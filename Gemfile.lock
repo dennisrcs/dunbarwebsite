@@ -78,6 +78,8 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
+    protected_attributes (1.1.0)
+      activemodel (>= 4.0.1, < 5.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -151,6 +153,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg
+  protected_attributes
   rails (= 4.2.5.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
