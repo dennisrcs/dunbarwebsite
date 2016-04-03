@@ -13,3 +13,56 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: Arial, sans-serif;
+}
+
+body .container {
+  display: table;
+  margin: 0 auto;
+  padding-top: 50px
+}
+
+body .container h1, body .container p {
+  display: table;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.flash_danger {
+  display: table;
+  margin: 0 auto;
+  color: #ff0000;  
+}
+
+.flash_info {
+  display: table;
+  margin: 0 auto;
+  color: #003366
+}
+
+.nav-top {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.nav-top li {
+  display: inline;
+}
+
+.nav-top li a {
+  display: inline-block;
+  font-size: 20px;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+
+.nav-top li a:link, .nav-top li a:visited {
+  color: #222222;
+}
+
+.nav-top li a:hover, .nav-top li a:active {
+  color: #666666;
+}
+
