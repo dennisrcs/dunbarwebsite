@@ -1,0 +1,23 @@
+// Place all the styles related to the publications controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+table {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+table .content {
+  text-align: left;
+  width:650px;
+}
+
+table .image {
+  height: auto; 
+  width: auto;
+  /*max-height: 200px;
+  max-width: 250px;
+  */
+  text-align: center;
+}
