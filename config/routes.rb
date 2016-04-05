@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   
   #get     'publications' => 'publications#index'
-  #get    'publications/new' => 'publications#new'
-  resources :publications, only: [:index, :new] 
+  get    'publications/new' => 'publications#new'
+  #resources :publications, only: [:index, :new] 
   
   #resources :resumes, only: [:index, :new, :create, :destroy]
   
