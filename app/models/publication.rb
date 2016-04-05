@@ -3,4 +3,6 @@ class Publication < ActiveRecord::Base
   
   mount_uploader :publication_picture, Publication_pictureUploader
   
+  #insert more details of model
+  
 end
