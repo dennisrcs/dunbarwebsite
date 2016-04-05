@@ -6,6 +6,6 @@
 .row
   #login-form.login-form
     = form_for(:session, url: login_path) do |f|
-      = f.text_field :username, :placeholder => 'Please enter your username', :required => true, :class => 'form-control'
-      = f.password_field :password, :placeholder => 'Password', :required => true, :class => 'form-control'
+      = f.text_field :username, :placeholder => 'Please enter your username', :required => true, :class => 'form-control', id: "username"
+      = f.password_field :password, :placeholder => 'Password', :required => true, :class => 'form-control', id: "password"
       = f.submit "Log in", id: "login-form-button"

@@ -6,19 +6,19 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-%body
-  .container
-    %nav
-      %ul.nav-top
-        %li= link_to "Home", root_path
-        %li= link_to "People", root_path
-        %li= link_to "Research", root_path
-        %li= link_to "Publications", root_path
-        %li= link_to "Outreach", root_path
-        %li= link_to "Collaborations", root_path
-        - if logged_in?
-          %li= link_to "Logout", logout_path, :method => 'delete'
-        - else
-          %li= link_to "Login", login_path
-  .container
-    = yield
+  %body
+    .container
+      %nav
+        %ul.nav-top
+          %li= link_to "Home", root_path
+          %li= link_to "People", root_path
+          %li= link_to "Research", root_path
+          %li= link_to "Publications", root_path
+          %li= link_to "Outreach", root_path
+          %li= link_to "Collaborations", root_path
+          - if logged_in?
+            %li= link_to "Logout", logout_path, :method => 'delete'
+          - else
+            %li= link_to "Login", login_path
+    .container
+      = yield
