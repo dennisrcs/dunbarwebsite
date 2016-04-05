@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   
-  get     'publications' => 'publications#index'
-  
+  #get     'publications' => 'publications#index'
+  #get    'publications/new' => 'publications#new'
   resources :publications, only: [:index, :new]
   
   #resources :resumes, only: [:index, :new, :create, :destroy]
