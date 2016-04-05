@@ -1,0 +1,21 @@
+-# in app/views/publications/new.html.haml
+- provide(:title, "Log in")
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
+    
+%h1 Create New Publication
+
+.row
+  #newPublication-form.newPublication-form
+    =form_for(:publication, url: publications_path) do |f|
+      = f.text_field :article, :placeholder => 'Article', :required => true, :class => 'form-control'
+      = f.text_field :contributors, :placeholder => 'Contributors', :required => true, :class => 'form-control'
+      = f.text_field :journal, :placeholder => 'Journal', :required => true, :class => 'form-control'
+      = f.text_field :year, :placeholder => 'Year', :required => true, :class => 'form-control'
+      = f.text_field :more_info, :placeholder => 'Additional Information', :required => true, :class => 'form-control'
+      = f.text_field :pages, :placeholder => 'Pages', :required => true, :class => 'form-control'
+      = f.text_field :link, :placeholder => 'Link', :required => true, :class => 'form-control'
+      = f.file_field :publication_picture => 'Picture', :required=> true, :accept=> 'image/PNG', :class => 'form-control' 
+      = f.submit "Create", id: "newPublication-button"
+

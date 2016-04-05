@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   
   get     'publications' => 'publications#index'
   
-  resources :publications
+  resources :publications, only: [:index, :new]
+  
+  #resources :resumes, only: [:index, :new, :create, :destroy]
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
