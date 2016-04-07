@@ -1,0 +1,41 @@
+.details
+  %h2 Details about #{@member.name}
+
+  %h3 Personal Information
+
+  #picture
+    = image_tag "#{@member.avatar_path}"
+
+  %ul#personal_info
+    %li
+      Name:
+      = @member.name
+    %li
+      Position:
+      = @member.position
+    %li
+      E-mail:
+      = @member.user.email
+    %li
+      Previous Affiliation:
+      = @member.previous_affiliation
+    %li
+      Telephone:
+      = @member.telephone
+
+  %h3 Building Information
+
+  %ul#building_info
+    %li 
+      Building:
+      = @member.building
+    %li
+      Office:
+      = @member.office
+
+  %h3 Bio
+  
+  %p
+    = @member.bio
+
+  = link_to "Back to people page", members_path

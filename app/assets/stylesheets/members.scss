@@ -1,0 +1,90 @@
+.details h2, .details h3 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.details p {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.container h1 {
+  display: table;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.entry {
+  display: block;
+  width: 380px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+input[type='file'].entry {
+  margin-top: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+textarea.entry {
+  width: 382px;
+  height: 100px;
+  resize: none;
+}
+
+.member_grid {
+  font-size: 0;
+}
+
+.member {
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 50px;
+  width: calc(25% - 6px);
+  margin-right: 8px;
+}
+
+.member:nth-of-type(2n) {
+  margin-right: 8px;
+}
+
+.member:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.member a {
+  display: block;
+}
+
+.member .avatar {
+  display: table;
+  margin: 0 auto;
+}
+
+.member .caption a, #add_member a, .details a {
+  font-size: 16px;
+  text-decoration: none;
+  display: table;
+  margin: 0 auto;
+}
+
+#add_member a {
+  font-size: 20px;
+}
+
+#member_form_button {
+  width: 100%;
+  height: 30px;
+}
+
+.member .caption a, #add_member a:link, #add_member a:visited, .details a:link, .details a:visited {
+  color: #222222;
+}
+
+#add_member a:hover, #add_member a:active, .details a:hover, .details :active {
+  color: #666666
+}
+
