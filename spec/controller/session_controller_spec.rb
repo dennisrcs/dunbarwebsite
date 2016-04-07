@@ -6,11 +6,6 @@ describe SessionsController, :type => :controller do
             create(:user)
             assert 'sessions/new'
         end
-        
-        it 'should close the session after 3 seconds of inaction' do
-            SessionsController.stub(session_timedout!).and_return(true)
-            assert 'session/destroy'
-        end
     end
     
     describe 'logout' do
