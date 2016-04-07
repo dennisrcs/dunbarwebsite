@@ -39,6 +39,11 @@ module HtmlSelectorsHelpers
         "Now, go and add a mapping in #{__FILE__}"
     end
   end
+  
+  #try to add the definition for logged_in here
+  def logged_in?
+    !current_user.nil?
+  end
 end
 
 World(HtmlSelectorsHelpers)

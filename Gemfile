@@ -61,16 +61,12 @@ group :development do
 end
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'rspec'
-  gem 'rspec-rails'
   gem 'factory_girl_rails'
-end
-
-group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'rspec-rails'
+  gem 'simplecov'
   gem 'launchy'
 end
