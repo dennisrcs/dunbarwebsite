@@ -21,3 +21,33 @@ table .image {
   */
   text-align: center;
 }
+ .publication_list {
+   float: center;
+ }
+ 
+ .publication{
+   float: center;
+ }
+ 
+ .publication_picture{
+   float: left;
+   height: 25px;
+   width: 300px;
+   padding: 10px;
+ }
+ 
+ .publication_information{
+   float: right;
+   height: 200px;
+   width: 400px;
+   padding: 10px;
+   text-align: justify;
+   text-justify: inter-word;
+ }
+ 
+ span {
+  display: table-cell;
+  vertical-align: middle;
+}
+ 
+ 

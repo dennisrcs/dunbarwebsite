@@ -23,10 +23,10 @@ body .container {
   padding-top: 50px
 }
 
-body .container h1, body .container p {
+.row h1 {
   display: table;
   margin: 0 auto;
-  padding-top: 10px;
+  padding-bottom: 40px;
 }
 
 .flash_danger {

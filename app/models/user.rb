@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  belongs_to :member
   attr_accessible :username, :email, :password, :password_confirmation
 
   before_save { self.email = email.downcase } 
