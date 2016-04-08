@@ -1,21 +1,19 @@
--# in app/views/publications/new.html.haml
-- provide(:title, "Log in")
-- flash.each do |name, msg|
-  - if msg.is_a?(String)
-    = content_tag :div, msg, :class => "flash_#{name}"
-    
-%h1 Create New Publication
+- if logged_in?
+  .row
+    %h1 Create New Publication
+    = form_tag({action: :create}, multipart: true) do
+      = text_field_tag :article, nil, :class => 'entry', :placeholder => 'Article title', :required => true
+      = text_field_tag :contributors, nil, :class => 'entry', :placeholder => 'Contributors', :required => true
+      = text_field_tag :journal, nil, :class => 'entry', :placeholder => 'Journar title', :required => true
+      = text_field_tag :year, nil, :class => 'entry', :placeholder => 'Year published', :required => true
+      = text_field_tag :more_info, nil, :class => 'entry', :placeholder => 'Additional information'
+      = text_field_tag :pages, nil, :class => 'entry', :placeholder => 'Pages', :required => true
+      = text_field_tag :link, nil, :class => 'entry', :placeholder => 'URL', :required => true
 
-.row
-  #newPublication-form.newPublication-form
-    =form_for(:publication, url: publications_path) do |f|
-      = f.text_field :article, :placeholder => 'Article', :required => true, :class => 'form-control'
-      = f.text_field :contributors, :placeholder => 'Contributors', :required => true, :class => 'form-control'
-      = f.text_field :journal, :placeholder => 'Journal', :required => true, :class => 'form-control'
-      = f.text_field :year, :placeholder => 'Year', :required => true, :class => 'form-control'
-      = f.text_field :more_info, :placeholder => 'Additional Information', :required => true, :class => 'form-control'
-      = f.text_field :pages, :placeholder => 'Pages', :required => true, :class => 'form-control'
-      = f.text_field :link, :placeholder => 'Link', :required => true, :class => 'form-control'
-      = f.file_field :publication_picture => 'Picture', :required=> true, :accept=> 'image/PNG', :class => 'form-control' 
-      = f.submit "Create", id: "newPublication-button"
-      
+      = label_tag :publication_picture, 'Please provide an image for the Article' 
+      = file_field_tag :publication_picture, :class => 'entry'
+
+      = submit_tag 'Create Publication', :id => 'publication_form_button'
+
+- else
+  %p Only users with privileges can add new members.

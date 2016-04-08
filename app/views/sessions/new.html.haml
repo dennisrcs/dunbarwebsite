@@ -1,11 +1,14 @@
 - provide(:title, "Log in")
-- flash.each do |name, msg|
-  - if msg.is_a?(String)
-    = content_tag :div, msg, :class => "flash_#{name}"
-%h1 Log in
-.row
-  #login-form.login-form
-    = form_for(:session, url: login_path) do |f|
-      = f.text_field :username, :placeholder => 'Please enter your username', :required => true, :class => 'form-control'
-      = f.password_field :password, :placeholder => 'Password', :required => true, :class => 'form-control'
-      = f.submit "Log in", id: "login-form-button"
+- if !logged_in?
+  - flash.each do |name, msg|
+    - if msg.is_a?(String)
+      = content_tag :div, msg, :class => "flash_#{name}"
+  .row
+    %h1 Log in
+    #login-form.login-form
+      = form_for(:session, url: login_path) do |f|
+        = f.text_field :username, :placeholder => 'Please enter your username', :required => true, :class => 'form-control'
+        = f.password_field :password, :placeholder => 'Password', :required => true, :class => 'form-control'
+        = f.submit "Log in", id: "login-form-button"
+- else
+  %p You are already logged in!

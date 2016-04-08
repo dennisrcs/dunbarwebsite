@@ -3,8 +3,14 @@ source 'https://rubygems.org'
 # Use Haml for templates
 gem 'haml'
 
+#add activerecord gem
+gem 'activerecord'
 # Use postgree database
 gem 'pg'
+#add webrat for website testing
+gem 'webrat'
+#add faker to create testing data
+gem 'faker'
 
 # for using attr_accesible
 gem 'protected_attributes'
@@ -33,9 +39,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use carrierwave for manage the uploaded images.
-gem 'carrierwave'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -57,3 +60,13 @@ group :development do
   gem 'spring'
 end
 
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'simplecov'
+  gem 'launchy'
+end

@@ -1,0 +1,14 @@
+%h1 Current members
+
+.member_grid
+  - @members.each do |member|
+    .member
+      .avatar
+        = link_to image_tag(member.avatar_path), member_path(member)
+      .caption
+        = link_to "#{member.name}", member_path(member) 
+        = link_to "#{member.position}", member_path(member)
+
+- if logged_in?
+  #add_member= link_to 'Add new member', new_member_path
+
