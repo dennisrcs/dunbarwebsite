@@ -10,8 +10,11 @@ Rails.application.routes.draw do
   
   #resources :resumes, only: [:index, :new, :create, :destroy]
   resources :publications
-  
+  #match "publications/:id", to: 'publications#edit', via: [:post, :get]
+  match "publications/:id/edit", to: 'publications#edit', via: [:post, :get]
+  #match "publications/:id/edit", to  'publications#update', via: [:put]
   delete 'logout'  => 'sessions#destroy'
+  
 
   resources :members
 
