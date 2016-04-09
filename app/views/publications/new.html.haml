@@ -10,21 +10,6 @@
       = text_field_tag :pages, nil, :class => 'entry', :placeholder => 'Pages', :required => true
       = text_field_tag :link, nil, :class => 'entry', :placeholder => 'URL', :required => true
 
-<<<<<<< 750a0e0f912652e70d42e0c085659c870a7016c7
-.row
-  #newPublication-form.newPublication-form
-    =form_for(:publication, url: publications_path) do |f|
-      = f.text_field :article, :placeholder => 'Article', :required => true, :class => 'form-control'
-      = f.text_field :contributors, :placeholder => 'Contributors', :required => true, :class => 'form-control'
-      = f.text_field :journal, :placeholder => 'Journal', :required => true, :class => 'form-control'
-      = f.text_field :year, :placeholder => 'Year', :required => true, :class => 'form-control'
-      = f.text_field :more_info, :placeholder => 'Additional Information', :required => true, :class => 'form-control'
-      = f.text_field :pages, :placeholder => 'Pages', :required => true, :class => 'form-control'
-      = f.text_field :link, :placeholder => 'Link', :required => true, :class => 'form-control'
-      = f.file_field :publication_picture => 'Picture', :required=> true, :class => 'form-control' 
-      = f.submit "Create", id: "newPublication-button"
-      
-=======
       = label_tag :publication_picture, 'Please provide an image for the Article' 
       = file_field_tag :publication_picture, :class => 'entry'
 
@@ -32,4 +17,3 @@
 
 - else
   %p Only users with privileges can add new members.
->>>>>>> Adding edit Publication fixing minor bugs
