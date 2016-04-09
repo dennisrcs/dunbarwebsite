@@ -73,3 +73,46 @@
           = link_to "DOI", "http://www.sciencedirect.com/science/article/pii/S0277538713004579"
 
 =link_to 'Add new publications', new_publication_path
+
+
+
+
+
+
+
+
+
+
+
+= form_tag({action: :edit}, multipart: true) do
+
+
+
+index
+
+%h1 Publications
+
+.publication_list
+  - @publications.reverse_each do |publication|
+    .publication
+      %span
+        .publication_picture
+          = image_tag(publication.publication_picture)
+        .publication_information
+          = publication.article.html_safe
+          = publication.contributors.html_safe
+          %i
+            = publication.journal.html_safe
+          %b
+            = publication.year
+          = publication.more_info.html_safe
+          = publication.pages
+ 
+          = link_to "DOI", "#{publication.link}"
+          = button_to 'Edit', edit_publication_path(publication)
+          = button_to 'Delete', publication_path(publication), :method => :delete, :confirm => 'Are you sure?'
+          
+
+- if logged_in?
+  #add_publication= link_to 'Add new Publication', new_publication_path
+

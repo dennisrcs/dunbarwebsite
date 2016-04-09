@@ -27,15 +27,9 @@ class PublicationsController < ApplicationController
                            :journal => params[:journal], :year => params[:year], 
                            :more_info => params[:more_info], :pages => params[:pages],
                            :link => params[:link], :publication_picture => publication_picture_path)
-
     publication.save
-    
-    
     # removing temp files
     try_delete_tempfile(params[:publication_picture])
-
-    
-
     # redirect to the created publication page
     redirect_to publications_path
   end
@@ -46,6 +40,21 @@ class PublicationsController < ApplicationController
     flash[:notice] = "Publication '#{@publication.article}' deleted."
     redirect_to publications_path
    end
+   
+   
+   def update
+    publication_picture_path = Publication.write_to_filesystem(params[:publication_picture], 'uploads/publications/')
+    publication = Publication.find params[:id]
+    
+    publication.update_attributes!(:article => params[:article], :contributors => params[:contributors],
+                           :journal => params[:journal], :year => params[:year], 
+                           :more_info => params[:more_info], :pages => params[:pages],
+                           :link => params[:link], :publication_picture => publication_picture_path)
+    try_delete_tempfile(params[:publication_picture])
+    flash[:notice] = "The Article was successfully updated."
+    redirect_to publications_path
+   end
+   
 
   # if there's a temporary file, then delete it
   def try_delete_tempfile(file)

@@ -2,11 +2,11 @@
 
 .publication_list
   - @publications.reverse_each do |publication|
-    .publication
-      %span
-        .publication_picture
+    %table
+      %tr
+        %td.image
           = image_tag(publication.publication_picture)
-        .publication_information
+        %td.content
           = publication.article.html_safe
           = publication.contributors.html_safe
           %i
@@ -18,7 +18,6 @@
  
           = link_to "DOI", "#{publication.link}"
           = button_to 'Edit', edit_publication_path(publication)
-
           = button_to 'Delete', publication_path(publication), :method => :delete, :confirm => 'Are you sure?'
           
 
