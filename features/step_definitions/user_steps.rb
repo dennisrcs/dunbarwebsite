@@ -5,11 +5,7 @@ end
 ######################################################################
 ## Background
 ######################################################################
-# Given (/^this user exists$/) do |table|
-#     table.hashes.each do |user|
-#         User.create(user)
-#     end
-# end
+
 
 Given (/^I am logged in$/) do
     create_user

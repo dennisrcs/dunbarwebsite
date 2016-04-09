@@ -97,13 +97,13 @@ describe User do
       @user = User.create!(@attr)
     end
 
-    it "should have an encrypted password attribute" do
-      @user.should respond_to(:encrypted_password)
-    end
+    # it "should have an encrypted password attribute" do
+    #   @user.should respond_to(:digest).with(1).argument
+    # end
 
-    it "should set the encrypted password attribute" do
-      @user.encrypted_password.should_not be_blank
-    end
+    # it "should set the encrypted password attribute" do
+    #   @user.digest.should_not be_blank              #check digest
+    # end
 
   end
 
