@@ -17,8 +17,9 @@
           = publication.pages
  
           = link_to "DOI", "#{publication.link}"
-          = button_to 'Edit', edit_publication_path(publication)
-          = button_to 'Delete', publication_path(publication), :method => :delete, :confirm => 'Are you sure?'
+          - if logged_in?
+            = button_to 'Edit', edit_publication_path(publication)
+            = button_to 'Delete', publication_path(publication), :method => :delete, :confirm => 'Are you sure?'
           
 
 - if logged_in?
