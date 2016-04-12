@@ -1,4 +1,4 @@
-- if logged_in?
+- if logged_in? && current_user_admin?
   .row
     %h1 Create New Publication
     = form_tag({action: :create}, multipart: true) do
@@ -16,4 +16,4 @@
       = submit_tag 'Create Publication', :id => 'publication_form_button'
 
 - else
-  %p Only users with privileges can add new members.
+  %p Only users with privileges can add new publications.

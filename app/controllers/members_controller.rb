@@ -6,17 +6,32 @@ class MembersController < ApplicationController
 
   def show
     id = params[:id]
-    @member = Member.find(id)
+    @member = Member.find_by_id(id)
+    if @member == nil
+      flash[:danger] = "Member not found"
+      redirect_to members_path
+    end
   end
 
   def new
     # only renders 'new' view
   end
 
+  def edit
+    id = params[:id]
+    @member = Member.find_by_id(id)
+    if @member == nil
+      flash.now[:danger] = "Member not found"
+      redirect_to members_path
+    end
+  end
+
   def create
     # generates a temporary password and create user
     temp_password = generate_random_password()
-    user = User.create(:username => params[:username], :email => params[:email], 
+    
+    is_admin = (params[:is_admin] == "1") ? true : false
+    user = User.create(:username => params[:username], :is_admin => is_admin, :email => params[:email], 
                        :password => temp_password, :password_confirmation => temp_password)
 
     # writing image to the NFS
@@ -41,11 +56,53 @@ class MembersController < ApplicationController
     redirect_to member_path(member)
   end
 
+  def update
+    member = Member.find(params[:id])
+
+    is_admin = (params[:is_admin] == "1") ? true : false
+    member.user.update_attribute(:is_admin, is_admin)
+
+    # writing avatar and cv to the NFS
+    if params[:avatar] != nil
+      avatar_path = Member.write_to_filesystem(params[:avatar], 'uploads/images/')
+      params[:avatar_path] = avatar_path
+    end
+
+    if params[:cv] != nil
+      cv_path = Member.write_to_filesystem(params[:cv], 'uploads/cv/')
+      params[:cv_path] = cv_path
+    end
+
+    member.update_attributes(params)
+
+    # removing temp files
+    try_delete_tempfile(params[:avatar])
+    try_delete_tempfile(params[:cv])
+
+    # redirecting to profile
+    redirect_to member_path(member)
+  end
+
+  def destroy
+    member = Member.find(params[:id])
+    if member != nil
+      if logged_in? && current_user.id == member.user.id
+        log_out
+      end
+      member.user.destroy
+      member.destroy
+      flash.now[:info] = "Member #{member.user.username} deleted successfully"
+    end
+    redirect_to members_path
+  end
+
   # if there's a temporary file, then delete it
   def try_delete_tempfile(file)
-    tempfile = file.tempfile.path
-    if File::exists?(tempfile)
-      File::delete(tempfile)
+    if file != nil
+      tempfile = file.tempfile.path
+      if File::exists?(tempfile)
+       File::delete(tempfile)
+      end
     end
   end
 

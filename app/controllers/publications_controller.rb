@@ -5,8 +5,6 @@ class PublicationsController < ApplicationController
   end
 
   def show
-    #id = params[:id]
-    #@publication = publication.find(id)
   end
 
   def new
@@ -21,8 +19,7 @@ class PublicationsController < ApplicationController
     # writing image to the NFS
     publication_picture_path = Publication.write_to_filesystem(params[:publication_picture], 'uploads/publications/')
     
-    
-    # creating publication+
+    # creating publication
     publication = Publication.create(:article => params[:article], :contributors => params[:contributors],
                            :journal => params[:journal], :year => params[:year], 
                            :more_info => params[:more_info], :pages => params[:pages],
@@ -51,16 +48,18 @@ class PublicationsController < ApplicationController
                            :more_info => params[:more_info], :pages => params[:pages],
                            :link => params[:link], :publication_picture => publication_picture_path)
     try_delete_tempfile(params[:publication_picture])
-    flash[:notice] = "The Article was successfully updated."
+    flash.now[:notice] = "The Article was successfully updated."
     redirect_to publications_path
    end
    
 
   # if there's a temporary file, then delete it
   def try_delete_tempfile(file)
-    tempfile = file.tempfile.path
-    if File::exists?(tempfile)
-      File::delete(tempfile)
+    if file != nil
+      tempfile = file.tempfile.path
+      if File::exists?(tempfile)
+        File::delete(tempfile)
+      end
     end
   end
 

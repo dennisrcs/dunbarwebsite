@@ -17,11 +17,11 @@
           = publication.pages
  
           = link_to "DOI", "#{publication.link}"
-          - if logged_in?
+          - if logged_in? && current_user_admin?
             = button_to 'Edit', edit_publication_path(publication)
             = button_to 'Delete', publication_path(publication), :method => :delete, :confirm => 'Are you sure?'
           
 
-- if logged_in?
+- if logged_in? && current_user_admin?
   #add_publication= link_to 'Add new Publication', new_publication_path
 

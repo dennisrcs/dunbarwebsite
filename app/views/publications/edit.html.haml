@@ -1,4 +1,4 @@
-- if logged_in?
+- if logged_in? && current_user_admin?
   .row
     %h1 Edit Publication
     = form_tag publication_path(@publication), :method => :put, multipart: true do
@@ -16,4 +16,4 @@
       = submit_tag 'Update Publication', :id => 'publication_form_button'
 
 - else
-  %p Only users with privileges can add new members.
+  %p Only users with privileges can edit publications.
