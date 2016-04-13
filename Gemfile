@@ -11,7 +11,8 @@ gem 'pg'
 gem 'webrat'
 #add faker to create testing data
 gem 'faker'
-
+gem 'axlsx', '~> 2.0.1'
+gem 'axlsx_rails'
 # for using attr_accesible
 gem 'protected_attributes'
 
@@ -69,4 +70,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'simplecov'
   gem 'launchy'
+  gem 'fixture_builder'
+  gem 'headless'
 end

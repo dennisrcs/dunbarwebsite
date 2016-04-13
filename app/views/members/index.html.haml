@@ -1,5 +1,9 @@
 %h1 Current members
 
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
+
 .member_grid
   - @members.each do |member|
     .member
@@ -9,6 +13,5 @@
         = link_to "#{member.name}", member_path(member) 
         = link_to "#{member.position}", member_path(member)
 
-- if logged_in?
-  #add_member= link_to 'Add new member', new_member_path
-
+- if logged_in? && current_user_admin?
+  #add_member= link_to 'Add new member', new_member_path 
