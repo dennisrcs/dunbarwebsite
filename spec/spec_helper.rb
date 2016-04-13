@@ -51,6 +51,8 @@ RSpec.configure do |config|
   end
   config.use_transactional_fixtures = true
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.global_fixtures = :all
+  
   config.infer_base_class_for_anonymous_controllers = true
   config.include Rails.application.routes.url_helpers
   #config.infer_spec_type_from_file_location
