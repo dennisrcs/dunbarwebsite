@@ -39,3 +39,7 @@
     = @member.bio
 
   = link_to "Back to people page", members_path
+
+  - if logged_in? && (current_user.id == @member.id || current_user_admin?)
+    = link_to "Edit profile", edit_member_path(@member)
+    = link_to "Delete profile", member_path, :method => :delete, data: { confirm: "Are you sure?" } 

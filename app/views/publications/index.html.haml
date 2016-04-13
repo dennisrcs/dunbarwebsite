@@ -1,0 +1,27 @@
+%h1 Publications
+
+.publication_list
+  - @publications.reverse_each do |publication|
+    %table
+      %tr
+        %td.image
+          = image_tag(publication.publication_picture)
+        %td.content
+          = publication.article.html_safe
+          = publication.contributors.html_safe
+          %i
+            = publication.journal.html_safe
+          %b
+            = publication.year
+          = publication.more_info.html_safe
+          = publication.pages
+ 
+          = link_to "DOI", "#{publication.link}"
+          - if logged_in? && current_user_admin?
+            = button_to 'Edit', edit_publication_path(publication)
+            = button_to 'Delete', publication_path(publication), :method => :delete, :confirm => 'Are you sure?'
+          
+
+- if logged_in? && current_user_admin?
+  #add_publication= link_to 'Add new Publication', new_publication_path
+

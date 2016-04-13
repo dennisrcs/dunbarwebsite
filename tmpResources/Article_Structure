@@ -1,0 +1,118 @@
+
+ Article title:
+    A tetranuclear oxofluorovanadium(IV) cluster encapsulating a Na(H<sub>2</sub>O)<sub>n</sub><sup>+</sup>
+ Contributors:
+    Tiffany M. Smith, Nika Mahne, Andrey Prosvirin, Kim R. Dunbar, and Jon Zubieta.
+ Journal title:
+    %i Inorg. Chem. Commun
+ Year published:
+    %b 2013.
+ More Information (Volumen):
+    33
+ Pages:
+    1-5.
+ Link:
+    = link_to "DOI", "http://www.sciencedirect.com/science/article/pii/S1387700313001287"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    -# in app/views/publications/index.html.haml
+- provide(:title, "Log in")
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
+    
+%h1 Publications
+
+%table#publications
+  %tbody 
+    %tr
+      %td.image
+        %p
+          %img(src="http://ars.els-cdn.com/content/image/1-s2.0-S1387700313001287-fx1.jpg")
+      %td.content
+        %p 
+          A tetranuclear oxofluorovanadium(IV) cluster encapsulating a Na(H<sub>2</sub>O)<sub>n</sub><sup>+</sup>
+          Tiffany M. Smith, Nika Mahne, Andrey Prosvirin, Kim R. Dunbar, and Jon Zubieta,
+          %i Inorg. Chem. Commun.,
+          %b 2013
+          , 33, 1-5. 
+          = link_to "DOI", "http://www.sciencedirect.com/science/article/pii/S1387700313001287"
+          
+    %tr
+      %td.image
+        %p
+          %img(src="http://pubs.acs.org/appl/literatum/publisher/achs/journals/content/jacsat/2013/jacsat.2013.135.issue-30/ja4045604/production/images/medium/ja-2013-045604_0009.gif")
+      %td.content
+        %p 
+          Cellular Toxicity Induced Through Photorelease of a Caged Bioactive Molecule: Design of Potential Dual-Action Ru(II) Complexes
+          Mark A. Sgambellone, Amanda David, Robert N. Garer, Kim R. Dunbar, and Claudia Turro,
+          %i J. Am. Chem. Soc.,
+          %b 2013
+          , 135, 11274-11282. 
+          = link_to "DOI", "http://pubs.acs.org/doi/abs/10.1021/ja4045604"
+          
+    %tr
+      %td.image
+        %p
+          %img(src="http://ars.els-cdn.com/content/image/1-s2.0-S0277538713004579-fx1.jpg")
+      %td.content
+        %p 
+          One-Dimensional Square- and Ladder-Type Architectures Incorporating Octacyanometallates of Molybdenum(V) and Tungsten(V)
+          Hanhua Zhao, Andrew J. Brown, Andrey V. Prosvirin, and Kim R. Dunbar,
+          %i George Christou Special Issue, Polyhedron,
+          %b 2013
+          , 12, 321-327. 
+          = link_to "DOI", "http://www.sciencedirect.com/science/article/pii/S0277538713004579"
+
+=link_to 'Add new publications', new_publication_path
+
+
+
+
+
+
+
+
+
+
+
+= form_tag({action: :edit}, multipart: true) do
+
+
+
+index
+
+%h1 Publications
+
+.publication_list
+  - @publications.reverse_each do |publication|
+    .publication
+      %span
+        .publication_picture
+          = image_tag(publication.publication_picture)
+        .publication_information
+          = publication.article.html_safe
+          = publication.contributors.html_safe
+          %i
+            = publication.journal.html_safe
+          %b
+            = publication.year
+          = publication.more_info.html_safe
+          = publication.pages
+ 
+          = link_to "DOI", "#{publication.link}"
+          = button_to 'Edit', edit_publication_path(publication)
+          = button_to 'Delete', publication_path(publication), :method => :delete, :confirm => 'Are you sure?'
+          
+
+- if logged_in?
+  #add_publication= link_to 'Add new Publication', new_publication_path
+

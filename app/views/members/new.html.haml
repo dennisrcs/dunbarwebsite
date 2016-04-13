@@ -1,4 +1,4 @@
-- if logged_in?
+- if logged_in? && current_user_admin?
   .row
     %h1 Create New Member
     = form_tag({action: :create}, multipart: true) do
@@ -19,7 +19,10 @@
   
       = label_tag :cv, 'Upload member curriculum'
       = file_field_tag :cv, :class => 'entry'
-  
+
+      = label_tag :is_admin, 'System administrator?' 
+      = check_box_tag :is_admin
+
       = submit_tag 'Save Member', :id => 'member_form_button'
 - else
   %p Only users with privileges can add new members.

@@ -6,6 +6,7 @@ end
 ## Background
 ######################################################################
 
+
 Given (/^I am logged in$/) do
     create_user
     visit '/login'
