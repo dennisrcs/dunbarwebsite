@@ -40,14 +40,22 @@ class PublicationsController < ApplicationController
    
    
    def update
-    publication_picture_path = Publication.write_to_filesystem(params[:publication_picture], 'uploads/publications/')
     publication = Publication.find params[:id]
-    
-    publication.update_attributes!(:article => params[:article], :contributors => params[:contributors],
+     
+    if !( params[:publication_picture].nil? || params[:publication_picture].empty?)
+      publication_picture_path = Publication.write_to_filesystem(params[:publication_picture], 'uploads/publications/')
+      
+      publication.update_attributes!(:article => params[:article], :contributors => params[:contributors],
                            :journal => params[:journal], :year => params[:year], 
                            :more_info => params[:more_info], :pages => params[:pages],
                            :link => params[:link], :publication_picture => publication_picture_path)
-    try_delete_tempfile(params[:publication_picture])
+      try_delete_tempfile(params[:publication_picture])
+    else
+      publication.update_attributes!(:article => params[:article], :contributors => params[:contributors],
+                           :journal => params[:journal], :year => params[:year], 
+                           :more_info => params[:more_info], :pages => params[:pages],
+                           :link => params[:link])
+    end
     flash.now[:notice] = "The Article was successfully updated."
     redirect_to publications_path
    end
