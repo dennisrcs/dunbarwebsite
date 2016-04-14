@@ -9,3 +9,6 @@ end
 #When (/^I go to Add new member$/) do
 #    visit '/members/new'
 #end
+When(/^I add a new member$/) do
+  visit '/members/new'
+end

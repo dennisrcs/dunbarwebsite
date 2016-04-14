@@ -9,10 +9,10 @@ Feature: Add new member
 
 Scenario: Add new member  
 Then I should see a button "Add new member"  
-When I follow  "Add new member"
-Then I should be on the the Create New Memeber page 
-When I fill in "Full Name" with "newmember123"
-And I fill in "Position" with "grad123"
+When I add a new member
+Then I should be on the Create New Member page 
+When I fill in "name" with "newmember123"
+And I fill in "position" with "grad123"
 And I fill in "Username" with "NewMember"
 And I fill in "E-mail" with "newmember123@tamu.edu"
 And I fill in "Telephone" with "999-99-99"
