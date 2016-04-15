@@ -12,5 +12,5 @@ Scenario: Delete new publication (happy path)
   Then I should be on the Publications page
   Then I should see "Delete" by a publication
   When I press "Delete"
-  Then I should be on the the Publication page 
+  Then I should be on the Publication page 
   And I should not see the publication

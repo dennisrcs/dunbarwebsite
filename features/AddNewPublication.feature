@@ -4,14 +4,14 @@ Feature: Add new publication
   So that I can add new publication wihtout manual tedium 
   
     Background:
-      Given I am recently logged in 
-      Given I am on the Home page
+      Given I am logged in 
+      Given I am on the home page
 
 Scenario: Add new publication (happy path)
   When I follow "Publications"
   Then I should be on the Publications page
-  Then I should see "Add new publication"  
-  When I press "Add new publication"
+  Then I should see a button "Add new Publication"  
+  When I press "Add new Publication"
   Then I should be on the the Create New Publication page 
   When I fill in "Article title" with "Cellular Toxicity Induced Through Photorelease of a Caged Bioactive Molecule: Design of Potential Dual-Action Ru(II) Complexe"
   And I fill in "Contributors" with "Mark A. Sgambellone, Amanda David, Robert N. Garer, Kim R. Dunbar, and Claudia Turro"
@@ -27,8 +27,8 @@ And I should see the new publication
 Scenario: Add new publication without Article title (sad path)
   When I follow "Publications"
   Then I should be on the Publications page
-  Then I should see "Add new publication"  
-  When I press "Add new publication"
+  Then I should see a button "Add new Publication"  
+  When I press "Add new Publication"
   Then I should be on the the Create New Publication page 
   When I fill in "Contributors" with "Mark A. Sgambellone, Amanda David, Robert N. Garer, Kim R. Dunbar, and Claudia Turro"
   And I fill in "Journal title" with "J. Am. Chem. Soc."
