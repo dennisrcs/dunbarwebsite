@@ -13,6 +13,11 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
     
+    when /^the Create New Member page$/ 
+      new_member_path
+ 
+    when /^the People\s?page$/
+      '/members'
     when /^the Login\s?page$/
       login_path
 
