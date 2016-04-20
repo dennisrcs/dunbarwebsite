@@ -18,6 +18,7 @@ describe Publication do
         @p = Publication.create!(@pattr)
         @p.should(be_an_instance_of(Publication))
     end
+    
     it 'should write data to the file system' do
        return_value = "/uploads/publications/glass_water250.jpg"
        path = Publication.stub(:write_to_filesystem).with(:publication_picture, 
