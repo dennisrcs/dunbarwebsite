@@ -69,6 +69,7 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'simplecov'
+  gem 'codeclimate-test-reporter'
   gem 'launchy'
   gem 'fixture_builder'
   gem 'headless'
