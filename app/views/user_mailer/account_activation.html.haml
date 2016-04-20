@@ -1,0 +1,7 @@
+%h1 Dr. Dunbar's Research Team
+
+%p Hi #{@user.username}
+
+%p Welcome to Dr. Dunbar's Research Team! Click on the link below to activate your account:
+
+= link_to "Activate your account", edit_account_activation_url(@user.activation_token, email: @user.email)

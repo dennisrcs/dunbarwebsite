@@ -10,5 +10,7 @@
         = f.text_field :username, :placeholder => 'Please enter your username', :required => true, :class => 'form-control', :id => "username"
         = f.password_field :password, :placeholder => 'Password', :required => true, :class => 'form-control', :id => "password"
         = f.submit "Log in", id: "login-form-button"
+
+      = link_to "Forgot my password", new_password_reset_path
 - else
   %p You are already logged in!
