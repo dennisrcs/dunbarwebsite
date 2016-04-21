@@ -115,4 +115,25 @@ index
 
 - if logged_in?
   #add_publication= link_to 'Add new Publication', new_publication_path
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+= text_field_tag :article, @publication.article, :class => 'entry', :placeholder => 'Article title', :required => true
 
+
+
+
+
+        %td.summary
+          = research.summary.html_safe

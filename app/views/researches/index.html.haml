@@ -1,0 +1,19 @@
+%h1 Research
+
+.publication_list
+  - @researches.each do |research|
+    %table
+      %tr
+        %td.title
+          %h2
+            = link_to research.title, research_path(research)
+          = research.summary
+
+          
+          - if logged_in? && current_user_admin?
+            = button_to 'Delete', research_path(research), :method => :delete, :confirm => 'Are you sure?'
+          
+
+- if logged_in? && current_user_admin?
+  #add_publication= link_to 'Add new Research', new_research_path
+

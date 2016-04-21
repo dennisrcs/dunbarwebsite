@@ -40,6 +40,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Mercury rich text editor.
+gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git'
+gem 'jquery-migrate-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
