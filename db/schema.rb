@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 20160420102827) do
     t.string "cv_path"
   end
 
+  create_table "mercury_images", force: :cascade do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "publications", force: :cascade do |t|
     t.string   "article"
     t.string   "contributors"
@@ -40,6 +49,14 @@ ActiveRecord::Schema.define(version: 20160420102827) do
     t.string   "publication_picture"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+  end
+
+  create_table "researches", force: :cascade do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
