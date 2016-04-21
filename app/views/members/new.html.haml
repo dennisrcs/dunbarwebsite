@@ -1,6 +1,11 @@
 - if logged_in? && current_user_admin?
   .row
     %h1 Create New Member
+
+    - flash.each do |name, msg|
+      - if msg.is_a?(String)
+        = content_tag :div, msg, :class => "flash_#{name}"
+  
     = form_tag({action: :create}, multipart: true) do
       = text_field_tag :name, nil,:placeholder => 'Full name', :required => true, :class => 'entry', :id => "name"
       = text_field_tag :position, nil, :class => 'entry', :placeholder => 'Position (PhD Student, MSc Student, etc)', :id => "position"

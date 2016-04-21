@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   #match "publications/:id/edit", to  'publications#update', via: [:put]
   delete 'logout'  => 'sessions#destroy'
   
-
   resources :members
+<<<<<<< HEAD
   resources :researches
 
   resources :researches do
@@ -25,6 +25,11 @@ Rails.application.routes.draw do
   end
 
 
+=======
+  resources :account_activations, only: [:edit, :update]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
+  
+>>>>>>> 3f5f0a4b763e2dda34d45942dbebe5c1a4cdc6a8
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

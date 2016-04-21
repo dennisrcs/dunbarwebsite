@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Use Haml for templates
 gem 'haml'
 
+# Gem for sanding emails
+gem 'rest-client'
+
 #add activerecord gem
 gem 'activerecord'
 # Use postgree database
@@ -73,6 +76,7 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'simplecov'
+  gem 'codeclimate-test-reporter'
   gem 'launchy'
   gem 'fixture_builder'
   gem 'headless'

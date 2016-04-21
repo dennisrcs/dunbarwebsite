@@ -1,0 +1,17 @@
+%h1 Activate Account
+
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
+
+- if @user != nil
+  = form_tag account_activation_path(@user), :method => :put do
+
+    = password_field_tag :password, nil, :placeholder => "Enter password", :required => true
+    = password_field_tag :password_confirmation, nil, :placeholder => "Confirm password", :required => true
+    = hidden_field_tag :token , @token
+
+    = submit_tag "Activate", :id => "activate_account_button"
+- else
+  %h2 Invalid activation link
+

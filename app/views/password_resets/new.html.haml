@@ -1,0 +1,14 @@
+- provide(:title, "Log in")
+- if !logged_in?
+  - flash.each do |name, msg|
+    - if msg.is_a?(String)
+      = content_tag :div, msg, :class => "flash_#{name}"
+        
+  .row
+    %h1 Log in
+    #forgot-password-form.forgot-password-form
+      = form_for(:password_reset, url: password_resets_path) do |f|
+        
+        = f.email_field :email, :placeholder => 'Please enter your e-mail', :required => true, :class => 'form-control', :id => "email"
+        = f.submit "Send", id: "forgot-password-form-button"
+

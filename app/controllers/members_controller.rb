@@ -31,29 +31,39 @@ class MembersController < ApplicationController
     temp_password = generate_random_password()
     
     is_admin = (params[:is_admin] == "1") ? true : false
-    user = User.create(:username => params[:username], :is_admin => is_admin, :email => params[:email], 
+    @user = User.new(:username => params[:username], :is_admin => is_admin, :email => params[:email], 
                        :password => temp_password, :password_confirmation => temp_password)
 
-    # writing image to the NFS
-    avatar_path = Member.write_to_filesystem(params[:avatar], 'uploads/images/')
-    
-    # writing cv to the NFS
-    cv_path = Member.write_to_filesystem(params[:cv], 'uploads/cv/')
-    
-    # creating member
-    member = Member.create(:name => params[:name], :position => params[:position],
-                           :telephone => params[:telephone], :fax => params[:fax], 
-                           :previous_affiliation => params[:previous_affiliation], :bio => params[:bio],
-                           :building => params[:building], :office => params[:office],
-                           :avatar_path => avatar_path, :cv_path => cv_path)
-    user.update_attribute(:member, member)
+    if @user.save
+      @user.send_activation_email
+      flash[:info] = "An e-mail has been sent to the member so that the account can be activated."
 
-    # removing temp files
-    try_delete_tempfile(params[:avatar])
-    try_delete_tempfile(params[:cv])
+      # writing image to the NFS
+      avatar_path = Member.write_to_filesystem(params[:avatar], 'uploads/images/')
+      
+      # writing cv to the NFS
+      cv_path = Member.write_to_filesystem(params[:cv], 'uploads/cv/')
+      
+      # creating member
+      member = Member.create(:name => params[:name], :position => params[:position],
+                             :telephone => params[:telephone], :fax => params[:fax],
+                             :previous_affiliation => params[:previous_affiliation], :bio => params[:bio],
+                             :building => params[:building], :office => params[:office],
+                             :avatar_path => avatar_path, :cv_path => cv_path)
+      
+      @user.update_attribute(:member, member)
+      
+      # removing temp files
+      try_delete_tempfile(params[:avatar])
+      try_delete_tempfile(params[:cv])
+      
+      # redirect to the created member page
+      redirect_to member_path(member)
+    else
+      flash[:danger] = "The account could not be created. Please try again."
+      redirect_to new_member_path
+    end
 
-    # redirect to the created member page
-    redirect_to member_path(member)
   end
 
   def update
