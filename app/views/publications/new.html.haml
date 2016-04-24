@@ -2,7 +2,6 @@
 - if logged_in? && current_user_admin?
   .row
     %h1 Create New Publication
-
     #new-publication-form.new-publication-form
       = form_tag({action: :create}, multipart: true) do
         = text_field_tag :article, nil, :class => 'entry', :placeholder => 'Article title', :required => true
