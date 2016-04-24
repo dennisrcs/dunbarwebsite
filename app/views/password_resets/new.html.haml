@@ -1,11 +1,14 @@
-- provide(:title, "Log in")
+= content_for(:title, "Reset password")
 - if !logged_in?
   - flash.each do |name, msg|
     - if msg.is_a?(String)
       = content_tag :div, msg, :class => "flash_#{name}"
         
   .row
-    %h1 Log in
+    %h1 Recover your account
+
+    %p An e-mail is going to be sent to your e-mail with the instructions about how to recover your account
+
     #forgot-password-form.forgot-password-form
       = form_for(:password_reset, url: password_resets_path) do |f|
         

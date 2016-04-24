@@ -34,7 +34,7 @@ class PublicationsController < ApplicationController
    def destroy
     @publication = Publication.find(params[:id])
     @publication.destroy
-    flash[:notice] = "Publication '#{@publication.article}' deleted."
+    flash[:info] = "Publication '#{@publication.article}' deleted."
     redirect_to publications_path
    end
    
@@ -56,7 +56,7 @@ class PublicationsController < ApplicationController
                            :more_info => params[:more_info], :pages => params[:pages],
                            :link => params[:link])
     end
-    flash.now[:notice] = "The Article was successfully updated."
+    flash.now[:info] = "The Article was successfully updated."
     redirect_to publications_path
    end
    

@@ -1,5 +1,5 @@
 class Member < ActiveRecord::Base
-  attr_accessible :name, :position, :telephone, :fax, :previous_affiliation, :bio, :building, :office, :avatar_path, :cv_path
+  attr_accessible :name, :position, :telephone, :fax, :researcherid, :previous_affiliation, :bio, :building, :office, :avatar_path, :cv_path
   has_one :user
 
   # writes 'data' to the public folder, following 'path' structure

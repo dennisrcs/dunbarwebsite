@@ -35,30 +35,36 @@ class MembersController < ApplicationController
                        :password => temp_password, :password_confirmation => temp_password)
 
     if @user.save
-      @user.send_activation_email
-      flash[:info] = "An e-mail has been sent to the member so that the account can be activated."
+      begin
+        @user.send_activation_email
+        flash[:info] = "An e-mail has been sent to the member so that the account can be activated."
 
-      # writing image to the NFS
-      avatar_path = Member.write_to_filesystem(params[:avatar], 'uploads/images/')
+        # writing image to the NFS
+        avatar_path = Member.write_to_filesystem(params[:avatar], 'uploads/images/')
+        
+        # writing cv to the NFS
+        cv_path = Member.write_to_filesystem(params[:cv], 'uploads/cv/')
       
-      # writing cv to the NFS
-      cv_path = Member.write_to_filesystem(params[:cv], 'uploads/cv/')
+        # creating member
+        member = Member.create(:name => params[:name], :position => params[:position],
+                               :telephone => params[:telephone], :fax => params[:fax],
+                               :previous_affiliation => params[:previous_affiliation], :bio => params[:bio],
+                               :building => params[:building], :office => params[:office],
+                               :avatar_path => avatar_path, :cv_path => cv_path)
       
-      # creating member
-      member = Member.create(:name => params[:name], :position => params[:position],
-                             :telephone => params[:telephone], :fax => params[:fax],
-                             :previous_affiliation => params[:previous_affiliation], :bio => params[:bio],
-                             :building => params[:building], :office => params[:office],
-                             :avatar_path => avatar_path, :cv_path => cv_path)
+        @user.update_attribute(:member, member)
       
-      @user.update_attribute(:member, member)
+        # removing temp files
+        try_delete_tempfile(params[:avatar])
+        try_delete_tempfile(params[:cv])
       
-      # removing temp files
-      try_delete_tempfile(params[:avatar])
-      try_delete_tempfile(params[:cv])
-      
-      # redirect to the created member page
-      redirect_to member_path(member)
+        # redirect to the created member page
+        redirect_to member_path(member)
+      rescue Exception => ex
+        @user.destroy
+        flash[:danger] = "#{ex}"
+        redirect_to root_path
+      end
     else
       flash[:danger] = "The account could not be created. Please try again."
       redirect_to new_member_path

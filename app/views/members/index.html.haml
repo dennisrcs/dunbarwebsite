@@ -1,3 +1,4 @@
+= content_for(:title, "Members")
 %h1 Current members
 
 - flash.each do |name, msg|
@@ -8,7 +9,7 @@
   - @members.each do |member|
     .member
       .avatar
-        = link_to image_tag(member.avatar_path), member_path(member)
+        = link_to image_tag(member.avatar_path), member_path(member), :class => "member-picture"
       .caption
         = link_to "#{member.name}", member_path(member) 
         = link_to "#{member.position}", member_path(member)

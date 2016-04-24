@@ -13,20 +13,50 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-Regular.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-Italic.ttf");
+  font-style: italic, oblique;
+}
+ 
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: /* "Liberation Sans" ,*/ Arial, sans-serif;
 }
 
 body .container {
   display: table;
   margin: 0 auto;
-  padding-top: 50px
+  margin-top: 50px;
 }
 
-.row h1 {
+.row h1, .large-row h1, .largest-row h1 {
   display: table;
   margin: 0 auto;
   padding-bottom: 40px;
+}
+
+.largest-row {
+  width: 980px;
 }
 
 .flash_danger {
@@ -52,17 +82,31 @@ body .container {
 }
 
 .nav-top li a {
+  border-bottom: 3px solid #FFFFFF;
+  transition: border-bottom 0.3s ease-out;
+}
+
+.nav-top li a:hover {
+  border-bottom: 3px solid #500000;
+}
+
+.nav-top li a {
   display: inline-block;
   font-size: 20px;
+  font-style: normal;
   padding: 15px 25px;
   text-decoration: none;
 }
 
-.nav-top li a:link, .nav-top li a:visited {
+a:link, a:visited {
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-out;
   color: #222222;
 }
 
-.nav-top li a:hover, .nav-top li a:active {
-  color: #666666;
+a:hover, a:active {
+  text-decoration: none;
+  color: #500000;
 }
 
