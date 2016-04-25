@@ -27,9 +27,18 @@
         = label_tag :cv, 'Upload member curriculum'
         = file_field_tag :cv, :class => 'entry'
 
-        #admin-div
-          = label_tag :is_admin, 'System administrator?' 
-          = check_box_tag :is_admin
+        .config
+          .member-config#admin-div
+            = label_tag :is_admin, 'System administrator?' 
+            = check_box_tag :is_admin
+
+          .member-config#current-member-div
+            = label_tag :is_current_member, 'Is current member?'
+            = check_box_tag :is_current_member
+
+          .member-config#is-listed
+            = label_tag :is_listed, 'Member should be listed?'
+            = check_box_tag :is_listed
 
         = submit_tag 'Save Member', :id => 'member_form_button'
 - else

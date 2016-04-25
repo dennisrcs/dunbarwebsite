@@ -12,7 +12,7 @@
       .publication-item  
         .image
           = image_tag(publication.publication_picture)
-        .content
+        .publication-content
           .title
             = (index+1).to_s + "."
             = publication.article.html_safe

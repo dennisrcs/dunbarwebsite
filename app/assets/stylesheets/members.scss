@@ -60,12 +60,6 @@
   margin: 5px 0px 5px 0px
 }
 
-.container h1 {
-  display: table;
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
-
 .new-member-form .entry, .edit-member-form .entry {
   display: block;
   width: 382px;
@@ -81,13 +75,40 @@ input[type='file'].entry {
   padding-right: 0px;
 }
 
-#admin-div * {
-  display: inline-block;
-  display: -moz-inline-box;
+.config {
+  display: table;
+  margin-bottom: 20px;
 }
 
-#is_admin {
-  margin-left: 10px;
+.former_members_list {
+  margin-bottom: 30px;
+}
+
+.former_member * {
+    vertical-align: middle;
+}
+
+.former_member {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.former_member a {
+  text-decoration: none;
+  color: #500000 !important;
+}
+
+.member-config {
+  display: table-row;
+}
+
+.member-config * {
+  display: table-cell;
+}
+
+.member-config label {
+  padding-right: 10px;
+  padding-bottom: 5px;
 }
 
 .new-member-form textarea.entry, .edit-member-form textarea.entry {
@@ -132,10 +153,6 @@ input[type='file'].entry {
   margin: 0 auto;
 }
 
-#is_admin {
-  margin-bottom: 20px;
-}
-
 #add_member a {
   font-size: 20px;
 }
@@ -146,7 +163,7 @@ input[type='file'].entry {
 }
 
 .member .caption a {
-  color: #222222;
+  color: #500000;
 }
 
 #people-page-button {

@@ -148,6 +148,28 @@
 	margin-bottom: 5px;
 }
 
+@media (max-width: 1100px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+
+	.footer-distributed .footer-left i {
+		margin-left: 0;
+	}
+
+}
+
 @media (max-width: 880px) {
 
 	.footer-distributed{
@@ -171,4 +193,5 @@
 	.footer-distributed .footer-left i {
 		margin-left: 0;
 	}
+
 }

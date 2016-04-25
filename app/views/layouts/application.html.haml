@@ -12,20 +12,20 @@
 
   %body
     .main
-      .container
+      .nav
         %nav
           %ul.nav-top
             %li= link_to "Home", root_path
             %li= link_to "People", members_path
             %li= link_to "Research", researches_path
             %li= link_to "Publications", publications_path
-            %li= link_to "Outreach", root_path
-            %li= link_to "Collaborations", root_path
+            %li= link_to "Teaching", root_path
+            %li= link_to "Group Info", root_path
             - if logged_in?
               %li= link_to "Logout", logout_path, :method => 'delete'
             - else
               %li= link_to "Login", login_path 
-      .container
+      .content
         = yield
     %footer.footer-distributed
       .footer-left

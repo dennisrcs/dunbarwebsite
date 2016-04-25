@@ -45,9 +45,13 @@ class MembersController < ApplicationController
         # writing cv to the NFS
         cv_path = Member.write_to_filesystem(params[:cv], 'uploads/cv/')
       
+        is_current_member = (params[:is_current_member] == "1" || params[:is_current_member] == "on") ? true : false
+        is_listed = (params[:is_listed] == "1" || params[:is_listed] == "on") ? true : false
+      
         # creating member
         member = Member.create(:name => params[:name], :position => params[:position],
                                :telephone => params[:telephone], :fax => params[:fax],
+                               :is_current_member => is_current_member, :is_listed => is_listed,
                                :previous_affiliation => params[:previous_affiliation], :bio => params[:bio],
                                :building => params[:building], :office => params[:office],
                                :avatar_path => avatar_path, :cv_path => cv_path)
@@ -88,6 +92,11 @@ class MembersController < ApplicationController
       cv_path = Member.write_to_filesystem(params[:cv], 'uploads/cv/')
       params[:cv_path] = cv_path
     end
+    
+    is_current_member = (params[:is_current_member] == "1" || params[:is_current_member] == "on") ? true : false
+    is_listed = (params[:is_listed] == "1" || params[:is_listed] == "on") ? true : false
+    params[:is_current_member] = is_current_member
+    params[:is_listed] = is_listed
 
     member.update_attributes(params)
 

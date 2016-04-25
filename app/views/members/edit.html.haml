@@ -24,14 +24,25 @@
         = file_field_tag :cv, :class => 'entry'
         
         - if current_user_admin?
-          #admin-div
-            = label_tag :is_admin, 'System administrator?'
-            - if @member.user.is_admin
-              = check_box_tag :is_admin, nil, {:checked => "checked"}
-            - else
-              = check_box_tag :is_admin
-
+          .config
+            .member-config#admin-div
+              = label_tag :is_admin, 'System administrator?' 
+              - if @member.user.is_admin
+                = check_box_tag :is_admin, nil, {:checked => "checked"}
+              - else
+                = check_box_tag :is_admin
+            .member-config#current-member-div
+              = label_tag :is_current_member, 'Is current member?'
+              - if @member.is_current_member
+                = check_box_tag :is_current_member, nil, {:checked => "checked"}
+              - else
+                = check_box_tag :is_current_member
+            .member-config#is-listed
+              = label_tag :is_listed, 'Member should be listed?'
+              - if @member.is_listed
+                = check_box_tag :is_listed, nil, {:checked => "checked"}
+              - else
+                = check_box_tag :is_listed
         = submit_tag 'Save Member', :id => 'member_form_button'
-    
 - else
-  %p Only users with privileges can edit members.                                
+  %p Only users with privileges can edit members.
