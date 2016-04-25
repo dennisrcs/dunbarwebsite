@@ -23,7 +23,7 @@
       - if !member.is_current_member && member.is_listed
         .former_member
           #{member.name},
-          %a{:href => "#{member.user.email}"} #{member.user.email},
+          %a{:href => "mailto:#{member.user.email}"} #{member.user.email},
           #{member.previous_affiliation},
           (#{member.position})
           - if logged_in? && current_user_admin?
@@ -37,7 +37,7 @@
         - if !member.is_listed
           .former_member
             #{member.name},
-            %a{:href => "#{member.user.email}"} #{member.user.email},
+            %a{:href => "mailto:#{member.user.email}"} #{member.user.email},
             #{member.previous_affiliation}
             (#{member.position})
             = link_to image_tag("icons/icon_edit.png"), edit_member_path(member), :title => "Edit profile"
