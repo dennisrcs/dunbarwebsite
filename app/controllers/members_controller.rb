@@ -30,7 +30,7 @@ class MembersController < ApplicationController
     # generates a temporary password and create user
     temp_password = generate_random_password()
     
-    is_admin = (params[:is_admin] == "1") ? true : false
+    is_admin = (params[:is_admin] == "1" || params[:is_admin] == "on") ? true : false
     @user = User.new(:username => params[:username], :is_admin => is_admin, :email => params[:email], 
                        :password => temp_password, :password_confirmation => temp_password)
 
@@ -75,7 +75,7 @@ class MembersController < ApplicationController
   def update
     member = Member.find(params[:id])
 
-    is_admin = (params[:is_admin] == "1") ? true : false
+    is_admin = (params[:is_admin] == "1" || params[:is_admin] == "on") ? true : false
     member.user.update_attribute(:is_admin, is_admin)
 
     # writing avatar and cv to the NFS
