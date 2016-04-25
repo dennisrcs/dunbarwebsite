@@ -4,11 +4,13 @@ Feature: Edit/Delete Member
   So that I can edit memer's info and/or delete members wihtout manual tedium 
   
     Background:
-      Given I am logged in
+      Given this user exists:
+        | name     | position | username | email             | telephone | fax    | previous     | bio            | building | image                            | cv                       |
+        | Editable | grad     | anyuser  | anyuser@email.com | 9999999   | 999999 | some college | hey! I am here |HRBB      | public/uploads/images/bender.png | public/uploads/cv/cv.pfd |
 
 Scenario: Edit member info  
   When I am on my personal page
-  #Then I should see "Edit profile"  
+  Then I should see "Edit profile"  
   When I follow "Edit profile"
   Then I should be on the Edit Member page 
   When I fill in "name" with "newmember123"
