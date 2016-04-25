@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+ 
 @font-face {
   font-family: "Liberation Sans";
   src: url("fonts/LiberationSans-Regular.ttf");
@@ -39,8 +39,33 @@
   font-style: italic, oblique;
 }
 
-body {
+html, body {
   font-family: /* "Liberation Sans" ,*/ Arial, sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+	padding: 0;
+	bottom: 0;
+	top: 0;
+}
+
+.main {
+  min-height: 100%;
+  margin-bottom: -310px;
+}
+
+.main:after {
+  content: "";
+  display: block;
+  height: 310px;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  position: relative;
+  background: #4E4B46;
 }
 
 body .container {
