@@ -1,27 +1,39 @@
-%h1 Publications
+= content_for(:title, "Publications")
 
-.publication_list
-  - @publications.reverse_each do |publication|
-    %table
-      %tr
-        %td.image
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
+
+.largest-row
+  %h1 Publications
+
+  .publication-list
+    - @publications.reverse_each.with_index do |publication, index|
+      .publication-item  
+        .image
           = image_tag(publication.publication_picture)
-        %td.content
-          = publication.article.html_safe
-          = publication.contributors.html_safe
-          %i
-            = publication.journal.html_safe
-          %b
-            = publication.year
-          = publication.more_info.html_safe
-          = publication.pages
+        .publication-content
+          .title
+            = (index+1).to_s + "."
+            = publication.article.html_safe
+          .authors
+            = publication.contributors.html_safe
+          .citation
+            %i
+              = publication.journal.html_safe
+            %b
+              = publication.year + ","
+            = publication.more_info.html_safe + ","
+            = publication.pages
  
-          = link_to "DOI", "#{publication.link}"
-          - if logged_in? && current_user_admin?
-            = button_to 'Edit', edit_publication_path(publication)
-            = button_to 'Delete', publication_path(publication), :method => :delete, :confirm => 'Are you sure?'
-          
+          .doi
+            = link_to "DOI", "#{publication.link}", :target => "_blank"
 
+        - if logged_in? && current_user_admin?
+          .edit_delete
+            .buttons
+              = link_to image_tag("icons/icon_edit.png"), edit_publication_path(publication), :title => "Edit publication #{index+1}"
+              = link_to image_tag("icons/icon_delete.png"), publication_path(publication), :title => "Delete publication #{index+1}", :method => :delete, data: { confirm: "Are you sure?" }
+          
 - if logged_in? && current_user_admin?
   #add_publication= link_to 'Add new Publication', new_publication_path
-
