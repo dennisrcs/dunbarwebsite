@@ -10,6 +10,7 @@ Feature: logout of the session
 Scenario: Correct Logging out
 When I logout
 Then I should be on the home page
-And I should see a flash "Successfully logging out"
+And I should see a message "You have successfully logged out!"
 When I return to the site
 Then I should be logged out
+And I should see "Login"

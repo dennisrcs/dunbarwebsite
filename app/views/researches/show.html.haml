@@ -1,3 +1,4 @@
+= content_for(:title, "#{@research.title}")
 .details
   %h2#title.mercury-region{:name =>"title","data-mercury"=>"full"}
     = @research.title.html_safe

@@ -1,19 +1,21 @@
+= content_for(:title, "Add publication")
 - if logged_in? && current_user_admin?
   .row
     %h1 Create New Publication
-    = form_tag({action: :create}, multipart: true) do
-      = text_field_tag :article, nil, :class => 'entry', :placeholder => 'Article title', :required => true
-      = text_field_tag :contributors, nil, :class => 'entry', :placeholder => 'Contributors', :required => true
-      = text_field_tag :journal, nil, :class => 'entry', :placeholder => 'Journar title', :required => true
-      = text_field_tag :year, nil, :class => 'entry', :placeholder => 'Year published', :required => true
-      = text_field_tag :more_info, nil, :class => 'entry', :placeholder => 'Additional information'
-      = text_field_tag :pages, nil, :class => 'entry', :placeholder => 'Pages', :required => true
-      = text_field_tag :link, nil, :class => 'entry', :placeholder => 'URL', :required => true
+    #new-publication-form.new-publication-form
+      = form_tag({action: :create}, multipart: true) do
+        = text_field_tag :article, nil, :class => 'entry', :placeholder => 'Article title', :required => true
+        = text_field_tag :contributors, nil, :class => 'entry', :placeholder => 'Contributors', :required => true
+        = text_field_tag :journal, nil, :class => 'entry', :placeholder => 'Journar title', :required => true
+        = text_field_tag :year, nil, :class => 'entry', :placeholder => 'Year published', :required => true
+        = text_field_tag :more_info, nil, :class => 'entry', :placeholder => 'Additional information'
+        = text_field_tag :pages, nil, :class => 'entry', :placeholder => 'Pages', :required => true
+        = text_field_tag :link, nil, :class => 'entry', :placeholder => 'URL', :required => true
+  
+        = label_tag :publication_picture, 'Please provide an image for the Article' 
+        = file_field_tag :publication_picture, :class => 'entry'
 
-      = label_tag :publication_picture, 'Please provide an image for the Article' 
-      = file_field_tag :publication_picture, :class => 'entry'
-
-      = submit_tag 'Create Publication', :id => 'publication_form_button'
+        = submit_tag 'Create Publication', :id => 'publication-form-button'
 
 - else
   %p Only users with privileges can add new publications.
