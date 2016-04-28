@@ -42,7 +42,7 @@ member5 = Member.create(:name => 'Bozhen Liu', :position => 'Professor', :resear
                         :avatar_path => '/uploads/images/bozhen.png', :cv_path => '/uploads/cv/cv.pdf')
 user5.update_attribute(:member, member5)
 
-user6 = User.create(:username => 'roberto', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'roberto@gmail.com', :password => 'roberto123', :password_confirmation => 'roberto123')
+user6 = User.create(:username => 'xiaoxuesu', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'xuesuxiao@gmail.com', :password => 'xiaoxuesu123', :password_confirmation => 'xiaoxuesu123')
 member6 = Member.create(:name => 'Xuesu Xiao', :position => 'Undergraduate Student', :telephone => '5555555555', :fax => '0000000000', :previous_affiliation => 'Carnegie Mellon University',
                         :bio => 'Hey, my name is Xuesu Xiao! :)', :building => 'Bright building', :office => '5th Floor',
                         :is_current_member => false, :is_listed => false,
