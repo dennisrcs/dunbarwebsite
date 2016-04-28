@@ -5,12 +5,18 @@ Feature: Edit/Delete Member
   
     Background:
       Given this user exists:
-        | name     | position | username | email             | telephone | fax    | previous     | bio            | building | image                            | cv                       |
-        | Editable | grad     | anyuser  | anyuser@email.com | 9999999   | 999999 | some college | hey! I am here |HRBB      | public/uploads/images/bender.png | public/uploads/cv/cv.pfd |
-
-Scenario: Edit member info  
-  When I am on my personal page
-  Then I should see "Edit profile"  
+        |username |email           | password | :password_confirmation | is_admin | activated | activated_at  | reset_sent_at |
+        | myname  |myname@email.com| myname123| myname123              | false    | true      | Time.zone.now | Time.zone.now |
+    Given this member exists for user "myname":
+  
+        | name     | position | telephone | fax    | researcherid | previous_affiliation | bio            | building | office | avatar_path                      | cv_path                  | is_current _member | is_listed |
+        | myname | grad     | 9999999   | 999999 | 1234         | some college         | hey! I am here | HRBB     |  407   | public/uploads/images/bender.png | public/uploads/cv/cv.pfd | true               | true      |
+        And I am logged in as administrator
+Scenario: Edit member info 
+  When I follow "People"
+  Then I should be on the People page
+  When I click on the picture for "myname"
+  Then I should be on the personal page for "myname"
   When I follow "Edit profile"
   Then I should be on the Edit Member page 
   When I fill in "name" with "newmember123"

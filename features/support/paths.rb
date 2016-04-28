@@ -20,7 +20,7 @@ module NavigationHelpers
       new_publication_path
       
     when /^my personal page$/
-      member_path(User.last.member)
+      member_path(Member.last)
     
     when /^the People\s?page$/
       '/members'

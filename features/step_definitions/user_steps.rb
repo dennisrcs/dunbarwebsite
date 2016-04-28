@@ -50,6 +50,19 @@ Given (/^these publications exist:$/) do |table|
         Publication.create(publication)
     end
 end
+Given (/^this user exists:$/) do |table|
+    table.hashes.each do |user|
+        @user1 = User.create(user)
+    end
+end
+
+Given (/^this member exists for user "myname":$/) do |table|
+    table.hashes.each do |member|
+        @member1 = Member.create(member)
+    end
+    @user1.update_attribute(:member, @member1)
+end
+
 ##########################################################################
 ## Action
 #########################################################################
@@ -74,6 +87,14 @@ And (/^I upload a file from "([^"]*)"$/) do |file|
     attach_file("cv", path)
 end
 
+When (/^I click on the picture for "([^"]*)"$/) do |name|
+    #click_image(@user1)
+    find(".img.member-picture").click
+end
+
+Then (/^the personal page for "([^"]*)"$/) do |name|
+    member_path(@user1)
+end
 ############################################################################
 ## Response
 ############################################################################

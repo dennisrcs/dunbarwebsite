@@ -16,7 +16,13 @@
 //= require turbolinks
 //= require_tree .
 
+
 $(document).ready(function() {
     $(".flash_danger").delay(2000).slideUp(1000);
     $(".flash_info").delay(2000).slideUp(1000);
 });
+
+$(window).load(function() {
+  $('#slider').nivoSlider();
+});
+
