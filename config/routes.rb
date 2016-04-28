@@ -3,23 +3,18 @@ Rails.application.routes.draw do
   root                'static_pages#home'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
+  
   get 'logout'  => 'sessions#destroy'
-  
-  #get     'publications' => 'publications#index'
-  #get    'publications/new' => 'publications#new'
-  resources :publications, only: [:index, :new] 
-  
-  #resources :resumes, only: [:index, :new, :create, :destroy]
-  resources :publications
-  #match "publications/:id", to: 'publications#edit', via: [:post, :get]
-  match "publications/:id/edit", to: 'publications#edit', via: [:post, :get]
-  #match "publications/:id/edit", to  'publications#update', via: [:put]
   delete 'logout'  => 'sessions#destroy'
-  
+
+  resources :publications, only: [:index, :new] 
+  resources :publications
+  match "publications/:id/edit", to: 'publications#edit', via: [:post, :get]
+   
   resources :members
+  resources :group_infos
 
   resources :researches
-
   resources :researches do
     member { post :mercury_update }
   end

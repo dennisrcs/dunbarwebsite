@@ -1,24 +1,56 @@
 !!! 5
 %html
   %head
-    %title Dunbarwebsiteapp
+    %title 
+      = yield(:title) + " | Dr. Dunbar"
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %link{:href => "//fonts.googleapis.com/css?family=Cookie", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
   %body
-    .container
-      %nav
-        %ul.nav-top
-          %li= link_to "Home", root_path
-          %li= link_to "People", members_path
-          %li= link_to "Research", researches_path
-          %li= link_to "Publications", publications_path
-          %li= link_to "Outreach", root_path
-          %li= link_to "Collaborations", root_path
-          - if logged_in?
-            %li= link_to "Logout", logout_path, :method => 'delete'
-          - else
-            %li= link_to "Login", login_path 
-    .container
-      = yield
+    .main
+      .nav
+        %nav
+          %ul.nav-top
+            %li= link_to "Home", root_path
+            %li= link_to "People", members_path
+            %li= link_to "Research", researches_path
+            %li= link_to "Publications", publications_path
+            %li= link_to "Teaching", root_path
+            %li= link_to "Group Info", group_infos_path
+            - if logged_in?
+              %li= link_to "Logout", logout_path, :method => 'delete'
+            - else
+              %li= link_to "Login", login_path 
+      .content
+        = yield
+    %footer.footer-distributed
+      .footer-left
+        %div
+          %i.fa.fa-map-marker
+          %p
+            %span 302A Chemistry Building
+            %span Department of Chemistry
+            %span Texas A&M University
+            College Station, TX
+        %div
+          %i.fa.fa-phone
+          %p +1 979 845 5235
+        %div
+          %i.fa.fa-envelope
+          %p
+            %a{:href => "mailto:dunbar@tamu.com"} dunbar@tamu.com
+      .footer-center
+        = link_to root_path do
+          Dr. Dunbar <span>Research Group</span>
+      .footer-right
+        %p.footer-company-about
+          %span About the research group
+          Research in the Dunbar Research Group spans a number of topics in synthetic and structural inorganic chemistry with a
+          focus on problems at the interface of materials and biological chemistry. The combined use of many physical techniques
+          reflect the breadth of problems under investigation. Our aim is to define important synthetic challenges and tackle their
+          solution with an arsenal of physical, chemical and spectroscopic data. We are devoted to the use of coordination chemistry
+          as a tool to make new compounds as well as to probe new structure and bonding relationships.
