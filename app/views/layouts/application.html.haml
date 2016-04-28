@@ -37,7 +37,7 @@
             %li= link_to "Research", researches_path
             %li= link_to "Publications", publications_path
             %li= link_to "Teaching", root_path
-            %li= link_to "Group Info", root_path
+            %li= link_to "Group Info", group_infos_path
             - if logged_in?
               %li= link_to "Logout", logout_path, :method => 'delete'
             - else

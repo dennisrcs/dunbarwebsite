@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Users seed
-user1 = User.create(:username => 'byter', :is_admin => true, :activated => true, :activated_at => Time.zone.now, :email => 'byters606@googlegroups.com', :password => 'byter123', :password_confirmation => 'byter123')
+user1 = User.create(:username => 'byter', :is_admin => true, :activated => true, :activated_at => Time.zone.now, :email => 'denisrcs@gmail.com', :password => 'byter123', :password_confirmation => 'byter123')
 member1 = Member.create(:name => 'Dennis Silva', :position => 'PhD Student', :researcherid => "F-5384-2011", :telephone => '321321321', :fax => '123123123', :previous_affiliation => 'University of Pernambuco', 
                         :bio => 'Hey, this is me, Dennis Silva! :)', :building => 'Bright building', :office => 'Basement',
                         :is_current_member => true, :is_listed => true,
@@ -42,7 +42,7 @@ member5 = Member.create(:name => 'Bozhen Liu', :position => 'Professor', :resear
                         :avatar_path => '/uploads/images/bozhen.png', :cv_path => '/uploads/cv/cv.pdf')
 user5.update_attribute(:member, member5)
 
-user6 = User.create(:username => 'roberto', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'roberto@gmail.com', :password => 'roberto123', :password_confirmation => 'roberto123')
+user6 = User.create(:username => 'xiaoxuesu', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'xuesuxiao@gmail.com', :password => 'xiaoxuesu123', :password_confirmation => 'xiaoxuesu123')
 member6 = Member.create(:name => 'Xuesu Xiao', :position => 'Undergraduate Student', :telephone => '5555555555', :fax => '0000000000', :previous_affiliation => 'Carnegie Mellon University',
                         :bio => 'Hey, my name is Xuesu Xiao! :)', :building => 'Bright building', :office => '5th Floor',
                         :is_current_member => false, :is_listed => false,
@@ -85,3 +85,8 @@ publication4 = Publication.create(:article => "Ligand Aspect Ratio as a Decisive
 :contributors => "Suzanne M. Jansze, Giacomo Cecot, Matthew D. Wise, Konstantin O. Zhurov, Tanya K. Ronson, Ana M. Castilla, Alba Finelli, Philip Pattison,
 Euro Solari, Rosario Scopelliti, Genrikh E. Zelinskii, Anna V. Vologzhanina, Yan Z. Voloshin, Jonathan R. Nitschke, and Kay Severin", :journal => "J. Am. Chem. Soc.",
 :year => "2016", :more_info => "138", :pages => "2046–2054", :publication_picture => "/uploads/publications/pub2.gif", :link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b13190")
+
+group_info1 = GroupInfo.create(:title => "Basic Group Information", :is_restricted => true, :file_path => "rules.pdf")
+group_info2 = GroupInfo.create(:title => "Bond Valence Calculator", :is_restricted => false, :file_path => "bond_valence_calculator.pdf")
+group_info3 = GroupInfo.create(:title => "Cyanide Precautions", :is_restricted => true, :file_path => "cyanide_precautions.pdf")
+group_info4 = GroupInfo.create(:title => "New Employee Arrivel Info", :is_restricted => true, :file_path => "new_employee_arrival_info.pdf")
