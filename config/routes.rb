@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  mount Mercury::Engine => '/'
   root                'static_pages#home'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   get 'logout'  => 'sessions#destroy'
+  
+      default_url_options :host => "test.host"
+
   
   #get     'publications' => 'publications#index'
   #get    'publications/new' => 'publications#new'
@@ -17,13 +19,6 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   
   resources :members
-
-  resources :researches
-
-  resources :researches do
-    member { post :mercury_update }
-  end
-
   resources :account_activations, only: [:edit, :update]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   

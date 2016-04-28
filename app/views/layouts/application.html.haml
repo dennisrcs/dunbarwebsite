@@ -10,6 +10,23 @@
     = csrf_meta_tags
 
   %body
+<<<<<<< HEAD
+    .container
+      %nav
+        %ul.nav-top
+          %li= link_to "Home", root_path
+          %li= link_to "People", members_path
+          %li= link_to "Research", root_path
+          %li= link_to "Publications", publications_path
+          %li= link_to "Outreach", root_path
+          %li= link_to "Collaborations", root_path
+          - if logged_in?
+            %li= link_to "Logout", logout_path, :method => 'delete'
+          - else
+            %li= link_to "Login", login_path 
+    .container
+      = yield
+=======
     .main
       .nav
         %nav
@@ -19,7 +36,7 @@
             %li= link_to "Research", researches_path
             %li= link_to "Publications", publications_path
             %li= link_to "Teaching", root_path
-            %li= link_to "Group Info", root_path
+            %li= link_to "Group Info", group_infos_path
             - if logged_in?
               %li= link_to "Logout", logout_path, :method => 'delete'
             - else
@@ -53,3 +70,4 @@
           reflect the breadth of problems under investigation. Our aim is to define important synthetic challenges and tackle their
           solution with an arsenal of physical, chemical and spectroscopic data. We are devoted to the use of coordination chemistry
           as a tool to make new compounds as well as to probe new structure and bonding relationships.
+>>>>>>> e7f6f4989c5f84b6f0e20d43b88047079860cc9d

@@ -15,36 +15,11 @@ Given (/^I am logged in$/) do
     click_button "login-form-button"
 end
 
-Given (/^I am logged in as administrator$/) do
-    adminattr = {
-        :username => 'adminuser',
-        :is_admin => true,
-        :email => 'adminuser23@email.com',
-        :password => 'adminuser123',
-        :password_confirmation => 'adminuser123',
-        :activated => true,
-        :activated_at => Time.zone.now
-    }
-    User.create(adminattr)
-    visit '/login'
-    fill_in "username", :with => adminattr[:username]
-    fill_in "password", :with => adminattr[:password]
-    click_button "login-form-button"
-end
-
 Given (/^I exist as a user$/) do
-    adminattr = {
-        :username => 'byter',
-        :is_admin => true,
-        :email => 'byter@email.com',
-        :password => 'byter123',
-        :password_confirmation => 'byter123',
-        :activated => true,
-        :activated_at => Time.zone.now
-    }
-    User.create(adminattr)
+    create_user
 end
 
+<<<<<<< HEAD
 Given (/^these publications exist:$/) do |table|
     table.hashes.each do |publication|
         Publication.create(publication)
@@ -63,6 +38,8 @@ Given (/^this member exists for user "myname":$/) do |table|
     @user1.update_attribute(:member, @member1)
 end
 
+=======
+>>>>>>> f96228d98e38e23391725238383c9b3a9042e060
 ##########################################################################
 ## Action
 #########################################################################
@@ -74,6 +51,7 @@ When (/^I return to the site$/) do
    visit '/'
 end
 
+<<<<<<< HEAD
 When (/^I choose to add new member$/) do
     visit '/members/new'
 end
@@ -95,19 +73,16 @@ end
 Then (/^the personal page for "([^"]*)"$/) do |name|
     member_path(@user1)
 end
+=======
+>>>>>>> f96228d98e38e23391725238383c9b3a9042e060
 ############################################################################
 ## Response
 ############################################################################
-Then (/^I should see a message "([^"]*)"$/) do |msg|
-    assert_text(msg)
+Then (/^I should see a flash "([^"]*)"$/) do |msg|
+    page.has_content?(msg)
 end
 
 Then (/^I should be logged out$/) do 
     page.should have_content "Login"
     page.should_not have_content "Logout"
-end
-
-Then (/^I should have an active session$/) do
-    page.should have_content "Logout"
-    page.should_not have_content "Login"
 end

@@ -4,17 +4,13 @@ Feature: Delete publication
   So that I can delete existing publication wihtout manual tedium 
   
     Background:
-      Given these publications exist:
-        |article  | contributors                  | journal | year | more_info | pages | link       | publication_picture                                 |
-        |Title1   | Dunbar, student1, student2    | science | 2015 | details1  | 6     | google.com | public/uploads/publications/glass_water250.jpg      |
-
-      Given I am logged in as administrator
-      Given I am on the home page
+      Given I am recently logged in 
+      Given I am on the Home page
 
 Scenario: Delete new publication (happy path)
   When I follow "Publications"
   Then I should be on the Publications page
-  #Then I should see "Delete"
+  Then I should see "Delete" by a publication
   When I press "Delete"
-  Then I should be on the Publications page 
-  And I should not see "Title1"
+  Then I should be on the Publication page 
+  And I should not see the publication

@@ -15,6 +15,7 @@ module NavigationHelpers
     
     when /^the Create New Member page$/ 
       new_member_path
+<<<<<<< HEAD
       
     when /^the Create New Publication page$/ 
       new_publication_path
@@ -22,6 +23,9 @@ module NavigationHelpers
     when /^my personal page$/
       member_path(Member.last)
     
+=======
+ 
+>>>>>>> f96228d98e38e23391725238383c9b3a9042e060
     when /^the People\s?page$/
       '/members'
     when /^the Login\s?page$/
@@ -29,10 +33,7 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
-     when /^the member\s?page$/
-       member_path(Member.last)
-       #'/members/#{Member.last}'
-       
+      
     when /^the Publications\s?page$/
       '/publications'
 
