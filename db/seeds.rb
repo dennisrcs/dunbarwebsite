@@ -85,3 +85,8 @@ publication4 = Publication.create(:article => "Ligand Aspect Ratio as a Decisive
 :contributors => "Suzanne M. Jansze, Giacomo Cecot, Matthew D. Wise, Konstantin O. Zhurov, Tanya K. Ronson, Ana M. Castilla, Alba Finelli, Philip Pattison,
 Euro Solari, Rosario Scopelliti, Genrikh E. Zelinskii, Anna V. Vologzhanina, Yan Z. Voloshin, Jonathan R. Nitschke, and Kay Severin", :journal => "J. Am. Chem. Soc.",
 :year => "2016", :more_info => "138", :pages => "2046–2054", :publication_picture => "/uploads/publications/pub2.gif", :link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b13190")
+
+group_info1 = GroupInfo.create(:title => "Basic Group Information", :is_restricted => true, :file_path => "rules.pdf")
+group_info2 = GroupInfo.create(:title => "Bond Valence Calculator", :is_restricted => false, :file_path => "bond_valence_calculator.pdf")
+group_info3 = GroupInfo.create(:title => "Cyanide Precautions", :is_restricted => true, :file_path => "cyanide_precautions.pdf")
+group_info4 = GroupInfo.create(:title => "New Employee Arrivel Info", :is_restricted => true, :file_path => "new_employee_arrival_info.pdf")
