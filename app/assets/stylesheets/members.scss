@@ -1,22 +1,68 @@
+.details {
+  margin-top: 40px;
+  width: 800px;
+  display: table;
+}
+
+.details .section {
+  margin-bottom: 30px;
+  display: table-row;
+}
+
+#personal_info {
+  display: table;
+  margin: 0 auto;
+}
+
+.details #info {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+#profile-actions {
+  margin: 0 auto;
+  display: table;
+}
+
+#profile-actions a {
+  display: inline-block;
+  display: -moz-inline-block;
+}
+
+.details #picture-cv {
+  display: table-cell;
+  padding-right: 50px;
+}
+
+.details #picture-cv #avatar {
+  margin: 0 auto;
+  display: table;
+  border-radius: 50%;
+}
+
+.member-picture img {
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+.member-picture img:hover {
+  opacity: 0.6;
+}
+
 .details h2, .details h3 {
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #222222;
 }
 
 .details p {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin: 5px 0px 5px 0px
 }
 
-.container h1 {
-  display: table;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.entry {
+.new-member-form .entry, .edit-member-form .entry {
   display: block;
-  width: 380px;
+  width: 382px;
   height: 30px;
   margin-bottom: 20px;
   padding-left: 8px;
@@ -29,7 +75,43 @@ input[type='file'].entry {
   padding-right: 0px;
 }
 
-textarea.entry {
+.config {
+  display: table;
+  margin-bottom: 20px;
+}
+
+.former_members_list {
+  margin-bottom: 30px;
+}
+
+.former_member * {
+    vertical-align: middle;
+}
+
+.former_member {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.former_member a {
+  text-decoration: none;
+  color: #500000 !important;
+}
+
+.member-config {
+  display: table-row;
+}
+
+.member-config * {
+  display: table-cell;
+}
+
+.member-config label {
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.new-member-form textarea.entry, .edit-member-form textarea.entry {
   width: 382px;
   height: 100px;
   resize: none;
@@ -71,10 +153,6 @@ textarea.entry {
   margin: 0 auto;
 }
 
-#is_admin {
-  margin-bottom: 20px;
-}
-
 #add_member a {
   font-size: 20px;
 }
@@ -84,11 +162,10 @@ textarea.entry {
   height: 30px;
 }
 
-.member .caption a, #add_member a:link, #add_member a:visited, .details a:link, .details a:visited {
-  color: #222222;
+.member .caption a {
+  color: #500000;
 }
 
-#add_member a:hover, #add_member a:active, .details a:hover, .details :active {
-  color: #666666
+#people-page-button {
+  margin-top: 30px;
 }
-

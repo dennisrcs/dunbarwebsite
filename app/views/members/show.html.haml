@@ -1,49 +1,49 @@
+= content_for(:title, "#{@member.name}")
 - flash.each do |name, msg|
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
 
+%h1 #{@member.name}
+
 .details
-  %h2 Details about #{@member.name}
 
-  %h3 Personal Information
+  #personal_info.section
+    #picture-cv
+      = image_tag "#{@member.avatar_path}", :id => "avatar"
+      = link_to 'Curriculum Vitae', "#{@member.cv_path}", :target => '_blank'
+      - if @member.researcherid != nil && !@member.researcherid.empty?
+        #badge
+          = link_to image_tag("icons/badge.gif"), "http://www.researcherid.com/rid/#{@member.researcherid}", :title => "ResearcherID Profile", :target => "_blank"
+      - if logged_in? && (current_user.id == @member.id || current_user_admin?)
+        #profile-actions
+          = link_to image_tag("icons/icon_edit.png"), edit_member_path(@member), :title => "Edit profile"
+          = link_to image_tag("icons/icon_delete.png"), member_path, :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" }
+    #info
+      %h2 Personal Information
 
-  #picture
-    = image_tag "#{@member.avatar_path}"
+      %p
+        Position:
+        = @member.position
+      %p
+        E-mail:
+        = @member.user.email
+      %p
+        Previous Affiliation:
+        = @member.previous_affiliation
+      %p
+        Telephone:
+        = @member.telephone
+      %p 
+        Building:
+        = @member.building
+      %p
+        Office:
+        = @member.office
 
-  %ul#personal_info
-    %li
-      Name:
-      = @member.name
-    %li
-      Position:
-      = @member.position
-    %li
-      E-mail:
-      = @member.user.email
-    %li
-      Previous Affiliation:
-      = @member.previous_affiliation
-    %li
-      Telephone:
-      = @member.telephone
-
-  %h3 Building Information
-
-  %ul#building_info
-    %li 
-      Building:
-      = @member.building
-    %li
-      Office:
-      = @member.office
-
-  %h3 Bio
+  #bio.section
+    %h3 Bio
   
-  %p
-    = @member.bio
+    %p
+      = @member.bio
 
-  = link_to "Back to people page", members_path
-
-  - if logged_in? && (current_user.id == @member.id || current_user_admin?)
-    = link_to "Edit profile", edit_member_path(@member)
-    = link_to "Delete profile", member_path, :method => :delete, data: { confirm: "Are you sure?" } 
+  = link_to "Back to people page", members_path, :id => "people-page-button"

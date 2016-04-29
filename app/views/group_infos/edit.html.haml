@@ -1,0 +1,23 @@
+= content_for(:title, "Edit group info")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Edit Group Info
+    #edit-group-info-form.edit-group-info-form
+      = form_tag group_info_path(@group_info), :method => :put, multipart: true do
+        = text_field_tag :title, @group_info.title, :class => 'entry', :placeholder => "Group info title", :required => true
+
+        = label_tag :file, "Please provide a file for the group info"
+        = file_field_tag :file, :class => 'entry'
+
+        .group-info-config-container
+          .group-info-config#group-info-config
+            = label_tag :is_restricted, 'Is this restricted to members only?'
+            - if @group_info.is_restricted
+              = check_box_tag :is_restricted, nil, {:checked => "checked"}
+            - else
+              = check_box_tag :is_restricted
+
+        = submit_tag 'Update Group Info', :id => 'group-info-form-button'
+
+- else
+  %p Only users with privileges can add new publications

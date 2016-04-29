@@ -11,31 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420102827) do
+ActiveRecord::Schema.define(version: 20160428041337) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "members", force: :cascade do |t|
-    t.string "name"
-    t.string "position"
-    t.string "telephone"
-    t.string "fax"
-    t.string "previous_affiliation"
-    t.string "bio"
-    t.string "building"
-    t.string "office"
-    t.string "avatar_path"
-    t.string "cv_path"
+  create_table "group_infos", force: :cascade do |t|
+    t.string  "title"
+    t.string  "file_path"
+    t.boolean "is_restricted", default: true
   end
 
-  create_table "mercury_images", force: :cascade do |t|
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "members", force: :cascade do |t|
+    t.string  "name"
+    t.string  "position"
+    t.string  "telephone"
+    t.string  "fax"
+    t.string  "previous_affiliation"
+    t.string  "bio"
+    t.string  "building"
+    t.string  "office"
+    t.string  "avatar_path"
+    t.string  "cv_path"
+    t.string  "researcherid"
+    t.boolean "is_current_member"
+    t.boolean "is_listed"
   end
 
   create_table "publications", force: :cascade do |t|
@@ -49,14 +49,6 @@ ActiveRecord::Schema.define(version: 20160420102827) do
     t.string   "publication_picture"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-  end
-
-  create_table "researches", force: :cascade do |t|
-    t.string   "title"
-    t.text     "summary"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
