@@ -35,13 +35,15 @@ class ResearchesController < ApplicationController
   
   def update
     research = Research.find(params[:id])
-    research.update_attributes!(:title => params[:content][:title][:value])
+    research.update_attributes!(:title => params[:content][:title][:value], 
+                                :summary => params[:content][:summary][:value],
+                                :content => params[:content][:content][:value])
     #research.title = params[:content][:title][:value]
     #research.summary = params[:content][:summary][:value]
     #research.content = params[:content][:content][:value]
     #research.save!
-    #render text: ""
-    redirect_to research_path
+    render text: ""
+    #redirect_to research_path
   end
    
   def mercury_update
