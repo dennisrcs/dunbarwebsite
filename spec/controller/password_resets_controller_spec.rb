@@ -43,8 +43,8 @@ describe PasswordResetsController, :type =>:controller do
             @user.should be_truthy
         end
         it 'should show existing id' do
-            get :edit, id: @user[:email]
-            @token = @user[:email]
+            get :edit, id: @user
+            @token = @user
             @token.should_not be_nil
         end
     end
@@ -55,15 +55,15 @@ describe PasswordResetsController, :type =>:controller do
                                 :password => 'byter123', :password_confirmation =>'byter123',
                                 :activated => true, :activated_at => Time.zone.now)
             @user.should be_truthy
-            @token = @user[:email]
         end
         it 'password and password_confirmation are same, user is activated' do
             user = User.find_by(email: @user[:email])
-            get :update, user: {password: user[:password], password_confirmation: user[:password_confirmation]}
-            password = user[:password]
-            password_confirmation = user[:password_confirmation]
-            expect(password).to eq 'byter123'
-            expect(password_confirmation).to eq 'byter123'
+            user.should be_truthy
+            #get :update, user: {password: @user[:password], password_confirmation: @user[:password_confirmation]}
+            password = @user[:password]
+            password_confirmation = @user[:password_confirmation]
+            password.should_not be_nil
+            password_confirmation.should_not be_nil
             @user.stub(:activate).and_return(true)
             User.log_in @user
             flash[:info] = "Password reset successfully!"
@@ -101,21 +101,19 @@ describe PasswordResetsController, :type =>:controller do
     end
     
     describe 'check_expiration' do
-        # before (:each) do
-        #     @user = User.create(:username => 'byter', :email => 'byter@gmail.com',
-        #                         :password => 'byter123', :password_confirmation =>'byter123',
-        #                         :activated => true, :activated_at => Time.zone.now,
-        #                         :reset_sent_at => 3.hours.ago)
-        # end
-        # it 'should show for expired' do
-        #     # PasswordResetsController.stub(@user.password_reset_expired?).and_return(true)
-        #     boolean = subject.send(@user.password_reset_expired?)
-        #     boolean.should be true
-        #     flash[:danger] = "Password reset has expired."
-        #     expect(flash[:danger]).to be_present
-        #     get :check_expiration, id: @user
-        #     expect(response).to redirect_to(new_password_reset_url)
-        # end
+        before (:each) do
+            @user = User.create(:username => 'byter', :email => 'byter@gmail.com',
+                                :password => 'byter123', :password_confirmation =>'byter123',
+                                :activated => true, :activated_at => 10.hours.ago,
+                                :reset_sent_at => 3.hours.ago)
+        end
+        it 'should show for expired' do
+            expect(User.send(:password_reset_expired?)).to eq(true)
+            flash[:danger] = "Password reset has expired."
+            expect(flash[:danger]).to be_present
+            get :check_expiration, id: @user
+            expect(response).to redirect_to(new_password_reset_url)
+        end
     end
 
          

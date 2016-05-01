@@ -13,8 +13,8 @@ describe AccountActivationsController, :type => :controller do
             get :edit, id: @user
             @token = @user[:password]
             @token.should_not be_nil
-            @user.stub(:activated?).with(user[:password]).and_return(true)
-            @user.stub(:authenticate).with(true, user[:password]).and_return true
+            @user.stub(:activated?).and_return(true)
+            @user.stub(:authenticate).with(user[:password]).and_return true
         end
     end
     
@@ -58,12 +58,11 @@ describe AccountActivationsController, :type => :controller do
         it 'if password and confirmation not match' do
             @user = User.create(:username => 'byter', :email => 'byter@gmail.com',
                                 :password => nil, :password_confirmation =>'123',
-                                :activated => false )
+                                :activated => false, :id => 'byter')
             @user.should be_truthy
-            get :update, id: @user
             password = @user[:password]
             password_confirmation = @user[:password_confirmation]
-            user = User.find(@user[:username])
+            user = User.find(@user.id)
             password.should be_nil
             password_confirmation.should_not be_nil
             user.should_not be_nil

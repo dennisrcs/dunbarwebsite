@@ -14,18 +14,18 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-29T19:39:26+00:00">2016-04-29T19:39:26+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-04-30T16:10:32+00:00">2016-04-30T16:10:32+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">67.7%</span></span>
+    (<span class="covered_percent"><span class="red">68.01%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.6
+         1.63
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>18</b> files in total.
     <b>322</b> relevant lines. 
-    <span class="green"><b>218</b> lines covered</span> and
-    <span class="red"><b>104</b> lines missed </span>
+    <span class="green"><b>219</b> lines covered</span> and
+    <span class="red"><b>103</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,11 +72,11 @@
       
       <tr>
         <td class="strong"><a href="#1cdaf955765200dcf14b05f9f92e6796d994b8eb" class="src_link" title="app/controllers/group_infos_controller.rb">app/controllers/group_infos_controller.rb</a></td>
-        <td class="red strong">48.57 %</td>
+        <td class="red strong">51.43 %</td>
         <td>69</td>
         <td>35</td>
-        <td>17</td>
         <td>18</td>
+        <td>17</td>
         <td>0.5</td>
       </tr>
       
@@ -227,7 +227,7 @@
         <td>40</td>
         <td>34</td>
         <td>6</td>
-        <td>6.6</td>
+        <td>6.8</td>
       </tr>
       
     </tbody>
@@ -239,7 +239,7 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">63.68%</span></span>
+    (<span class="covered_percent"><span class="red">64.13%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -251,8 +251,8 @@
   <div>
     <b>8</b> files in total.
     <b>223</b> relevant lines. 
-    <span class="green"><b>142</b> lines covered</span> and
-    <span class="red"><b>81</b> lines missed </span>
+    <span class="green"><b>143</b> lines covered</span> and
+    <span class="red"><b>80</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -290,11 +290,11 @@
       
       <tr>
         <td class="strong"><a href="#1cdaf955765200dcf14b05f9f92e6796d994b8eb" class="src_link" title="app/controllers/group_infos_controller.rb">app/controllers/group_infos_controller.rb</a></td>
-        <td class="red strong">48.57 %</td>
+        <td class="red strong">51.43 %</td>
         <td>69</td>
         <td>35</td>
-        <td>17</td>
         <td>18</td>
+        <td>17</td>
         <td>0.5</td>
       </tr>
       
@@ -360,7 +360,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.98
+         4.09
        </span>
     </span> hits/line)
   </h2>
@@ -422,7 +422,7 @@
         <td>40</td>
         <td>34</td>
         <td>6</td>
-        <td>6.6</td>
+        <td>6.8</td>
       </tr>
       
     </tbody>
@@ -921,11 +921,11 @@
         <div class="source_table" id="1cdaf955765200dcf14b05f9f92e6796d994b8eb">
   <div class="header">
     <h3>app/controllers/group_infos_controller.rb</h3>
-    <h4><span class="red">48.57 %</span> covered</h4>
+    <h4><span class="red">51.43 %</span> covered</h4>
     <div>
       <b>35</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
-      <span class="red"><b>18</b> lines missed.</span>
+      <span class="green"><b>18</b> lines covered</span> and
+      <span class="red"><b>17</b> lines missed.</span>
     </div>
   </div>
   
@@ -998,8 +998,8 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">    @group_info = GroupInfo.find params[:id]</code>
         </li>
@@ -4250,8 +4250,8 @@
           <code class="ruby">  def User.digest(string)</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="19">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="33" data-linenumber="19">
+          <span class="hits">33</span>
           
           <code class="ruby">    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :</code>
         </li>
@@ -4262,8 +4262,8 @@
           <code class="ruby">                                                  BCrypt::Engine.cost</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="21">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="33" data-linenumber="21">
+          <span class="hits">33</span>
           
           <code class="ruby">    BCrypt::Password.create(string, cost: cost)</code>
         </li>
@@ -4460,8 +4460,8 @@
           <code class="ruby">  def User.new_token</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="54">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="33" data-linenumber="54">
+          <span class="hits">33</span>
           
           <code class="ruby">    SecureRandom.urlsafe_base64</code>
         </li>
@@ -4526,8 +4526,8 @@
           <code class="ruby">    def downcase_email</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="65">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="39" data-linenumber="65">
+          <span class="hits">39</span>
           
           <code class="ruby">      self.email = email.downcase</code>
         </li>
@@ -4550,8 +4550,8 @@
           <code class="ruby">    def downcase_username</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="69">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="39" data-linenumber="69">
+          <span class="hits">39</span>
           
           <code class="ruby">      self.username = username.downcase</code>
         </li>
@@ -4580,14 +4580,14 @@
           <code class="ruby">    def create_activation_digest</code>
         </li>
       
-        <li class="covered" data-hits="30" data-linenumber="74">
-          <span class="hits">30</span>
+        <li class="covered" data-hits="31" data-linenumber="74">
+          <span class="hits">31</span>
           
           <code class="ruby">      self.activation_token  = User.new_token</code>
         </li>
       
-        <li class="covered" data-hits="30" data-linenumber="75">
-          <span class="hits">30</span>
+        <li class="covered" data-hits="31" data-linenumber="75">
+          <span class="hits">31</span>
           
           <code class="ruby">      self.activation_digest = User.digest(activation_token)</code>
         </li>
