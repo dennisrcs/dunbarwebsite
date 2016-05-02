@@ -19,10 +19,10 @@ describe PublicationsController, :type => :controller do
             post :create 
             expect(response).to redirect_to(publications_path)
         end
-        it 'should delete temporary files' do
-            @publication.should be_truthy
-            # subject.send(:try_delete_tempfile, (@publication[:publication_picture]))
-        end
+        # it 'should delete temporary files' do
+        #     @publication.should be_truthy
+        #     subject.send(:try_delete_tempfile, (@publication[:publication_picture]))
+        # end
     end
     
     describe 'edit' do
