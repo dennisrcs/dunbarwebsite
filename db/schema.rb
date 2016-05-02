@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428041337) do
+ActiveRecord::Schema.define(version: 20160429074845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "course_files", force: :cascade do |t|
+    t.integer "course_id"
+    t.string  "name"
+    t.string  "file_path"
+    t.integer "type"
+  end
+
+  add_index "course_files", ["course_id"], name: "index_course_files_on_course_id", using: :btree
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "group_infos", force: :cascade do |t|
     t.string  "title"
@@ -38,15 +53,6 @@ ActiveRecord::Schema.define(version: 20160428041337) do
     t.boolean "is_listed"
   end
 
-  create_table "mercury_images", force: :cascade do |t|
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "publications", force: :cascade do |t|
     t.string   "article"
     t.string   "contributors"
@@ -58,14 +64,6 @@ ActiveRecord::Schema.define(version: 20160428041337) do
     t.string   "publication_picture"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-  end
-
-  create_table "researches", force: :cascade do |t|
-    t.string   "title"
-    t.text     "summary"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

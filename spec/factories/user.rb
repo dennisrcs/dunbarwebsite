@@ -1,9 +1,6 @@
 FactoryGirl.define do
   factory :user do |user|
       user.username{"byter"}
-      user.is_admin{false}
-      user.activated{true}
-      user.activated_at{Time.zone.now}
       user.email{"user_#{rand(1000).to_s}@factory.com"}
       user.password{"byter123"}
       user.password_confirmation{"byter123"}
