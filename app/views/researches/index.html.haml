@@ -7,8 +7,8 @@
       %tr
         %td.title
           %h2
-            = link_to research.title, research_path(research)
-          = research.summary
+            = link_to research.title.html_safe, research_path(research)
+          = research.summary.html_safe
 
           
           - if logged_in? && current_user_admin?
