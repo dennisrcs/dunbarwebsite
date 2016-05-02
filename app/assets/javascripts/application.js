@@ -10,18 +10,15 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require_self
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
-
+;(function($) {
 $(document).ready(function() {
     $(".flash_danger").delay(2000).slideUp(1000);
     $(".flash_info").delay(2000).slideUp(1000);
 });
-
-$(window).load(function() {
-  $('#slider').nivoSlider();
-});
-
+})(jquery);

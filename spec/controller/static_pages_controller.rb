@@ -1,12 +1,5 @@
 require 'spec_helper'
 
-<<<<<<< HEAD
-describe ApplicationController, :type => :controller do
-    it 'should protect_from_forgery' do
-        
-    end
-end
-=======
 describe StaticPagesController < ActionController do
 
   it "should get home" do
@@ -27,4 +20,3 @@ describe StaticPagesController < ActionController do
     assert_select "title", "People"
   end
 end
->>>>>>> homeslider

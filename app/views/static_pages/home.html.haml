@@ -7,37 +7,21 @@
 %script{:src => "js/jquery.flexslider-min.js"}
 %script{:src => "js/scripts.js"}
 = content_for(:title, "Home")
-
+:javascript
+  $( $.fn.cycle.defaults.autoSelector ).cycle();
+    
 - flash.each do |name, msg|
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
-.content
-.container
-  .sixteen.columns
-    .flex-container
-      .flexslider
-        %ul.slides
-          %li
-            %a{:href => "#"}
-              %img.scale-with-grid{:alt => "Random Penguin Photo", :src => "/uploads/sliderimages/better_slide1.jpg"}/
-            .flex-caption
-              %h5
-                %a{:href => "#"} Fully Responsive
-              %p Icebrrrg adapts to any screen size to optimize your user's experience.
-          %li
-            %a{:href => "#"}
-              %img.scale-with-grid{:alt => "Random Penguin Photo", :src => "/uploads/sliderimages/better_slide2.jpg"}/
-            .flex-caption{:style => "display:none;"}
-              %h5
-                %a{:href => "#"} Multiple layouts
-              %p Easily create multiple different layouts with the simple grid setup - one column, two column, three column, more.
-          %li
-            %a{:href => "#"}
-              %img.scale-with-grid{:alt => "Random Penguin Photo", :src => "/uploads/sliderimages/better_slide3.jpg"}/
-            .flex-caption{:style => "display:none;"}
-              %h5
-                %a{:href => "#"} Contact form
-              %p Not a developer? No problem. Icebrrrg comes complete with a PHP contact form ready to rock.
-.welcome
-  %h1 Welcome to Dr. Dunbar website
-  %p Page under construction. Please return in a few weeks
+
+#home    
+  .cycle-slideshow{"data-cycle-fx" => "scrollHorz", "data-cycle-timeout" => "2000"}
+    -@sliderImages.each.with_index do |slider_image, index|
+      = image_tag(slider_image.slider_image_picture)
+  .welcome    
+    %h1 Welcome to Dr. Dunbar website
+    %p Page under construction. Please return in a few weeks
+:javascript
+  $( "#home" ).click(function() {
+    $( $.fn.cycle.defaults.autoSelector ).cycle();
+  });
