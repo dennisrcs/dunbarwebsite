@@ -6,7 +6,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     %link{:href => "//fonts.googleapis.com/css?family=Cookie", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}/
-
+    // %script{:src => "/javascripts/jquery.cycle2.js"}
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
@@ -19,7 +19,7 @@
             %li= link_to "People", members_path
             %li= link_to "Research", researches_path
             %li= link_to "Publications", publications_path
-            %li= link_to "Teaching", root_path
+            %li= link_to "Teaching", root_path 
             %li= link_to "Group Info", group_infos_path
             - if logged_in?
               %li= link_to "Logout", logout_path, :method => 'delete'
