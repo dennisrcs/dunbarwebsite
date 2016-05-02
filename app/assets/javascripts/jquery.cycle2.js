@@ -681,11 +681,16 @@ $.fn.cycle.defaults = {
     updateView:       0
 };
 
-// automatically find and run slideshows
+//automatically find and run slideshows
 $(document).ready(function() {
     $( $.fn.cycle.defaults.autoSelector ).cycle();
 });
 
+//run slideshow when the home tab is clicked
+$( "#home" ).click(function() {
+    alert( "Handler for .click() called." );
+    $( $.fn.cycle.defaults.autoSelector ).cycle();
+});
 })(jQuery);
 
 /*! Cycle2 autoheight plugin; Copyright (c) M.Alsup, 2012; version: 20130913 */

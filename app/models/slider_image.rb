@@ -1,5 +1,5 @@
 class SliderImage < ActiveRecord::Base
-  attr_accessible :title, :link, :sliderImage_picture
+  attr_accessible :title, :link, :slider_image_picture
   
   # writes 'data' to the public folder, following 'path' structure
   def self.write_to_filesystem(data, path)
