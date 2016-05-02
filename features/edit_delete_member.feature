@@ -1,10 +1,9 @@
 Feature: Edit/Delete Member
   
   As a administrator
-  So that I can edit memer's info and/or delete members wihtout manual tedium 
+  So that I can edit member's info and/or delete members wihtout manual tedium 
   
     Background:
-<<<<<<< HEAD
       Given this user exists:
         |username |email           | password | :password_confirmation | is_admin | activated | activated_at  | reset_sent_at |
         | myname  |myname@email.com| myname123| myname123              | false    | true      | Time.zone.now | Time.zone.now |
@@ -34,9 +33,6 @@ Scenario: Edit member info
   And I press "Save Member"
   Then I should return to the profile Member page
   And I should see all the new information
-=======
-      Given I am logged in 
-      Given I am on any profile Member page
 
 Scenario: Edit member info  
 Then I should see a button "Edit profile"  
@@ -56,7 +52,7 @@ And I fill in "Curriculum Vitae" with "cv_123.pdf"
 And I press "Save Member"
 Then I should return to the profile Member page
 And I should see all the new information
->>>>>>> f96228d98e38e23391725238383c9b3a9042e060
+
 
 Scenario: Delete member  
 Then I should see a button "Delete profile"  

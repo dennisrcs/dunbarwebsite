@@ -36,7 +36,7 @@ class GroupInfosController < ApplicationController
     # writing avatar and cv to the NFS
     if params[:file] != nil
       file_path = GroupInfo.write_to_filesystem(params[:file], 'uploads/group_info/')
-      params[:file_path] = avatar_path
+      params[:file_path] = file_path
     end
 
     # update attributes and try deleting temp file

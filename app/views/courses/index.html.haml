@@ -1,0 +1,18 @@
+= content_for(:title, "Teaching")
+
+%h1 Courses
+
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
+
+- if logged_in?
+  .largest-row
+    .courses-list
+      - @courses.each do |course|
+        .course-info
+          = link_to "#{course.name}", course_path(course)
+        
+- else
+  %p You need to be logged in to have access to the courses
+

@@ -113,4 +113,5 @@ JACS_2015_trimers = SliderImage.create(:title => "New Mn(III)-NC-M(III)-CN-Mn(II
 exchange-bias behavior depending on the interstitial methanol content.", :link => "", :slider_image_picture => "/uploads/slider/JACS_2015_trimers.png")
 
 
-
+course1 = Course.create(:name => "CHEM 634")
+course2 = Create.create(:name => "CHEM 362")

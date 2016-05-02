@@ -19,7 +19,6 @@ Given (/^I exist as a user$/) do
     create_user
 end
 
-<<<<<<< HEAD
 Given (/^these publications exist:$/) do |table|
     table.hashes.each do |publication|
         Publication.create(publication)
@@ -38,8 +37,14 @@ Given (/^this member exists for user "myname":$/) do |table|
     @user1.update_attribute(:member, @member1)
 end
 
-=======
->>>>>>> f96228d98e38e23391725238383c9b3a9042e060
+
+
+Given (/^this group info exist:$/) do |table|
+    table.hashes.each do |group_info|
+        GroupInfo.create(group_info)
+    end
+end
+
 ##########################################################################
 ## Action
 #########################################################################
@@ -51,9 +56,13 @@ When (/^I return to the site$/) do
    visit '/'
 end
 
-<<<<<<< HEAD
 When (/^I choose to add new member$/) do
     visit '/members/new'
+end
+
+
+When(/^I choose to add new group info$/) do
+  visit '/group_infos/new'
 end
 
 And (/^I upload a picture from "([^"]*)"$/) do |picture|
@@ -73,8 +82,12 @@ end
 Then (/^the personal page for "([^"]*)"$/) do |name|
     member_path(@user1)
 end
-=======
->>>>>>> f96228d98e38e23391725238383c9b3a9042e060
+
+When(/^I upload a group file from "([^"]*)"$/) do |file|
+    path = File.join(::Rails.root, file) 
+    attach_file("file", path)
+end
+
 ############################################################################
 ## Response
 ############################################################################
