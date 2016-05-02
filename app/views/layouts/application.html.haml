@@ -19,11 +19,7 @@
             %li= link_to "People", members_path
             %li= link_to "Research", researches_path
             %li= link_to "Publications", publications_path
-<<<<<<< HEAD
-            %li= link_to "Teaching", root_path 
-=======
             %li= link_to "Teaching", courses_path
->>>>>>> 6c08192dbfeb1dfe41d32bf4a19cc727e260a5e8
             %li= link_to "Group Info", group_infos_path
             - if logged_in?
               %li= link_to "Logout", logout_path, :method => 'delete'

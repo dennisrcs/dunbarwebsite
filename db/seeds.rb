@@ -114,4 +114,4 @@ exchange-bias behavior depending on the interstitial methanol content.", :link =
 
 
 course1 = Course.create(:name => "CHEM 634")
-course2 = Create.create(:name => "CHEM 362")
+course2 = Course.create(:name => "CHEM 362")
