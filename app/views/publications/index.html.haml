@@ -24,10 +24,10 @@
             %b
               = publication.year + ","
             = publication.more_info.html_safe + ","
-            = publication.pages
+            = publication.pages + "."
  
           .doi
-            = link_to "DOI", "#{publication.link}", :target => "_blank"
+            = link_to "View Publication", "#{publication.link}", :target => "_blank"
 
         - if logged_in? && current_user_admin?
           .edit_delete

@@ -127,13 +127,19 @@ body .nav, body .content {
   display: inline;
 }
 
-.nav-top li a {
-  border-bottom: 3px solid #FFFFFF;
-  transition: border-bottom 0.3s ease-out;
+.nav-top {
+  background-color: #292c2f;
 }
 
-.nav-top li a:hover {
-  border-bottom: 3px solid #500000;
+.nav-top li a {
+  color: white;
+  transition: background-color 0.5s ease-out;
+}
+
+.nav-top li a:hover,
+.nav-top li a .clicked {
+  color: white;
+  background-color: #FFF056;
 }
 
 .nav-top li a {
@@ -153,6 +159,6 @@ a:link, a:visited {
 
 a:hover, a:active {
   text-decoration: none;
-  color: #500000;
+  color: #FFF056;
 }
 
