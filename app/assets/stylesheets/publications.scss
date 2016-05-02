@@ -71,11 +71,12 @@
   display: inline-block;
   display: moz-inline-box;
   font-size: 16px;
-  color: #DDDDDD;
-  background-color: #808080;
+  color: white;
+  background-color: #dfdfdf;
   padding: 10px 80px;
   text-decoration: none;
   transition: background-color 0.5s ease-out;
+  transition: color 0.5s ease-out;
   -webkit-transition: background-color 0.5s ease-out;
 }
 
@@ -84,8 +85,8 @@
   display: moz-inline-box;
   font-size: 16px;
   font-style: normal;
-  color: #DDDDDD;
-  background-color: #292c2f;
+  color: black;
+  background-color: #FFF056;
   padding: 10px 80px;
   text-decoration: none;
 }

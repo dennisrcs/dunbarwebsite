@@ -13,6 +13,7 @@ Rails.application.routes.draw do
    
   resources :members
   resources :group_infos
+  resources :courses
 
   resources :researches
   resources :researches do
