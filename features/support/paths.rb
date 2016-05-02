@@ -19,11 +19,20 @@ module NavigationHelpers
     when /^the Create New Publication page$/ 
       new_publication_path
       
+     when /^the Create New Group Info page$/ 
+      new_group_info_path  
+      
+    when /^the Edit Publication page$/ 
+      publication_path(@publication)
+      
     when /^my personal page$/
       member_path(User.last.member)
     
     when /^the People\s?page$/
       '/members'
+     when /^the Group Info\s?page$/
+      '/group_infos'  
+      
     when /^the Login\s?page$/
       login_path
 

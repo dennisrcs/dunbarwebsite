@@ -1,10 +1,10 @@
 Feature: Edit/Delete Member
   
   As a administrator
-  So that I can edit memer's info and/or delete members wihtout manual tedium 
+  So that I can edit member's info and/or delete members wihtout manual tedium 
   
     Background:
-      Given I am logged in
+      Given I am logged in as administrator
 
 Scenario: Edit member info  
   When I am on my personal page

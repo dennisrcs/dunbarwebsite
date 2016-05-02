@@ -50,6 +50,12 @@ Given (/^these publications exist:$/) do |table|
         Publication.create(publication)
     end
 end
+
+Given (/^this group info exist:$/) do |table|
+    table.hashes.each do |group_info|
+        GroupInfo.create(group_info)
+    end
+end
 ##########################################################################
 ## Action
 #########################################################################
@@ -65,6 +71,10 @@ When (/^I choose to add new member$/) do
     visit '/members/new'
 end
 
+When(/^I choose to add new group info$/) do
+  visit '/group_infos/new'
+end
+
 And (/^I upload a picture from "([^"]*)"$/) do |picture|
     path = File.join(::Rails.root, picture) 
     attach_file("avatar", path)
@@ -72,6 +82,11 @@ end
 And (/^I upload a file from "([^"]*)"$/) do |file|
     path = File.join(::Rails.root, file) 
     attach_file("cv", path)
+end
+
+When(/^I upload a group file from "([^"]*)"$/) do |file|
+    path = File.join(::Rails.root, file) 
+    attach_file("file", path)
 end
 
 ############################################################################

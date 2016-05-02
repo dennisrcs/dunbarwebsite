@@ -6,7 +6,7 @@ Feature: Add new member
     Background:
       Given I am logged in as administrator
       
-Scenario: Add new member
+Scenario: Add new group info
   Then I should have an active session
   When I follow "People"
   Then I should be on the People page
