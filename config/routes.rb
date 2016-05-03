@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit, :update]
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
-  #resources :news
+  resources :news
   resources :news do
     member { post :mercury_update }
   end
