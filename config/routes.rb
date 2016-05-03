@@ -1,31 +1,32 @@
 Rails.application.routes.draw do
+  get 'news/index'
+
   mount Mercury::Engine => '/'
   root                'static_pages#home'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   get 'logout'  => 'sessions#destroy'
   
-  #get     'publications' => 'publications#index'
-  #get    'publications/new' => 'publications#new'
   resources :publications, only: [:index, :new] 
-  
-  #resources :resumes, only: [:index, :new, :create, :destroy]
   resources :publications
-  #match "publications/:id", to: 'publications#edit', via: [:post, :get]
   match "publications/:id/edit", to: 'publications#edit', via: [:post, :get]
-  #match "publications/:id/edit", to  'publications#update', via: [:put]
   delete 'logout'  => 'sessions#destroy'
   
   resources :members
 
   resources :researches
-
   resources :researches do
     member { post :mercury_update }
   end
 
   resources :account_activations, only: [:edit, :update]
   resources :password_resets,     only: [:new, :create, :edit, :update]
+
+  #resources :news
+  resources :news do
+    member { post :mercury_update }
+  end
+
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

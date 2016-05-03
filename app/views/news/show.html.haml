@@ -1,0 +1,7 @@
+= content_for(:title, "News")
+.details
+  %h3 News
+  %p#content.mercury-region{"data-mercury" => "full"}
+    = @new.content.html_safe
+  = @new.date
+  %p= link_to "Edit", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_news_path(@new)}
