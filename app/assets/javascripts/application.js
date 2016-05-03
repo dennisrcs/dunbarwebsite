@@ -12,8 +12,8 @@
 //
 //= require_self
 //= require jquery
+//= require jquery-migrate-min
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 ;(function($) {
