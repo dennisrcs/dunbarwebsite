@@ -10,7 +10,6 @@
   #personal_info.section
     #picture-cv
       = image_tag "#{@member.avatar_path}", :id => "avatar"
-      = link_to 'Curriculum Vitae', "#{@member.cv_path}", :target => '_blank'
       - if @member.researcherid != nil && !@member.researcherid.empty?
         #badge
           = link_to image_tag("icons/badge.gif"), "http://www.researcherid.com/rid/#{@member.researcherid}", :title => "ResearcherID Profile", :target => "_blank"
@@ -24,9 +23,9 @@
       %p
         Position:
         = @member.position
-      // %p
-      //   E-mail:
-      //   = @member.user.email
+      %p
+        E-mail:
+        = @member.user.email
       %p
         Previous Affiliation:
         = @member.previous_affiliation
@@ -39,6 +38,8 @@
       %p
         Office:
         = @member.office
+      %p 
+        = link_to 'Curriculum Vitae', "#{@member.cv_path}", :target => '_blank'
 
   #bio.section
     %h3 Bio

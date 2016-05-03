@@ -20,7 +20,29 @@
   resize: none;
 }
 
-#content {
-  height: 200px;
+.research-content {
+  display: table-row;
 }
 
+.research-list {
+  margin: 0 auto;
+  display: table;
+}
+
+.research-item {
+  display: table-row;
+  height: auto;
+}
+
+#add-research-btn {
+  margin-top: 30px !important;
+  font-size: 20px;
+  display: table;
+  margin: 0 auto;
+}
+
+#edit-research-btn {
+  font-size: 20px;
+  display: table;
+  margin: 0 auto;
+}

@@ -119,27 +119,31 @@ body .nav, body .content {
 
 .nav-top {
   margin: 0px;
+  width: 980px;
   padding: 0px;
   list-style-type: none;
+  background-color: #292c2f;
+}
+
+.nav-items {
+  display: table;
+  margin: 0 auto;
 }
 
 .nav-top li {
   display: inline;
 }
 
-.nav-top {
-  background-color: #292c2f;
-}
-
 .nav-top li a {
   color: white;
-  transition: background-color 0.5s ease-out;
+  border-bottom: 3px solid #292c2f;
+  transition: color 0.5s ease-out;
+  transition: border-bottom 0.5s ease-out;
 }
 
-.nav-top li a:hover,
-.nav-top li a .clicked {
-  color: white;
-  background-color: #FFF056;
+.nav-top li a:hover {
+  color: #FFF056;
+  border-bottom: 3px solid #FFF056;
 }
 
 .nav-top li a {
@@ -159,6 +163,6 @@ a:link, a:visited {
 
 a:hover, a:active {
   text-decoration: none;
-  color: #FFF056;
+  color: #666666;
 }
 

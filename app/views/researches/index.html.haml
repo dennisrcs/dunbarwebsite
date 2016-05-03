@@ -1,20 +1,17 @@
 = content_for(:title, "Research")
 %h1 Research
 
-.publication_list
-  - @researches.each do |research|
-    %table
-      %tr
-        %td.title
+.largest-row
+  .research_list
+    - @researches.each do |research|
+      .research-item
+        .title
           %h2
             = link_to research.title.html_safe, research_path(research)
           = research.summary.html_safe
-
-          
           - if logged_in? && current_user_admin?
             = button_to 'Delete', research_path(research), :method => :delete, :confirm => 'Are you sure?'
-          
-
-- if logged_in? && current_user_admin?
-  #add_research= link_to 'Add new Research', new_research_path
+            
+  - if logged_in? && current_user_admin?
+    #add-research-btn= link_to 'Add new Research', new_research_path
 

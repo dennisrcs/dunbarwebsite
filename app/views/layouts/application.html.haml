@@ -15,16 +15,17 @@
       .nav
         %nav
           %ul.nav-top
-            %li= link_to "Home", root_path
-            %li= link_to "People", members_path
-            %li= link_to "Research", researches_path
-            %li= link_to "Publications", publications_path
-            %li= link_to "Teaching", courses_path
-            %li= link_to "Group Info", group_infos_path
-            - if logged_in?
-              %li= link_to "Logout", logout_path, :method => 'delete'
-            - else
-              %li= link_to "Login", login_path 
+            .nav-items
+              %li= link_to "Home", root_path
+              %li= link_to "People", members_path
+              %li= link_to "Research", researches_path
+              %li= link_to "Publications", publications_path
+              %li= link_to "Teaching", courses_path
+              %li= link_to "Group Info", group_infos_path
+              - if logged_in?
+                %li= link_to "Logout", logout_path, :method => 'delete'
+              - else
+                %li= link_to "Login", login_path 
       .content
         = yield
     %footer.footer-distributed
@@ -32,7 +33,7 @@
         %div
           %i.fa.fa-map-marker
           %p
-            %span 302A Chemistry Building
+            %span 2311 Chemistry Building
             %span Department of Chemistry
             %span Texas A&M University
             College Station, TX
@@ -45,7 +46,7 @@
             %a{:href => "mailto:dunbar@tamu.com"} dunbar@tamu.com
       .footer-center
         = link_to root_path do
-          Dr. Dunbar <span>Research Group</span>
+          Dr. Dunbar <sub><span>Research Group</span></sub>
       .footer-right
         %p.footer-company-about
           %span About the research group

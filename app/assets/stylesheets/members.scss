@@ -95,7 +95,7 @@ input[type='file'].entry {
 
 .former_member a {
   text-decoration: none;
-  color: #500000 !important;
+  color: #666666 !important;
 }
 
 .member-config {
@@ -163,9 +163,13 @@ input[type='file'].entry {
 }
 
 .member .caption a {
-  color: #500000;
+  color: #666666;
 }
 
 #people-page-button {
   margin-top: 30px;
+}
+
+#info a {
+  display: inline;
 }
