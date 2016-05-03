@@ -217,7 +217,7 @@ a:hover, a:active {
 		/*vertical-align: top;*/
 		right: 0px;
 		/*margin-left: 2em;*/
-		width: 30%;
+		width: 100%;
 	}
 	.button{
 		display: inline-block;
