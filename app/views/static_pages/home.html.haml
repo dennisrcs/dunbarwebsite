@@ -6,13 +6,27 @@
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
 
-#home    
-  .cycle-slideshow{"data-cycle-fx" => "scrollHorz", "data-cycle-timeout" => "2000"}
-    -@sliderImages.each.with_index do |slider_image, index|
-      = image_tag(slider_image.slider_image_picture)
-  .welcome    
-    %h1 Welcome to Dr. Dunbar website
-    %p Page under construction. Please return in a few weeks
+// #home    
+//   .cycle-slideshow{"data-cycle-fx" => "scrollHorz", "data-cycle-timeout" => "2000"}
+//     -@sliderImages.each.with_index do |slider_image, index|
+//       = image_tag(slider_image.slider_image_picture, alt: slider_image.title)
+      
+.cycle-slideshow.slider{"data-cycle-caption-fx-in" => "slideDown", "data-cycle-caption-fx-out" => "slideUp", "data-cycle-caption-plugin" => "caption2", "data-cycle-fx" => "scrollHorz", "data-cycle-slides" => "> div", "data-cycle-timeout" => "3000"}
+  -@sliderImages.each.with_index do |slider_image, index|
+    .innerWrapper{"data-cycle-title" => slider_image.title}
+      %table
+        %td
+          %img.slide1img{:alt => "", :src => slider_image.slider_image_picture}/
+        %td
+          %p.slide2text "#{slider_image.title}"
+          %br/
+          %a.button{:href => slider_image.link} Click More
+      
+      
+.welcome    
+  %h1 Welcome to Dr. Dunbar website
+  %p Page under construction. Please return in a few weeks
+
 :javascript
   $( "#home" ).click(function() {
     $( $.fn.cycle.defaults.autoSelector ).cycle();

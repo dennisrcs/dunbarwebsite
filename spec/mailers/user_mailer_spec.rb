@@ -1,4 +1,4 @@
-require "rails_helper"
+require "spec_helper"
 
 RSpec.describe UserMailer, type: :mailer do
   describe "account_activation" do

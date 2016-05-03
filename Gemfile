@@ -5,7 +5,6 @@ gem 'haml'
 
 # Gem for sanding emails
 gem 'rest-client'
-gem 'flexslider-rails'
 #add activerecord gem
 gem 'activerecord'
 # Use postgree database
