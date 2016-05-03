@@ -57,7 +57,7 @@ position: relative;
 
 
 /* Direction Nav */
-.flex-direction-nav{
+.flex-direction-nav {
 	display:none;
 	position:absolute;
 	width:100%;
@@ -65,6 +65,7 @@ position: relative;
 	margin-top:-25px;
 	display:block\9; /*IE needs this */
 }
+
 .flex-direction-nav li a {
 	margin: 0 ; 
 	display:block;
@@ -93,7 +94,7 @@ position: relative;
 	
 }
 
-.flex-direction-nav li a:hover{
+.flex-direction-nav li a:hover {
 	background-color:#222;
 	background-color:rgba(0,0,0,.3);
 	
@@ -149,7 +150,7 @@ position: relative;
 
 /* Only show on hover */
 .flex-container:hover .flex-direction-nav,
-.flex-container:hover .flex-control-nav{
+.flex-container:hover .flex-control-nav {
 	display:block;
 }
 

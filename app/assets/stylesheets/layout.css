@@ -134,7 +134,7 @@ footer {background: #d0ebfd; border-top: 1px solid #afdfff; }
 .flex-container .flex-caption h5, .flex-container .flex-caption h5 a { font-family: Helvetica, Arial, sans-serif!important; color: white; font-weight: bold; margin-bottom: 0px; font-style: normal; text-decoration: none; text-transform: uppercase; }
 .flex-container .flexslider { padding: 0; background:none; border: 10px solid #005088; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; }
 .flexslider li { margin-bottom: 0; }
-..flex-direction-nav { display: none; position: absolute; width: 100%; top: 50%; margin-top: -25px; display: block	9; }
+.flex-direction-nav { display: none; position: absolute; width: 100%; top: 50%; margin-top: -25px; display: block	9; }
 
 /*  Font Awesome
     the iconic font designed for use with Twitter Bootstrap
