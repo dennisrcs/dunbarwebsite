@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount Mercury::Engine => '/'
   root                'static_pages#home'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
@@ -31,7 +32,8 @@ Rails.application.routes.draw do
     member { post :mercury_update }
   end
 
-  
+#  get 'news/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
