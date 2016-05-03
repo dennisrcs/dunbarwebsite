@@ -645,6 +645,54 @@
         null,
         null
       ],
+      "/home/ubuntu/workspace/app/controllers/news_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/home/ubuntu/workspace/app/controllers/password_resets_controller.rb": [
         1,
         1,
@@ -831,8 +879,8 @@
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         null,
         null,
@@ -1050,6 +1098,11 @@
         null,
         null
       ],
+      "/home/ubuntu/workspace/app/models/new.rb": [
+        1,
+        1,
+        null
+      ],
       "/home/ubuntu/workspace/app/models/group_info.rb": [
         1,
         1,
@@ -1073,6 +1126,6 @@
         null
       ]
     },
-    "timestamp": 1462230759
+    "timestamp": 1462249839
   }
 }
