@@ -110,7 +110,6 @@ GEM
     fixture_builder (0.4.1)
       activerecord (>= 2)
       activesupport (>= 2)
-    flexslider-rails (1.0.0)
     gherkin (3.2.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -258,7 +257,6 @@ DEPENDENCIES
   factory_girl_rails
   faker
   fixture_builder
-  flexslider-rails
   haml
   headless
   jbuilder (~> 2.0)
