@@ -1,0 +1,14 @@
+= content_for(:title, "Add research")
+- if logged_in? && current_user_admin?
+  .large-row
+    %h1 Create New Research
+    #new-research-form.new-research-form
+      = form_tag({action: :create}, multipart: true) do
+        = text_field_tag :title, nil, :class => 'entry', :placeholder => 'Research title', :required => true, :id => 'title'
+        = text_area_tag :summary, nil, :class => 'entry', :placeholder => 'Summary', :required => true, :id => 'summary'
+        = text_area_tag :content, nil, :class => 'entry', :placeholder => 'Content', :required => true, :id => 'content'
+      
+        = submit_tag 'Create Research', :id => 'research-form-button'
+
+- else
+  %p Only users with privileges can add new publications.
