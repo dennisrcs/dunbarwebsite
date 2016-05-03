@@ -1,9 +1,27 @@
+%link{:href => "stylesheets/base.css", :rel => "stylesheet"}/
+%link{:href => "stylesheets/skeleton.css", :rel => "stylesheet"}/
+%link{:href => "stylesheets/layout.css", :rel => "stylesheet"}/
+%link{:href => "stylesheets/flexslider.css", :rel => "stylesheet"}/
+%link{:href => "stylesheets/prettyPhoto.css", :rel => "stylesheet"}/
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"}
+%script{:src => "js/jquery.flexslider-min.js"}
+%script{:src => "js/scripts.js"}
 = content_for(:title, "Home")
-
+:javascript
+  $( $.fn.cycle.defaults.autoSelector ).cycle();
+    
 - flash.each do |name, msg|
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
 
-.welcome
-  %h1 Welcome to Dr. Dunbar website
-  %p Page under construction. Please return in a few weeks
+#home    
+  .cycle-slideshow{"data-cycle-fx" => "scrollHorz", "data-cycle-timeout" => "2000"}
+    -@sliderImages.each.with_index do |slider_image, index|
+      = image_tag(slider_image.slider_image_picture)
+  .welcome    
+    %h1 Welcome to Dr. Dunbar website
+    %p Page under construction. Please return in a few weeks
+:javascript
+  $( "#home" ).click(function() {
+    $( $.fn.cycle.defaults.autoSelector ).cycle();
+  });

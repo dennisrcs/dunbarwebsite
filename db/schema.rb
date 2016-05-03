@@ -11,10 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160502210602) do
+ActiveRecord::Schema.define(version: 20160429074845) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "course_files", force: :cascade do |t|
+    t.integer "course_id"
+    t.string  "name"
+    t.string  "file_path"
+    t.integer "type"
+  end
+
+  add_index "course_files", ["course_id"], name: "index_course_files_on_course_id", using: :btree
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "group_infos", force: :cascade do |t|
+    t.string  "title"
+    t.string  "file_path"
+    t.boolean "is_restricted", default: true
+  end
 
   create_table "members", force: :cascade do |t|
     t.string  "name"

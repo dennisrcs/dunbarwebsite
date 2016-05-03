@@ -6,7 +6,7 @@
       = form_tag publication_path(@publication), :method => :put, multipart: true do
         = text_field_tag :article, @publication.article, :class => 'entry', :placeholder => 'Article title', :required => true
         = text_field_tag :contributors, @publication.contributors, :class => 'entry', :placeholder => 'Contributors', :required => true
-        = text_field_tag :journal, @publication.journal, :class => 'entry', :placeholder => 'Journar title', :required => true
+        = text_field_tag :journal, @publication.journal, :class => 'entry', :placeholder => 'Journal title', :required => true
         = text_field_tag :year, @publication.year, :class => 'entry', :placeholder => 'Year published', :required => true
         = text_field_tag :more_info, @publication.more_info, :class => 'entry', :placeholder => 'Additional information'
         = text_field_tag :pages, @publication.pages, :class => 'entry', :placeholder => 'Pages', :required => true

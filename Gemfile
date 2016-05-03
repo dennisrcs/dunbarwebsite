@@ -5,7 +5,7 @@ gem 'haml'
 
 # Gem for sanding emails
 gem 'rest-client'
-
+gem 'flexslider-rails'
 #add activerecord gem
 gem 'activerecord'
 # Use postgree database
@@ -43,9 +43,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+
+
 # Mercury rich text editor.
 gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git'
 gem 'jquery-migrate-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -80,4 +83,6 @@ group :development, :test do
   gem 'launchy'
   gem 'fixture_builder'
   gem 'headless'
+
 end
+

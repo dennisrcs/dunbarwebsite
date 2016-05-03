@@ -1,0 +1,22 @@
+= content_for(:title, "Group Info")
+%h1 Group Info
+
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
+
+.largest-row
+  .group-info-list
+    - @group_infos.each do |info|
+      .group-info
+        - if logged_in?
+          = link_to "#{info.title}", "#{info.file_path}", :target => '_blank'
+          - if logged_in? && current_user_admin?
+            = link_to image_tag("icons/icon_edit.png"), edit_group_info_path(info), :title => "Edit Group Info" , :id =>"Edit"
+            = link_to image_tag("icons/icon_delete.png"), group_info_path(info), :title => "Delete Group Info", :method => :delete, data: { confirm: "Are you sure?" }
+        - else
+          - if !info.is_restricted
+            = link_to "#{info.title}", "#{info.file_path}", :target => '_blank'
+
+- if logged_in? && current_user_admin?
+  = link_to "Add new group info", new_group_info_path, :id => 'add-group-info'

@@ -1,18 +1,22 @@
 Rails.application.routes.draw do
-  get 'news/index'
 
-  mount Mercury::Engine => '/'
   root                'static_pages#home'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   get 'logout'  => 'sessions#destroy'
   
+
+  default_url_options :host => "test.host"
+  
   resources :publications, only: [:index, :new] 
   resources :publications
   match "publications/:id/edit", to: 'publications#edit', via: [:post, :get]
+  
   delete 'logout'  => 'sessions#destroy'
   
+  resources :group_infos
   resources :members
+  resources :courses
 
   resources :researches
   resources :researches do
