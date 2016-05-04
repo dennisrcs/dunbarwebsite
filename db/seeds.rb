@@ -49,24 +49,6 @@ member6 = Member.create(:name => 'Xuesu Xiao', :position => 'Undergraduate Stude
                         :avatar_path => '/uploads/images/xuesu.png', :cv_path => '/uploads/cv/cv.pdf')
 user6.update_attribute(:member, member6)
 
-#40.times do |m|
-#    user = User.create(:username => "user#{m}", :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => "member#{m}@gmail.com", :password => 'member123', :password_confirmation => 'member123')
-#    member = Member.create(:name => 'Bozhen Liu', :position => 'Professor', :researcherid => 'B-6488-2015', :telephone => '4444444444', :fax => '0000000000', :previous_affiliation => 'Random University',
-#                        :bio => "Hey, my name is User#{m}! :)", :building => 'Bright building', :office => '4th Floor',
-#                        :is_current_member => true, :is_listed => true,
-#                        :avatar_path => '/uploads/images/dennis.png', :cv_path => '/uploads/cv/cv.pdf')
-#    user.update_attribute(:member, member)
-#end
-
-#10.times do |m|
-#    user = User.create(:username => "user2#{m}", :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => "member2#{m}@gmail.com", :password => 'member123', :password_confirmation => 'member123')
-#    member = Member.create(:name => "Random Name #{m}" , :position => 'Professor', :researcherid => 'B-6488-2015', :telephone => '4444444444', :fax => '0000000000', :previous_affiliation => 'Random University',
-#                        :bio => "Hey, my name is User2#{m}! :)", :building => 'Bright building', :office => '4th Floor',
-#                        :is_current_member => false, :is_listed => true,
-#                        :avatar_path => '/uploads/images/dennis.png', :cv_path => '/uploads/cv/cv.pdf')
-#    user.update_attribute(:member, member)
-#end
-
 # publications seed
 publication1 = Publication.create(:article => "Sequence-Dependent Guest Release Triggered by Orthogonal Chemical Signals",
 :contributors => "Ana M. Castilla, Tanya K. Ronson, and Jonathan R. Nitschke", :journal => "J. Am. Chem. Soc.", :year => "2016", :more_info => "138", :pages => "2342–2351",
@@ -106,6 +88,52 @@ exchange-bias behavior depending on the interstitial methanol content.", :link =
 course1 = Course.create(:name => "CHEM 634")
 course2 = Course.create(:name => "CHEM 362")
 
+syllabus = CourseFile.new(:name => "syllabus", :file_path => "/uploads/courses/qualifying.pdf")
+syllabus.file_type = :syllabus
+syllabus.course_id = course1.id
+syllabus.save
+
+10.times do |m|
+   file = CourseFile.new(:name => "#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :notes
+   file.course_id = course1.id
+   file.save
+end
+
+5.times do |m|
+   file = CourseFile.new(:name => "Goal #{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :chapter_goals
+   file.course_id = course1.id
+   file.save
+end
+
+8.times do |m|
+   file = CourseFile.new(:name => "Resource #{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :resource_research
+   file.course_id = course1.id
+   file.save
+end
+
+5.times do |m|
+   file = CourseFile.new(:name => "HW#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :homework
+   file.course_id = course1.id
+   file.save
+end
+
+5.times do |m|
+   file = CourseFile.new(:name => "Solution#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :solutions
+   file.course_id = course1.id
+   file.save
+end
+
+5.times do |m|
+   file = CourseFile.new(:name => "Answer#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :exam_answers
+   file.course_id = course1.id
+   file.save
+end
 
 research1 = Research.create(:title => "Supramolecular Chemistry of Anions", :summary => "Research in the Supramolecular Chemistry of Anions is a newer 
 project in the Dunbar Group. The project has developed into a highly interdisciplinary endeavor, encompassing coordination chemistry, computational 
