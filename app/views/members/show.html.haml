@@ -15,8 +15,8 @@
           = link_to image_tag("icons/badge.gif"), "http://www.researcherid.com/rid/#{@member.researcherid}", :title => "ResearcherID Profile", :target => "_blank"
       - if logged_in? && (current_user.id == @member.id || current_user_admin?)
         #profile-actions
-          = link_to image_tag("icons/icon_edit.png"), edit_member_path(@member), :title => "Edit profile"
-          = link_to image_tag("icons/icon_delete.png"), member_path, :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" }
+          = link_to image_tag("icons/icon_edit.png"), edit_member_path(@member), :title => "Edit profile", :id => "Edit"
+          = link_to image_tag("icons/icon_delete.png"), member_path, :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" }, :id => "Delete"
     #info
       %h2 Personal Information
 

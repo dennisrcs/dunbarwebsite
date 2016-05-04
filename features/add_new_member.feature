@@ -6,11 +6,11 @@ Feature: Add new member
     Background:
       Given I am logged in as administrator
       
-Scenario: Add new group info
+Scenario: Add new member
   Then I should have an active session
   When I follow "People"
   Then I should be on the People page
-  And I should see a message "Add new member"  
+  And I should see "Add new member"  
   When I choose to add new member
   Then I should be on the Create New Member page 
   When I fill in "name" with "newmember123"

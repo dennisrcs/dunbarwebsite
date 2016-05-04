@@ -16,18 +16,12 @@ describe ResearchesController, :type => :controller do
                                         :content => 'what a wonderful research')
             @research.should be_truthy
             get :show, id: @research
-            id = @research[:id]
-            id.should_not be_nil
-            research = Research.find_by_id(@research)
-            research.should be_truthy
         end
         it 'should show msg for nil research' do
-            research = Research.find_by_id(@research)
-            research.should be_nil
             flash[:danger] = "research not found"
+            get :show, id: '-1'
+            expect(response).to redirect_to(researches_path)
             expect(flash[:danger]).to be_present
-            get :show
-            expect(response).to redirect_to(research_path)
         end
     end
     
@@ -60,7 +54,7 @@ describe ResearchesController, :type => :controller do
             flash[:notice] = "Research '#{@research.title}' deleted."
             expect(flash[:notice]).to be_present
             get :destroy, id: @research
-            expect(response).to redirect_to(research_path)
+            expect(response).to redirect_to(researches_path)
         end
     end
     
@@ -72,9 +66,9 @@ describe ResearchesController, :type => :controller do
             @research.should be_truthy
         end
         it 'should find the research by id' do
-            research = Research.find(@research)
-            research.should be_truthy
-            research.stub(:update_attributes).with(:title, 'Research B')
+            # research = Research.find(@research)
+            # research.should be_truthy
+            # research.stub(:update_attributes).with(:title, 'Research B')
             get :update, id: @research 
             response.should render_template(:text => "")
         end

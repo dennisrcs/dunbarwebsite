@@ -1,12 +1,16 @@
+
 Feature: Password Reset
   In order to retrieve a lost password
   As a user of this site
   I want to reset it
 
+  Background:
+      Given this user exists:
+        |username |email           | password | :password_confirmation | is_admin | activated | activated_at  | reset_sent_at |
+        | xiaoxuesu  |xuesuxiao@gmail.com| xiaoxuesu123| xiaoxuesu123              | false    | true      | Time.zone.now | Time.zone.now |
+
   Scenario: Reset password
-    Given I am not logged in
-    And a user exists with email: "xuesuxiao@gmail.com", password: "xiaoxuesu123"
-    And I am on the login page
+    When I am on the login page
     Then I should see "Forgot my password"
     When I follow "Forgot my password"
     Then I should see "Recover your account"
@@ -27,8 +31,7 @@ Feature: Password Reset
     Then I should be able to log in with email "xuesuxiao@gmail.com" and password "xiaoxuesu456"
 
   Scenario: Reset password no account
-    Given I am not logged in
-    And I am on the login page
+    When I am on the login page
     Then I should see "Forgot my password"
     When I follow "Forgot my password"
     Then I should see "Recover your account"

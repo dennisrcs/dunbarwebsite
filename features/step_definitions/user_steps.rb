@@ -15,6 +15,23 @@ Given (/^I am logged in$/) do
     click_button "login-form-button"
 end
 
+Given (/^I am logged in as administrator$/) do
+    adminattr = {
+        :username => 'adminuser',
+        :is_admin => true, 
+        :activated => true, 
+        :activated_at => Time.zone.now, 
+        :email => 'adminuser23@gmail.com', 
+        :password => 'admin123', 
+        :password_confirmation => 'admin123'
+        
+    }
+    User.create(adminattr)   
+    visit '/login'
+    fill_in "username", :with => adminattr[:username]
+    fill_in "password", :with => adminattr[:password]
+    click_button "login-form-button"
+end
 Given (/^I exist as a user$/) do
     create_user
 end
@@ -59,7 +76,10 @@ end
 When (/^I choose to add new member$/) do
     visit '/members/new'
 end
-
+When (/^I am not logged in$/) do
+    page.should have_content "Login"
+    page.should_not have_content "Logout"
+end
 
 When(/^I choose to add new group info$/) do
   visit '/group_infos/new'
@@ -88,6 +108,11 @@ When(/^I upload a group file from "([^"]*)"$/) do |file|
     attach_file("file", path)
 end
 
+When (/^my session is active$/) do 
+    page.should have_content "Logout"
+    page.should_not have_content "Login"
+end
+
 ############################################################################
 ## Response
 ############################################################################
@@ -98,4 +123,36 @@ end
 Then (/^I should be logged out$/) do 
     page.should have_content "Login"
     page.should_not have_content "Logout"
+end
+
+Then (/^I should have an active session$/) do
+    page.should have_content "Logout"
+    page.should_not have_content "Login"
+end
+
+Then (/^I should be able to log in with email "([^"]*)" and password "([^"]*)"$/) do |email, password|
+    create_user
+    visit '/login'
+    fill_in "username", :with => email
+    fill_in "password", :with => password
+    click_button "login-form-button"
+end
+
+########################################################
+## Definitions for the email. Still to be figured out
+########################################################
+Then(/^"([^"]*)" should have an email$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I open the email$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I should see "([^"]*)" in the email body$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When(/^I follow "([^"]*)" in the email$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
 end
