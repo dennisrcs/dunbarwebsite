@@ -1,0 +1,25 @@
+= content_for(:title, "#{@course.name}")
+
+- if logged_in?
+  %h1 Files for #{@course.name}
+
+  .largest-row
+    .course-files-content
+      - if @syllabus != nil
+        .syllabus
+          = link_to "Course Syllabus", "#{@syllabus.file_path}", :target => "_blank"
+      - if @notes.length != 0
+        .notes
+          %p
+            Notes:
+          - @notes.each do |note| 
+            = link_to "#{note.name}", "#{note.file_path}", :target => "_blank"
+      -if @chapter_goals.length != 0
+        .chapter_goals
+          %p
+            Chapter Goals:
+          - @chapter_goals.each do |goal|
+            = link_to "#{goal.name}", "#{goal.file_path}", :target => "_blank"
+- else
+  %p Only members with privileges can access the documents in "#{@course.name}"
+
