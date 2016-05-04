@@ -9,7 +9,7 @@ class CreateCourse < ActiveRecord::Migration
       t.belongs_to :course, index:true
       t.string :name
       t.string :file_path
-      t.integer :type
+      t.integer :file_type
     end
   end
 end
