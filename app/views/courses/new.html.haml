@@ -1,0 +1,11 @@
+= content_for(:title, "Add course")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Create New Course
+    #new-course-form.new-coursefile-form
+      = form_tag courses_path, :method => :post do
+        = text_field_tag :name, nil, :class => 'entry', :placeholder => "Please provide a name to the course", :required => true
+
+        = submit_tag 'Create Course', :id => 'add-course-form-btn'
+- else
+  %p Only users with privileges can add new courses

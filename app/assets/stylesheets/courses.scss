@@ -6,6 +6,11 @@
   vertical-align: middle;
 }
 
+.courses-list .course-info a {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
 .course-info {
   font-size: 18px;
   margin-bottom: 5px;
@@ -25,4 +30,36 @@
 
 .course-files-content h4 {
   margin-bottom: 10px;
+}
+
+#add-new-coursefile,
+#back-teaching-page,
+#add-course-btn {
+  display: table;
+  margin: 0 auto;
+}
+
+#add-new-coursefile,
+#add-course-btn {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.new-coursefile-form .entry {
+  display: block;
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.new-coursefile-form #select {
+  width: 100%;
+}
+
+#add-coursefile-btn, 
+#add-course-form-btn {
+  width: 100%;
+  height: 30px;
 }

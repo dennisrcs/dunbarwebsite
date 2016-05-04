@@ -86,7 +86,6 @@ exchange-bias behavior depending on the interstitial methanol content.", :link =
 
 
 course1 = Course.create(:name => "CHEM 634")
-course2 = Course.create(:name => "CHEM 362")
 
 syllabus = CourseFile.new(:name => "syllabus", :file_path => "/uploads/courses/qualifying.pdf")
 syllabus.file_type = :syllabus
@@ -132,6 +131,34 @@ end
    file = CourseFile.new(:name => "Answer#{m}", :file_path => "/uploads/courses/qualifying.pdf")
    file.file_type = :exam_answers
    file.course_id = course1.id
+   file.save
+end
+
+course2 = Course.create(:name => "CHEM 362")
+
+syllabus2 = CourseFile.new(:name => "syllabus", :file_path => "/uploads/courses/qualifying.pdf")
+syllabus2.file_type = :syllabus
+syllabus2.course_id = course2.id
+syllabus2.save
+
+8.times do |m|
+   file = CourseFile.new(:name => "#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :notes
+   file.course_id = course2.id
+   file.save
+end
+
+5.times do |m|
+   file = CourseFile.new(:name => "HW#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :homework
+   file.course_id = course2.id
+   file.save
+end
+
+2.times do |m|
+   file = CourseFile.new(:name => "Answer#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :exam_answers
+   file.course_id = course2.id
    file.save
 end
 

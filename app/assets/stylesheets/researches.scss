@@ -34,6 +34,16 @@
   height: auto;
 }
 
+.research-item .title,
+.research-item .delete-research {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.research-item .delete-research {
+  padding-left: 10px;
+}
+
 #add-research-btn {
   margin-top: 30px !important;
   font-size: 20px;

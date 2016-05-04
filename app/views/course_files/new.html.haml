@@ -1,0 +1,18 @@
+= content_for(:title, "Add member")
+- if logged_in? && current_user_admin?
+  .row
+    - flash.each do |name, msg|
+      - if msg.is_a?(String)
+        = content_tag :div, msg, :class => "flash_#{name}"
+    %h1 Add new file
+    #new-coursefile-form.new-coursefile-form
+      = form_tag({action: :create}, multipart: true) do
+        = text_field_tag :name, nil,:placeholder => 'Name', :required => true, :class => 'entry', :id => "name"
+        
+        = label_tag :file_type, 'Please select the type of the file'
+        = select_tag :file_type, options_for_select(@file_types), :class => 'entry', :id => "select"
+        
+        = label_tag :file, 'Please select a file to be added to the course page'
+        = file_field_tag :file, :class => 'entry'
+        
+        = submit_tag 'Add file', :id => 'add-coursefile-btn'
