@@ -170,7 +170,7 @@ a:hover, a:active {
 .slide{
 		background-color: #228FC4;
 		width:100%;
-		height: 300px;
+		height: auto;
 		border:4px solid gray;
 		vertical-align: middle;
 	}
