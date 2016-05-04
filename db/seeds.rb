@@ -229,7 +229,72 @@ F. A. Cotton, C.  Murillo and R.A. Walton, Eds., Springer-Science  and Business 
 	7. Kang, M.; Chifotides, H. T.;  Dunbar, K. R. <i>Biochemistry</i>, <strong>2008</strong>, <i>47</i>, 2265-2276. </p>
 ")
 
-
+research2 = Research.create(:title => "Molecular Materials Based on TCNQ", :summary => "We are interested in molecular magnets and molecular 
+conductors based on coordination polymers of 7,7,8,8-tetracyanoquinodimethane (TCNQ) because the materials are lighter than the traditional 
+ones, they are typically obtained at room temperature, and the properties can be tuned by installing substituents on the ring that change the 
+steric bulk and redox behavior of the ligand. The TCNQ ligand is very stable in its radical anion form and, as such, it is very useful as a 
+spin carrier in coordination compounds. In fact, the magnetic communication between metal ions is greatly enhanced in comparison with 
+diamagnetic linkers of similar size. The co-assembly of TCNQ radicals with transition metal, main group and lanthanide metal ions leads 
+to materials that exhibit interesting magnetic and/or electronic properties. The coordination chemistry of TCNQ is diverse, as illustrated 
+by the formation of 0-D complexes, 1-D chains, 2-D frameworks and 3-D nets. We have synthesized and characterized representative examples 
+of each dimensionality. Our research is directed at obtaining crystalline phases that can be analyzed by single crystal diffraction techniques 
+and correlating the structural features with the physical properties in order to build a database of information that we can draw upon for future 
+design of materials with improved properties.", :content => "
+<p>We are interested in molecular magnets and molecular conductors based on coordination polymers of 7,7,8,8<tt>-</tt>tetracyanoquinodimethane (TCNQ) because the materials are lighter than the traditional ones, they are typically obtained at room temperature, and the properties can be tuned by installing substituents on the ring that change the steric bulk and redox behavior of the ligand. The TCNQ ligand is very stable in its radical anion form and, as such, it is very useful as a spin carrier in coordination compounds. In fact, the magnetic communication between metal ions is greatly enhanced in comparison with diamagnetic linkers of similar size. The co<tt>-</tt>assembly of TCNQ radicals with transition metal, main group and lanthanide metal ions leads to materials that exhibit interesting magnetic and/or electronic properties. The coordination chemistry of TCNQ is diverse, as illustrated by the formation of 0<tt>-</tt>D complexes, 1<tt>-</tt>D chains, 2<tt>-</tt>D frameworks and 3<tt>-</tt>D nets. We have synthesized and characterized representative examples of each dimensionality.  Our research is directed at obtaining crystalline phases that can be analyzed by single crystal diffraction techniques and correlating the structural features with the physical properties in order to build a database of information that we can draw upon for future design of materials with improved properties.</p>
+<p></p><center><b>Discrete M<tt>-</tt>TCNQ complexes</b></center><p></p>
+<p>The 0<tt>-</tt>dimensional {Tb[TCNQF<sub>4</sub>]<sub>2</sub>[H<sub>2</sub>O]<sub>6</sub>} (TCNQF<sub>4</sub>)(3H<sub>2</sub>O) mononuclear 
+complex is an example of a lanthanide<tt>-</tt>organic radical with fascinating and complex behavior. A detailed micro<tt>-</tt>SQUID study at 
+low temperature, conducted in collaboration with Dr. Wolfgang Wernsdorfer from the Institut Neel at Grenoble, revealed an unprecedented interplay 
+between single molecule magnetic behavior (SMM) and a phonon bottleneck effect (PB). The dilution studies with diamagnetic Y<sup>III</sup> ions 
+indicate that the \"sea of organic S = 1/2 radicals\" is responsible for the PB effect observed and the SMM behavior arises from the magnetically 
+anisotropic Tb<sup>III</sup> ions.</p>
+<p><left><img src=\"/uploads/research_images/TbTCNQF4.png\" width=\"300\" height=\"300\"></left></p><center><img src=\"/uploads/research_images/TbTCNQF4hyst.png\" 
+width=\"300\" height=\"300\">
+</center><right><img src=\"/uploads/research_images/TbTCNQF4ac.png\" width=\"300\" height=\"300\"></right><p></p>
+<p>Molecular structure of the Tb-TCNQF<sub>4</sub> cationic complex (top left). Field-dependent micro<tt>-</tt>SQUID magnetization scans collected 
+for Tb<tt>-</tt>TCNQF<sub>4</sub> at 0.04 K showing double<tt>-</tt>s shape hysteresis (top right). Interstitial water molecules and hydrogen atoms 
+have been omitted for the sake of clarity. Tb = green, O = red, N = blue, C = gray, F = yellow. Temperature dependence of the imaginary component 
+χ'' of the AC magnetic susceptibility of Tb<tt>-</tt>TCNQF<sub>4</sub> measured under zero applied field in an oscillating field of 3 Oe at 
+different frequencies (bottom).</p>
+<p></p><center><b>M<tt>-</tt>TCNQ 3D frameworks</b></center><p></p>
+<p>Crystalline 3D materials based on TCNQ are also under investigation in our laboratories. Our work is contributing to the understanding of 
+important electronic materials with non<tt>-</tt>volatile memory effects that have been known for decades but whose properties are still not 
+well understood. We discovered that there are two phases of Cu(TCNQ)<sup>1</sup> (see figure) and Ag(TCNQ). Cu(TCNQ) phase I and Ag(TCNQ) 
+are 1<tt>-</tt>D semiconductors with electron mobility being facilitated through TCNQ columns with evenly spaced TCNQ radical units. Cu(TCNQ) 
+phase I is one of the most extensively studied semiconductors among all coordination polymers and exhibits a reversible switching from a 
+highly resistive state to a conducting state promoted by the application of an electric field or irradiation, which makes it an excellent 
+candidate for non-volatile memory.<sup>2,3</sup> The promise for commercial applications is sufficiently high such that researchers have 
+fabricated devices with nanowires, nanorods and nanoribbons of Cu(TCNQ) as well as Ag(TCNQ).<sup>4-9</sup></p>
+<p><left><img src=\"/uploads/research_images/CuTCNQ1.jpg\" width=\"379\" height=\"375\"></left><right><img src=\"/uploads/research_images/CuTCNQ2.jpg\" 
+width=\"379\" height=\"375\"></right></p>
+<p>A perspective view of Cu(TCNQ) phase I (left), in which the π<tt>-</tt>π stacking of 3.2 Å is observed along the short axis (a axis). 
+A perspective view of Cu(TCNQ) phase II in which there are no π<tt>-</tt>π interactions because the shortest distance between rings is 5.3 
+Å (right). Color code: Cu = green, C = gray, N = blue, H = light pink.</p>
+<p><sup>1</sup>New Insight into the Nature of Cu(TCNQ):  Solution Routes to Two Distinct Polymorphs and Their Relationship to Crystalline 
+Films that Display Bistable Switching Behavior.  Robert A. Heintz, Hanhua Zhao, Xiang Ouyang, Giulio Grandinetti, Jerry Cowen and Kim R. 
+Dunbar <i>Inorg. Chem.</i> <b>1999</b>, <i>38</i>, 144-156.</p>
+<p><sup>2</sup>Electrical switching and memory phenomena in Cu<tt>-</tt>TCNQ thin films. R. S. Potember, T. O. Poehler, D. O. Cowan, 
+<i>Appl. Phys. Lett</i>. <b>1979</b>, <i>34</i> , 405.</p>
+<p><sup>3</sup>Optical switching in semiconductor organic thin films. R. S. Potember, T. O. Poehler, R. C. Benson,  <i>Appl. Phys. 
+Lett</i>. <b>1982</b>, <i>41</i> , 548.</p>
+<p><sup>4</sup>Directed integration of tetracyanoquinodimethane<tt>-</tt>Cu organic nanowires into prefabricated device architectures. 
+K. Xiao, I. N. Ivanov, A. A. Puretzky, Z. Liu, D. B. Geohegan, <i>Adv. Mater</i>., <b>2006</b>, <i>18</i>, 2184-2188.</p>
+<p><sup>5</sup>Single<tt>-</tt>Crystal Organic Nanowires of Copper<tt>-</tt>Tetracyanoquinodimethane: Synthesis, Patterning, 
+Characterization, and Device Applications. K. Xiao, J. Tao, Z. Pan, A. A. Puretzky, I. N. Ivanov, S. J. Pennycook, D. B. Geohegan, 
+<i>Angew. Chem. Int. Ed</i>. <b>2007</b>, <i>46</i>, 2650.</p>
+<p><sup>6</sup>Particle<tt>-</tt>Size Control and Patterning of a Charge<tt>-</tt>Transfer Complex for Nanoelectronics. Y. 
+Liu, Z. Ji, Q. Tang, L. Jiang, H. Li, M. He, W. Hu, D. Zhang, L. Jiang, X. Wang, C. Wang, Y. Liu, D. Zhu, <i>Adv. Mater</i>., 
+<b>2005</b>, <i>17</i>, 2953.</p>
+<p><sup>7</sup>Controlling the Growth of Single Crystalline Nanoribbons of Copper Tetracyanoquinodimethane for the Fabrication 
+of Devices and Device Arrays. Y. Liu, H. Li, D. Tu, Z. Ji, C. Wang, Q. Tang, M. Liu, W. Hu, Y. Liu, D. Zhu, <i>J. Am. Chem. 
+Soc</i>., <b>2006</b>, <i>128</i>,12917-12922.</p>
+<p><sup>8</sup>Field Emission Properties of Large<tt>-</tt>Area Nanowires of Organic Charge<tt>-</tt>Transfer Complexes. H. 
+Liu, Q. Zhao, Y. Li, Y. Liu, F. Lu, J. Zhuang, S. Wang, L. Jiang, D. Zhu, D. Yu, L. Chi, <i>J. Am. Chem. Soc</i>. <b>2005</b>, 
+<i>127</i>, 1120.</p>
+<p><sup>9</sup>Selective Patterned Growth of Single<tt>-</tt>Crystal Ag<tt>-</tt>TCNQ Nanowires for Devices by Vapor<tt>-
+</tt>Solid Chemical Reaction. K. Xiao, J. Tao, A. A. Puretzky, I. N. Ivanov, S. T. Retterer, S. J. Pennycook, D. B. Geohegan, 
+<i>Adv. Funct. Mater</i>. <b>2008</b>, <i>18</i>, 3043.</p>
+")
 
 
 #slider image seed
