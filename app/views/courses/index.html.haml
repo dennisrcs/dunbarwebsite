@@ -12,7 +12,11 @@
       - @courses.each do |course|
         .course-info
           = link_to "#{course.name}", course_path(course)
+          - if current_user_admin?
+            = link_to image_tag("icons/icon_edit.png"), edit_course_path(course), :title => "Edit course"
+            = link_to image_tag("icons/icon_delete.png"), course_path(course), :title => "Delete course", :method => :delete, data: { confirm: "Are you sure?" }
+  - if current_user_admin?
+    = link_to "Add new course", new_course_path, :id => 'add-course-btn'
         
 - else
   %p You need to be logged in to have access to the courses
-

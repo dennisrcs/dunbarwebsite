@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160502210602) do
     t.integer "course_id"
     t.string  "name"
     t.string  "file_path"
-    t.integer "type"
+    t.integer "file_type"
   end
 
   add_index "course_files", ["course_id"], name: "index_course_files_on_course_id", using: :btree

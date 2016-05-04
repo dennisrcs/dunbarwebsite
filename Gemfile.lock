@@ -110,7 +110,6 @@ GEM
     fixture_builder (0.4.1)
       activerecord (>= 2)
       activesupport (>= 2)
-    flexslider-rails (1.0.0)
     gherkin (3.2.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -168,6 +167,11 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (4.2.5.2)
       actionpack (= 4.2.5.2)
       activesupport (= 4.2.5.2)
@@ -258,7 +262,6 @@ DEPENDENCIES
   factory_girl_rails
   faker
   fixture_builder
-  flexslider-rails
   haml
   headless
   jbuilder (~> 2.0)
@@ -269,6 +272,7 @@ DEPENDENCIES
   pg
   protected_attributes
   rails (= 4.2.5.2)
+  rails_12factor
   rest-client
   rspec-rails
   sass-rails (~> 5.0)

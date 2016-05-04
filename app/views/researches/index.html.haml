@@ -1,7 +1,12 @@
 = content_for(:title, "Research")
-%h1 Research
+
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
 
 .largest-row
+  %h1 Research
+  
   .research_list
     - @researches.each do |research|
       .research-item
@@ -9,8 +14,9 @@
           %h2
             = link_to research.title.html_safe, research_path(research)
           = research.summary.html_safe
-          - if logged_in? && current_user_admin?
-            = button_to 'Delete', research_path(research), :method => :delete, :confirm => 'Are you sure?'
+        - if logged_in? && current_user_admin?
+          .delete-research
+            = link_to image_tag("icons/icon_delete.png"), research_path(research), :title => "Delete research", :method => :delete, data: { confirm: "Are you sure?" } , :id =>"Delete"
             
   - if logged_in? && current_user_admin?
     #add-research-btn= link_to 'Add new Research', new_research_path

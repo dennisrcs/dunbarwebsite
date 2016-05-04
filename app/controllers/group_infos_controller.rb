@@ -4,6 +4,11 @@ class GroupInfosController < ApplicationController
     @group_infos = GroupInfo.all
   end
 
+  def show
+    flash[:danger] = "Invalid action!"
+    redirect_to group_infos_path
+  end
+
   def new
     # only renders 'new' view
   end

@@ -12,13 +12,11 @@
 //
 //= require_self
 //= require jquery
+//= require jquery-migrate-min
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
-;(function($) {
 $(document).ready(function() {
     $(".flash_danger").delay(2000).slideUp(1000);
     $(".flash_info").delay(2000).slideUp(1000);
 });
-})(jquery);

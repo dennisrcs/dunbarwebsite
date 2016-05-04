@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   resources :members
   resources :courses
 
+  resources :courses do
+    resources :course_files
+  end
+
   resources :researches
   resources :researches do
     member { post :mercury_update }
@@ -26,10 +30,11 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit, :update]
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
-  resources :news
   resources :news do
     member { post :mercury_update }
   end
+
+  get '*path', :to => 'application#page_not_found'
 
   #get 'news/index'
 

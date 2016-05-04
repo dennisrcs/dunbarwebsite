@@ -1,0 +1,72 @@
+= content_for(:title, "#{@course.name}")
+
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
+
+- if logged_in?
+  %h1 #{@course.name}
+
+  .largest-row
+    .course-files-content
+      - if @syllabus != nil
+        .course-files-item#syllabus
+          = link_to "Course Syllabus", "#{@syllabus.first.file_path}", :target => "_blank"
+          = link_to image_tag("icons/icon_delete.png"), course_course_file_path(@course, @syllabus), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" } if logged_in? && current_user_admin?
+      - if @notes != nil
+        .course-files-item.notes
+          %h4
+            Notes:
+          - @notes.each do |file| 
+            = link_to "#{file.name}", "#{file.file_path}", :target => "_blank"
+            = link_to image_tag("icons/icon_delete.png"), course_course_file_path(@course, file), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" } if logged_in? && current_user_admin?
+      -if @chapter_goals != nil
+        .course-files-item#chapter_goals
+          %h4
+            Chapter Goals:
+          - @chapter_goals.each do |file|
+            = link_to "#{file.name}", "#{file.file_path}", :target => "_blank"
+            = link_to image_tag("icons/icon_delete.png"), course_course_file_path(@course, file), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" } if logged_in? && current_user_admin?
+      -if @resource_research != nil
+        .course-files-item#resource_research
+          %h4
+            Resources for Research Paper:
+          - @resource_research.each do |file|
+            = link_to "#{file.name}", "#{file.file_path}", :target => "_blank"
+            = link_to image_tag("icons/icon_delete.png"), course_course_file_path(@course, file), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" } if logged_in? && current_user_admin?
+      -if @resource_research != nil
+        .course-files-item#homework
+          %h4
+            Homework:
+          - @homework.each do |file|
+            = link_to "#{file.name}", "#{file.file_path}", :target => "_blank"
+            = link_to image_tag("icons/icon_delete.png"), course_course_file_path(@course, file), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" } if logged_in? && current_user_admin?
+      -if @solutions != nil
+        .course-files-item#solutions
+          %h4
+            Solutions:
+          - @solutions.each do |file|
+            = link_to "#{file.name}", "#{file.file_path}", :target => "_blank"
+            = link_to image_tag("icons/icon_delete.png"), course_course_file_path(@course, file), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" } if logged_in? && current_user_admin?
+      -if @exam_answers != nil
+        .course-files-item#exam_answers
+          %h4
+            Exam Key Answers:
+          - @exam_answers.each do |file|
+            = link_to "#{file.name}", "#{file.file_path}", :target => "_blank"
+            = link_to image_tag("icons/icon_delete.png"), course_course_file_path(@course, file), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" } if logged_in? && current_user_admin?
+      -if @misc != nil
+        .course-files-item#misc
+          %h4
+            Miscellaneous:
+          - @misc.each do |file|
+            = link_to "#{file.name}", "#{file.file_path}", :target => "_blank"
+            = link_to image_tag("icons/icon_delete.png"), course_course_file_path(@course, file), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" } if logged_in? && current_user_admin?
+            
+  - if logged_in? && current_user_admin?
+    = link_to "Add new file", new_course_course_file_path(@course), :id => 'add-new-coursefile'
+    
+  = link_to "Go back to Teaching page", courses_path, :id => 'back-teaching-page'
+- else
+  %p Only members with privileges can access the documents in "#{@course.name}"
+

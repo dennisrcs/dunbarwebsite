@@ -221,7 +221,7 @@ a:hover, a:active {
 	}
 	.button{
 		display: inline-block;
-		margin-left: 10em;
+		/*margin-left: 10em;*/
 		text-decoration: none;
 		color: black;
 		font-family: arial;
