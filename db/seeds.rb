@@ -105,3 +105,81 @@ exchange-bias behavior depending on the interstitial methanol content.", :link =
 
 course1 = Course.create(:name => "CHEM 634")
 course2 = Course.create(:name => "CHEM 362")
+
+
+research1 = Research.create(:title => "Supramolecular Chemistry of Anions", :summary => "Research in the Supramolecular Chemistry of Anions is a newer 
+project in the Dunbar Group. The project has developed into a highly interdisciplinary endeavor, encompassing coordination chemistry, computational 
+chemistry, and, biochemistry. Anion-π interactions, i.e., the noncovalent forces between electron-deficient aromatic systems and anions, have been 
+relatively unexplored as compared to cation-pi interactions, primarily due to the counter-intuitive nature of aromatic rings being attracted to a 
+negative charge. The vital role of anions in many key chemical and biological processes and the involvement of pi rings in molecular anion 
+recognition and transport processes, however, indicate that anion-pi contacts may be prominent players in fields as diverse as medicine and 
+environmental chemistry. Our tutorial review in Chemical Society Reviews presents a good overview of the aims and scope of the field.", 
+:content => "<p>Research in the Supramolecular Chemistry of Anions is a newer project in the Dunbar Group.  The project has developed 
+into a highly interdisciplinary endeavor, encompassing coordination chemistry, computational chemistry, and, biochemistry. Anion-π interactions, 
+i.e., the noncovalent forces between electron-deficient aromatic systems and anions, have been relatively unexplored as compared to cation-pi 
+interactions, primarily due to the counter-intuitive nature of aromatic rings being attracted to a negative charge. The vital role of anions 
+in many key chemical and biological processes and the involvement of pi rings in molecular anion recognition and transport processes, however, 
+indicate that anion-pi contacts may be prominent players in fields as diverse as medicine and environmental chemistry. Our tutorial review in 
+<i>Chemical Society Reviews</i> presents a good overview of the aims and scope of the field.<sup>1-4</sup></p><p>The main question that we are 
+posing is: \"How does the interplay between anions and electron-deficient aromatic ligands mediate the structures and properties of supramolecular 
+architectures\"? An initial foray into the nature of supramolecular interactions involving anions - specifically the anion-pi interaction was 
+initiated in response to our discovery of two related metallocyclophanes, the nuclearity of which is dictated by the identity of the encapsulated 
+anion.<sup>1</sup> Reactions of fully-solvated Ni<sup>II</sup> ions with the ligand 3,6-bis(2'-pyridyl)-1,2,4,5-tetrazine (bptz) yield the square 
+[Ni<sub>4</sub>(bptz)<sub>4</sub>(NCCH<sub>3</sub>)<sub>8</sub>⊂BF<sub>4</sub>]<sup>7+</sup> (Figure 1, left) and pentagonal 
+[Ni<sub>5</sub>(bptz)<sub>5</sub>(NCCH<sub>3</sub>)<sub>10</sub>⊂SbF<sub>6</sub>]<sup>9+</sup> (Figure 1, right) motifs in the presence of 
+[BF<sub>4</sub>]<sup>-</sup> and [SbF<sub>6</sub>]<sup>-</sup> anions, respectively. Intriguingly, the pentagonal motif can be converted to 
+the square motif simply by adding the [BF<sub>4</sub>]<sup>-</sup> ions to the pentagon in solution. The reverse conversion may also be effected. 
+The previous findings along with the observation of an alignment between the central tetrazine core of bptz and [BF<sub>4</sub>]<sup>-</sup> 
+in the square motif's crystal structure, suggest that anion-pi interactions are an integral part of the template effect.</p><center>
+<img width=\"282\" height=\"282\" src=\"/uploads/research_images/clip_image002.gif\" alt=\"NiSqSide.tif\">
+<img width=\"307\" height=\"282\" src=\"/uploads/research_images/clip_image003.gif\" alt=\"NiPentFront.tif\"><br clear=\"all\">
+<img width=\"271\" height=\"165\" src=\"/uploads/research_images/clip_image005.gif\" alt=\"NiSqTop.tif\">
+<img width=\"311\" height=\"165\" src=\"/uploads/research_images/clip_image006.gif\" alt=\"NiPentTop.tif\"></center>
+<p></p><p><b>Figure 1.</b> : Side (above) and top (below) views of the cationic [Ni<sub>4</sub>(bptz)<sub>4</sub>(NCCH<sub>3</sub>)<sub>8</sub>
+⊂BF<sub>4</sub>]<sup>7+</sup> (square, left) and [Ni<sub>5</sub>(bptz)<sub>5</sub>(NCCH<sub>3</sub>)<sub>10</sub>⊂SbF<sub>6</sub>]<
+sup>9+</sup> (pentagon, right) species. Non-encapsulated anions, solvent molecules and hydrogen atoms have been omitted for clarity. Atom 
+colors: C = gray, N = blue, F = green, B = purple, Sb = yellow and Ni = tan.<sup>1</sup></p><p>The aforementioned observations led us to 
+explore the nature of anion-pi interactions in both experimental and computational systems, with a focus on the role of the electronic 
+nature of the ligand and the anion identity. Our work revealed that when bptz reacts with salts of Ag<sup>I</sup>, the ensuing structure 
+depends on the identity of the anion which interacts strongly with the ligand through anion-pi interactions (the most striking example being 
+the propeller-type structure with AgSbF<sub>6</sub>).<sup>2</sup> Conversely  if a ligand with a more electron-rich central ring is used, such 
+as 3,6-bis(2'-pyridyl)pyridazine (bppn), a grid structure arises regardless of the anion used, and the structure maximizes pi-pi stacking 
+interactions at the expense of anion-pi interactions (Figure 2). By using similar tricyclic ligands with varying binding motifs and electronic 
+distributions we are aim to further probe the anion-templation effect in complexes of first-row transition metals.</p><p></p>
+<center><img width=\"232\" height=\"334\" src=\"/uploads/research_images/clip_image007.gif\" alt=\"agprop.tif\">
+		<img width=\"346\" height=\"334\" src=\"/uploads/research_images/clip_image008.gif\" alt=\"aggrid.tif\"><br clear=\"all\">
+		<img width=\"247\" height=\"100\" src=\"/uploads/research_images/clip_image009.gif\" alt=\"bptz_esp.tif\">
+		<img width=\"242\" height=\"100\" src=\"/uploads/research_images/clip_image010.gif\" alt=\"bppn_esp.tif\">
+		</center><p></p>
+<p><b>Figure 2.</b> : Structures resulting from the reaction of AgSbF<sub>6</sub> with bptz (propeller, top left) and bppn (grid, top right), 
+with the electrostatic potential maps of bptz (lower left) and bppn (lower right). Electrostatic potential maps created at a 0.02 isodensity 
+value and a color scale 126 (blue) to -63  (red) kcal/mol using Cerius<sup>2</sup>. Atom colors: C = gray, H = white, N = blue, F = green, B = 
+purple, Sb = yellow and Ag = brown.<sup>2</sup></p><p>As part of our broader interest in anion-pi interactions, we have recently been studying 
+the interesting electron-deficient ligand HAT(CN)<sub>6</sub> (1,4,5,8,9,12-hexaazatriphenylene-hexacarbonitrile) (Figure 3, left) which 
+co-crystallizes with [n-Bu<sub>4</sub>N][I] to afford {([n-Bu<sub>4</sub>N][I])<sub>3</sub>[HAT(CN)<sub>6</sub>]<sub>2</sub>}·3C<sub>6</sub>
+H<sub>6</sub> (1). This material exhibits charge-transfer from the [I]<sup>-</sup> ions to the HAT(CN)<sub>6</sub> rings as well as anion-pi 
+interactions at the ring centroid.<sup>3,4</sup>  The crystal structure of <b>1</b> indicates four crystallographic positions partially 
+occupied by three iodide anions (Figure 3, center); three of the four iodide positions are centered over the periphery of the HAT(CN)
+<sub>6</sub> ring while the fourth position is located directly over the centroid on the opposite face of the ring (Figure 3, center).  
+The resulting structure exhibits an ABCD type stacking with alternating layers of HAT(CN)<sub>6</sub> molecules and iodide anions 
+(Figure 3, right).  The two distinct anion sites and the established anion-π interactions are the focus of ongoing studies in our 
+group.</p><p></p>
+<center><img width=\"222\" height=\"195\" src=\"/uploads/research_images/clip_image011.gif\" alt=\"hatcn6_transparent.tif\">
+		<img width=\"226\" height=\"195\" src=\"/uploads/research_images/clip_image012.gif\" alt=\"hatcn6_top.tif\">
+		<img width=\"133\" height=\"195\" src=\"/uploads/research_images/clip_image013.gif\" alt=\"hatcn6_stack.tif\">
+		</center><p></p>
+<p><b>Figure 3.</b> : (Left) Structure of HAT(CN)<sub>6</sub>; (center) {([n-Bu<sub>4</sub>N][I])<sub>3</sub>[HAT-(CN)<sub>6</sub>]<sub>2</sub>}.3C
+<sub>6</sub>H<sub>6</sub> looking down the c axis (the three iodide ions are distributed among four crystallographic positions) and (right) 
+space-filling diagram of the repeat layers in ([n-Bu<sub>4</sub>N][I])<sub>3</sub>HAT-(CN)<sub>6</sub>]<sub>2</sub>; the cations have been 
+omitted for clarity. Atom colors:  C = gray, H = white, N = blue, I = yellow.<sup>3</sup></p><p>Our computational studies (with both Density 
+Functional Theory and <i>ab initio</i> methods) are used to corroborate our experimental findings, and the results suggest that highly pi-acidic 
+aromatic systems are more amenable to anion-pi interactions. Continuing research involves expanding the computational models to include multiple 
+anions and multiple arenes to explore the anion-pi interaction in extended systems as well as single-point energy and geometry optimization 
+computations on structures derived from crystallographic studies.</p><p>Perhaps even more fascinating than the role of anions in 
+metallosupramolecular chemistry is the possible role of anion-pi interactions in biological systems due to the pivotal role of anions in many 
+key chemical and biological processes.<sup>4</sup> The presence of electron-poor aromatic moieties in biomolecules such as proteins and nucleic acids led us to ask whether anion-pi interactions may play a role in protein functions, e.g., anion-transport, or other enzyme activities.  Current research in the Dunbar group aims at addressing the role of anion-π interactions in proteins and other molecules of biological interest via computational and statistical analyses of known protein structures.</p><p><b>References</b><br>
+1.	Campos-Fernandez, C. S.; Schottel, B. L.; Chifotides, H. T.; Bera, J. K.; Bacsa, J.; Koomen, J. M.; Russell, D. H.; Dunbar, K. R. J. Am. Chem. Soc., 2005, 127, 12909-12923.<br>
+2.	Schottel, B. L.; Chifotides, H. T.; Shatruk, M.; Chouai, A.; Bacsa, J.;  Perez, L. M.; Dunbar, K. R.  J. Am. Chem. Soc. 2006, 128, 5895-5912.<br>
+3.	Szalay, P. S.; Galan-Mascaros, J. R.; Schottel, B. L.; Basca, J.; Perez, L. M.; Ichimura, I. S.; Chouai, A.; Dunbar, K. R. J. Cluster Sci. 2004, 15, 503-530.<br>
+4.	Schottel, B. L.; Chifotides, H. T.; Dunbar, K. R. Chem. Soc. Rev. 2008, 37, 68-83.</p>
+")
