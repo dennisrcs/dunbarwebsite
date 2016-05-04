@@ -3,18 +3,13 @@ class Course < ActiveRecord::Base
 
   attr_accessible :name
   
-  def self.get_syllabus(course)
-    @syllabus_file = course.course_files.select { |f| f.file_type == 'syllabus'}
-    return @syllabus_file.first;
+  def self.get_course_files(course, filetype)
+    if course == nil || course.course_files == nil || course.course_files.length == 0
+      return nil
+    else
+      files = course.course_files.select { |f| f.file_type == filetype }
+      return (files.length == 0) ? nil : files
+    end
   end
-  
-  def self.get_notes(course)
-    @notes_files = course.course_files.select { |f| f.file_type == 'notes'}
-    return @notes_files;
-  end
-  
-  def self.get_chapter_goals(course)
-    @chapter_goals_files = course.course_files.select { |f| f.file_type == 'chapter_goals'}
-    return @chapter_goals_files
-  end
+
 end
