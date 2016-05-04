@@ -1,13 +1,19 @@
 .homepage-content {
+  display: block;
+}
+
+.homepage-content .news,
+.homepage-content .news h4 {
+  margin: 0 auto;
   display: table;
 }
 
-.homepage-content .slide-wrapper {
-  display: table-row;
-  width: 70%
+.homepage-content .news h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.homepage-content .news {
-  display: table-row;
-  width: 30%
+.homepage-content .news-item {
+  margin-bottom: 30px;
 }
+
