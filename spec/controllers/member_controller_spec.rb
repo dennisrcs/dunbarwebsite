@@ -22,7 +22,7 @@ describe MembersController, :type => :controller do
         end
         it 'should create a new member from a user object' do
             post :create
-            expect(response).to redirect_to (member_path(Member.last))
+            expect(response).to redirect_to (new_member_path)
         end
         
         it 'should call random_password' do
