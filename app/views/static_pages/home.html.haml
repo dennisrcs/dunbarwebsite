@@ -8,27 +8,26 @@
 
 .welcome    
   %h1 Welcome to The Dunbar Research Group  
-  
-.cycle-slideshow.slider{"data-cycle-caption-fx-in" => "slideDown", "data-cycle-caption-fx-out" => "slideUp", "data-cycle-caption-plugin" => "caption2", "data-cycle-fx" => "scrollHorz", "data-cycle-slides" => "> div", "data-cycle-timeout" => "3000"}
-  -@sliderImages.each.with_index do |slider_image, index|
-    .innerWrapper{"data-cycle-title" => slider_image.title}
-      %table
-        %td{:width => "70%"}
-          %img.slide1img{:alt => "", :src => slider_image.slider_image_picture}/
-        %td{:width => "30%"}
-          %p.slide2text "#{slider_image.title}"
-          %a.button{:href => slider_image.link} More
-      
-.news    
-  -if logged_in? && current_user_admin?
-    %h4= link_to "News", announcements_path
-  -else
-    %h4 News
-  - @announcements.first(10).each do |announcement|
-    = announcement.content.html_safe
-    = announcement.date
-    %br
-    %br
+
+.homepage-content
+  .slider-wrapper
+    .cycle-slideshow.slider{"data-cycle-caption-fx-in" => "slideDown", "data-cycle-caption-fx-out" => "slideUp", "data-cycle-caption-plugin" => "caption2", "data-cycle-fx" => "scrollHorz", "data-cycle-slides" => "> div", "data-cycle-timeout" => "3000"}
+      - @sliderImages.each.with_index do |slider_image, index|
+        .innerWrapper{"data-cycle-title" => slider_image.title}
+          %table
+            %td{:width => "70%"}
+              %img.slide1img{:alt => "", :src => slider_image.slider_image_picture}/
+            %td{:width => "30%"}
+              %p.slide2text "#{slider_image.title}"
+              %a.button{:href => slider_image.link} More
+  .news    
+    -if logged_in? && current_user_admin?
+      %h4= link_to "News", announcements_path
+    -else
+      %h4 News
+    - @announcements.first(10).each do |announcement|
+      = announcement.content.html_safe
+      = announcement.date
     
 :javascript
   $( "#home" ).click(function() {
