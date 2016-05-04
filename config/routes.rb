@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   resources :members
   resources :courses
 
+  resources :courses do
+    resources :course_files
+  end
+
   resources :researches
   resources :researches do
     member { post :mercury_update }

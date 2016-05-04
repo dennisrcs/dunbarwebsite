@@ -8,6 +8,7 @@
       - if @syllabus != nil
         .course-files-item#syllabus
           = link_to "Course Syllabus", "#{@syllabus.first.file_path}", :target => "_blank"
+          = link_to image_tag("icons/icon_delete.png"), course_course_file_path(@course, @syllabus), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" }
       - if @notes != nil
         .course-files-item.notes
           %h4
