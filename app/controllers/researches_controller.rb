@@ -9,7 +9,7 @@ class ResearchesController < ApplicationController
     @research = Research.find_by_id(id)
     if @research == nil
       flash[:danger] = "research not found"
-      redirect_to research_path
+      redirect_to researches_path
     end
   end
   

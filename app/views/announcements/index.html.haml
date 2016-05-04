@@ -1,0 +1,21 @@
+= content_for(:title, "News")
+%h1 News
+
+.publication_list
+  - @announcements.each do |announcement|
+    %table
+      %tr
+        %td.content
+          //= link_to announcement.content.html_safe, news_path(new)
+          = announcement.content.html_safe
+          = announcement.date
+
+          
+          - if logged_in? && current_user_admin?
+            //= button_to 'Delete', news_path(new), :method => :delete, :confirm => 'Are you sure?'
+            = link_to image_tag("icons/icon_edit.png"), edit_announcement_path(announcement), :title => "Edit News" , :id => "Edit"
+            = link_to image_tag("icons/icon_delete.png"), announcement_path(announcement), :title => "Delete News", :method => :delete, data: { confirm: "Are you sure?" } , :id =>"Delete"
+
+- if logged_in? && current_user_admin?
+  #add_announcement= link_to 'Add new News', new_announcement_path
+

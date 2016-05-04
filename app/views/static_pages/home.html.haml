@@ -19,10 +19,17 @@
           %p.slide2text "#{slider_image.title}"
           %a.button{:href => slider_image.link} More
       
-      
-
-  %p Current News: Comming Soon
-
+.news    
+  -if logged_in? && current_user_admin?
+    %h4= link_to "News", announcements_path
+  -else
+    %h4 News
+  - @announcements.first(10).each do |announcement|
+    = announcement.content.html_safe
+    = announcement.date
+    %br
+    %br
+    
 :javascript
   $( "#home" ).click(function() {
     $( $.fn.cycle.defaults.autoSelector ).cycle();

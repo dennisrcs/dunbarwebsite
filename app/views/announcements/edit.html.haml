@@ -1,0 +1,11 @@
+= content_for(:title, "Edit News")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Edit News
+    #edit-new-form.edit-new-form
+      = form_tag new_path(@new), :method => :put, multipart: true do
+        = text_field_tag :content, @new_path.content, :class => 'entry', :placeholder => 'News Content', :required => true
+        
+        = submit_tag 'Update News', :id => 'edit-new-form-button'
+- else
+  %p Only users with privileges can edit publications.

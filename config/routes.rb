@@ -12,6 +12,15 @@ Rails.application.routes.draw do
   resources :publications
   match "publications/:id/edit", to: 'publications#edit', via: [:post, :get]
   
+  
+  #resources :news, only: [:index, :new] 
+  #resources :news
+  #match "news/:id/edit", to: 'news#edit', via: [:post, :get]
+  
+  resources :announcements, only: [:index, :new] 
+  resources :announcements
+  match "announcements/:id/edit", to: 'announcements#edit', via: [:post, :get]
+  
   delete 'logout'  => 'sessions#destroy'
   
   resources :group_infos
@@ -30,9 +39,11 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit, :update]
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
-  resources :news do
-    member { post :mercury_update }
-  end
+  
+  
+  #resources :news do
+  #  member { post :mercury_update }
+  #end
 
   get '*path', :to => 'application#page_not_found'
 

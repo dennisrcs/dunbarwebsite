@@ -56,7 +56,7 @@ class PublicationsController < ApplicationController
                            :more_info => params[:more_info], :pages => params[:pages],
                            :link => params[:link])
     end
-    flash.now[:info] = "The Article was successfully updated."
+    flash.now[:info] = "The publication was successfully updated."
     redirect_to publications_path
    end
    

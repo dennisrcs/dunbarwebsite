@@ -20,4 +20,4 @@ Scenario: Edit group info
   And I upload a group file from "/public/uploads/cv/cv.pdf"
   And I press "Update Group Info"
   Then I should be on the Group Info page
-  And I should see a message "newinfo" 
+  And I should see "newinfo" 

@@ -73,94 +73,16 @@ group_info2 = GroupInfo.create(:title => "Bond Valence Calculator", :is_restrict
 group_info3 = GroupInfo.create(:title => "Cyanide Precautions", :is_restricted => true, :file_path => "/uploads/group_info/cyanide_precautions.pdf")
 group_info4 = GroupInfo.create(:title => "New Employee Arrivel Info", :is_restricted => true, :file_path => "/uploads/group_info/new_employee_arrival_info.pdf")
 
-#slider image seed
-PBA_magnetism = SliderImage.create(:title =>"Desing of metal cyanide clusters of desired geometries that give rise to a variety of magnetic phenomena,
-e.g.  spin-crossover, photomagnetism, and single molecule magnetism.", :link => "", :slider_image_picture => "/uploads/slider/PBA_magnetism.png")
-
-ChemSci_2016_TCNQ = SliderImage.create(:title => "New bifunctional TCNQ based material: [Co(terpy)2](TCNQ)3·CH3CN exhibits a high room temperature 
-conductivity of 0.13 S cm−1 and an anomaly in conductivity at ∼190 K as evidenced by variable temperature structural, 
-magnetic and conductivity studies.", :link => "", :slider_image_picture => "/uploads/slider/ChemSci_2016_TCNQ.png")
-
-JACS_2015_trimers = SliderImage.create(:title => "New Mn(III)-NC-M(III)-CN-Mn(III) complexes exhibing switchable single-molecule magnet (SMM) and 
-exchange-bias behavior depending on the interstitial methanol content.", :link => "", :slider_image_picture => "/uploads/slider/JACS_2015_trimers.png")
 
 
-course1 = Course.create(:name => "CHEM 634")
 
-syllabus = CourseFile.new(:name => "syllabus", :file_path => "/uploads/courses/qualifying.pdf")
-syllabus.file_type = :syllabus
-syllabus.course_id = course1.id
-syllabus.save
+news1 = New.create(:content => "Francisco Birk is currently visiting Ph.D. student in Jagiellonian University (Kraków, Poland)
+working in Dawid Pinkowicz’s lab synthetizing group 5 and 6 cyanometallates. Enjoy the stay!")
 
-10.times do |m|
-   file = CourseFile.new(:name => "#{m}", :file_path => "/uploads/courses/qualifying.pdf")
-   file.file_type = :notes
-   file.course_id = course1.id
-   file.save
-end
+news2 = New.create(:content => "Kelsey Schulte passed her prelim this month. Congratulations!")
 
-5.times do |m|
-   file = CourseFile.new(:name => "Goal #{m}", :file_path => "/uploads/courses/qualifying.pdf")
-   file.file_type = :chapter_goals
-   file.course_id = course1.id
-   file.save
-end
-
-8.times do |m|
-   file = CourseFile.new(:name => "Resource #{m}", :file_path => "/uploads/courses/qualifying.pdf")
-   file.file_type = :resource_research
-   file.course_id = course1.id
-   file.save
-end
-
-5.times do |m|
-   file = CourseFile.new(:name => "HW#{m}", :file_path => "/uploads/courses/qualifying.pdf")
-   file.file_type = :homework
-   file.course_id = course1.id
-   file.save
-end
-
-5.times do |m|
-   file = CourseFile.new(:name => "Solution#{m}", :file_path => "/uploads/courses/qualifying.pdf")
-   file.file_type = :solutions
-   file.course_id = course1.id
-   file.save
-end
-
-5.times do |m|
-   file = CourseFile.new(:name => "Answer#{m}", :file_path => "/uploads/courses/qualifying.pdf")
-   file.file_type = :exam_answers
-   file.course_id = course1.id
-   file.save
-end
-
-course2 = Course.create(:name => "CHEM 362")
-
-syllabus2 = CourseFile.new(:name => "syllabus", :file_path => "/uploads/courses/qualifying.pdf")
-syllabus2.file_type = :syllabus
-syllabus2.course_id = course2.id
-syllabus2.save
-
-8.times do |m|
-   file = CourseFile.new(:name => "#{m}", :file_path => "/uploads/courses/qualifying.pdf")
-   file.file_type = :notes
-   file.course_id = course2.id
-   file.save
-end
-
-5.times do |m|
-   file = CourseFile.new(:name => "HW#{m}", :file_path => "/uploads/courses/qualifying.pdf")
-   file.file_type = :homework
-   file.course_id = course2.id
-   file.save
-end
-
-2.times do |m|
-   file = CourseFile.new(:name => "Answer#{m}", :file_path => "/uploads/courses/qualifying.pdf")
-   file.file_type = :exam_answers
-   file.course_id = course2.id
-   file.save
-end
+news3 = New.create(:content => "The end of the semester brings us a plethora of thesis dissertations – Xuan Zhang, Toby J. 
+Woods, Jill V. Ellenbarger and Codi A. Sanders. Good luck to the protagonist!")
 
 research1 = Research.create(:title => "Supramolecular Chemistry of Anions", :summary => "Research in the Supramolecular Chemistry of Anions is a newer 
 project in the Dunbar Group. The project has developed into a highly interdisciplinary endeavor, encompassing coordination chemistry, computational 
@@ -238,3 +160,107 @@ key chemical and biological processes.<sup>4</sup> The presence of electron-poor
 3.	Szalay, P. S.; Galan-Mascaros, J. R.; Schottel, B. L.; Basca, J.; Perez, L. M.; Ichimura, I. S.; Chouai, A.; Dunbar, K. R. J. Cluster Sci. 2004, 15, 503-530.<br>
 4.	Schottel, B. L.; Chifotides, H. T.; Dunbar, K. R. Chem. Soc. Rev. 2008, 37, 68-83.</p>
 ")
+
+
+
+
+#slider image seed
+PBA_magnetism = SliderImage.create(:title =>"Desing of metal cyanide clusters of desired geometries that give rise to a variety of magnetic phenomena,
+e.g.  spin-crossover, photomagnetism, and single molecule magnetism.", :link => "http://pubs.rsc.org/en/content/articlelanding/2016/sc/c5sc03547c#!divAbstract", :slider_image_picture => "/uploads/slider/PBA_magnetism.png")
+
+ChemSci_2016_TCNQ = SliderImage.create(:title => "New bifunctional TCNQ based material: [Co(terpy)2](TCNQ)3·CH3CN exhibits a high room temperature 
+conductivity of 0.13 S cm−1 and an anomaly in conductivity at ∼190 K as evidenced by variable temperature structural, 
+magnetic and conductivity studies.", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k", :slider_image_picture => "/uploads/slider/ChemSci_2016_TCNQ.png")
+
+JACS_2015_trimers = SliderImage.create(:title => "New Mn(III)-NC-M(III)-CN-Mn(III) complexes exhibing switchable single-molecule magnet (SMM) and 
+exchange-bias behavior depending on the interstitial methanol content.", :link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b09378", :slider_image_picture => "/uploads/slider/JACS_2015_trimers.png")
+
+HAT = SliderImage.create(:title => "The exceptional π-electron-acceptor strength of HAT(CN)6 renders it an excellent colorimetric halide sensor. 
+It engages in multisite anion interactions, namely, both charge-transfer and anion–π, in solution and the solid state. The halide ions are the driving 
+elements for the spontaneous self-assembly of the sandwich-like complexes through η2,η2-charge-transfer contacts.", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k", :slider_image_picture => 
+"/uploads/slider/HAT.png")
+
+RecordS_2010 = SliderImage.create(:title => "A record-breaking high-spin state is observed in a molecule based on the [Mo(CN)7]4− building block. 
+The anionic nanosized docosanuclear {Mo8Mn14} cluster was the first discrete compound based on [Mo(CN)7]4−. The compound contains the most paramagnetic 
+centers (22) and the largest ground-state spin value (S=31) for a cyanide-bridged cluster.", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k", :slider_image_picture => 
+"/uploads/slider/RecordS_2010.png")
+
+JACS_2014_Rh2 = SliderImage.create(:title => "Tuning the ligand field around the dimetal center to maximize the photoreactivity and achieve the best photodynamic
+action", :link => "http://pubs.acs.org/doi/abs/10.1021/ja5078359", :slider_image_picture => "/uploads/slider/JACS_2014_Rh2_HR.png")
+
+course1 = Course.create(:name => "CHEM 634")
+
+syllabus = CourseFile.new(:name => "syllabus", :file_path => "/uploads/courses/qualifying.pdf")
+syllabus.file_type = :syllabus
+syllabus.course_id = course1.id
+syllabus.save
+
+10.times do |m|
+   file = CourseFile.new(:name => "#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :notes
+   file.course_id = course1.id
+   file.save
+end
+
+5.times do |m|
+   file = CourseFile.new(:name => "Goal #{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :chapter_goals
+   file.course_id = course1.id
+   file.save
+end
+
+8.times do |m|
+   file = CourseFile.new(:name => "Resource #{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :resource_research
+   file.course_id = course1.id
+   file.save
+end
+
+5.times do |m|
+   file = CourseFile.new(:name => "HW#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :homework
+   file.course_id = course1.id
+   file.save
+end
+
+5.times do |m|
+   file = CourseFile.new(:name => "Solution#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :solutions
+   file.course_id = course1.id
+   file.save
+end
+
+5.times do |m|
+   file = CourseFile.new(:name => "Answer#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :exam_answers
+   file.course_id = course1.id
+   file.save
+end
+
+course2 = Course.create(:name => "CHEM 362")
+
+syllabus2 = CourseFile.new(:name => "syllabus", :file_path => "/uploads/courses/qualifying.pdf")
+syllabus2.file_type = :syllabus
+syllabus2.course_id = course2.id
+syllabus2.save
+
+8.times do |m|
+   file = CourseFile.new(:name => "#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :notes
+   file.course_id = course2.id
+   file.save
+end
+
+5.times do |m|
+   file = CourseFile.new(:name => "HW#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :homework
+   file.course_id = course2.id
+   file.save
+end
+
+2.times do |m|
+   file = CourseFile.new(:name => "Answer#{m}", :file_path => "/uploads/courses/qualifying.pdf")
+   file.file_type = :exam_answers
+   file.course_id = course2.id
+   file.save
+end
