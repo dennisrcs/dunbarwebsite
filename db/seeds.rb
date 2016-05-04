@@ -162,6 +162,14 @@ end
    file.save
 end
 
+news1 = New.create(:content => "Francisco Birk is currently visiting Ph.D. student in Jagiellonian University (Kraków, Poland)
+working in Dawid Pinkowicz’s lab synthetizing group 5 and 6 cyanometallates. Enjoy the stay!")
+
+news2 = New.create(:content => "Kelsey Schulte passed her prelim this month. Congratulations!")
+
+news3 = New.create(:content => "The end of the semester brings us a plethora of thesis dissertations – Xuan Zhang, Toby J. 
+Woods, Jill V. Ellenbarger and Codi A. Sanders. Good luck to the protagonist!")
+
 research1 = Research.create(:title => "Supramolecular Chemistry of Anions", :summary => "Research in the Supramolecular Chemistry of Anions is a newer 
 project in the Dunbar Group. The project has developed into a highly interdisciplinary endeavor, encompassing coordination chemistry, computational 
 chemistry, and, biochemistry. Anion-π interactions, i.e., the noncovalent forces between electron-deficient aromatic systems and anions, have been 
