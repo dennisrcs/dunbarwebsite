@@ -22,6 +22,7 @@ describe MembersController, :type => :controller do
         end
         it 'should create a new member from a user object' do
             post :create
+            (flash[:danger] = "The account could not be created. Please try again.").should be_present
             expect(response).to redirect_to (new_member_path)
         end
         

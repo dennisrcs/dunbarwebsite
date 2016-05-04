@@ -75,15 +75,27 @@ group_info4 = GroupInfo.create(:title => "New Employee Arrivel Info", :is_restri
 
 #slider image seed
 PBA_magnetism = SliderImage.create(:title =>"Desing of metal cyanide clusters of desired geometries that give rise to a variety of magnetic phenomena,
-e.g.  spin-crossover, photomagnetism, and single molecule magnetism.", :link => "", :slider_image_picture => "/uploads/slider/PBA_magnetism.png")
+e.g.  spin-crossover, photomagnetism, and single molecule magnetism.", :link => "http://pubs.rsc.org/en/content/articlelanding/2016/sc/c5sc03547c#!divAbstract", :slider_image_picture => "/uploads/slider/PBA_magnetism.png")
 
 ChemSci_2016_TCNQ = SliderImage.create(:title => "New bifunctional TCNQ based material: [Co(terpy)2](TCNQ)3·CH3CN exhibits a high room temperature 
 conductivity of 0.13 S cm−1 and an anomaly in conductivity at ∼190 K as evidenced by variable temperature structural, 
-magnetic and conductivity studies.", :link => "", :slider_image_picture => "/uploads/slider/ChemSci_2016_TCNQ.png")
+magnetic and conductivity studies.", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k", :slider_image_picture => "/uploads/slider/ChemSci_2016_TCNQ.png")
 
 JACS_2015_trimers = SliderImage.create(:title => "New Mn(III)-NC-M(III)-CN-Mn(III) complexes exhibing switchable single-molecule magnet (SMM) and 
-exchange-bias behavior depending on the interstitial methanol content.", :link => "", :slider_image_picture => "/uploads/slider/JACS_2015_trimers.png")
+exchange-bias behavior depending on the interstitial methanol content.", :link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b09378", :slider_image_picture => "/uploads/slider/JACS_2015_trimers.png")
 
+HAT = SliderImage.create(:title => "The exceptional π-electron-acceptor strength of HAT(CN)6 renders it an excellent colorimetric halide sensor. 
+It engages in multisite anion interactions, namely, both charge-transfer and anion–π, in solution and the solid state. The halide ions are the driving 
+elements for the spontaneous self-assembly of the sandwich-like complexes through η2,η2-charge-transfer contacts.", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k", :slider_image_picture => 
+"/uploads/slider/HAT.png")
+
+RecordS_2010 = SliderImage.create(:title => "A record-breaking high-spin state is observed in a molecule based on the [Mo(CN)7]4− building block. 
+The anionic nanosized docosanuclear {Mo8Mn14} cluster was the first discrete compound based on [Mo(CN)7]4−. The compound contains the most paramagnetic 
+centers (22) and the largest ground-state spin value (S=31) for a cyanide-bridged cluster.", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k", :slider_image_picture => 
+"/uploads/slider/RecordS_2010.png")
+
+JACS_2014_Rh2 = SliderImage.create(:title => "Tuning the ligand field around the dimetal center to maximize the photoreactivity and achieve the best photodynamic
+action", :link => "http://pubs.acs.org/doi/abs/10.1021/ja5078359", :slider_image_picture => "/uploads/slider/JACS_2014_Rh2_HR.png")
 
 course1 = Course.create(:name => "CHEM 634")
 

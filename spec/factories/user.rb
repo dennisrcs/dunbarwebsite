@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :user do |user|
       user.username{"byter"}
-      user.email{"user_#{rand(1000).to_s}@factory.com"}
+      user.email{"user_#{rand(1000).to_s}@gmail.com"}
       user.password{"byter123"}
       user.password_confirmation{"byter123"}
       

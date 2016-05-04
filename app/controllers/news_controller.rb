@@ -32,13 +32,13 @@ class NewsController < ApplicationController
 
   def update
     new = New.find(params[:id])
-    new.update_attributes!(:content => params[:content][:content][:value])
+    new.update_attributes!(:content => params[:content])
     render text: ""
   end
    
   def mercury_update
     new = New.find(params[:id])
-    new.content = params[:content][:content][:value]
+    new.content = params[:content]
     new.save!
     render text: ""
   end

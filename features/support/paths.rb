@@ -30,7 +30,14 @@ module NavigationHelpers
       
     when /^my personal page$/
       member_path(User.last.member)
- 
+    
+    when /^the personal page for "myname"$/
+      member_path(Member.find_by(name: "myname"))
+      
+    
+    when /^the Edit Member page for "myname"$/ 
+      edit_member_path(Member.last)
+      
     when /^the People\s?page$/
       '/members'
      when /^the Group Info\s?page$/
@@ -44,6 +51,9 @@ module NavigationHelpers
       
     when /^the Publications\s?page$/
       '/publications'
+      
+    when /^the member page$/
+      member_path(Member.last)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
