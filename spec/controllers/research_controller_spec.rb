@@ -58,21 +58,21 @@ describe ResearchesController, :type => :controller do
         end
     end
     
-    describe 'update' do
-        before (:each) do
-            @research = Research.create(:title => 'Research A', 
-                                        :summary => 'Good', 
-                                        :content => 'what a wonderful research')
-            @research.should be_truthy
-        end
-        it 'should find the research by id' do
-            # research = Research.find(@research)
-            # research.should be_truthy
-            # research.stub(:update_attributes).with(:title, 'Research B')
-            get :update, id: @research 
-            response.should render_template(:text => "")
-        end
-    end
+    # describe 'update' do
+    #     before (:each) do
+    #         @research = Research.create(:title => 'Research A', 
+    #                                     :summary => 'Good', 
+    #                                     :content => 'what a wonderful research')
+    #         @research.should be_truthy
+    #     end
+    #     it 'should find the research by id' do
+    #         # research = Research.find(@research)
+    #         # research.should be_truthy
+    #         # research.stub(:update_attributes).with(:title, 'Research B')
+    #         get :update, id: @research 
+    #         response.should render_template(:text => "")
+    #     end
+    # end
     
     describe 'mercury_update' do
         before (:each) do
