@@ -7,7 +7,7 @@
     %p#summary.mercury-region{"data-mercury" => "full"}
       = @research.summary.html_safe
     %h3 Content
-    %p#content.mercury-region{"data-mercury" => "full"}
+    .content#content.mercury-region{"data-mercury" => "full"}
       = @research.content.html_safe  
-    - if logged_in? && current_user_admin?
-      = link_to "Edit", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_research_path(@research)}, :id => "edit-research-btn"
+- if logged_in? && current_user_admin?
+  = link_to "Edit", "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_research_path(@research)}, :id => "edit-research-btn"
