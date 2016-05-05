@@ -1,0 +1,15 @@
+= content_for(:title, "Add SliderImages")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Create New Slide
+    #new-slider_image-form.new-slider_image-form
+      = form_tag({action: :create}, multipart: true) do
+        = text_field_tag :title, nil, :class => 'entry', :placeholder => 'Title', :required => true
+        = text_field_tag :link, nil, :class => 'entry', :placeholder => 'link to the slide', :required => true
+        = label_tag :slider_image_picture, 'Please upload a 720X540 image' 
+        = file_field_tag :slider_image_picture, :class => 'entry'
+        
+        = submit_tag 'Create Slide', :id => 'slider_image-form-button'
+
+- else
+  %p Only users with privileges can manage slides.
