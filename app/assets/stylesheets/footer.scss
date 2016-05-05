@@ -11,9 +11,13 @@
 
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
-.footer-distributed .footer-right{
+.footer-distributed .footer-right {
 	display: inline-block;
 	vertical-align: top;
+}
+
+.footer-distributed .footer-center * {
+	vertical-align: middle;
 }
 
 /* Footer left */
