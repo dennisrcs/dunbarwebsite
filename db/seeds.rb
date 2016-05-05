@@ -7,74 +7,91 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Users seed
-user1 = User.create(:username => 'byter', :is_admin => true, :activated => true, :activated_at => Time.zone.now, :email => 'denisrcs@gmail.com', :password => 'byter123', :password_confirmation => 'byter123')
-member1 = Member.create(:name => 'Dennis Silva', :position => 'PhD Student', :researcherid => "F-5384-2011", :telephone => '321321321', :fax => '123123123', :previous_affiliation => 'University of Pernambuco', 
-                        :bio => 'Hey, this is me, Dennis Silva! :)', :building => 'Bright building', :office => 'Basement',
-                        :is_current_member => true, :is_listed => true,
-                        :avatar_path => '/uploads/images/dennis.png', :cv_path => '/uploads/cv/cv.pdf')
+user1 = User.create(:username => 'dunbar', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'dunbar@gmail.com', :password => 'dunbar123', :password_confirmation => 'dunbar123')
+member1 = Member.create(:name => 'Dr. Kim R. Dunbar', :position => 'Distriguinshed Professor', :telephone => '(979) 513-4983', :fax => '(979) 513-4413', :previous_affiliation => 'Michigan State University',
+                        :bio => 'Professor Dunbar received her Ph.D. in inorganic chemistry from Purdue University in 1984 with Professor Richard A. Walton and carried out postdoctoral research at Texas'\
+                        ' A&M University from 1985-86 under the direction of the late F. Albert Cotton. She joined the Texas A&M chemistry faculty in 1999 after being a faculty member at Michigan State University'\
+                        ' from 1987-1999 where she was served as University Distinguished Professor from 1998-1999. In 2004, she was named a Davidson Professor of Science at Texas A&M University and a joint holder'\
+                        ' of the Davidson Chair in Science, meriting particular distinction as the first female chair holder in the history of the College of Science.'\
+                        " Kim Dunbar's research in synthetic and structural inorganic chemistry, recently funded by the National Science Foundation, Department of Energy, the American Chemical Society-Petroleum"\
+                        " Research Fund and the Welch Foundation, is focused on the application of coordination chemistry principles to the solution of diverse problems ranging from new magnetic and conducting"\
+                        " materials to anticancer agents."\
+                        " Major professional honors include an Alfred P. Sloan Foundation Fellowship, a Camille and Henry Dreyfus Teacher-Scholar Award, and Fellowships in the American Association for the Advancement"\
+                        " of Science and the American Institute of Chemists. She received a Distinguished Alumna Award from her graduate alma mater Purdue University in 2004 and her undergraduate institution Westminster"\
+                        " College in 2000."\
+                        " She serves her profession as Associate Editor of Inorganic Chemistry and is past Secretary and Chair of the American Chemical Society's Division of Inorganic Chemistry. She has mentored over"\
+                        " 60 graduate students and postdoctoral researchers and has worked with over 30 undergraduates. She frequently hosts visiting professors and scholars from all over the world and collaborates"\
+                        " extensively with colleagues from Europe and Asia as well as North America."\
+                        " Dr. Dunbar was recently recognized by Texas A&M University with the inaugural Graduate Mentoring Award from The Association of Former Students at Texas A&M University in 2006. She is the author"\
+                        " of over 280 research publications and 16 book chapters or reviews.",
+                        :building => 'Chemistry Building', :office => '2311',
+                        :is_current_member => true, :is_listed => true, :researcherid => "B-6488-2015",
+                        :avatar_path => '/uploads/images/dunbar.png', :cv_path => '/uploads/cv/cv.pdf')
 user1.update_attribute(:member, member1)
 
-user2 = User.create(:username => 'bender', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'dudiannahu@gmail.com', :password => 'bender123', :password_confirmation => 'bender123')
-member2 = Member.create(:name => 'Diego Martinez', :position => 'MSc Student', :telephone => '1111111111', :fax => '0000000000', :previous_affiliation => 'Universidad de México',
-                        :bio => 'Hey, my name is Diego Martinez! :)', :building => 'Bright building', :office => '1st Floor',
+user2 = User.create(:username => 'andrezza', :is_admin => true, :activated => true, :activated_at => Time.zone.now, :email => 'andrezza@gmail.com', :password => 'andrezza123', :password_confirmation => 'andrezza123')
+member2 = Member.create(:name => 'Andrezza Antonio', :position => 'Assistant', :telephone => '(979) 533-1153', :fax => '(979) 113-5457', :previous_affiliation => 'Unilever', 
+                        :bio => 'Hey, this is me, Andrezza! :)', :building => 'Chemistry Building', :office => '2311',
                         :is_current_member => true, :is_listed => true,
-                        :avatar_path => '/uploads/images/diego.png', :cv_path => '/uploads/cv/cv.pdf')
+                        :avatar_path => '/uploads/images/andrezza.jpg', :cv_path => '/uploads/cv/cv.pdf')
 user2.update_attribute(:member, member2)
 
-user3 = User.create(:username => 'calculon', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'calculon@gmail.com', :password => 'calculon123', :password_confirmation => 'calculon123')
-member3 = Member.create(:name => 'Diane Duwacu', :position => 'PhD Student', :telephone => '2222222222', :fax => '0000000000', :previous_affiliation => 'Oklahoma University',
-                        :bio => 'Hey, my name is Diane Duwacu! :)', :building => 'Bright building', :office => '2nd Floor',
-                        :is_current_member => false, :is_listed => true,
-                        :avatar_path => '/uploads/images/diane.png', :cv_path => '/uploads/cv/cv.pdf')
+user3 = User.create(:username => 'silvia', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'silvia@gmail.com', :password => 'silvia123', :password_confirmation => 'silvia123')
+member3 = Member.create(:name => 'Silvia Gomez', :position => 'Postdoc', :researcherid => "F-5384-2011", :telephone => '(979) 973-3543', :fax => '(979) 127-3126', :previous_affiliation => 'University of Spain',
+                        :bio => 'Hey, my name is Silvia Gomez! :)', :building => 'Chemistry Building', :office => '2311',
+                        :is_current_member => true, :is_listed => true,
+                        :avatar_path => '/uploads/images/silvia.png', :cv_path => '/uploads/cv/cv.pdf')
 user3.update_attribute(:member, member3)
 
 user4 = User.create(:username => 'devil', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'devil@gmail.com', :password => 'devil123', :password_confirmation => 'devil123')
-member4 = Member.create(:name => 'Irving Solis', :position => 'Undergraduate', :telephone => '3333333333', :fax => '0000000000', :previous_affiliation => 'Universidad Nacional Autonoma do Mexico',
-                        :bio => 'Hey, my name is Irving Solis! :)', :building => 'Bright building', :office => '3rd Floor',
+member4 = Member.create(:name => 'Irving Solis', :position => 'PhD Student', :telephone => '(979) 169-9253', :fax => '(979) 779-7382', :previous_affiliation => 'Universidad Nacional Autonoma do Mexico',
+                        :bio => 'Hey, my name is Irving Solis! :)', :building => 'Chemistry Building', :office => '2311',
                         :is_current_member => false, :is_listed => true,
                         :avatar_path => '/uploads/images/irving.png', :cv_path => '/uploads/cv/cv.pdf')
 user4.update_attribute(:member, member4)
 
 user5 = User.create(:username => 'police', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'police@gmail.com', :password => 'police123', :password_confirmation => 'police123')
-member5 = Member.create(:name => 'Bozhen Liu', :position => 'Professor', :researcherid => 'B-6488-2015', :telephone => '4444444444', :fax => '0000000000', :previous_affiliation => 'Cornell University',
-                        :bio => 'Hey, my name is Bozhen Liu! :)', :building => 'Bright building', :office => '4th Floor',
-                        :is_current_member => true, :is_listed => true,
+member5 = Member.create(:name => 'Bozhen Liu', :position => 'MSc Student', :researcherid => 'B-6488-2015', :telephone => '(979) 941-0023', :fax => '(979) 441-6421', :previous_affiliation => 'Cornell University',
+                        :bio => 'Hey, my name is Bozhen Liu! :)', :building => 'Chemistry Building', :office => '2311',
+                        :is_current_member => false, :is_listed => true,
                         :avatar_path => '/uploads/images/bozhen.png', :cv_path => '/uploads/cv/cv.pdf')
 user5.update_attribute(:member, member5)
 
 user6 = User.create(:username => 'xiaoxuesu', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'xuesuxiao@gmail.com', :password => 'xiaoxuesu123', :password_confirmation => 'xiaoxuesu123')
-member6 = Member.create(:name => 'Xuesu Xiao', :position => 'Undergraduate Student', :telephone => '5555555555', :fax => '0000000000', :previous_affiliation => 'Carnegie Mellon University',
-                        :bio => 'Hey, my name is Xuesu Xiao! :)', :building => 'Bright building', :office => '5th Floor',
+member6 = Member.create(:name => 'Xuesu Xiao', :position => 'Undergraduate Student', :telephone => '(979) 835-1259', :fax => '(979) 148-7289', :previous_affiliation => 'Carnegie Mellon University',
+                        :bio => 'Hey, my name is Xuesu Xiao! :)', :building => 'Chemistry Building', :office => '2311',
                         :is_current_member => false, :is_listed => false,
                         :avatar_path => '/uploads/images/xuesu.png', :cv_path => '/uploads/cv/cv.pdf')
 user6.update_attribute(:member, member6)
 
 # publications seed
-publication1 = Publication.create(:article => "Sequence-Dependent Guest Release Triggered by Orthogonal Chemical Signals",
-:contributors => "Ana M. Castilla, Tanya K. Ronson, and Jonathan R. Nitschke", :journal => "J. Am. Chem. Soc.", :year => "2016", :more_info => "138", :pages => "2342–2351",
-:publication_picture => "/uploads/publications/pub4.gif", :link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b13016")
+publication1 = Publication.create(:article => "Anion−π Interactions in Supramolecular Architectures",
+:contributors => "Helen T. Chifotides and Kim R. Dunbar", :journal => "Acc. Chem. Res.",
+:year => "2013", :more_info => "46 (4)", :pages => "894–906", :publication_picture => "/uploads/publications/new_pub5.png", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k")
 
-publication3 = Publication.create(:article => "Subcomponent Flexibility Enables Conversion between D4-Symmetric CdII8L8 and T-Symmetric CdII4L4 Assemblies",
-:contributors => "Jesús Mosquera, Tanya K. Ronson, and Jonathan R. Nitschke", :journal => "J. Am. Chem. Soc.", :year => "2016", :more_info => "138", :pages => "1812–1815",
-:publication_picture => "/uploads/publications/pub3.gif", :link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b12955")
+publication2 = Publication.create(:article => "Optimizing the Electronic Properties of Photoactive Anticancer Oxypyridine-Bridged Dirhodium(II,II) Complexes",
+:contributors => "Zhanyong Li, Amanda David, Bryan A. Albani, Jean-Philippe Pellois, Claudia Turro, and Kim R. Dunbar", :journal => "J. Am. Chem. Soc.",
+:year => "2014", :more_info => "136 (49)", :pages => "17058–17070", :publication_picture => "/uploads/publications/new_pub4.png", :link => "http://pubs.acs.org/doi/abs/10.1021/ja5078359")
 
-publication3 = Publication.create(:article => "Catenation and encapsulation induce distinct reconstitutions within a dynamic library of mixed-ligand Zn4L6 cages",
-:contributors => "Samuel P. Black,   Daniel M. Wood,   Felix B. Schwarz, Tanya K. Ronson,   Julian J. Holstein,   Artur R. Stefankiewicz, Christoph A. Schalley, 
-Jeremy. K. M. Sanders and  Jonathan R. Nitschke", :journal => "Chem. Sci.", :year => "2016", :more_info => "7", :pages => "2614-2620", 
-:publication_picture => "/uploads/publications/pub1.gif", :link => "http://pubs.rsc.org/en/content/articlelanding/sc/2016/c5sc04906g#!divAbstract")
+publication3 = Publication.create(:article => "Strong Direct Magnetic Coupling in a Dinuclear CoII Tetrazine Radical Single-Molecule Magnet",
+:contributors => "Toby J. Woods, Maria Fernanda Ballesteros-Rivas, Sergei M. Ostrovsky, Andrew V. Palii, Oleg S. Reu, Sophia I. Klokishner and Kim R. Dunbar", :journal => "Chem. - A Eur. J.",
+:year => "2015", :more_info => "21", :pages => "10302–10305", 
+:publication_picture => "/uploads/publications/new_pub3.png", :link => "http://onlinelibrary.wiley.com/wol1/doi/10.1002/chem.201501726/abstract")
 
-publication4 = Publication.create(:article => "Ligand Aspect Ratio as a Decisive Factor for the Self-Assembly of Coordination Cages.",
-:contributors => "Suzanne M. Jansze, Giacomo Cecot, Matthew D. Wise, Konstantin O. Zhurov, Tanya K. Ronson, Ana M. Castilla, Alba Finelli, Philip Pattison,
-Euro Solari, Rosario Scopelliti, Genrikh E. Zelinskii, Anna V. Vologzhanina, Yan Z. Voloshin, Jonathan R. Nitschke, and Kay Severin", :journal => "J. Am. Chem. Soc.",
-:year => "2016", :more_info => "138", :pages => "2046–2054", :publication_picture => "/uploads/publications/pub2.gif", :link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b13190")
+publication4 = Publication.create(:article => "Cyanide Single-Molecule Magnets Exhibiting Solvent Dependent Reversible “On” and “Off” Exchange Bias Behavior",
+:contributors => "Dawid Pinkowicz, Heather I. Southerland, Carolina Avendaño, Andrey Prosvirin, Codi Sanders, Wolfgang Wernsdorfer, Kasper S. Pedersen, Jan Dreiser, 
+Rodolphe Clérac, Joscha Nehrkorn○, Giovanna G. Simeoni, Alexander Schneggo, Karsten Holldack, and Kim R. Dunbar", :journal => "J. Am. Chem. Soc.", 
+:year => "2015", :more_info => "137 (45)", :pages => "14406–14422",
+:publication_picture => "/uploads/publications/new_pub2.png", :link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b09378")
+
+publication5 = Publication.create(:article => "A cobalt(II) spin-crossover compound with partially charged TCNQ radicals and an anomalous conducting behavior",
+:contributors => "Xuan Zhang, Zhao-Xi Wang, Haomiao Xie, Ming-Xing Li, Toby J. Woods and Kim R. Dunbar", :journal => "Chem. Sci.", :year => "2016", :more_info => "7", :pages => "1569-1574",
+:publication_picture => "/uploads/publications/new_pub1.png", :link => "http://pubs.rsc.org/en/content/articlelanding/2016/sc/c5sc03547c")
 
 group_info1 = GroupInfo.create(:title => "Basic Group Information", :is_restricted => true, :file_path => "/uploads/group_info/rules.pdf")
 group_info2 = GroupInfo.create(:title => "Bond Valence Calculator", :is_restricted => false, :file_path => "/uploads/group_info/bond_valence_calculator.pdf")
 group_info3 = GroupInfo.create(:title => "Cyanide Precautions", :is_restricted => true, :file_path => "/uploads/group_info/cyanide_precautions.pdf")
 group_info4 = GroupInfo.create(:title => "New Employee Arrivel Info", :is_restricted => true, :file_path => "/uploads/group_info/new_employee_arrival_info.pdf")
-
-
-
 
 news1 = New.create(:content => "Francisco Birk is currently visiting Ph.D. student in Jagiellonian University (Kraków, Poland)
 working in Dawid Pinkowicz’s lab synthetizing group 5 and 6 cyanometallates. Enjoy the stay!")
@@ -298,28 +315,23 @@ Liu, Q. Zhao, Y. Li, Y. Liu, F. Lu, J. Zhuang, S. Wang, L. Jiang, D. Zhu, D. Yu,
 
 
 #slider image seed
-PBA_magnetism = SliderImage.create(:title =>"Desing of metal cyanide clusters of desired geometries that give rise to a variety of magnetic phenomena,
-e.g.  spin-crossover, photomagnetism, and single molecule magnetism.", :link => "http://pubs.rsc.org/en/content/articlelanding/2016/sc/c5sc03547c#!divAbstract", :slider_image_picture => "/uploads/slider/PBA_magnetism.png")
 
-ChemSci_2016_TCNQ = SliderImage.create(:title => "New bifunctional TCNQ based material: [Co(terpy)2](TCNQ)3·CH3CN exhibits a high room temperature 
-conductivity of 0.13 S cm−1 and an anomaly in conductivity at ∼190 K as evidenced by variable temperature structural, 
-magnetic and conductivity studies.", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k", :slider_image_picture => "/uploads/slider/ChemSci_2016_TCNQ.png")
+ChemSci_2016_TCNQ = SliderImage.create(:title => "New bifunctional TCNQ based material: [Co(terpy)2](TCNQ)3·CH3CN exhibits a high room temperature conductivity of 0.13 S cm−1 and an anomaly in conductivity at ∼190 K as evidenced by variable temperature structural, magnetic and conductivity studies.", 
+:link => "http://pubs.rsc.org/en/content/articlelanding/2016/sc/c5sc03547c#!divAbstract", :slider_image_picture => "/uploads/slider/ChemSci_2016_TCNQ.png")
 
-JACS_2015_trimers = SliderImage.create(:title => "New Mn(III)-NC-M(III)-CN-Mn(III) complexes exhibing switchable single-molecule magnet (SMM) and 
-exchange-bias behavior depending on the interstitial methanol content.", :link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b09378", :slider_image_picture => "/uploads/slider/JACS_2015_trimers.png")
+JACS_2015_trimers = SliderImage.create(:title => "New Mn(III)-NC-M(III)-CN-Mn(III) complexes exhibing switchable single-molecule magnet (SMM) and exchange-bias behavior depending on the interstitial methanol content.", 
+:link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b09378", :slider_image_picture => "/uploads/slider/JACS_2015_trimers.png")
 
-HAT = SliderImage.create(:title => "The exceptional π-electron-acceptor strength of HAT(CN)6 renders it an excellent colorimetric halide sensor. 
-It engages in multisite anion interactions, namely, both charge-transfer and anion–π, in solution and the solid state. The halide ions are the driving 
-elements for the spontaneous self-assembly of the sandwich-like complexes through η2,η2-charge-transfer contacts.", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k", :slider_image_picture => 
-"/uploads/slider/HAT.png")
+HAT = SliderImage.create(:title => "The exceptional π-electron-acceptor strength of HAT(CN)6 renders it an excellent colorimetric halide sensor. It engages in multisite anion interactions, namely, 
+both charge-transfer and anion–π, in solution and the solid state. The halide ions are the driving elements for the spontaneous self-assembly of the sandwich-like complexes through η2,η2-charge-transfer 
+contacts.", :link => "http://onlinelibrary.wiley.com/doi/10.1002/anie.201001755/abstract;jsessionid=B9D0CE52F7ED4464FE09B6D0A1E8BDF9.f01t04", :slider_image_picture => "uploads/slider/HAT.png")
 
-RecordS_2010 = SliderImage.create(:title => "A record-breaking high-spin state is observed in a molecule based on the [Mo(CN)7]4− building block. 
-The anionic nanosized docosanuclear {Mo8Mn14} cluster was the first discrete compound based on [Mo(CN)7]4−. The compound contains the most paramagnetic 
-centers (22) and the largest ground-state spin value (S=31) for a cyanide-bridged cluster.", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k", :slider_image_picture => 
-"/uploads/slider/RecordS_2010.png")
+RecordS_2009 = SliderImage.create(:title => "A record-breaking high-spin state is observed in a molecule based on the [Mo(CN)7]4− building block. The anionic nanosized docosanuclear {Mo8Mn14} cluster was 
+the first discrete compound based on [Mo(CN)7]4−. The compound contains the most paramagnetic centers (22) and the largest ground-state spin value (S=31) for a cyanide-bridged cluster.", 
+:link => "http://onlinelibrary.wiley.com/doi/10.1002/anie.201001664/abstract", :slider_image_picture => "/uploads/slider/RecordS_2009.png")
 
-JACS_2014_Rh2 = SliderImage.create(:title => "Tuning the ligand field around the dimetal center to maximize the photoreactivity and achieve the best photodynamic
-action", :link => "http://pubs.acs.org/doi/abs/10.1021/ja5078359", :slider_image_picture => "/uploads/slider/JACS_2014_Rh2_HR.png")
+JACS_2014_Rh2 = SliderImage.create(:title => "Tuning the ligand field around the dimetal center to maximize the photoreactivity and achieve the best photodynamic action.", 
+:link => "http://pubs.acs.org/doi/abs/10.1021/ja5078359", :slider_image_picture => "/uploads/slider/JACS_2014_Rh2.png")
 
 course1 = Course.create(:name => "CHEM 634")
 
