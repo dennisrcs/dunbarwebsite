@@ -24,7 +24,7 @@ describe PasswordResetsController, :type =>:controller do
             @user.stub(:send_password_reset_email)
             flash[:info] = "Email sent with password reset instructions"            
             expect(flash[:info]).to be_present
-            expect(response).to redirect_to(root_url)
+            expect(response).to redirect_to(root_path)
         end
         it 'user does not exist' do
             user = User.find_by(email: @user[:email])
