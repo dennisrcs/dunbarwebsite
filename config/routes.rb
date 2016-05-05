@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   get 'logout'  => 'sessions#destroy'
   
-  default_url_options :host => "test.host"
-  
   resources :publications, only: [:index, :new] 
   resources :publications
   match "publications/:id/edit", to: 'publications#edit', via: [:post, :get]
