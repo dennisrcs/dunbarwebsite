@@ -38,8 +38,9 @@
       %p
         Office:
         = @member.office
-      %p 
-        = link_to 'Curriculum Vitae', "#{@member.cv_path}", :target => '_blank'
+      %p
+        #cv
+          = link_to 'Curriculum Vitae', "#{@member.cv_path}", :target => '_blank'
 
   #bio.section
     %h3 Bio

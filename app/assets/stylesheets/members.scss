@@ -14,6 +14,33 @@
   margin: 0 auto;
 }
 
+#personal_info #cv a {
+  margin-top: 10px;
+}
+
+#personal_info #cv a:link, #personal_info #cv a:visited {
+  display: inline-block;
+  display: moz-inline-box;
+  font-size: 16px;
+  color: #191919;
+  background-color: #FFF056;
+  padding: 10px 80px;
+  text-decoration: none;
+  opacity: 1.0;
+  transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+}
+
+#personal_info #cv a:hover, #personal_info #cv a:active {
+   display: inline-block;
+   display: moz-inline-box;
+   font-size: 16px;
+   font-style: normal;
+   opacity: 0.5;
+   padding: 10px 80px;
+   text-decoration: none;
+}
+
 .details #info {
   vertical-align: middle;
   display: table-cell;
