@@ -26,10 +26,7 @@
     .button
       = link_to "Manage Slides", slider_images_path
   .news    
-    -if logged_in? && current_user_admin?
-      %h4= link_to "News", announcements_path
-    -else
-      %h4 News
+    %h4= link_to "News", announcements_path
     - @announcements.first(10).each do |announcement|
       .news-item
         = announcement.content.html_safe

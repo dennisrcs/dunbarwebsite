@@ -1,3 +1,24 @@
-// Place all the styles related to the News controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.news-list .news-item {
+  margin-bottom: 20px;
+}
+
+#add-announcement {
+  font-size: 16px;
+  margin: 0 auto;
+  display: table;
+}
+
+.new-news-form .entry, .edit-news-form .entry {
+  display: block;
+  width: 382px;
+  height: 300px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+  resize: none;
+}
+
+#new-news-form-button, #edit-news-form-button {
+  width: 100%;
+  height: 30px;
+}

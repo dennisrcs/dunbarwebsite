@@ -1,12 +1,12 @@
 = content_for(:title, "Add News")
 - if logged_in? && current_user_admin?
   .row
-    %h1 Create New News
-    #new-announcement-form.new-announcement-form
+    %h1 Add News
+    #new-news-form.new-news-form
       = form_tag({action: :create}, multipart: true) do
-        = text_field_tag :content, nil, :class => 'entry', :placeholder => 'News content', :required => true
+        = text_area_tag :content, nil, :class => 'entry', :placeholder => 'News content', :required => true
         
-        = submit_tag 'Create News', :id => 'announcement-form-button'
+        = submit_tag 'Add News', :id => 'new-news-form-button'
 
 - else
   %p Only users with privileges can add new publications.

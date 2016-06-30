@@ -23,7 +23,7 @@ class AnnouncementsController < ApplicationController
   def destroy
     @announcement = New.find(params[:id])
     @announcement.destroy
-    flash[:notice] = "News '#{@announcement.content}' deleted."
+    flash.now[:info] = "News '#{@announcement.content}' deleted."
     redirect_to announcements_path
   end
   
@@ -33,27 +33,5 @@ class AnnouncementsController < ApplicationController
     flash.now[:info] = "The news was successfully updated."
     redirect_to announcements_path
   end  
-  
-  #def show
-    #id = params[:id]
-    #@new = New.find_by_id(id)
-    #if @new == nil
-    #  flash[:danger] = "new not found"
-    #  redirect_to news_path
-    #end
-  #end
-  
-#  def update
-#    new = New.find(params[:id])
-#    new.update_attributes!(:content => params[:content][:content][:value])
-#    render text: ""
-#  end
-   
-#  def mercury_update
-#    new = New.find(params[:id])
-#    new.content = params[:content][:content][:value]
-#    new.save!
-#    render text: ""
-#  end
 
 end
