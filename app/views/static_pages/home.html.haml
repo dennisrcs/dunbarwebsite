@@ -19,12 +19,12 @@
               %img.slide1img{:alt => "", :src => slider_image.slider_image_picture}/
             %td{:width => "50%"}
               %p.slide2text "#{slider_image.title}"
-              .button
-                = link_to "More", slider_image.link, :target => "_blank"
-                
+              .box-btn
+                = link_to "More", slider_image.link, :target => '_blank'
   -if logged_in? && current_user_admin?
-    .button
-      = link_to "Manage Slides", slider_images_path
+    .box-btn.manage-slides
+      = link_to "Manage Slides", slider_images_path, :title => "Manage slides"
+                
   .news    
     %h4= link_to "News", announcements_path
     - @announcements.first(10).each do |announcement|
