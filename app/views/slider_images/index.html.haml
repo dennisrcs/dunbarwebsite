@@ -1,16 +1,18 @@
-= content_for(:title, "SliderImages")
-
-- flash.each do |name, msg|
-  - if msg.is_a?(String)
-    = content_tag :div, msg, :class => "flash_#{name}"
+= content_for(:title, "Slider")
 
 %h1 Current Slides
 
 .largest-row
-  .slider_image_grid
+  .slider-image-list
     - @sliderImages.each do |slider_image|
-      = link_to image_tag(slider_image.slider_image_picture), slider_image_path(slider_image), :class => "slider_image-picture"
-      = link_to image_tag("icons/icon_edit.png"), edit_slider_image_path(slider_image), :title => "Edit profile"
-      = link_to image_tag("icons/icon_delete.png"), slider_image_path(slider_image), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" }
+      .slider-image-item
+        .slider-image
+          = link_to image_tag(slider_image.slider_image_picture), slider_image_path(slider_image), :class => "slider_image-picture"
+        .slider-title
+          = slider_image.title
+        .slider-edit-delete
+          = link_to image_tag("icons/icon_edit.png"), edit_slider_image_path(slider_image), :title => "Edit profile"
+          = link_to image_tag("icons/icon_delete.png"), slider_image_path(slider_image), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" }
+
 - if logged_in? && current_user_admin?
-  #add_slider_image= link_to 'Add new slider_image', new_slider_image_path 
+  #add_slider_image= link_to 'Add new slider image', new_slider_image_path 

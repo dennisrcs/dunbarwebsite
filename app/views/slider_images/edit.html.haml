@@ -4,7 +4,7 @@
     %h1 Edit Slide
     #edit-slider_image-form.edit-slider_image-form
       = form_tag slider_image_path(@sliderImage), :method => :put, multipart: true do
-        = text_area_tag :title, @sliderImage.title , :class => 'entry', :placeholder => 'Please enter a title of the image'
+        = text_area_tag :title, @sliderImage.title , :class => 'entry', :placeholder => 'Please enter a description to the image'
         = text_field_tag :link, @sliderImage.link, :class => 'entry', :placeholder => 'Link'
         
         = label_tag :slider_image_picture, 'Please provide an image to the slider_image'

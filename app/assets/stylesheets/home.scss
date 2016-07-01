@@ -16,35 +16,3 @@
 .homepage-content .news-item {
   margin-bottom: 30px;
 }
-
-.cycle-slideshow.slider {
-  height: 560px;
-}
-
-.homepage-content .box-btn a:link, .homepage-content .box-btn a:visited {
-  display: inline-block;
-  display: moz-inline-box;
-  font-size: 16px;
-  color: #191919;
-  background-color: #FFF056;
-  padding: 10px 80px;
-  text-decoration: none;
-  opacity: 1.0;
-  transition: opacity 0.5s ease-out;
-  -webkit-transition: opacity 0.5s ease-out;
-}
-
-.homepage-content .box-btn a:hover, .homepage-content .box-btn a:active {
-  display: inline-block;
-  display: moz-inline-box;
-  font-size: 16px;
-  font-style: normal;
-  opacity: 0.5;
-  padding: 10px 80px;
-  text-decoration: none;
-}
-
-.homepage-content .manage-slides {
-  margin: 0 auto;
-  display: table;
-}
