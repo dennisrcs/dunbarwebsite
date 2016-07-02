@@ -81,21 +81,22 @@ html, body {
 
 .flash_danger,
 .flash_info {
-  text-align: center;
-  padding: 5px 20px;
-  margin-bottom: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 60px;
 }
 
 .flash_danger {
   color: #a94442;
   background-color: #f2dede;
-  border-color: #ebccd1;
+  border: 1.5px solid #ebccd1;
 }
 
 .flash_info {
   color: #31708f;
   background-color: #d9edf7;
-  border-color: #bce8f1;
+  border: 1.5px solid #bce8f1;
 }
 
 footer {
