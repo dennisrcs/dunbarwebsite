@@ -51,8 +51,11 @@
   margin: 0 auto;
 }
 
-#edit-research-btn {
-  font-size: 20px;
+.edit-delete-research {
   display: table;
   margin: 0 auto;
+}
+
+.edit-delete-research #delete-research-btn {
+  margin-left: 10px;
 }

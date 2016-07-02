@@ -16,6 +16,7 @@
           = research.summary.html_safe
         - if logged_in? && current_user_admin?
           .delete-research
+            = link_to image_tag("icons/icon_edit.png"), "/editor" + request.path + "/#{research.id}", id: "edit_link", data: {save_url: mercury_update_research_path(research)}, :id => "edit-research-btn"
             = link_to image_tag("icons/icon_delete.png"), research_path(research), :title => "Delete research", :method => :delete, data: { confirm: "Are you sure?" } , :id =>"Delete"
             
   - if logged_in? && current_user_admin?
