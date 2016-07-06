@@ -106,10 +106,18 @@ footer {
   background: #4E4B46;
 }
 
-body .nav, body .content {
+body .nav {
   display: table;
   margin: 0 auto;
-  margin-top: 50px;
+}
+
+body {
+  margin-top: 150px;
+}
+
+body .content {
+  display: table;
+  margin: 0 auto;
 }
 
 .row h1, .large-row h1, .largest-row h1 {
@@ -118,9 +126,26 @@ body .nav, body .content {
   padding-bottom: 40px;
 }
 
+.temp {
+  background-color: #292c2f;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+}
+
 .nav-top {
   margin: 0px;
-  width: 980px;
+  width: 100%;
   padding: 0px;
   list-style-type: none;
   background-color: #292c2f;
