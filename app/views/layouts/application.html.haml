@@ -31,24 +31,24 @@
         = yield
     %footer.footer-distributed
       .footer-left
-        %div
+        %div.info-group-item
           %i.fa.fa-map-marker
           %p
             %span 2311 Chemistry Building
             %span Department of Chemistry
             %span Texas A&M University
             College Station, TX
-        %div
+        %div.info-group-item
           %i.fa.fa-phone
           %p +1 979 845 5235
-        %div
+        %div.info-group-item
           %i.fa.fa-envelope
           %p
             %a{:href => "mailto:dunbar@tamu.com"} dunbar@tamu.com
       .footer-center
         = link_to image_tag("logo.png"), root_path
         = link_to root_path do
-          Dr. Dunbar <sub><span>Research Group</span></sub>
+          Dunbar <sub><span>Research Group</span></sub>
       .footer-right
         %p.footer-company-about
           %span About the research group
