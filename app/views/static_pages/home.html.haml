@@ -6,9 +6,6 @@
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
 
-.welcome    
-  %h1 Welcome to The Dunbar Research Group  
-
 .homepage-content
   .slider-wrapper
     .cycle-slideshow.slider{"data-cycle-caption-fx-in" => "slideDown", "data-cycle-caption-fx-out" => "slideUp", 
@@ -28,11 +25,19 @@
       = link_to "Manage Slides", slider_images_path, :title => "Manage slides"
                 
   .news    
-    %h4= link_to "News", announcements_path
-    - @announcements.first(10).each do |announcement|
+    %h2
+    - @announcements.first(3).each do |announcement|
       .news-item
-        = announcement.content.html_safe
-        = announcement.date
+        .news-title
+          %strong
+            = announcement.title
+        .news-content
+          = announcement.content.html_safe
+        .news-date
+          %p
+            = announcement.created_at
+    .more-news
+      = link_to "Read More", announcements_path, :class => 'yellow-box-link'
 :javascript
   $( "#home" ).click(function() {
     $( $.fn.cycle.defaults.autoSelector ).cycle();

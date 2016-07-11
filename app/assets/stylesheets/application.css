@@ -192,6 +192,29 @@ a:hover, a:active {
   color: #666666;
 }
 
+.yellow-box-link:link, .yellow-box-link:visited {
+  display: inline-block;
+  display: moz-inline-box;
+  font-size: 16px;
+  color: #191919;
+  background-color: #FFF056;
+  padding: 10px 80px;
+  text-decoration: none;
+  opacity: 1.0;
+  transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+}
+
+.yellow-box-link:hover, .yellow-box-link:active {
+  display: inline-block;
+  display: moz-inline-box;
+  font-size: 16px;
+  font-style: normal;
+  opacity: 0.5;
+  padding: 10px 80px;
+  text-decoration: none;
+}
+
 /* css for the slider*/
 .slide{
 		background-color: #228FC4;
@@ -276,3 +299,4 @@ div .cycle-caption{
     color: white; background: red; opacity: .3; filter:alpha(opacity=60);
     position: absolute; bottom: 0; width: 100%; padding: 15px;	
 }
+

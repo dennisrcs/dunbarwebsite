@@ -1,3 +1,3 @@
 class New < ActiveRecord::Base
-  attr_accessible :content, :date
+  attr_accessible :title, :content, :date
 end

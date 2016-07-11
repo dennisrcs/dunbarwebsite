@@ -93,12 +93,12 @@ group_info2 = GroupInfo.create(:title => "Bond Valence Calculator", :is_restrict
 group_info3 = GroupInfo.create(:title => "Cyanide Precautions", :is_restricted => true, :file_path => "/uploads/group_info/cyanide_precautions.pdf")
 group_info4 = GroupInfo.create(:title => "New Employee Arrivel Info", :is_restricted => true, :file_path => "/uploads/group_info/new_employee_arrival_info.pdf")
 
-news1 = New.create(:content => "Francisco Birk is currently visiting Ph.D. student in Jagiellonian University (Kraków, Poland)
+news1 = New.create(:title => "Francisco in Jagiellonian University", :content => "Francisco Birk is currently visiting Ph.D. student in Jagiellonian University (Kraków, Poland)
 working in Dawid Pinkowicz’s lab synthetizing group 5 and 6 cyanometallates. Enjoy the stay!")
 
-news2 = New.create(:content => "Kelsey Schulte passed her prelim this month. Congratulations!")
+news2 = New.create(:title => "Kelsey passed her prelim", :content => "Kelsey Schulte passed her prelim this month. Congratulations!")
 
-news3 = New.create(:content => "The end of the semester brings us a plethora of thesis dissertations – Xuan Zhang, Toby J. 
+news3 = New.create(:title => "Xuan, Toby, Jill and Cody to defend this month", :content => "The end of the semester brings us a plethora of thesis dissertations – Xuan Zhang, Toby J. 
 Woods, Jill V. Ellenbarger and Codi A. Sanders. Good luck to the protagonist!")
 
 research1 = Research.create(:title => "Supramolecular Chemistry of Anions", :summary => "Research in the Supramolecular Chemistry of Anions is a newer 
@@ -328,10 +328,10 @@ contacts.", :link => "http://onlinelibrary.wiley.com/doi/10.1002/anie.201001755/
 
 RecordS_2009 = SliderImage.create(:title => "A record-breaking high-spin state is observed in a molecule based on the [Mo(CN)7]4− building block. The anionic nanosized docosanuclear {Mo8Mn14} cluster was 
 the first discrete compound based on [Mo(CN)7]4−. The compound contains the most paramagnetic centers (22) and the largest ground-state spin value (S=31) for a cyanide-bridged cluster.", 
-:link => "http://onlinelibrary.wiley.com/doi/10.1002/anie.201001664/abstract", :slider_image_picture => "/uploads/slider/RecordS_2009.png")
+:link => "http://onlinelibrary.wiley.com/doi/10.1002/anie.201001664/abstract", :slider_image_picture => "/uploads/slider/RecordS_2010.png")
 
 JACS_2014_Rh2 = SliderImage.create(:title => "Tuning the ligand field around the dimetal center to maximize the photoreactivity and achieve the best photodynamic action.", 
-:link => "http://pubs.acs.org/doi/abs/10.1021/ja5078359", :slider_image_picture => "/uploads/slider/JACS_2014_Rh2.png")
+:link => "http://pubs.acs.org/doi/abs/10.1021/ja5078359", :slider_image_picture => "/uploads/slider/JACS_2014_Rh2_HR.png")
 
 course1 = Course.create(:name => "CHEM 634")
 
