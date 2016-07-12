@@ -8,7 +8,7 @@
 
 .largest-row
   .news-list
-    - @announcements.reverse_each.with_index do |announcement, index|
+    - @announcements.each.with_index do |announcement, index|
       .news-item
         = (index+1).to_s + "."
         = announcement.content.html_safe

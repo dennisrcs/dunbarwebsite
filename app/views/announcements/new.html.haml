@@ -4,6 +4,7 @@
     %h1 Add News
     #new-news-form.new-news-form
       = form_tag({action: :create}, multipart: true) do
+        = text_field_tag :title, nil, :class => 'entry', :placeholder => 'Title', :required => true
         = text_area_tag :content, nil, :class => 'entry', :placeholder => 'News content', :required => true
         
         = submit_tag 'Add News', :id => 'new-news-form-button'

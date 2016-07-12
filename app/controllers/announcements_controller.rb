@@ -1,7 +1,7 @@
 class AnnouncementsController < ApplicationController
   
   def index
-    @announcements = New.all
+    @announcements = New.getTopNews
   end
   
   def show
@@ -15,7 +15,7 @@ class AnnouncementsController < ApplicationController
   end
   
   def create
-    announcement = New.create(:content => params[:content])
+    announcement = New.create(:content => params[:content], :title => params[:title])
     announcement.save
     redirect_to announcements_path
   end
@@ -23,13 +23,13 @@ class AnnouncementsController < ApplicationController
   def destroy
     @announcement = New.find(params[:id])
     @announcement.destroy
-    flash.now[:info] = "News '#{@announcement.content}' deleted."
+    flash.now[:info] = "News '#{@announcement.title}' deleted."
     redirect_to announcements_path
   end
   
   def update
     announcement = New.find(params[:id])
-    announcement.update_attributes!(:content => params[:content])
+    announcement.update_attributes!(:content => params[:content], :title => params[:title])
     flash.now[:info] = "The news was successfully updated."
     redirect_to announcements_path
   end  

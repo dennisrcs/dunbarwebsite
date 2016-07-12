@@ -4,6 +4,7 @@
     %h1 Edit News
     #edit-news-form.edit-news-form
       = form_tag announcement_path(@announcement), :method => :put do
+        = text_field_tag :title, @announcement.title, :class => 'entry', :placeholder => 'Title', :required => true
         = text_area_tag :content, @announcement.content, :class => 'entry', :placeholder => 'News Content', :required => true
         
         = submit_tag 'Update News', :id => 'edit-news-form-button'

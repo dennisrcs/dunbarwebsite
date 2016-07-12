@@ -24,11 +24,15 @@
 .new-news-form .entry, .edit-news-form .entry {
   display: block;
   width: 382px;
-  height: 300px;
+  height: 30px;
   margin-bottom: 20px;
   padding-left: 8px;
   padding-right: 8px;
   resize: none;
+}
+
+.new-news-form textarea.entry, .edit-news-form textarea.entry {
+  height: 200px;
 }
 
 #new-news-form-button, #edit-news-form-button {
