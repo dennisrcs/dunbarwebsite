@@ -2,17 +2,99 @@
   display: block;
 }
 
-.homepage-content .news,
-.homepage-content .news h4 {
-  margin: 0 auto;
-  display: table;
-}
-
-.homepage-content .news h4 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .homepage-content .news-item {
   margin-bottom: 30px;
+}
+
+.news-aboutus-sponsor {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.homepage-content .aboutus-sponsor {
+  vertical-align: top;
+  display: inline-block;
+  width: 74.5%; 
+}
+
+.homepage-content .news {
+  vertical-align: top;
+  display: inline-block;
+  width: 24.5%;
+}
+
+.aboutus-sponsor .aboutus,
+.aboutus-sponsor .sponsor {
+  padding-right: 50px;
+}
+
+.aboutus-sponsor .icons-container, 
+.aboutus-sponsor .icons-container .icon-item {
+  display: table;
+  margin: 0 auto;
+}
+
+.icons-container .icon-wrapper {
+  display: inline-block;
+}
+
+.aboutus .icons-container .icon-wrapper {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.sponsor .icons-container .icon-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: padding-left 0.5s ease-out;
+  transition: padding-right 0.5s ease-out;
+}
+
+.sponsor .icons-container {
+  margin-top: 30px;
+}
+
+.sponsor .icons-container img {
+  height: 100px;
+}
+
+.icons-container .icon-wrapper .description {
+  text-align: center;
+}
+
+@media screen and (max-width: 1320px) {
+  .sponsor .icons-container .icon-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;  
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .news-aboutus-sponsor h2 {
+    font-size: 26pt;
+  }
+  
+  .sponsor .icons-container .icon-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;  
+  }
+  
+  .news-aboutus-sponsor .aboutus-sponsor,
+  .news-aboutus-sponsor .news {
+    display: block;
+  }
+  
+  .homepage-content .aboutus-sponsor {
+    width: 100%;
+  }
+
+  .homepage-content .news {
+    width: 100%;
+  }
+  
+  .homepage-content .aboutus p,
+  .homepage-content .aboutus .description,
+  .homepage-content .news-item {
+    font-size: 22pt;
+  }
 }

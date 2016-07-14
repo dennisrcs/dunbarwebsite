@@ -44,3 +44,9 @@
   margin: 0 auto;
   display: table;
 }
+
+@media screen and (max-width: 1200px) {
+  .news .news-item .news-date * {
+    font-size: 16pt;  
+  }
+}

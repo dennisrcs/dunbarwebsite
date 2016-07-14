@@ -85,6 +85,7 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px 60px;
+  z-index: 150;
 }
 
 .flash_danger {
@@ -172,6 +173,11 @@ body .content {
   border-bottom: 3px solid #FFF056;
 }
 
+.nav-top .active {
+  color: #FFF056;
+  border-bottom: 3px solid #FFF056;
+}
+
 .nav-top li a {
   display: inline-block;
   font-size: 20px;
@@ -213,6 +219,13 @@ a:hover, a:active {
   opacity: 0.5;
   padding: 10px 80px;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .yellow-box-link:link, .yellow-box-link:visited {
+    padding: 15px 80px;
+    font-size: 26pt;
+  }
 }
 
 /* css for the slider*/

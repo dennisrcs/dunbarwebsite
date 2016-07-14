@@ -23,21 +23,64 @@
   -if logged_in? && current_user_admin?
     .box-btn.manage-slides
       = link_to "Manage Slides", slider_images_path, :title => "Manage slides"
-                
-  .news    
-    %h2 News
-    - New.getTopNews.each do |announcement|
-      .news-item
-        .news-title
-          %strong
-            = announcement.title
-        .news-content
-          = announcement.content.html_safe
-        .news-date
-          %p
-            = announcement.created_at
-    .more-news
-      = link_to "Read More", announcements_path, :class => 'yellow-box-link'
+  .news-aboutus-sponsor
+    .aboutus-sponsor
+      .aboutus
+        %h2 About us
+        %p
+          Research in the Dunbar Research Group spans a number of topics in synthetic and structural inorganic
+          chemistry with a focus on problems at the interface of materials and biological chemistry. The combined
+          use of many physical techniques (electronic epr, infrared spectroscopies, X-ray crystallography, ac and 
+          dc magnetic magnetometry, scanning and transmission electron microscopy, mass spectrometry and
+          electrochemistry to name a subset) reflect the breadth of problems under investigation. Our aim is to 
+          define important synthetic challenges and tackle their solution with an arsenal of physical, chemical 
+          and spectroscopic data. We are devoted to the use of coordination chemistry as a tool to make new compounds
+          as well as to probe new structure and bonding relationships.
+        %p
+          Find out more:
+        .icons-container
+          .icon-wrapper
+            .icon-item
+              = link_to image_tag("icons/icon_research.png"), researches_path
+            .description
+              Research
+          .icon-wrapper
+            .icon-item
+              = link_to image_tag("icons/icon_members.png"), members_path
+            .description
+              Members
+          .icon-wrapper
+            .icon-item
+              = link_to image_tag("icons/icon_publications.png"), publications_path
+            .description
+              Publications
+      .sponsor
+        %h2 Supporting our research over the years
+        .icons-container
+          .icon-wrapper
+            = link_to image_tag("sponsors/ACS.png"), 'http://www.acs.org/', :target => "blank"
+          .icon-wrapper
+            = link_to image_tag("sponsors/DE.png"), 'http://www.energy.gov/', :target => 'blank'
+          .icon-wrapper
+            = link_to image_tag("sponsors/welch.png"), 'http://www.welch1.org/', :target => 'blank'
+          .icon-wrapper
+            = link_to image_tag("sponsors/NIH.png"), 'www.nih.gov', :target => 'blank'
+          .icon-wrapper
+            = link_to image_tag("sponsors/NSF.png"), 'http://www.nsf.gov/', :target => 'blank'
+    .news    
+      %h2 News
+      - New.getTopNews.each do |announcement|
+        .news-item
+          .news-title
+            %strong
+              = announcement.title
+          .news-content
+            = announcement.content.html_safe
+          .news-date
+            %p
+              = announcement.created_at
+      .more-news
+        = link_to "Read More", announcements_path, :class => 'yellow-box-link'
 :javascript
   $( "#home" ).click(function() {
     $( $.fn.cycle.defaults.autoSelector ).cycle();

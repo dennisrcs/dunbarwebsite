@@ -103,3 +103,15 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (max-width: 1200px) {
+
+  .homepage-content .box-btn a:link, .homepage-content .box-btn a:visited {
+    font-size: 18pt;
+    padding: 20px 70px;
+  }
+  
+  .homepage-content .slider-title p {
+    font-size: 13pt;
+  }
+  
+}
