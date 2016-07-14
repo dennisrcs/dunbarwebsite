@@ -8,13 +8,13 @@
   %h1 Publications
 
   .publication-list
-    - @publications.reverse_each.with_index do |publication, index|
+    - @publications.each.with_index do |publication, index|
       .publication-item  
         .image
           = image_tag(publication.publication_picture)
         .publication-content
           .title
-            = (index+1).to_s + "."
+            = Publication.publicationNumber(params[:page], index)
             = publication.article.html_safe
           .authors
             = publication.contributors.html_safe
@@ -34,6 +34,7 @@
             .buttons
               = link_to image_tag("icons/icon_edit.png"), edit_publication_path(publication), :title => "Edit publication #{index+1}" , :id => "Edit"
               = link_to image_tag("icons/icon_delete.png"), publication_path(publication), :title => "Delete publication #{index+1}", :method => :delete, data: { confirm: "Are you sure?" } , :id =>"Delete"
-          
 - if logged_in? && current_user_admin?
   #add_publication= link_to 'Add new Publication', new_publication_path
+.apple_pagination 
+  = will_paginate @publications, :container => false

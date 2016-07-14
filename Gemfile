@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Use Haml for templates
 gem 'haml'
 
+# Pagination
+gem 'will_paginate'
+
 # Gem for sanding emails
 gem 'rest-client'
 #add activerecord gem

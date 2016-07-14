@@ -1,7 +1,7 @@
 class PublicationsController < ApplicationController
   
   def index
-    @publications = Publication.all.order(year: :asc);
+    @publications = Publication.search(params[:page])
   end
 
   def show

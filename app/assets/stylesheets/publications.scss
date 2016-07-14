@@ -67,6 +67,16 @@
   margin-left: 5px;
 }
 
+.largest-row .pagination {
+  margin: 0 auto;
+  display: table;
+}
+
+.largest-row .pagination > * {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .publication-item .doi a:link, .publication-item .doi a:visited {
   display: inline-block;
   display: moz-inline-box;
@@ -93,4 +103,5 @@
 #add_publication {
   margin: 0 auto;
   display: table;
+  padding-bottom: 10px;
 }

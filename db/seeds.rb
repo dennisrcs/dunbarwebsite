@@ -88,6 +88,34 @@ publication5 = Publication.create(:article => "A cobalt(II) spin-crossover compo
 :contributors => "Xuan Zhang, Zhao-Xi Wang, Haomiao Xie, Ming-Xing Li, Toby J. Woods and Kim R. Dunbar", :journal => "Chem. Sci.", :year => "2016", :more_info => "7", :pages => "1569-1574",
 :publication_picture => "/uploads/publications/new_pub1.png", :link => "http://pubs.rsc.org/en/content/articlelanding/2016/sc/c5sc03547c")
 
+# ASDASDASd
+
+# publications seed
+Publication.create(:article => "Anion−π Interactions in Supramolecular Architectures",
+:contributors => "Helen T. Chifotides and Kim R. Dunbar", :journal => "Acc. Chem. Res.",
+:year => "2005", :more_info => "46 (4)", :pages => "894–906", :publication_picture => "/uploads/publications/new_pub5.png", :link => "http://pubs.acs.org/doi/abs/10.1021/ar300251k")
+
+Publication.create(:article => "Optimizing the Electronic Properties of Photoactive Anticancer Oxypyridine-Bridged Dirhodium(II,II) Complexes",
+:contributors => "Zhanyong Li, Amanda David, Bryan A. Albani, Jean-Philippe Pellois, Claudia Turro, and Kim R. Dunbar", :journal => "J. Am. Chem. Soc.",
+:year => "2017", :more_info => "136 (49)", :pages => "17058–17070", :publication_picture => "/uploads/publications/new_pub4.png", :link => "http://pubs.acs.org/doi/abs/10.1021/ja5078359")
+
+Publication.create(:article => "Strong Direct Magnetic Coupling in a Dinuclear CoII Tetrazine Radical Single-Molecule Magnet",
+:contributors => "Toby J. Woods, Maria Fernanda Ballesteros-Rivas, Sergei M. Ostrovsky, Andrew V. Palii, Oleg S. Reu, Sophia I. Klokishner and Kim R. Dunbar", :journal => "Chem. - A Eur. J.",
+:year => "2017", :more_info => "21", :pages => "10302–10305", 
+:publication_picture => "/uploads/publications/new_pub3.png", :link => "http://onlinelibrary.wiley.com/wol1/doi/10.1002/chem.201501726/abstract")
+
+Publication.create(:article => "Cyanide Single-Molecule Magnets Exhibiting Solvent Dependent Reversible “On” and “Off” Exchange Bias Behavior",
+:contributors => "Dawid Pinkowicz, Heather I. Southerland, Carolina Avendaño, Andrey Prosvirin, Codi Sanders, Wolfgang Wernsdorfer, Kasper S. Pedersen, Jan Dreiser, 
+Rodolphe Clérac, Joscha Nehrkorn○, Giovanna G. Simeoni, Alexander Schneggo, Karsten Holldack, and Kim R. Dunbar", :journal => "J. Am. Chem. Soc.", 
+:year => "2012", :more_info => "137 (45)", :pages => "14406–14422",
+:publication_picture => "/uploads/publications/new_pub2.png", :link => "http://pubs.acs.org/doi/abs/10.1021/jacs.5b09378")
+
+Publication.create(:article => "A cobalt(II) spin-crossover compound with partially charged TCNQ radicals and an anomalous conducting behavior",
+:contributors => "Xuan Zhang, Zhao-Xi Wang, Haomiao Xie, Ming-Xing Li, Toby J. Woods and Kim R. Dunbar", :journal => "Chem. Sci.", :year => "2009", :more_info => "7", :pages => "1569-1574",
+:publication_picture => "/uploads/publications/new_pub1.png", :link => "http://pubs.rsc.org/en/content/articlelanding/2016/sc/c5sc03547c")
+
+# ASDASDASd
+
 group_info1 = GroupInfo.create(:title => "Basic Group Information", :is_restricted => true, :file_path => "/uploads/group_info/rules.pdf")
 group_info2 = GroupInfo.create(:title => "Bond Valence Calculator", :is_restricted => false, :file_path => "/uploads/group_info/bond_valence_calculator.pdf")
 group_info3 = GroupInfo.create(:title => "Cyanide Precautions", :is_restricted => true, :file_path => "/uploads/group_info/cyanide_precautions.pdf")
