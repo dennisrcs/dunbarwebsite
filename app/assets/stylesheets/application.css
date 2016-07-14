@@ -51,18 +51,25 @@ html, body {
 }
 
 .content .row {
+  display: table;
+  margin: 0 auto;
   width: 400px;
 }
 
 .content .large-row {
+  display: table;
+  margin: 0 auto;
   width: 500px;
 }
 
 .content .largest-row {
+  display: table;
+  margin: 0 auto;
   width: 980px;
 }
 
-.content h1 {
+.content h1,
+.content > p {
   display: table;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -114,11 +121,6 @@ body .nav {
 
 body {
   margin-top: 150px;
-}
-
-body .content {
-  display: table;
-  margin: 0 auto;
 }
 
 .row h1, .large-row h1, .largest-row h1 {

@@ -1,12 +1,9 @@
 = content_for(:title, "Publications")
-
 - flash.each do |name, msg|
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
-
 .largest-row
   %h1 Publications
-
   .publication-list
     - @publications.each.with_index do |publication, index|
       .publication-item  
@@ -25,10 +22,8 @@
               = publication.year + ","
             = publication.more_info.html_safe + ","
             = publication.pages + "."
- 
           .doi
             = link_to "View Publication", "#{publication.link}", :target => "_blank"
-
         - if logged_in? && current_user_admin?
           .edit_delete
             .buttons

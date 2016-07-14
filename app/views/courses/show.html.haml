@@ -6,7 +6,6 @@
 
 - if logged_in?
   %h1 #{@course.name}
-
   .largest-row
     .course-files-content
       - if @syllabus != nil
@@ -65,7 +64,6 @@
             
   - if logged_in? && current_user_admin?
     = link_to "Add new file", new_course_course_file_path(@course), :id => 'add-new-coursefile'
-    
   = link_to "Go back to Teaching page", courses_path, :id => 'back-teaching-page'
 - else
   %p Only members with privileges can access the documents in "#{@course.name}"

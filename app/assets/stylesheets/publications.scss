@@ -24,7 +24,8 @@
   height: auto;
 }
 
-.image, .publication-content {
+.publication-item .image,
+.publication-item  .publication-content {
   display: table-cell;
   vertical-align: top;
   padding-bottom: 10px;
@@ -37,7 +38,7 @@
 }
 
 .publication-item * {
-  font-size: 16px;
+  font-size: 12pt;
 }
 
 .publication-item .title {
@@ -80,7 +81,7 @@
 .publication-item .doi a:link, .publication-item .doi a:visited {
   display: inline-block;
   display: moz-inline-box;
-  font-size: 16px;
+  font-size: 12pt;
   color: #191919;
   background-color: #FFF056;
   padding: 10px 80px;
@@ -93,7 +94,7 @@
 .publication-item .doi a:hover, .publication-item .doi a:active {
   display: inline-block;
   display: moz-inline-box;
-  font-size: 16px;
+  font-size: 12pt;
   font-style: normal;
   opacity: 0.5;
   padding: 10px 80px;
@@ -105,3 +106,26 @@
   display: table;
   padding-bottom: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+  .publication-item * {
+    font-size: 16pt;
+  }  
+  
+  .publication-item .doi a:link, .publication-item .doi a:visited {
+    padding: 20px 80px;
+    font-size: 16pt;
+  }
+  
+  .publication-item .doi a:hover, .publication-item .doi a:active {
+    padding: 20px 80px;
+    font-size: 16pt;
+  }
+  
+  .publication-item .image,
+  .publication-item  .publication-content {
+    padding-bottom: 30px;
+  }
+  
+}
+
