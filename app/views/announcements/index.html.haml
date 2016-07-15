@@ -7,17 +7,21 @@
 %h1 News
 
 .largest-row
-  .news-list
+  .news
     - @announcements.each.with_index do |announcement, index|
-      .news-item
-        = (index+1).to_s + "."
-        = announcement.content.html_safe
-        = announcement.date
-          
+      .admin-controls
         - if logged_in? && current_user_admin?
           = link_to image_tag("icons/icon_edit.png"), edit_announcement_path(announcement), :title => "Edit News" , :id => "Edit"
           = link_to image_tag("icons/icon_delete.png"), announcement_path(announcement), :title => "Delete News", :method => :delete, data: { confirm: "Are you sure?" } , :id =>"Delete"
-
+      .news-item
+        .news-title
+          %strong
+            = announcement.title
+        .news-content
+          = announcement.content.html_safe
+        .news-date
+          %p
+            = announcement.created_at
 - if logged_in? && current_user_admin?
   #add-announcement= link_to 'Add new News', new_announcement_path
 

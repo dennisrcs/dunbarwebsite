@@ -43,17 +43,17 @@
             .icon-item
               = link_to image_tag("icons/icon_research.png"), researches_path
             .description
-              Research
+              = link_to "Research", researches_path
           .icon-wrapper
             .icon-item
               = link_to image_tag("icons/icon_members.png"), members_path
             .description
-              Members
+              = link_to "Members", members_path
           .icon-wrapper
             .icon-item
               = link_to image_tag("icons/icon_publications.png"), publications_path
             .description
-              Publications
+              = link_to "Publications", publications_path
       .sponsor
         %h2 Supporting our research over the years
         .icons-container

@@ -1,0 +1,126 @@
+body .nav {
+  display: table;
+  margin: 0 auto;
+}
+
+.nav {
+  top: 0;
+  position: fixed;
+  height: 200px;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+  background-color: #292c2f;
+  transition: height  0.5s ease-out;
+}
+
+.nav .logo {
+  position: absolute;
+  top: 50%; left: 20%;
+  transform: translate(-50%,-50%);
+  transition: left 0.5s ease-out;
+  z-index: 100;
+}
+
+.nav .logo img {
+  height: 200px;
+  transition: height 0.5s ease-out;
+}
+
+.nav .logo a {
+  color:  #ffffff;
+  font: normal 24pt 'Cookie', cursive;
+  transition: font-size 0.5s ease-out;
+  margin: 0;
+}
+
+.nav .logo a span{
+  color: #FFF056;
+}
+
+.nav .logo a * {
+  vertical-align: middle;
+}
+
+.nav-top {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-35%,-50%);
+  width: 100%;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.nav-items {
+  display: table;
+  margin: 0 auto;
+}
+
+.nav-top li {
+  display: inline;
+}
+
+.nav-top li a {
+  color: white;
+  border-bottom: 3px solid #292c2f;
+  transition: color 0.5s ease-out, border-bottom 0.5s ease-out, padding 0.5s ease-out;
+  display: inline-block;
+  font-size: 15pt;
+  font-style: normal;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+.nav-top li a:hover {
+  color: #FFF056;
+  border-bottom: 3px solid #FFF056;
+}
+
+.nav-top .active {
+  color: #FFF056;
+  border-bottom: 3px solid #FFF056;
+}
+
+.nav .menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 1700px) {
+  .nav-top li a {
+      padding: 15px 15px;
+  }
+  
+  .nav .logo {
+      left: 15%;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .nav-top li a {
+      padding: 15px 10px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .nav-top li a {
+      padding: 15px 4px;
+      font-size: 12pt;
+  }
+  
+  .nav-top {
+      transform: translate(-33%,-50%);
+  }
+  
+  .nav .logo {
+      left: 18%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

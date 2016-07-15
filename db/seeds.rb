@@ -129,6 +129,9 @@ news2 = New.create(:title => "Kelsey passed her prelim", :content => "Kelsey Sch
 news3 = New.create(:title => "Xuan, Toby, Jill and Cody to defend this month", :content => "The end of the semester brings us a plethora of thesis dissertations – Xuan Zhang, Toby J. 
 Woods, Jill V. Ellenbarger and Codi A. Sanders. Good luck to the protagonist!")
 
+news4 = New.create(:title => "New paper on Journal of the American Chemistry Society", :content => "The paper Cyanide Single Molecule Magnets Exhibiting Reversible, Solvent Dependent 'On' and 'Off' Exchange Bias Behavior
+has just been accepted on the Journal of the American Chemistry Society!")
+
 research1 = Research.create(:title => "Supramolecular Chemistry of Anions", :summary => "Research in the Supramolecular Chemistry of Anions is a newer 
 project in the Dunbar Group. The project has developed into a highly interdisciplinary endeavor, encompassing coordination chemistry, computational 
 chemistry, and, biochemistry. Anion-π interactions, i.e., the noncovalent forces between electron-deficient aromatic systems and anions, have been 

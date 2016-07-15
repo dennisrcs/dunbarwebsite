@@ -54,6 +54,7 @@
   margin-top: 30px;
 }
 
+.aboutus .icons-container img,
 .sponsor .icons-container img {
   height: 100px;
 }
@@ -69,7 +70,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   .news-aboutus-sponsor h2 {
     font-size: 26pt;
   }
@@ -96,5 +97,9 @@
   .homepage-content .aboutus .description,
   .homepage-content .news-item {
     font-size: 22pt;
+  }
+  
+  .aboutus .icons-container img {
+    height: 125px;
   }
 }

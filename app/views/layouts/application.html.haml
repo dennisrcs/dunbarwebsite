@@ -12,9 +12,12 @@
 
   %body
     .main
-      .temp
-      .nav
-        %nav
+      %nav.nav
+        .logo
+          = link_to image_tag("logo.png"), root_path
+          = link_to root_path do 
+            Dunbar <sub><span>Research Group</span></sub>
+        .nav-items-wrapper
           %ul.nav-top
             .nav-items
               %li= link_to "Home", root_path
@@ -22,11 +25,14 @@
               %li= link_to "Research", researches_path
               %li= link_to "Publications", publications_path
               %li= link_to "Teaching", courses_path
+              %li= link_to "Outreach", root_path
+              %li= link_to "Collaborations", root_path
               %li= link_to "Group Info", group_infos_path
               - if logged_in?
                 %li= link_to "Logout", logout_path, :method => 'delete'
               - else
                 %li= link_to "Login", login_path 
+              %li= link_to "☰", "javascript:void(0);", :class => "menu-icon"
       .content
         = yield
     %footer.footer-distributed
@@ -57,3 +63,7 @@
           reflect the breadth of problems under investigation. Our aim is to define important synthetic challenges and tackle their
           solution with an arsenal of physical, chemical and spectroscopic data. We are devoted to the use of coordination chemistry
           as a tool to make new compounds as well as to probe new structure and bonding relationships.
+  :javascript
+    function myFunction() {
+        document.getElementsById("menu-icon")[0].classList.toggle("responsive");
+    }
