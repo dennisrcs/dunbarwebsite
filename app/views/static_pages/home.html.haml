@@ -9,15 +9,18 @@
 .homepage-content
   .slider-wrapper
     .cycle-slideshow.slider{"data-cycle-caption-fx-in" => "slideDown", "data-cycle-caption-fx-out" => "slideUp", 
-    "data-cycle-caption-plugin" => "caption2", "data-cycle-fx" => "scrollHorz", "data-cycle-slides" => "> div", "data-cycle-timeout" => "3000"}
+    "data-cycle-caption-plugin" => "caption2", "data-cycle-fx" => "scrollHorz", "data-cycle-slides" => "> div", "data-cycle-timeout" => "5000"}
       - @sliderImages.each.with_index do |slider_image, index|
         .innerWrapper{"data-cycle-title" => slider_image.title}
           .slider-table
             .slider-row
               .slider-image
                 %img.slide1img{:src => slider_image.slider_image_picture}
-              .slider-title
-                %p.slide2text #{slider_image.title}
+              .slider-content-wrapper
+                .slider-title
+                  %p.slide2text #{slider_image.title}
+                .slider-content
+                  %p.slide2text #{slider_image.content}
                 .box-btn
                   = link_to "More", slider_image.link, :target => '_blank'
   -if logged_in? && current_user_admin?

@@ -4,8 +4,9 @@
     %h1 Create New Slide
     #new-slider_image-form.new-slider_image-form
       = form_tag({action: :create}, multipart: true) do
-        = text_area_tag :title, nil, :class => 'entry', :placeholder => 'Please enter a description to the image', :required => true
-        = text_field_tag :link, nil, :class => 'entry', :placeholder => 'link to the slide', :required => true
+        = text_field_tag :title, nil, :class => 'entry', :placeholder => 'Please enter a title to the image', :required => true
+        = text_area_tag :content, nil, :class => 'entry', :placeholder => 'Description for the slider item', :required => true
+        = text_field_tag :link, nil, :class => 'entry', :placeholder => 'Link to the slider item', :required => true
         = label_tag :slider_image_picture, 'Please upload a 720X540 image' 
         = file_field_tag :slider_image_picture, :class => 'entry'
         

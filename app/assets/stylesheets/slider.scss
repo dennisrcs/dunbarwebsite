@@ -1,5 +1,5 @@
 .cycle-slideshow.slider {
-  height: 560px;
+  height: auto;
 }
 
 .homepage-content .box-btn a:link, .homepage-content .box-btn a:visited {
@@ -48,8 +48,14 @@
   padding-bottom: 10px;
 }
 
+.slider-content-wrapper .slider-title p {
+  margin-bottom: 50px;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
 .slider-image-list .slider-image img {
-  height: 80%;
+  height: 90%;
 }
 
 .slider-image-list .slider-edit-delete {
@@ -61,7 +67,7 @@
   height: 30px;
   margin-bottom: 20px;
   padding-left: 8px;
-  padding-right: 8px
+  padding-right: 8px;
 }
 
 .new-slider_image-form textarea.entry, .edit-slider_image-form textarea.entry {
@@ -93,7 +99,7 @@
   display: table-row;
 }
 .homepage-content .slider-image,
-.homepage-content .slider-title {
+.homepage-content .slider-content-wrapper {
   display: table-cell;
   width: 50%;
 }
@@ -104,13 +110,22 @@
 }
 
 @media screen and (max-width: 1200px) {
-
+  
+  .slider-row .slider-image img {
+    height: 80%;
+  }
+  
   .homepage-content .box-btn a:link, .homepage-content .box-btn a:visited {
     font-size: 18pt;
     padding: 20px 70px;
   }
   
-  .homepage-content .slider-title p {
+  .slider-content-wrapper .slider-title p {
+    margin-bottom: 10px;
+    font-size: 13pt;
+  }
+  
+  .homepage-content .slider-content-wrapper p {
     font-size: 13pt;
   }
   

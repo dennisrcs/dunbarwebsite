@@ -9,7 +9,8 @@
         .slider-image
           = link_to image_tag(slider_image.slider_image_picture), slider_image_path(slider_image), :class => "slider_image-picture"
         .slider-title
-          = slider_image.title
+          %p
+            = slider_image.title
         .slider-edit-delete
           = link_to image_tag("icons/icon_edit.png"), edit_slider_image_path(slider_image), :title => "Edit profile"
           = link_to image_tag("icons/icon_delete.png"), slider_image_path(slider_image), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" }

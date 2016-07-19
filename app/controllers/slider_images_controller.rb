@@ -20,6 +20,7 @@ class SliderImagesController < ApplicationController
     
     sliderImage = SliderImage.create(
         :title => params[:title], 
+        :content => params[:content],
         :link => params[:link], 
         :slider_image_picture => slider_image_picture_path)
     sliderImage.save
@@ -43,11 +44,13 @@ class SliderImagesController < ApplicationController
       sliderImage.update_attributes!(
           :title => params[:title], 
           :link => params[:link],
+          :content => params[:content],
           :slider_image_picture => slider_image_picture_path)
       try_delete_tempfile(params[:slider_image_picture])
-  else
-    sliderImage.update_attributes!(
+    else
+      sliderImage.update_attributes!(
         :title => params[:title], 
+        :content => params[:content],
         :link => params[:link])
     end
     flash.now[:info] = "The slide was successfully updated."
