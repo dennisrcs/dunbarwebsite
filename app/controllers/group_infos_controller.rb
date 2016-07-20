@@ -2,6 +2,7 @@ class GroupInfosController < ApplicationController
   
   def index
     @group_infos = GroupInfo.all
+    @categories = GroupInfo.categories_list
   end
 
   def show
