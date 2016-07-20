@@ -10,20 +10,19 @@ class GroupInfosController < ApplicationController
   end
 
   def new
-    # only renders 'new' view
+    @categories = GroupInfo.categories_list
   end
 
   def edit
     @group_info = GroupInfo.find params[:id]
+    @categories = GroupInfo.categories_list
   end
 
   def create
     # writing file to the NFS
-    
-    is_restricted = (params[:is_restricted] == "1" || params[:is_restricted] == "on") ? true : false
     file_path = GroupInfo.write_to_filesystem(params[:file], 'uploads/group_info/')
-    group_info = GroupInfo.new(:title => params[:title], :is_restricted => is_restricted, :file_path => file_path)
-
+    group_info = GroupInfo.new(:title => params[:title], :is_restricted => true, :category => params[:category], :file_path => file_path)
+    
     if group_info.save
       flash[:info] = "Group info successfully added!"
     else
@@ -37,7 +36,6 @@ class GroupInfosController < ApplicationController
   def update
     group_info = GroupInfo.find(params[:id])
 
-    is_restricted = (params[:is_restricted] == "1" || params[:is_restricted] == "on") ? true : false
     # writing avatar and cv to the NFS
     if params[:file] != nil
       file_path = GroupInfo.write_to_filesystem(params[:file], 'uploads/group_info/')
@@ -45,7 +43,7 @@ class GroupInfosController < ApplicationController
     end
 
     # update attributes and try deleting temp file
-    group_info.update_attributes(params)
+    group_info.update_attributes(:title => params[:title], :is_restricted => true, :category => params[:category], :file_path => file_path)
     try_delete_tempfile(params[:file])
    
     # redirect to group info index

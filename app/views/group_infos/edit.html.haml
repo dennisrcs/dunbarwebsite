@@ -8,14 +8,9 @@
 
         = label_tag :file, "Please provide a file for the group info"
         = file_field_tag :file, :class => 'entry'
-
-        .group-info-config-container
-          .group-info-config#group-info-config
-            = label_tag :is_restricted, 'Is this restricted to members only?'
-            - if @group_info.is_restricted
-              = check_box_tag :is_restricted, nil, {:checked => "checked"}
-            - else
-              = check_box_tag :is_restricted
+        
+        = label_tag :category, 'Please select the category of the group info file'
+        = select_tag :category, options_for_select(@categories, @group_info.category), :class => 'entry', :id => "category-selector"
 
         = submit_tag 'Update Group Info', :id => 'group-info-form-button'
 

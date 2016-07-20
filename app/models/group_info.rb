@@ -1,5 +1,17 @@
 class GroupInfo < ActiveRecord::Base
-  attr_accessible :title, :file_path, :is_restricted
+  attr_accessible :title, :category, :file_path, :is_restricted
+  
+  enum category: [ :misc, :group_rules, :safety, :lab_techniques, :synthesis, :magnetism, :equipments, :electrochemistry, :crystallography, :NMR, :software ]
+  
+  def self.categories_list 
+    [
+      ['Miscellaneous', :misc], ['Group Rules & Guidelines', :group_rules], ['Safety', :safety], ['Lab Techniques & Hints', :lab_techniques], 
+      ['Synthesis', :synthesis], ['Magnetism', :magnetism], ['Instruments / Equipment usage', :equipments], ['Electrochemistry', :electrochemistry],
+      ['Crystallography', :crystallography], ['NMR', :NMR], ['Useful software', :software]
+    ]
+  end
+  
+  after_create :setRestriction
 
   validates :title, presence: true
   validates :file_path, presence: true
@@ -16,5 +28,10 @@ class GroupInfo < ActiveRecord::Base
       end
     return result_path
   end
-
+  
+  def setRestriction
+    if category == "group_rules"
+      update_attribute(:is_restricted, false)
+    end
+  end
 end

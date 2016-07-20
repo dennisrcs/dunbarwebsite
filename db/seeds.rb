@@ -116,10 +116,10 @@ Publication.create(:article => "A cobalt(II) spin-crossover compound with partia
 
 # group info
 
-group_info1 = GroupInfo.create(:title => "Basic Group Information", :is_restricted => true, :file_path => "/uploads/group_info/rules.pdf")
-group_info2 = GroupInfo.create(:title => "Bond Valence Calculator", :is_restricted => false, :file_path => "/uploads/group_info/bond_valence_calculator.pdf")
-group_info3 = GroupInfo.create(:title => "Cyanide Precautions", :is_restricted => true, :file_path => "/uploads/group_info/cyanide_precautions.pdf")
-group_info4 = GroupInfo.create(:title => "New Employee Arrivel Info", :is_restricted => true, :file_path => "/uploads/group_info/new_employee_arrival_info.pdf")
+group_info1 = GroupInfo.create(:title => "Basic Group Information", :category => :group_rules, :file_path => "/uploads/group_info/rules.pdf")
+group_info2 = GroupInfo.create(:title => "Bond Valence Calculator", :category => :software, :file_path => "/uploads/group_info/bond_valence_calculator.pdf")
+group_info3 = GroupInfo.create(:title => "Cyanide Precautions", :category => :safety, :file_path => "/uploads/group_info/cyanide_precautions.pdf")
+group_info4 = GroupInfo.create(:title => "New Employee Arrivel Info", :category => :group_rules, :file_path => "/uploads/group_info/new_employee_arrival_info.pdf")
 
 news1 = New.create(:title => "Francisco in Jagiellonian University", :content => "Francisco Birk is currently visiting Ph.D. student in Jagiellonian University (Kraków, Poland)
 working in Dawid Pinkowicz’s lab synthetizing group 5 and 6 cyanometallates. Enjoy the stay!")
