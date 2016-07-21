@@ -73,6 +73,12 @@ body {
   width: 980px;
 }
 
+.content .wide-row {
+  display: table;
+  margin: 0 auto;
+  width: 1024px;
+}
+
 .content h1,
 .content > p {
   display: table;

@@ -4,21 +4,30 @@
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
 
-.largest-row
+.wide-row
+  .linetop
   .group-info-list
     %ul.group-info-category
       - @categories.each do |category|
         %li
-          = link_to category[0], "#"
-    - @group_infos.each do |info|
-      .group-info
-        - if logged_in?
-          = link_to "#{info.title}", "#{info.file_path}", :target => '_blank'
-          - if logged_in? && current_user_admin?
-            = link_to image_tag("icons/icon_edit.png"), edit_group_info_path(info), :title => "Edit Group Info" , :id =>"Edit"
-            = link_to image_tag("icons/icon_delete.png"), group_info_path(info), :title => "Delete Group Info", :method => :delete, data: { confirm: "Are you sure?" }
-        - else
-          - if !info.is_restricted
-            = link_to "#{info.title}", "#{info.file_path}", :target => '_blank'
+          - if logged_in?
+            = link_to category[0], "javascript:void(0)", :id => "#{category[1].to_s}", :class => "category-link"
+          - else
+            - if !GroupInfo.checkIsRestricted(category[1])
+              = link_to category[0], "javascript:void(0)", :id => "#{category[1].to_s}", :class => "category-link"
+    %ul.group-info
+      %h2 Files
+      - @categories.each do |category|
+        - GroupInfo.getFiles(category[1]).each do |info|
+          - if logged_in?
+            %li
+              = link_to "#{info.title}", "#{info.file_path}", :class => "files_#{category[1].to_s}", :target => '_blank'
+              - if logged_in? && current_user_admin?
+                = link_to image_tag("icons/icon_edit.png"), edit_group_info_path(info), :title => "Edit Group Info" , :id =>"Edit"
+                = link_to image_tag("icons/icon_delete.png"), group_info_path(info), :title => "Delete Group Info", :method => :delete, data: { confirm: "Are you sure?" }
+          - else
+            - if !GroupInfo.checkIsRestricted(category[1])
+              %li
+                = link_to "#{info.title}", "#{info.file_path}", :class => "files_#{category[1].to_s}", :target => '_blank'
 - if logged_in? && current_user_admin?
   = link_to "Add new group info", new_group_info_path, :id => 'add-group-info'

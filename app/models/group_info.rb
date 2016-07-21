@@ -5,10 +5,18 @@ class GroupInfo < ActiveRecord::Base
   
   def self.categories_list 
     [
-      ['Miscellaneous', :misc], ['Group Rules & Guidelines', :group_rules], ['Safety', :safety], ['Lab Techniques & Hints', :lab_techniques], 
-      ['Synthesis', :synthesis], ['Magnetism', :magnetism], ['Instruments / Equipment usage', :equipments], ['Electrochemistry', :electrochemistry],
-      ['Crystallography', :crystallography], ['NMR', :NMR], ['Useful software', :software]
+      ['Group Rules & Guidelines', :group_rules], ['Safety', :safety], ['Lab Techniques & Hints', :lab_techniques], ['Synthesis', :synthesis],
+      ['Magnetism', :magnetism], ['Instruments / Equipment usage', :equipments], ['Electrochemistry', :electrochemistry], ['Crystallography', :crystallography],
+      ['NMR', :NMR], ['Useful software', :software], ['Miscellaneous', :misc]
     ]
+  end
+  
+  def self.checkIsRestricted(category)
+    return category.to_s != "group_rules"
+  end
+  
+  def self.getFiles(category)
+    return GroupInfo.send category
   end
   
   after_create :setRestriction
