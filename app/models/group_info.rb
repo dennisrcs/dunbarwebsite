@@ -11,6 +11,25 @@ class GroupInfo < ActiveRecord::Base
     ]
   end
   
+  baseIconDir = "icons/group_info/"
+  
+  @icons = Hash.new
+  @icons[:group_rules] = baseIconDir + "group_rules"
+  @icons[:safety] = baseIconDir + "safety"
+  @icons[:lab_techniques] = baseIconDir + "lab_techniques"
+  @icons[:synthesis] = baseIconDir + "synthesis"
+  @icons[:magnetism] = baseIconDir + "magnetism"
+  @icons[:equipments] = baseIconDir + "equipments"
+  @icons[:electrochemistry] = baseIconDir + "electrochemistry"
+  @icons[:crystallography] = baseIconDir + "crystallography"
+  @icons[:NMR] = baseIconDir + "nmr"
+  @icons[:software] = baseIconDir + "software"
+  @icons[:misc] = baseIconDir + "misc"
+  
+  def self.getCategoryIconPath(category)
+    return @icons[category] 
+  end
+  
   def self.checkIsRestricted(category)
     return category.to_s != "group_rules"
   end

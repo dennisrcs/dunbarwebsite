@@ -9,12 +9,15 @@
   .group-info-list
     %ul.group-info-category
       - @categories.each do |category|
-        %li
-          - if logged_in?
-            = link_to category[0], "javascript:void(0)", :id => "#{category[1].to_s}", :class => "category-link"
-          - else
-            - if !GroupInfo.checkIsRestricted(category[1])
-              = link_to category[0], "javascript:void(0)", :id => "#{category[1].to_s}", :class => "category-link"
+        - if logged_in?
+          %li
+            = image_tag GroupInfo.getCategoryIconPath(category[1]), :id => "#{category[1].to_s}"
+            = link_to category[0], "javascript:void(0)", :class => "category-link"
+        - else
+          - if !GroupInfo.checkIsRestricted(category[1])
+            %li
+              = image_tag GroupInfo.getCategoryIconPath(category[1]), :id => "#{category[1].to_s}"
+              = link_to category[0], "javascript:void(0)", :class => "category-link"
     %ul.group-info
       %h2 Files
       - @categories.each do |category|
