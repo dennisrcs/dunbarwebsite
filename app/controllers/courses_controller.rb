@@ -2,6 +2,7 @@ class CoursesController < ApplicationController
 
   def index
     @courses = Course.all
+    @file_types = CourseFile.file_types_list
   end
 
   def edit

@@ -1,19 +1,96 @@
 .courses-list {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.course-info * {
+ul.course-info{
+  display: inline-block;
+  vertical-align: top;
+}
+
+ul.course-info,
+.course-info li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-info li {
+  height: 55px;
+}
+
+.course-info li a.course-name {
+  display: inline-block;
+  width: 180px;
+  vertical-align: top;
+  position: relative;
+  padding: 18px 5px;
+  font: normal 12pt;
+  border-bottom: 1px solid #FFF;
+  background: #fff;
+}
+
+.course-info li a img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.course-info li a.course-name:hover,
+.course-info li.active a.course-name {
+  background: #e0e0e0 !important;
+  color: #000 !important;
+}
+
+.course-info li.active a.course-name:after,
+.course-info li:hover a.course-name:after {
+  content: "";
+  position: absolute;
+  border-top: 28px solid rgba(0, 0, 0, 0);
+  border-bottom: 28px solid rgba(0, 0, 0, 0);
+  right: -10px;
+  border-left: 10px solid #E0E0E0;
+  height: 56px;
+  top: 0px;
+}
+
+.course-info *:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.course-files * {
   vertical-align: middle;
 }
 
-.courses-list .course-info a {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.course-info {
+.course-files {
+  width: 750px;
   font-size: 18px;
   margin-bottom: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.course-files .course-files-container {
+  display: none;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.course-files .course-files-container.active {
+  display: block;
+  margin-left: 30px
+}
+
+.course-files .course-files-container h4 {
+  margin-bottom: 5px;
+  color: #292c2f;
+}
+
+.course-files .course-files-container h4:first-child {
+  margin-top: 5px;
 }
 
 .largest-row .course-files-content {
@@ -42,6 +119,7 @@
 #add-new-coursefile,
 #add-course-btn {
   font-size: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 

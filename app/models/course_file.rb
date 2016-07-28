@@ -3,7 +3,9 @@ class CourseFile < ActiveRecord::Base
   enum file_type: [ :misc, :syllabus, :notes, :chapter_goals, :resource_research, :homework, :solutions, :exam_answers ]
   
   def self.file_types_list 
-    [ ['Miscellaneous', :misc], ['Syllabus', :syllabus], ['Lecture Notes', :notes], ['Chapter Goals', :chapter_goals], ['Resources for Research Paper', :resource_research], ['Homework', :homework], ['Solutions', :solutions], ['Exam key answers', :exam_answers] ]
+    [ ['Syllabus', :syllabus], ['Lecture Notes', :notes], ['Chapter Goals', :chapter_goals], 
+    ['Resources for Research Paper', :resource_research], ['Homework', :homework],
+    ['Solutions', :solutions], ['Exam key answers', :exam_answers], ['Miscellaneous', :misc] ]
   end
 
   # writes 'data' to the public folder, following 'path' structure

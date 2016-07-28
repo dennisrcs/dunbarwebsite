@@ -2,7 +2,6 @@ class CourseFilesController < ApplicationController
    
   def destroy
     # retrieving parameters
-    course_id = params[:course_id]
     file_id = params[:id]
        
     # finding and destroying file
@@ -11,7 +10,7 @@ class CourseFilesController < ApplicationController
     
     # filling flash and redirecting to course page
     flash[:info] = "File #{file.name} successfully deleted!"
-    redirect_to course_path(course_id)
+    redirect_to courses_path
   end
 
   def new
@@ -34,7 +33,7 @@ class CourseFilesController < ApplicationController
     try_delete_tempfile(params[:file])
     
     flash[:info] = "#{coursefile.name} Successfully added!"
-    redirect_to course_path(course_id)
+    redirect_to courses_path
   end
   
   # if there's a temporary file, then delete it

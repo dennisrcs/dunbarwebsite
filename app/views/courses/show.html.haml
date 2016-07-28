@@ -13,7 +13,7 @@
           = link_to "Course Syllabus", "#{@syllabus.first.file_path}", :target => "_blank"
           = link_to image_tag("icons/icon_delete.png"), course_course_file_path(@course, @syllabus), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" } if logged_in? && current_user_admin?
       - if @notes != nil
-        .course-files-item.notes
+        .course-files-item#notes
           %h4
             Notes:
           - @notes.each do |file| 
@@ -66,5 +66,5 @@
     = link_to "Add new file", new_course_course_file_path(@course), :id => 'add-new-coursefile'
   = link_to "Go back to Teaching page", courses_path, :id => 'back-teaching-page'
 - else
-  %p Only members with privileges can access the documents in "#{@course.name}"
+  %p Only members with privileges can access course files
 
