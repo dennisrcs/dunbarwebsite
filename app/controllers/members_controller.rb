@@ -92,11 +92,13 @@ class MembersController < ApplicationController
       cv_path = Member.write_to_filesystem(params[:cv], 'uploads/cv/')
       params[:cv_path] = cv_path
     end
-    
-    is_current_member = (params[:is_current_member] == "1" || params[:is_current_member] == "on") ? true : false
-    is_listed = (params[:is_listed] == "1" || params[:is_listed] == "on") ? true : false
-    params[:is_current_member] = is_current_member
-    params[:is_listed] = is_listed
+   
+    if logged_in? && current_user_admin? 
+      is_current_member = (params[:is_current_member] == "1" || params[:is_current_member] == "on") ? true : false
+      is_listed = (params[:is_listed] == "1" || params[:is_listed] == "on") ? true : false
+      params[:is_current_member] = is_current_member
+      params[:is_listed] = is_listed
+    end
 
     member.update_attributes(params)
 
