@@ -30,14 +30,47 @@
 }
 
 .research-item {
-  display: table-row;
-  height: auto;
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 8px);
+  margin-right: 8px;
+}
+
+.research-item:nth-of-type(2n) {
+  margin-right: 0;
 }
 
 .research-item .title,
 .research-item .delete-research {
-  display: table-cell;
-  vertical-align: middle;
+  display: table;
+  margin: 0 auto;
+}
+
+.research-item .title img {
+  padding-top: 20px;
+  max-width: 400px;
+}
+
+.research-item .title a {
+  display: table;
+  margin: 0 auto;
+}
+
+.research-item .title a:hover {
+  color: #222222;
+}
+
+.research-item .title h2 {
+  margin-bottom: 0px;
+}
+
+.research-item .title {
+  opacity: 1.0;
+  transition: opacity 0.4s ease-out;
+}
+
+.research-item .title:hover {
+  opacity: 0.5;
 }
 
 .research-item .delete-research {
@@ -58,4 +91,28 @@
 
 .edit-delete-research #delete-research-btn {
   margin-left: 10px;
+}
+
+@media (max-width: 1000px) {
+  .research-item {
+    width: 90%;
+  }
+  
+  .research-item .title img {
+    padding-top: 20px;
+    max-width: 500px;
+  }
+  
+  .research-item .title h2,
+  .research-content h2 {
+    font-size: 24pt;
+  }
+  
+  .research-content h3 {
+    font-size: 22pt;
+  }
+  
+  .research-content p {
+    font-size: 20pt;
+  }
 }

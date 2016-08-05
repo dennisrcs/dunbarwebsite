@@ -170,6 +170,10 @@ a:hover, a:active {
   .content .wide-row {
     width: 90%;
   }
+  
+  .content .largest-row {
+    width: 90%;
+  }
 }
 
 /* css for the slider*/

@@ -132,7 +132,7 @@ Woods, Jill V. Ellenbarger and Codi A. Sanders. Good luck to the protagonist!")
 news4 = New.create(:title => "New paper on Journal of the American Chemistry Society", :content => "The paper Cyanide Single Molecule Magnets Exhibiting Reversible, Solvent Dependent 'On' and 'Off' Exchange Bias Behavior
 has just been accepted on the Journal of the American Chemistry Society!")
 
-research1 = Research.create(:title => "Supramolecular Chemistry of Anions", :summary => "Research in the Supramolecular Chemistry of Anions is a newer 
+research1 = Research.create(:title => "Supramolecular Chemistry of Anions", :picture_path => "/uploads/research_images/new_res1.png", :summary => "Research in the Supramolecular Chemistry of Anions is a newer 
 project in the Dunbar Group. The project has developed into a highly interdisciplinary endeavor, encompassing coordination chemistry, computational 
 chemistry, and, biochemistry. Anion-π interactions, i.e., the noncovalent forces between electron-deficient aromatic systems and anions, have been 
 relatively unexplored as compared to cation-pi interactions, primarily due to the counter-intuitive nature of aromatic rings being attracted to a 
@@ -209,7 +209,7 @@ key chemical and biological processes.<sup>4</sup> The presence of electron-poor
 4.	Schottel, B. L.; Chifotides, H. T.; Dunbar, K. R. Chem. Soc. Rev. 2008, 37, 68-83.</p>
 ")
 
-research2 = Research.create(:title => "Metal Anti-Tumor Agents", :summary => "<p>The  discovery of the anticancer 
+research2 = Research.create(:title => "Metal Anti-Tumor Agents", :picture_path => "/uploads/research_images/new_res2.png", :summary => "<p>The  discovery of the anticancer 
 drug cisplatin over 40 years ago spawned a new era  of modern metal-based pharmaceuticals. Among the  
 recognized non-platinum containing antitumor agents are dinuclear  carboxylate species of Rh, Re and Ru but early  investigations that 
 commenced in the 1970’s steadily declined, in part, due to  the fact that the compounds did not surpass the anticancer activity of  cisplatin. 
@@ -277,7 +277,7 @@ F. A. Cotton, C.  Murillo and R.A. Walton, Eds., Springer-Science  and Business 
 	7. Kang, M.; Chifotides, H. T.;  Dunbar, K. R. <i>Biochemistry</i>, <strong>2008</strong>, <i>47</i>, 2265-2276. </p>
 ")
 
-research2 = Research.create(:title => "Molecular Materials Based on TCNQ", :summary => "We are interested in molecular magnets and molecular 
+research2 = Research.create(:title => "Molecular Materials Based on TCNQ", :picture_path => "/uploads/research_images/new_res3.png", :summary => "We are interested in molecular magnets and molecular 
 conductors based on coordination polymers of 7,7,8,8-tetracyanoquinodimethane (TCNQ) because the materials are lighter than the traditional 
 ones, they are typically obtained at room temperature, and the properties can be tuned by installing substituents on the ring that change the 
 steric bulk and redox behavior of the ligand. The TCNQ ligand is very stable in its radical anion form and, as such, it is very useful as a 

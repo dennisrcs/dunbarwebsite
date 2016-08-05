@@ -7,7 +7,10 @@
         = text_field_tag :title, nil, :class => 'entry', :placeholder => 'Research title', :required => true, :id => 'title'
         = text_area_tag :summary, nil, :class => 'entry', :placeholder => 'Summary', :required => true, :id => 'summary'
         = text_area_tag :content, nil, :class => 'entry', :placeholder => 'Content', :required => true, :id => 'content'
-      
+
+        = label_tag :picture, 'Please provide an image to this research' 
+        = file_field_tag :picture, :class => 'entry'
+
         = submit_tag 'Create Research', :id => 'research-form-button'
 
 - else

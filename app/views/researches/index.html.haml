@@ -5,20 +5,16 @@
     = content_tag :div, msg, :class => "flash_#{name}"
 
 .largest-row
-  %h1 Research
-  
   .research_list
     - @researches.each do |research|
       .research-item
         .title
           %h2
-            = link_to research.title.html_safe, research_path(research)
-          = research.summary.html_safe
+            = link_to research.title.html_safe, research_path(research), :class => "research-title"
+          = link_to image_tag(research.picture_path), research_path(research), :class => "research-picture"
         - if logged_in? && current_user_admin?
           .delete-research
             = link_to image_tag("icons/icon_edit.png"), "/editor" + request.path + "/#{research.id}", id: "edit_link", data: {save_url: mercury_update_research_path(research)}, :id => "edit-research-btn"
             = link_to image_tag("icons/icon_delete.png"), research_path(research), :title => "Delete research", :method => :delete, data: { confirm: "Are you sure?" } , :id =>"Delete"
-            
   - if logged_in? && current_user_admin?
     #add-research-btn= link_to 'Add new Research', new_research_path
-

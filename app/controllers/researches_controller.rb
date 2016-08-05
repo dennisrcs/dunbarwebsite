@@ -18,10 +18,13 @@ class ResearchesController < ApplicationController
   end
   
   def create
-    # generates a temporary password and create user
+    # writing image to the NFS
+    picture_path = Research.write_to_filesystem(params[:picture], 'uploads/research_images/')
+    
+    # create research
     research = Research.create(:title => params[:title], :summary => params[:summary], 
-                       :content=> params[:content])
-    research.save
+                       :content=> params[:content], :picture_path => picture_path)
+
     # redirect to the created member page
     redirect_to research_path(research)
   end
