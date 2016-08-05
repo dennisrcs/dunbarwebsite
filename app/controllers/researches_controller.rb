@@ -1,7 +1,7 @@
 class ResearchesController < ApplicationController
     
   def index
-    @researches = Research.all
+    @researches = Research.all.order(created_at: :desc)
   end
 
   def show
@@ -53,4 +53,18 @@ class ResearchesController < ApplicationController
     render text: ""
   end
    
+  def edit_picture
+    @research = Research.find(params[:id])
+  end
+  
+  def update_picture
+    research = Research.find(params[:id])
+    
+    # writing image to the NFS
+    picture_path = Research.write_to_filesystem(params[:picture], 'uploads/research_images/')
+    research.update_attributes!(:picture_path => picture_path)
+    
+    flash.now[:info] = "The research picture was successfully updated."
+    redirect_to researches_path
+  end
 end

@@ -29,6 +29,13 @@ Rails.application.routes.draw do
     member { post :mercury_update }
   end
 
+  resources :researches, only: []  do
+    collection do
+      get 'update_picture/:id' => 'researches#edit_picture'
+      put 'update_picture/:id' => 'researches#update_picture'
+    end
+  end
+
   resources :account_activations, only: [:edit, :update]
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
