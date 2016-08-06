@@ -1,7 +1,7 @@
 .details {
   margin: 0 auto;
   margin-top: 40px;
-  width: 800px;
+  width: 880px;
   display: table;
 }
 
@@ -63,12 +63,14 @@
 }
 
 .details #picture-cv #avatar {
+  width: 200px;
   margin: 0 auto;
   display: table;
   border-radius: 50%;
 }
 
 .member-picture img {
+  width: 200px;
   border-radius: 50%;
   opacity: 1;
   transition: opacity 0.4s ease-out;
@@ -85,7 +87,8 @@
 }
 
 .details p {
-  margin: 5px 0px 5px 0px
+  margin: 5px 0px 5px 0px;
+  font-size: 12pt;
 }
 
 .new-member-form .entry, .edit-member-form .entry {
@@ -113,7 +116,7 @@ input[type='file'].entry {
 }
 
 .former_member {
-  font-size: 18px;
+  font-size: 14pt;
   margin-bottom: 5px;
 }
 
@@ -146,7 +149,6 @@ input[type='file'].entry {
 }
 
 .member {
-  font-size: 16px;
   display: inline-block;
   margin-bottom: 50px;
   width: calc(25% - 6px);
@@ -177,6 +179,10 @@ input[type='file'].entry {
   margin: 0 auto;
 }
 
+#picture-cv #badge img {
+  width: 100%;
+}
+
 #add_member a {
   font-size: 20px;
 }
@@ -196,4 +202,71 @@ input[type='file'].entry {
 
 #info a {
   display: inline;
+}
+
+@media screen and (max-width: 1000px) {
+  .member {
+    margin-bottom: 30px;
+    width: calc(50% - 6px);
+    margin-right: 8px;
+  }
+  
+  .member-picture img {
+    width: 300px;
+  }
+  
+  .member:nth-of-type(n) {
+    margin-right: 8px;
+  }
+  
+  .member:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  
+  .member .caption a,
+  .details a,
+  .details p,
+  .former_member,
+  #add_member a {
+    font-size: 18pt;
+  }
+  
+  .details #picture-cv #avatar {
+    width: 300px;
+  }
+  
+  #picture-cv #badge img {
+    width: 200px;
+  }
+  
+  #personal_info #cv a:link, #personal_info #cv a:visited {
+    display: inline-block;
+    display: moz-inline-box;
+    font-size: 18pt;
+    color: #191919;
+    background-color: #FFF056;
+    padding: 20px 100px;
+    text-decoration: none;
+    opacity: 1.0;
+    transition: opacity 0.5s ease-out;
+    -webkit-transition: opacity 0.5s ease-out;
+  }
+  
+  #personal_info #cv a:hover, #personal_info #cv a:active {
+     display: inline-block;
+     display: moz-inline-box;
+     font-size: 18pt;
+     font-style: normal;
+     opacity: 0.5;
+     padding: 20px 100px;
+     text-decoration: none;
+  }
+  
+  .details h2 {
+    font-size: 20pt;
+  }
+  
+  .details h3 {
+    font-size: 18pt;
+  }
 }

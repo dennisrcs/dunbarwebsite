@@ -44,7 +44,7 @@ member3 = Member.create(:name => 'Silvia Gomez', :position => 'Postdoc', :resear
 user3.update_attribute(:member, member3)
 
 user4 = User.create(:username => 'devil', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'devil@gmail.com', :password => 'devil123', :password_confirmation => 'devil123')
-member4 = Member.create(:name => 'Irving Solis', :position => 'PhD Student', :telephone => '(979) 169-9253', :fax => '(979) 779-7382', :previous_affiliation => 'Universidad Nacional Autonoma do Mexico',
+member4 = Member.create(:name => 'Irving Solis', :position => 'PhD Student', :telephone => '(979) 169-9253', :fax => '(979) 779-7382', :previous_affiliation => 'Universidad Nacional do Mexico',
                         :bio => 'Hey, my name is Irving Solis! :)', :building => 'Chemistry Building', :office => '2311',
                         :is_current_member => false, :is_listed => true,
                         :avatar_path => '/uploads/images/irving.png', :cv_path => '/uploads/cv/cv.pdf')
