@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160811025631) do
 
   create_table "collaborations", force: :cascade do |t|
     t.string "researcher"
+    t.string "link"
     t.string "affiliation"
     t.string "description"
     t.string "picture_path"

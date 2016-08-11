@@ -1,0 +1,18 @@
+= content_for(:title, "Add Collaboration")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Create New Collaboration
+    #new-collaboration-form.new-collaboration-form
+      = form_tag({action: :create}, multipart: true) do
+        = text_field_tag :researcher, nil, :class => 'entry', :placeholder => 'Researcher name', :required => true
+        = text_field_tag :link, nil, :class => 'entry', :placeholder => 'Collaboration website', :required => true
+        = text_field_tag :affiliation, nil, :class => 'entry', :placeholder => 'Affiliation', :required => true
+        = text_area_tag :description, nil, :class => 'entry', :placeholder => 'Please provide a brief description of this collaboration', :required => true
+  
+        = label_tag :collaboration_picture, 'Please provide an image for the collaboration' 
+        = file_field_tag :collaboration_picture, :class => 'entry'
+
+        = submit_tag 'Create Collaboration', :id => 'collaboration-form-button'
+
+- else
+  %p Only users with privileges can add new collaborations.

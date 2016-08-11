@@ -1,5 +1,11 @@
 class Collaboration < ActiveRecord::Base
-  attr_accessible :researcher, :affiliation, :description, :picture_path
+  attr_accessible :researcher, :link, :affiliation, :description, :picture_path
+  
+  validates :researcher, presence: true
+  validates :link, presence: true
+  validates :affiliation, presence: true
+  validates :description, presence: true
+  validates :picture_path, presence: true
 
   # writes 'data' to the public folder, following 'path' structure
   def self.write_to_filesystem(data, path)

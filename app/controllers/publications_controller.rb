@@ -5,6 +5,7 @@ class PublicationsController < ApplicationController
   end
 
   def show
+    redirect_to publications_path
   end
 
   def new
