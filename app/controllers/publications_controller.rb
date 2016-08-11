@@ -43,7 +43,7 @@ class PublicationsController < ApplicationController
    def update
     publication = Publication.find params[:id]
      
-    if !( params[:publication_picture].nil? || params[:publication_picture].empty?)
+    if params[:publication_picture] != nil
       publication_picture_path = Publication.write_to_filesystem(params[:publication_picture], 'uploads/publications/')
       
       publication.update_attributes!(:article => params[:article], :contributors => params[:contributors],

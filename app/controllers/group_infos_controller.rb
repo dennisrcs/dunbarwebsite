@@ -6,7 +6,6 @@ class GroupInfosController < ApplicationController
   end
 
   def show
-    flash[:danger] = "Invalid action!"
     redirect_to group_infos_path
   end
 

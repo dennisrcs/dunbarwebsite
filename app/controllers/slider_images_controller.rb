@@ -38,7 +38,7 @@ class SliderImagesController < ApplicationController
   
   def update
     sliderImage = SliderImage.find(params[:id])
-    if !( params[:slider_image_picture].nil? || params[:slider_image_picture].empty?)
+    if params[:slider_image_picture] != nil
       slider_image_picture_path = SliderImage.write_to_filesystem(params[:slider_image_picture], 'uploads/slider/')
       
       sliderImage.update_attributes!(
