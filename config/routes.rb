@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   resources :publications
   match "publications/:id/edit", to: 'publications#edit', via: [:post, :get]
   
-  
   resources :announcements
   match "announcements/:id/edit", to: 'announcements#edit', via: [:post, :get]
   
@@ -33,6 +32,18 @@ Rails.application.routes.draw do
     collection do
       get 'update_picture/:id' => 'researches#edit_picture'
       put 'update_picture/:id' => 'researches#update_picture'
+    end
+  end
+
+  resources :events
+  resources :events do
+    member { post :mercury_update }
+  end
+
+  resources :events, only: []  do
+    collection do
+      get 'update_picture/:id' => 'events#edit_picture'
+      put 'update_picture/:id' => 'events#update_picture'
     end
   end
 

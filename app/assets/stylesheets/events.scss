@@ -1,0 +1,161 @@
+// Place all the styles related to the collaborations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.new-event-form .entry, .edit-event-form .entry {
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px
+}
+
+#event-form-button, #edit-event-form-button, #edit-event-info-button {
+  width: 100%;
+  height: 30px;
+}
+
+.new-event-form textarea.entry, .edit-event-form textarea.entry {
+  width: 382px;
+  height: 100px;
+  resize: none;
+}
+
+.events-list {
+  margin: 0 auto;
+  display: table;
+}
+
+.event-item {
+  display: table-row;
+  height: auto;
+}
+
+.event-item .event-picture,
+.event-item .event-info {
+  display: table-cell;
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+
+.event-item .event-edit-delete {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#add-event {
+  display: table;
+  margin: 0 auto;
+  font-size: 15pt;
+}
+
+.event-item .edit-delete-buttons {
+  margin-left: 5px;
+}
+
+.event-picture img {
+  margin-right: 50px;
+  margin-bottom: 30px;
+  max-width: 400px;
+  height: auto;
+}
+
+.event-info h3 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.event-item .event-date p {
+  margin-top: 0px;
+}
+
+.event-wrapper .event-title h3 {
+  margin-bottom: 10px;
+}
+
+.event-wrapper .event-date p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.event-wrapper .event-content {
+  margin-top: 50px;
+}
+
+.edit-delete-event,
+.event-wrapper .event-title,
+.event-wrapper .event-date {
+  margin: 0 auto;
+  display: table;
+}
+
+.event-item .event-summary {
+  margin-bottom: 40px;
+}
+
+.event-item .event-summary p,
+.event-wrapper #content {
+  font-size: 12pt;
+}
+
+.event-item h3,
+.event-item .event-date p,
+.event-wrapper #date,
+.event-wrapper #title {
+  font-size: 14pt;
+}
+
+.event-wrapper #date {
+  font-style: italic;
+}
+
+@media screen and (max-width: 1100px) {
+  
+  .events-list {
+    width: 600px;  
+  }
+  
+  .event-item .event-summary {
+    margin-bottom: 20px;
+  }
+  
+  .event-item .event-date p {
+    margin-bottom: 10px;
+  }
+  
+  .event-item .event-summary p {
+    margin-top: 10px;
+  }
+  
+  .event-read-more {
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  
+  .event-picture img {
+    display: table;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 600px;
+    height: auto;
+  }
+  
+  .event-item .event-picture,
+  .event-item .event-info{
+    display: table-row;
+  }
+  
+  .event-item .event-summary p,
+  .event-wrapper #content {
+    font-size: 16pt;
+    text-align: center;
+  }
+  
+  .event-item h3,
+  .event-item .event-date p,
+  .event-wrapper #date,
+  .event-wrapper #title {
+    font-size: 18pt;
+    text-align: center;
+  }
+}

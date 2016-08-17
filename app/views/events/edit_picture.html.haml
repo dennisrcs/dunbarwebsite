@@ -1,0 +1,13 @@
+= content_for(:title, "Update Event Info")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Update Event Info
+    .edit-event-form
+      = form_tag "/events/update_picture/#{@event.id}", :method => :put, multipart: true do
+        = text_field_tag :title, @event.title, :class => 'entry', :placeholder => 'Title'
+        = text_field_tag :date, @event.date, :class => 'entry', :placeholder => 'Date'
+        = text_area_tag :summary, @event.summary, :class => 'entry', :placeholder => 'Please provide a summary of this event'
+        = label_tag :picture, 'Please provide an image to this research'
+        = file_field_tag :picture, :class => 'entry'
+        
+        = submit_tag 'Update', :id => 'edit-event-info-button'

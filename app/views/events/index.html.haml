@@ -1,0 +1,32 @@
+= content_for(:title, "Outreach")
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
+.wide-row
+  %h1 Outreach
+  .events-list
+    - @events.each do |event|
+      .event-item
+        .event-picture
+          = link_to image_tag(event.picture_path), event_path(event)
+        .event-info
+          .event-title
+            %h3
+              = link_to event.title, event_path(event)
+          .event-date
+            %p
+              %i
+                = event.date
+          .event-summary
+            %p
+              = event.summary.html_safe
+          .event-read-more
+            = link_to "Read More", event_path(event), :class => "yellow-box-link"
+        - if logged_in? && current_user_admin?
+          .event-edit-delete
+            .edit-delete-buttons
+              = link_to image_tag("icons/icon_edit.png"), "/editor" + request.path + "/#{event.id}", id: "edit_link", data: {save_url: mercury_update_event_path(event)}, :id => "edit-event-btn"
+              = link_to image_tag("icons/icon_camera.png"), "/events/update_picture/#{event.id}", :id => "edit-event-btn"
+              = link_to image_tag("icons/icon_delete.png"), event_path(event), :title => "Delete event", :method => :delete, data: { confirm: "Do you want to delete this event?" }
+- if logged_in? && current_user_admin?
+  #add-event= link_to 'Add New Event', new_event_path

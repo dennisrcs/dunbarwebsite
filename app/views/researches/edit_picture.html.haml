@@ -1,6 +1,6 @@
 = content_for(:title, "Update Research Picture")
 - if logged_in? && current_user_admin?
-  .large-row
+  .row
     %h1 Update Research Picture
     .edit-research-form
       = form_tag "/researches/update_picture/#{@research.id}", :method => :put, multipart: true do

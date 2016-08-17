@@ -1,0 +1,18 @@
+= content_for(:title, "Add Event")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Create New Event
+    #new-event-form.new-event-form
+      = form_tag({action: :create}, multipart: true) do
+        = text_field_tag :title, nil, :class => 'entry', :placeholder => 'Title', :required => true
+        = text_field_tag :date, nil, :class => 'entry', :placeholder => 'Date', :required => true
+        = text_area_tag :summary, nil, :class => 'entry', :placeholder => 'Please provide a summary of this event', :required => true
+        = text_area_tag :content, nil, :class => 'entry', :placeholder => 'Please a temporary description of this event', :required => true
+  
+        = label_tag :picture, 'Please provide a representative picture to this event' 
+        = file_field_tag :picture, :class => 'entry'
+
+        = submit_tag 'Create Event', :id => 'event-form-button'
+
+- else
+  %p Only users with privileges can add new events.

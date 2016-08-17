@@ -52,7 +52,7 @@ class CollaborationsController < ApplicationController
     redirect_to collaborations_path
   end
   
-   # if there's a temporary file, then delete it
+  # if there's a temporary file, then delete it
   def try_delete_tempfile(file)
     if file != nil
       tempfile = file.tempfile.path

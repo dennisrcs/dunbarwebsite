@@ -62,9 +62,12 @@ class ResearchesController < ApplicationController
     
     # writing image to the NFS
     picture_path = Research.write_to_filesystem(params[:picture], 'uploads/research_images/')
-    research.update_attributes!(:picture_path => picture_path)
     
-    flash.now[:info] = "The research picture was successfully updated."
+    if picture_path != nil
+      research.update_attributes!(:picture_path => picture_path)
+      flash.now[:info] = "The research picture was successfully updated."
+    end
+    
     redirect_to researches_path
   end
 end

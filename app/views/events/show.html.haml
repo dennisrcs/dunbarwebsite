@@ -1,0 +1,13 @@
+= content_for(:title, "#{@event.title}")
+.wide-row
+  .event-wrapper
+    %h3#title.event-title.mercury-region{:name =>"title","data-mercury"=>"full"}
+      = @event.title.html_safe
+    %p#date.event-date.mercury-region{"data-mercury" => "full"}
+      = @event.date.html_safe
+    %p#content.event-content.mercury-region{"data-mercury" => "full"}
+      = @event.content.html_safe
+.edit-delete-event
+  - if logged_in? && current_user_admin?
+    = link_to image_tag("icons/icon_edit.png"), "/editor" + request.path, id: "edit_link", data: {save_url: mercury_update_event_path(@event)}, :id => "edit-event-btn"
+    = link_to image_tag("icons/icon_delete.png"), event_path(@event), :title => "Delete event", :method => :delete, data: { confirm: "Are you sure you want to delete this event?" } , :id =>"delete-event-btn"
