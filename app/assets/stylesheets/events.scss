@@ -93,7 +93,7 @@
 }
 
 .event-item .event-summary p,
-.event-wrapper #content {
+.event-wrapper p {
   font-size: 12pt;
 }
 
@@ -108,8 +108,13 @@
   font-style: italic;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   
+  .wide-row .event-wrapper > * {
+    max-width: 100%;
+    min-width: 400px;
+  }
+
   .events-list {
     width: 600px;  
   }
@@ -146,16 +151,21 @@
   }
   
   .event-item .event-summary p,
-  .event-wrapper #content {
-    font-size: 16pt;
-    text-align: center;
+  .event-wrapper  p {
+    font-size: 20pt;
   }
   
   .event-item h3,
   .event-item .event-date p,
   .event-wrapper #date,
   .event-wrapper #title {
-    font-size: 18pt;
+    font-size: 22pt;
+    text-align: center;
+  }
+  
+  .event-item .event-date p,
+  .event-wrapper #date {
+    font-style: italic;
     text-align: center;
   }
 }

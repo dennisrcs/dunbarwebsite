@@ -167,91 +167,91 @@ a:hover, a:active {
 }
 
 @media (max-width: 1100px) {
-  .content .wide-row {
-    width: 90%;
-  }
   
+  .content .wide-row, 
   .content .largest-row {
     width: 90%;
+    max-width: 90%;
   }
+  
 }
 
 /* css for the slider*/
 .slide{
-		background-color: #228FC4;
-		width:100%;
-		height: auto;
-		border: 4px solid gray;
-		vertical-align: middle;
-	}
-	.slide:before{
-		content:"";
-		display: inline-block;
-		height: 100%;
-		vertical-align: middle;
-		margin-right: -0.25em;
-	}
-	.slide1 p, .slide1 .slide1img  {
-		margin-right: 1em;
-		display: inline-block;
-	}
-		.slide2 p, .slide1 .slide2img  {
-		margin-right: 1em;
-		display: inline-block;
-	}
-	.innerWrapper{
+	background-color: #228FC4;
+	width:100%;
+	height: auto;
+	border: 4px solid gray;
+	vertical-align: middle;
+}
+.slide:before{
+	content:"";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+.slide1 p, .slide1 .slide1img  {
+	margin-right: 1em;
+	display: inline-block;
+}
+	.slide2 p, .slide1 .slide2img  {
+	margin-right: 1em;
+	display: inline-block;
+}
+.innerWrapper{
 /*		margin:0 auto;
-		width:90%;
-		border:#fff 4px solid ;
-		vertical-align: middle;*/
-		/*display: inline-block;*/
-		display: inline-block;
-		vertical-align: middle;
-		width: 90%;
-		border-left:10px solid white;
-		border-right:10px solid white;
-		margin-left: 20px;
-		padding: 10px;
-		/*padding: 55px 0 0 40px;*/
-		text-align: center;
-		/*height: 280px;*/
-	}
-	.slide1text{
-		vertical-align: top;
-		width: 30%;
-		text-align: left;
-		font-size: 1.4em;
-		color: black;
-	}
-	.slide2text{
-		/*vertical-align: top;*/
-		right: 0px;
-		/*margin-left: 2em;*/
-		width: 100%;
-	}
-	.button{
-		display: inline-block;
-		/*margin-left: 10em;*/
-		text-decoration: none;
-		color: black;
-		font-family: arial;
-		background-color: yellow;
-		padding: 10px;
-		border-radius: 5px;
+	width:90%;
+	border:#fff 4px solid ;
+	vertical-align: middle;*/
+	/*display: inline-block;*/
+	display: inline-block;
+	vertical-align: middle;
+	width: 90%;
+	border-left:10px solid white;
+	border-right:10px solid white;
+	margin-left: 20px;
+	padding: 10px;
+	/*padding: 55px 0 0 40px;*/
+	text-align: center;
+	/*height: 280px;*/
+}
+.slide1text{
+	vertical-align: top;
+	width: 30%;
+	text-align: left;
+	font-size: 1.4em;
+	color: black;
+}
+.slide2text{
+	/*vertical-align: top;*/
+	right: 0px;
+	/*margin-left: 2em;*/
+	width: 100%;
+}
+.button{
+	display: inline-block;
+	/*margin-left: 10em;*/
+	text-decoration: none;
+	color: black;
+	font-family: arial;
+	background-color: yellow;
+	padding: 10px;
+	border-radius: 5px;
 
-	}
-	.outerWrapper{
-		/*border-right:5px solid white;*/
-	}
-	.box1,.box2{
-		width:300px;
-		height: 300px;
-		background-color: green;
-		padding: 50px;
-	}
-	.box2{
-		background-color: blue;
-	}
+}
+.outerWrapper{
+	/*border-right:5px solid white;*/
+}
+.box1,.box2{
+	width:300px;
+	height: 300px;
+	background-color: green;
+	padding: 50px;
+}
+.box2{
+	background-color: blue;
+}
 div .cycle-overlay { 
     color: white; background: black; opacity: .3; filter:alpha(opacity=60);
     position: absolute; bottom: 0; width: 100%; padding: 15px;
