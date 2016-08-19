@@ -12,41 +12,26 @@ footer {
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-	padding: 55px 50px;
+	padding: 55px 0px;
 	margin-top: 20px;
 }
 
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right {
+.footer-distributed .footer-left {
 	display: inline-block;
 	vertical-align: top;
 }
 
-.footer-distributed .footer-center * {
-	vertical-align: middle;
+.footer-distributed .footer-right {
+	display: inline-block;
+	transform: translateY(50%);
 }
 
-/* Footer left */
-
-.footer-distributed .footer-left{
-	width: 25%;
-}
-
-/* The company logo */
-
-.footer-distributed .footer-center a {
-	color:  #ffffff;
-	font: normal 36px 'Cookie', cursive;
-	margin: 0;
-}
-
-.footer-distributed .footer-center a span{
-	color:  #FFF056;
+.footer-distributed .footer-left, 
+.footer-distributed .footer-right {
+	width: calc(50% - 3px);
 }
 
 /* Footer links */
-
 .footer-distributed .footer-links{
 	color:  #ffffff;
 	margin: 20px 0 12px;
@@ -58,20 +43,6 @@ footer {
 	line-height: 1.8;
 	text-decoration: none;
 	color:  inherit;
-}
-
-.footer-distributed .footer-company-name{
-	color:  #8f9296;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
-}
-
-/* Footer Center */
-
-.footer-distributed .footer-center{
-	width: 45%;
-	text-align: center;
 }
 
 .footer-distributed .footer-left i{
@@ -87,8 +58,18 @@ footer {
 	vertical-align: middle;
 }
 
-.footer-distributed .footer-left i {
-	margin-left: 30%;
+.footer-distributed .footer-left .info-group-item,
+.footer-distributed .footer-right a {
+	display: table;
+	margin: 0 auto;
+}
+
+.footer-distributed .footer-left .info-group-item {
+	padding-left: calc(20%);
+}
+
+.footer-distributed .footer-right a {
+	padding-right: calc(20%);
 }
 
 .footer-distributed .footer-left i.fa-envelope{
@@ -117,27 +98,6 @@ footer {
 
 
 /* Footer Right */
-
-.footer-distributed .footer-right{
-	width: 25%;
-}
-
-.footer-distributed .footer-company-about{
-	line-height: 20px;
-	color:  #92999f;
-	font-size: 13px;
-	font-weight: normal;
-	margin: 0;
-}
-
-.footer-distributed .footer-company-about span{
-	display: block;
-	color:  #ffffff;
-	font-size: 14px;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
-
 .footer-distributed .footer-icons{
 	margin-top: 25px;
 }
@@ -159,18 +119,6 @@ footer {
 	margin-bottom: 5px;
 }
 
-@media (max-width: 1355px) {
-  	.footer-distributed .footer-left i {
-  		margin-left: 20%;
-  	}
-}
-
-@media (max-width: 1200px) {
-  	.footer-distributed .footer-left i {
-  		margin-left: 10%;
-  	}
-}
-
 @media (max-width: 1100px) {
 	
 	.footer-distributed p,
@@ -180,23 +128,31 @@ footer {
 		font-size: 16pt;
 		line-height: 1.5;
 	}
+	
+	.footer-distributed .footer-right {
+		display: inline-block;
+		transform: none;
+	}
 
+	
 	.footer-distributed .footer-left,
-	.footer-distributed .footer-center,
-	.footer-distributed .footer-right{
+	.footer-distributed .footer-right {
 		display: block;
 		width: 100%;
 		margin-bottom: 40px;
 		text-align: center;
 	}
-
-	.footer-distributed .footer-center i{
-		margin-left: 0;
-	}
-
-
+	
 	.footer-distributed .footer-left i {
 		margin-left: 0;
+	}
+	
+	.footer-distributed .footer-left .info-group-item {
+		padding-left: 0px;
+	}
+	
+	.footer-distributed .footer-right a {
+		padding-right: 0px;
 	}
 
 }
@@ -204,18 +160,12 @@ footer {
 @media (max-width: 880px) {
 
 	.footer-distributed .footer-left,
-	.footer-distributed .footer-center,
 	.footer-distributed .footer-right{
 		display: block;
 		width: 100%;
 		margin-bottom: 40px;
 		text-align: center;
 	}
-
-	.footer-distributed .footer-center i{
-		margin-left: 0;
-	}
-
 
 	.footer-distributed .footer-left i {
 		margin-left: 0;

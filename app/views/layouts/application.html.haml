@@ -51,18 +51,8 @@
           %i.fa.fa-envelope
           %p
             %a{:href => "mailto:dunbar@tamu.com"} dunbar@tamu.com
-      .footer-center
-        = link_to image_tag("logo.png"), root_path
-        = link_to root_path do
-          Dunbar <sub><span>Research Group</span></sub>
       .footer-right
-        %p.footer-company-about
-          %span About the research group
-          Research in the Dunbar Research Group spans a number of topics in synthetic and structural inorganic chemistry with a
-          focus on problems at the interface of materials and biological chemistry. The combined use of many physical techniques
-          reflect the breadth of problems under investigation. Our aim is to define important synthetic challenges and tackle their
-          solution with an arsenal of physical, chemical and spectroscopic data. We are devoted to the use of coordination chemistry
-          as a tool to make new compounds as well as to probe new structure and bonding relationships.
+        = link_to image_tag("chemistry_logo.png"), "http://www.chem.tamu.edu/", :target => '_blank'
   :javascript
     function myFunction() {
         document.getElementsById("menu-icon")[0].classList.toggle("responsive");
