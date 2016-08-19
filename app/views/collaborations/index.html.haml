@@ -3,7 +3,6 @@
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
 .wide-row
-  %h1 Collaborations
   .collaborations-list
     - @collaborations.each do |collaboration|
       .collaboration-item

@@ -78,17 +78,28 @@
 }
 
 @media (max-width: 1100px) {
+  
   .collaboration-item .collaboration-description p {
+    text-align: center;
     font-size: 16pt;
   }
   
   .collaboration-item h3,
   .collaboration-item .collaboration-affiliation p {
+    text-align: center;
     font-size: 18pt;
   }
   
   .collaboration-picture img {
+    display: table;
+    margin: 0 auto;
     width: 300px;
+    max-width: 300px;
     vertical-align: middle;
+  }
+  
+  .collaborations-list .collaboration-picture,
+  .collaborations-list .collaboration-info {
+    display: table-row;
   }
 }
