@@ -27,7 +27,7 @@ class GroupInfo < ActiveRecord::Base
   @icons[:misc] = baseIconDir + "misc"
   
   def self.getCategoryIconPath(category)
-    return @icons[category] 
+    return @icons[category] + '.png'
   end
   
   def self.checkIsRestricted(category)

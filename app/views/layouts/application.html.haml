@@ -32,7 +32,7 @@
                 %li= link_to "Logout", logout_path, :method => 'delete'
               - else
                 %li= link_to "Login", login_path 
-              %li= link_to "☰", "javascript:void(0);", :class => "menu-icon"
+              %li{:class => 'menu-icon'}= link_to "☰", "#", :id => 'teste'
       .content
         = yield
     %footer.footer-distributed

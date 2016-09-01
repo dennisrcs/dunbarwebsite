@@ -20,15 +20,17 @@ $(document).ready(function() {
     $(".flash_info").delay(2000).fadeOut(1000);
     
     $(window).scroll(function() {
-      if ($(this).scrollTop() > 200){
-        $(".logo img").css("height", "100px");
-        $(".logo a").css("font-size", "20pt");
-        $("nav").css("height", "100px");
-      }
-      else {
-        $(".logo img").css("height", "200px");
-        $(".logo a").css("font-size", "24pt");
-        $("nav").css("height", "200px");
+      if ($(this).width() > 1100) {
+        if ($(this).scrollTop() > 200){
+          $(".logo img").css("height", "100px");
+          $(".logo a").css("font-size", "20pt");
+          $("nav").css("height", "100px");
+        }
+        else {
+          $(".logo img").css("height", "200px");
+          $(".logo a").css("font-size", "24pt");
+          $("nav").css("height", "200px");
+        }
       }
     });
 });

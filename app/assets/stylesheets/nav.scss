@@ -63,7 +63,7 @@ body .nav {
 .nav-top li a {
   color: white;
   border-bottom: 3px solid #292c2f;
-  transition: color 0.5s ease-out, border-bottom 0.5s ease-out, padding 0.5s ease-out;
+  transition: color 0.5s ease-out, border-bottom 0.5s ease-out;
   display: inline-block;
   font-size: 15pt;
   font-style: normal;
@@ -118,10 +118,62 @@ body .nav {
 }
 
 @media screen and (max-width: 1100px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
+  
+  .nav {
+    height: 100px !important;
+  }
+  
+  .nav-top {
+    transform: none; 
+    left: 0;
+    top: 0;
+  }
+  
+  .nav-top li:first-child a {
+    margin-left: 40px;
+  }
+  
+  .nav-items { 
+    display: inline;
+  }
+  
+  .nav .logo {
+    display: none;
+  }
+  
+  .nav-top li a {
+    font-size: 24pt;
+  }
+  
+  .nav-top li:not(:first-child) {display: none;}
+  
+  .nav-top.responsive li a {
+    font-size: 24pt;
+  }
+  
+  .nav-top.responsive li:not(:last-child) a {
+    margin-left: 40px;
+  }
+  
+  ul.nav-top.responsive {position: relative;}
+  ul.nav-top.responsive li.menu-icon {
     position: absolute;
     right: 0;
     top: 0;
+  }
+  ul.nav-top.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.nav-top.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  
+  .nav-top li.menu-icon {
+    float: right;
+    display: inline-block;
+    margin-right: 40px;
+    top: 15px;
   }
 }
