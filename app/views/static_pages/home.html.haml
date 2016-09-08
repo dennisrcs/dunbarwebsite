@@ -1,15 +1,14 @@
 = content_for(:title, "Home")
-:javascript
-  $( $.fn.cycle.defaults.autoSelector ).cycle();
-    
+
 - flash.each do |name, msg|
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
 
 .homepage-content
   .slider-wrapper
-    .cycle-slideshow.slider{"data-cycle-caption-fx-in" => "slideDown", "data-cycle-caption-fx-out" => "slideUp", 
-    "data-cycle-caption-plugin" => "caption2", "data-cycle-fx" => "scrollHorz", "data-cycle-slides" => "> div", "data-cycle-timeout" => "5000"}
+    .cycle-slideshow.slider{"data-cycle-fx" => "scrollHorz", "data-cycle-pager" => "> .cycle-pager",
+      "data-cycle-slides" => ".innerWrapper", "data-cycle-timeout" => "5000"}
+      .cycle-pager
       - @sliderImages.each.with_index do |slider_image, index|
         .innerWrapper{"data-cycle-title" => slider_image.title}
           .slider-table
@@ -84,7 +83,3 @@
               = announcement.created_at
       .more-news
         = link_to "Read More", announcements_path, :class => 'yellow-box-link'
-:javascript
-  $( "#home" ).click(function() {
-    $( $.fn.cycle.defaults.autoSelector ).cycle();
-  });

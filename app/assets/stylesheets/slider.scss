@@ -1,5 +1,5 @@
 .cycle-slideshow.slider {
-  height: auto;
+  height: 560px;
 }
 
 .homepage-content .box-btn a:link, .homepage-content .box-btn a:visited {
@@ -50,8 +50,12 @@
 
 .slider-content-wrapper .slider-title p {
   margin-bottom: 50px;
-  font-size: 15pt;
+  font-size: 18pt;
   font-weight: bold;
+}
+
+.slider-content-wrapper .slider-content p {
+  font-size: 16pt;
 }
 
 .slider-image-list .slider-image img {
@@ -109,6 +113,16 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+.cycle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; bottom: 10px; overflow: hidden;
+}
+.cycle-pager span { 
+    font-family: arial; font-size: 65px; width: 20px; height: 20px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.cycle-pager span.cycle-pager-active { color: #D69746;}
+.cycle-pager > * { cursor: pointer;}
+
 @media screen and (max-width: 1200px) {
   
   .slider-row .slider-image img {
@@ -129,4 +143,11 @@
     font-size: 16pt;
   }
   
+}
+
+@media screen and (max-width: 1100px) {
+  .cycle-pager span { 
+      font-family: arial; font-size: 200px; width: 50px; height: 16px; 
+      display: inline-block; color: #ddd; cursor: pointer; 
+  }
 }
