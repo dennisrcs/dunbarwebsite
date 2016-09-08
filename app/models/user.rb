@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 8 }
+  validates :username, uniqueness: true
+  validates :email, uniqueness: true
   
   # creates a digest for a given string
   def User.digest(string)
