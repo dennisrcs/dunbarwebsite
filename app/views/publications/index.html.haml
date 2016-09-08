@@ -32,4 +32,4 @@
 - if logged_in? && current_user_admin?
   #add_publication= link_to 'Add new Publication', new_publication_path
 .apple_pagination 
-  = will_paginate @publications, :container => false
+  = will_paginate @publications, :container => false, :inner_window => '1', :outer_window => '0'
