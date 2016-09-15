@@ -370,6 +370,17 @@ RecordS_2009 = SliderImage.create(:title => "High-sping state observed in molecu
 JACS_2014_Rh2 = SliderImage.create(:title => "Leveraging ligand field aroun dimetal center", :content => "Tuning the ligand field around the dimetal center to maximize the photoreactivity and achieve the best photodynamic action.", 
 :link => "http://pubs.acs.org/doi/abs/10.1021/ja5078359", :slider_image_picture => "/uploads/slider/JACS_2014_Rh2_HR.png")
 
+# people image seeds
+
+people_image1 = PeopleImage.create(:description => 'Famous scientists gathered', :link => '', :picture_path => '/uploads/images/people1.png')
+
+people_image2 = PeopleImage.create(:description => 'Wei Research Group', :link => 'http://www.chem.purdue.edu/awei/', :picture_path => '/uploads/images/people2.png')
+
+people_image3 = PeopleImage.create(:description => 'Burgmayer Receives NIH Grant to Research the Impact of Molybdenum', :link => 'http://news.blogs.brynmawr.edu/2014/02/26/chemistry-professor-sharon-burgmayer-receives-nih-grant-to-continue-researching-the-impact-of-molybdenum-on-human-health/', :picture_path => '/uploads/images/people3.png')
+
+people_image4 = PeopleImage.create(:description => 'Nasa engineers', :link => 'https://www.nasa.gov/', :picture_path => '/uploads/images/peopleNasa.png')
+
+
 course1 = Course.create(:name => "CHEM 634")
 
 syllabus = CourseFile.new(:name => "syllabus", :file_path => "/uploads/courses/qualifying.pdf")

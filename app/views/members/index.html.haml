@@ -4,44 +4,49 @@
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
 
-%h1 Current members
-
 .largest-row
-  .member_grid
-    - @members.each do |member|
-      - if member.is_current_member && member.is_listed
-        .member
-          .avatar
-            = link_to image_tag(member.avatar_path), member_path(member), :class => "member-picture"
-          .caption
-            = link_to "#{member.name}", member_path(member) 
-            = link_to "#{member.position}", member_path(member)
-
-  %h1 Former members
-  .former_members_list
-    - @members.each do |member|
-      - if !member.is_current_member && member.is_listed
-        .former_member
-          #{member.name},
-          %a{:href => "mailto:#{member.user.email}"} #{member.user.email},
-          #{member.previous_affiliation},
-          (#{member.position})
-          - if logged_in? && current_user_admin?
-            = link_to image_tag("icons/icon_edit.png"), edit_member_path(member), :title => "Edit profile"
-            = link_to image_tag("icons/icon_delete.png"), member_path(member), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this member?" }
-
-  - if logged_in? && current_user_admin?
-    %h1 Not listed members
+  .peopleSlider
+    .cycle-slideshow{"data-cycle-timeout" => "3000", "data-cycle-slides" => 'a', "data-cycle-caption-plugin" => "caption2"}
+      .cycle-overlay
+      - @peopleImages.each do |image|
+        = link_to image_tag(image.picture_path), image.link, 'data-cycle-desc' => image.description
+  .manage-people-slider
+    - if logged_in? && current_user_admin?
+      = link_to image_tag("icons/icon_edit.png"), people_images_path, :title => "Manage People Slider"
+  .members-wrapper
+    %h1 Current members
+    .member_grid
+      - @members.each do |member|
+        - if member.is_current_member && member.is_listed
+          .member
+            .avatar
+              = link_to image_tag(member.avatar_path), member_path(member), :class => "member-picture"
+            .caption
+              = link_to "#{member.name}", member_path(member) 
+              = link_to "#{member.position}", member_path(member)
+    %h1 Former members
     .former_members_list
       - @members.each do |member|
-        - if !member.is_listed
+        - if !member.is_current_member && member.is_listed
           .former_member
             #{member.name},
             %a{:href => "mailto:#{member.user.email}"} #{member.user.email},
-            #{member.previous_affiliation}
+            #{member.previous_affiliation},
             (#{member.position})
-            = link_to image_tag("icons/icon_edit.png"), edit_member_path(member), :title => "Edit profile"
-            = link_to image_tag("icons/icon_delete.png"), member_path(member), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this member?" }
-
+            - if logged_in? && current_user_admin?
+              = link_to image_tag("icons/icon_edit.png"), edit_member_path(member), :title => "Edit profile"
+              = link_to image_tag("icons/icon_delete.png"), member_path(member), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this member?" }
+    - if logged_in? && current_user_admin?
+      %h1 Not listed members
+      .former_members_list
+        - @members.each do |member|
+          - if !member.is_listed
+            .former_member
+              #{member.name},
+              %a{:href => "mailto:#{member.user.email}"} #{member.user.email},
+              #{member.previous_affiliation}
+              (#{member.position})
+              = link_to image_tag("icons/icon_edit.png"), edit_member_path(member), :title => "Edit profile"
+              = link_to image_tag("icons/icon_delete.png"), member_path(member), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this member?" }
 - if logged_in? && current_user_admin?
   #add_member= link_to 'Add new member', new_member_path 

@@ -256,11 +256,11 @@ a:hover, a:active {
 .box2{
 	background-color: blue;
 }
-div .cycle-overlay { 
+.slider-wrapper div .cycle-overlay { 
     color: white; background: black; opacity: .3; filter:alpha(opacity=60);
     position: absolute; bottom: 0; width: 100%; padding: 15px;
 }
-div .cycle-caption{
+.slider-wrapper div .cycle-caption{
     color: white; background: red; opacity: .3; filter:alpha(opacity=60);
     position: absolute; bottom: 0; width: 100%; padding: 15px;	
 }

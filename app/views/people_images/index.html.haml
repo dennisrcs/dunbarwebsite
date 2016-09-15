@@ -1,0 +1,19 @@
+= content_for(:title, "Group Images")
+
+- if logged_in? && current_user_admin?
+  %h1 Current Slides
+  .wide-row
+    .slider-image-list
+      - @peopleImages.each do |image|
+        .slider-image-item
+          .slider-image
+            = link_to image_tag(image.picture_path), people_image_path(image), :class => "people-slider-picture"
+          .slider-title
+            %p
+              = image.description
+          .slider-edit-delete
+            = link_to image_tag("icons/icon_edit.png"), edit_people_image_path(image), :title => "Edit profile"
+            = link_to image_tag("icons/icon_delete.png"), people_image_path(image), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this image?" }
+  #add_slider_image= link_to 'Add new member image', new_people_image_path
+- else
+  %p Only users with privileges can edit group images.

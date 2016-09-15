@@ -1,0 +1,15 @@
+= content_for(:title, "Edit people image")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Edit Slide
+    #edit-slider_image-form.edit-slider_image-form
+      = form_tag people_image_path(@peopleImage), :method => :put, multipart: true do
+        = text_field_tag :description, @peopleImage.description , :class => 'entry', :placeholder => 'Please enter a short description about this picture'
+        = text_field_tag :link, @peopleImage.link, :class => 'entry', :placeholder => 'Link'
+        
+        = label_tag :picture_path, 'Please provide an image'
+        = file_field_tag :picture_path, :class => 'entry'
+        
+        = submit_tag 'Save Image', :id => 'people_image_form_button'
+- else
+  %p Only users with privileges can edit members images.

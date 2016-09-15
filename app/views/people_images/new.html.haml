@@ -1,0 +1,16 @@
+= content_for(:title, "Add Image")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Add new group picture
+    #new-slider_image-form.new-slider_image-form
+      = form_tag({action: :create}, multipart: true) do
+        = text_field_tag :description, nil, :class => 'entry', :placeholder => 'Please enter a description to the image', :required => true
+        = text_field_tag :link, nil, :class => 'entry', :placeholder => 'Link to the slider item', :required => true
+        
+        = label_tag :picture_path, 'Please upload an image 980X400'
+        = file_field_tag :picture_path, :class => 'entry'
+        
+        = submit_tag 'Add Image', :id => 'slider_image-form-button'
+
+- else
+  %p Only users with privileges can manage slides.

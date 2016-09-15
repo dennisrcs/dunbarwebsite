@@ -2,6 +2,7 @@ class MembersController < ApplicationController
 
   def index
     @members = Member.all
+    @peopleImages = PeopleImage.all
   end
 
   def show

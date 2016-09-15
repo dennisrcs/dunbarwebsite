@@ -42,6 +42,11 @@
    text-decoration: none;
 }
 
+#people_image_form_button {
+  width: 100%;
+  height: 30px;
+}
+
 .details #info {
   vertical-align: middle;
   display: table-cell;
@@ -204,6 +209,35 @@ input[type='file'].entry {
   display: inline;
 }
 
+.peopleSlider .cycle-slideshow a img {
+  height: 400px;
+}
+
+.slider-image-item .slider-title p {
+  padding-left: 15px;
+}
+
+/* overlay */
+.peopleSlider .cycle-overlay { 
+  font-family: tahoma, arial;
+  position: absolute; bottom: 3px; width: 100%; z-index: 600;
+  background: black; color: white; padding: 15px 0px; opacity: .6;
+}
+
+.peopleSlider .cycle-overlay div {
+  padding: 0px 15px;
+  font-size: 14pt;
+}
+
+.manage-people-slider {
+  display: table;
+  margin: 0 auto;
+}
+
+.members-wrapper {
+  margin-top: 30px;
+}
+
 @media screen and (max-width: 1000px) {
   .member {
     margin-bottom: 30px;
@@ -268,5 +302,18 @@ input[type='file'].entry {
   
   .details h3 {
     font-size: 18pt;
+  }
+  
+  .former_members_list {
+    margin-left: 30px;
+  }
+
+  .peopleSlider .cycle-overlay { 
+    opacity: .7;
+  }
+
+  .peopleSlider .cycle-overlay div {
+    padding: 0px 20px;
+    font-size: 20pt;
   }
 }

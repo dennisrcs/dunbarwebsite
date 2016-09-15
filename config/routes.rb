@@ -51,6 +51,7 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
   resources :slider_images
+  resources :people_images
   
   get '*path', :to => 'application#page_not_found'
 
