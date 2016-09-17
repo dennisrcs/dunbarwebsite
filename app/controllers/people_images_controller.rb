@@ -32,7 +32,7 @@ class PeopleImagesController < ApplicationController
   def destroy
     peopleImage = PeopleImage.find(params[:id])
     peopleImage.destroy
-    flash[:notice] = "People Image was deleted."
+    flash[:info] = "People Image was deleted."
     redirect_to people_images_path
   end
   

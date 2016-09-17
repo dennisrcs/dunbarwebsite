@@ -9,6 +9,8 @@
         = text_field_tag :position, @member.position, :class => 'entry', :placeholder => 'Position (PhD Student, MSc Student, etc)'
         = text_field_tag :username, @member.user.username, :class => 'entry', :placeholder => 'Username', :required => true
         = text_field_tag :email, @member.user.email, :class => 'entry', :placeholder => 'E-mail', :required => true
+        - if current_user_admin?
+          = text_field_tag :rank, @member.rank, :class => 'entry', :placeholder => 'Please provide a rank for sorting purposes'
         = text_field_tag :researcherid, @member.researcherid, :class => 'entry', :placeholder => 'Researcher ID'
         = text_field_tag :telephone, @member.telephone, :class => 'entry', :placeholder => 'Telephone', :id => "telephone"
         = text_field_tag :fax, @member.fax, :class => 'entry', :placeholder => 'Fax', :id => "fax"

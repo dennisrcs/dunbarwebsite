@@ -32,7 +32,7 @@ class SliderImagesController < ApplicationController
   def destroy
     @sliderImage = SliderImage.find(params[:id])
     @sliderImage.destroy
-    flash[:notice] = "Slider Image '#{@sliderImage.title}' is deleted."
+    flash[:info] = "Slider Image '#{@sliderImage.title}' is deleted."
     redirect_to slider_images_path
   end
   

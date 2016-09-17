@@ -32,7 +32,7 @@ class ResearchesController < ApplicationController
   def destroy
     @research = Research.find(params[:id])
     @research.destroy
-    flash[:notice] = "Research '#{@research.title}' deleted."
+    flash[:info] = "Research '#{@research.title}' deleted."
     redirect_to researches_path
   end
   

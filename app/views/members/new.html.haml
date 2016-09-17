@@ -1,11 +1,9 @@
 = content_for(:title, "Add member")
 - if logged_in? && current_user_admin?
   .row
-    
     - flash.each do |name, msg|
       - if msg.is_a?(String)
         = content_tag :div, msg, :class => "flash_#{name}"
-  
     %h1 Create New Member
     #new-member-form.new-member-form
       = form_tag({action: :create}, multipart: true) do
@@ -13,6 +11,7 @@
         = text_field_tag :position, nil, :class => 'entry', :placeholder => 'Position (PhD Student, MSc Student, etc)', :id => "position"
         = text_field_tag :username, nil, :class => 'entry', :placeholder => 'Username', :required => true, :id => "username" 
         = text_field_tag :email, nil, :class => 'entry', :placeholder => 'E-mail', :required => true
+        = text_field_tag :rank, nil, :class => 'entry', :placeholder => 'Please provide a rank for sorting purposes'
         = text_field_tag :researcherid, nil, :class => 'entry', :placeholder => 'Researcher ID'
         = text_field_tag :telephone, nil, :class => 'entry', :placeholder => 'Telephone', :id => "telephone"
         = text_field_tag :fax, nil, :class => 'entry', :placeholder => 'Fax', :id => "fax"
@@ -20,7 +19,7 @@
         = text_area_tag :bio, 'Howdy! This is my bio.' , :class => 'entry', :placeholder => 'Please enter a short description of the member'
         = text_field_tag :building, nil, :class => 'entry', :placeholder => 'Building'
         = text_field_tag :office, nil, :class => 'entry', :placeholder => 'Office'
-  
+
         = label_tag :avatar, 'Please provide an image to the member profile' 
         = file_field_tag :avatar, :class => 'entry'
   

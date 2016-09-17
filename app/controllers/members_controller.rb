@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
 
   def index
-    @members = Member.all
+    @members = Member.all.order(rank: :asc)
     @peopleImages = PeopleImage.all
   end
 
@@ -54,7 +54,7 @@ class MembersController < ApplicationController
                                :telephone => params[:telephone], :fax => params[:fax],
                                :is_current_member => is_current_member, :is_listed => is_listed,
                                :previous_affiliation => params[:previous_affiliation], :bio => params[:bio],
-                               :building => params[:building], :office => params[:office],
+                               :building => params[:building], :office => params[:office], :rank => params[:rank].to_i,
                                :avatar_path => avatar_path, :cv_path => cv_path)
       
         @user.update_attribute(:member, member)
@@ -99,6 +99,7 @@ class MembersController < ApplicationController
       is_listed = (params[:is_listed] == "1" || params[:is_listed] == "on") ? true : false
       params[:is_current_member] = is_current_member
       params[:is_listed] = is_listed
+      params[:rank] = params[:rank].to_i
     end
 
     member.update_attributes(params)
@@ -119,7 +120,7 @@ class MembersController < ApplicationController
       end
       member.user.destroy
       member.destroy
-      flash.now[:info] = "Member #{member.user.username} deleted successfully"
+      flash[:info] = "Member #{member.user.username} deleted successfully"
     end
     redirect_to members_path
   end
