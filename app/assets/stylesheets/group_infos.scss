@@ -146,6 +146,18 @@ ul.group-info-category,
   padding-right: 5px;
 }
 
+.group-info-login-message{
+  display: table;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.group-info-login-message p {
+  font-size: 14pt;
+  display: table;
+  margin: 0 auto;
+}
+
 @media (max-width: 1100px) {
   
   .group-info-container,
@@ -189,5 +201,21 @@ ul.group-info-category,
   
   ul.group-info-category img {
     display: none;
+  }
+  
+  .group-info-login-message{
+    display: table;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+  .group-info-login-message h2 {
+    font-size: 22pt;
+  }
+  
+  .group-info-login-message p {
+    font-size: 18pt;
+    display: table;
+    margin: 0 auto;
   }
 }

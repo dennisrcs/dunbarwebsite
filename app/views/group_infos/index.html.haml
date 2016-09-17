@@ -33,5 +33,9 @@
             - if !GroupInfo.checkIsRestricted(category[1])
               %li
                 = link_to "#{info.title}", "#{info.file_path}", :class => "files_#{category[1].to_s}", :target => '_blank'
+  - if !logged_in?
+    .group-info-login-message
+      %h2 Unfortunately some files are restricted only to members
+      %p Please log in to access other files
 - if logged_in? && current_user_admin?
   = link_to "Add new group info", new_group_info_path, :id => 'add-group-info'
