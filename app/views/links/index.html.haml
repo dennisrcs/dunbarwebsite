@@ -1,0 +1,20 @@
+= content_for(:title, "Links")
+
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    = content_tag :div, msg, :class => "flash_#{name}"
+
+%h1 Important Links
+
+.largest-row
+  .links-wrapper
+    - @links.each.with_index do |link, index|
+      .links-content
+        = link_to link.title, link.url, :target => "_blank"
+        - if logged_in? && current_user_admin?
+          .link-admin-controls
+            = link_to image_tag("icons/icon_edit.png"), edit_link_path(link), :title => "Edit Link" , :id => "Edit"
+            = link_to image_tag("icons/icon_delete.png"), link_path(link), :title => "Delete Link", :method => :delete, data: { confirm: "Are you sure you want to delete this link?" }, :id =>"Delete"
+- if logged_in? && current_user_admin?
+  #add-link-button= link_to 'Add Link', new_link_path
+

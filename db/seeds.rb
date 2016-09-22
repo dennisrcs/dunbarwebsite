@@ -141,6 +141,12 @@ event1 = Event.create(:title => 'Elementary Science Demonstrations', :date => 'J
 event2 = Event.create(:title => 'Chemistry Open House', :date => 'March 2016', :picture_path => '/uploads/events/outreach2.png', :summary => 'Every year, during National Chemistry Week, the Texas A&amp;M Chemistry department has an open house, inviting members of the community, especially young students, to come and explore the world of chemistry. Our group actively participates with the open house by running stations where students get to experience hands-on experiments, including polymer smoothies, ferrofluids, and UV fluorescent nail polish.', :content => 'this is the content for now')
 event3 = Event.create(:title => 'Science Olympiad', :date => 'December 2015', :picture_path => '/uploads/events/outreach3.png', :summary => 'Each spring, our students design, troubleshoot, run, and grade the chemistry lab event for the Texas state competition of Science Olympiad. This past year’s lab tested students’ knowledge of the ideal gas law. They applied the ideal gas law to determine the stoichiometry of an unknown metal compound.', :content => 'this is the content for now')
 
+link1 = Link.create(:title => "Texas A&M University", :url => "http://www.tamu.edu/")
+link2 = Link.create(:title => "Chemistry @ Texas A&M University", :url => "http://www.chem.tamu.edu/")
+link3 = Link.create(:title => "National Science Foundation", :url => "http://www.nsf.gov/")
+link4 = Link.create(:title => "ChemTutor", :url => "http://www.chemtutor.com/")
+link5 = Link.create(:title => "Periodic Table", :url => "http://www.webelements.com")
+
 research1 = Research.create(:title => "Supramolecular Chemistry of Anions", :picture_path => "/uploads/research_images/new_res1.png", :summary => "Research in the Supramolecular Chemistry of Anions is a newer 
 project in the Dunbar Group. The project has developed into a highly interdisciplinary endeavor, encompassing coordination chemistry, computational 
 chemistry, and, biochemistry. Anion-π interactions, i.e., the noncovalent forces between electron-deficient aromatic systems and anions, have been 

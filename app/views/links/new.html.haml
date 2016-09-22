@@ -1,0 +1,11 @@
+= content_for(:title, "Add Link")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Add Link
+    #new-link-form.new-link-form
+      = form_tag({action: :create}, multipart: true) do
+        = text_field_tag :title, nil, :class => 'entry', :placeholder => 'Title', :required => true
+        = text_field_tag :url, nil, :class => 'entry', :placeholder => 'Url', :required => true
+        = submit_tag 'Add Link', :id => 'new-link-form-button'
+- else
+  %p Only users with privileges can add new publications.

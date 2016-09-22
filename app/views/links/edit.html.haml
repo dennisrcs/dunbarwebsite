@@ -1,0 +1,12 @@
+= content_for(:title, "Edit Link")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Edit Link
+    #edit-link-form.edit-link-form
+      = form_tag link_path(@link), :method => :put do
+        = text_field_tag :title, @link.title, :class => 'entry', :placeholder => 'Title', :required => true
+        = text_field_tag :url, @link.url, :class => 'entry', :placeholder => 'Url', :required => true
+        
+        = submit_tag 'Update Link', :id => 'edit-link-form-button'
+- else
+  %p Only users with privileges can edit publications.

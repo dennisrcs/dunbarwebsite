@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :group_infos
   resources :members
   resources :collaborations
+  resources :links
   resources :courses
   resources :courses do
     resources :course_files
