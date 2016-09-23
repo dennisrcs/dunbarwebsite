@@ -16,14 +16,14 @@ body .nav {
 
 .nav .logo {
   position: absolute;
-  top: 50%; left: 20%;
-  transform: translate(-50%,-50%);
+  bottom: 15%; left: 15%;
+  transform: translateX(-50%);
   transition: left 0.5s ease-out;
   z-index: 100;
 }
 
 .nav .logo img {
-  height: 200px;
+  height: 100px;
   transition: height 0.5s ease-out;
 }
 
@@ -44,11 +44,12 @@ body .nav {
 
 .nav-top {
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-35%,-50%);
+  bottom: 15%; left: 50%;
+  transform: translateX(-36%);
   width: 100%;
   padding: 0px;
   list-style-type: none;
+  margin-bottom: 0px;
 }
 
 .nav-items {
@@ -62,8 +63,9 @@ body .nav {
 
 .nav-top li a {
   color: white;
-  border-bottom: 3px solid #292c2f;
-  transition: color 0.5s ease-out, border-bottom 0.5s ease-out;
+  background: #4C0000;
+  margin-left: 10px;
+  opacity: 1;
   display: inline-block;
   font-size: 15pt;
   font-style: normal;
@@ -72,48 +74,53 @@ body .nav {
 }
 
 .nav-top li a:hover {
-  color: #FFF056;
-  border-bottom: 3px solid #FFF056;
+  opacity: 0.8;
 }
 
-.nav-top .active {
-  color: #FFF056;
-  border-bottom: 3px solid #FFF056;
+.nav-top a.active {
+  opacity: 0.8;
 }
 
 .nav .menu-icon {
   display: none;
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1900px) {
   .nav-top li a {
       padding: 15px 15px;
+      font-size: 13pt;
   }
   
-  .nav .logo {
-      left: 15%;
+  .nav-top {
+    transform: translate(-37%,-50%);
   }
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1600px) {
   .nav-top li a {
       padding: 15px 10px;
-      font-size: 13pt;
+      font-size: 12pt;
+  }
+  
+  .nav .logo img {
+    height: 80px;
   }
 }
 
 @media screen and (max-width: 1350px) {
   .nav-top li a {
       padding: 15px 4px;
-      font-size: 12pt;
+      font-size: 11pt;
   }
   
   .nav-top {
-      transform: translate(-33%,-50%);
+      transform: translate(-40%,-50%);
   }
-  
-  .nav .logo {
-      left: 18%;
+}
+
+@media screen and (max-width: 1250px) {
+  .nav-top {
+      transform: translate(-37%,-50%);
   }
 }
 
@@ -153,6 +160,7 @@ body .nav {
   
   .nav-top.responsive li:not(:last-child) a {
     margin-left: 40px;
+    margin-right: 40px;
   }
   
   ul.nav-top.responsive {position: relative;}
@@ -173,6 +181,7 @@ body .nav {
   .nav-top li.menu-icon {
     float: right;
     display: inline-block;
+    padding: 10 10px;
     margin-right: 40px;
     top: 15px;
   }

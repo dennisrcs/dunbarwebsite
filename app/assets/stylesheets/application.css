@@ -159,6 +159,10 @@ a:hover, a:active {
   text-decoration: none;
 }
 
+.nav {
+  background: url('banner_bg.png');
+}
+
 @media screen and (max-width: 1200px) {
   .yellow-box-link:link, .yellow-box-link:visited {
     padding: 15px 80px;

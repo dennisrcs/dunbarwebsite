@@ -22,12 +22,12 @@ $(document).ready(function() {
     $(window).scroll(function() {
       if ($(this).width() > 1100) {
         if ($(this).scrollTop() > 200){
-          $(".logo img").css("height", "100px");
+          $(".logo img").css("height", "70px");
           $(".logo a").css("font-size", "20pt");
           $("nav").css("height", "100px");
         }
         else {
-          $(".logo img").css("height", "200px");
+          $(".logo img").css("height", "100px");
           $(".logo a").css("font-size", "24pt");
           $("nav").css("height", "200px");
         }
