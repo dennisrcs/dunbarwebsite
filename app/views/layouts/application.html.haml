@@ -14,9 +14,7 @@
     .main
       %nav.nav
         .logo
-          = link_to image_tag("logo.png"), root_path
-          = link_to root_path do 
-            Dunbar <sub><span>Research Group</span></sub>
+          = link_to image_tag("new_logo.png"), root_path
         .nav-items-wrapper
           %ul.nav-top
             .nav-items
@@ -28,6 +26,7 @@
               %li= link_to "Outreach", events_path
               %li= link_to "Collaborations", collaborations_path
               %li= link_to "Group Info", group_infos_path
+              %li= link_to "Links", links_path
               - if logged_in?
                 %li= link_to "Logout", logout_path, :method => 'delete'
               - else
