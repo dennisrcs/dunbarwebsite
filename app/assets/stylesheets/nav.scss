@@ -12,6 +12,7 @@ body .nav {
   box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
   background-color: #292c2f;
   transition: height  0.5s ease-out;
+  background: url(asset-path('banner_bg.png'));
 }
 
 .nav .logo {
