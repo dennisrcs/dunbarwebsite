@@ -159,6 +159,23 @@ a:hover, a:active {
   text-decoration: none;
 }
 
+.login-message {
+  margin: 0 auto;
+  display: table;
+  margin-top: 30px;
+}
+
+.login-message p,
+.login-message h2 {
+  margin: 0 auto;
+  display: table;
+  font-size: 16pt;
+}
+
+.login-message p {
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 1200px) {
   .yellow-box-link:link, .yellow-box-link:visited {
     padding: 15px 80px;
@@ -176,6 +193,10 @@ a:hover, a:active {
   .content .largest-row {
     width: 90%;
     max-width: 90%;
+  }
+  
+  .login-message p {
+    font-size: 20pt;
   }
   
 }

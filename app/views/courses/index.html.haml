@@ -32,4 +32,6 @@
               - if current_user_admin?
                 = link_to "Add new file", new_course_course_file_path(course), :id => 'add-new-coursefile'
 - else
-  %p You need to be logged in to have access to the courses
+  .login-message
+    %h2 Page restricted to registered members
+    %p You need to be logged in to have access to the courses
