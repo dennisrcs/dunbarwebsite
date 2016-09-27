@@ -9,7 +9,6 @@
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"}
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-
   %body
     .main
       %nav.nav
@@ -36,22 +35,23 @@
         = yield
     %footer.footer-distributed
       .footer-left
-        %div.info-group-item
-          %i.fa.fa-map-marker
-          %p
-            %span 2311 Chemistry Building
-            %span Department of Chemistry
-            %span Texas A&M University
-            College Station, TX
-        %div.info-group-item
-          %i.fa.fa-phone
-          %p +1 979 845 5235
-        %div.info-group-item
-          %i.fa.fa-envelope
-          %p
-            %a{:href => "mailto:dunbar@tamu.com"} dunbar@tamu.com
+        .info-group-items-wrapper
+          %div.info-group-item
+            %i.fa.fa-map-marker
+            %p
+              %span 2311 Chemistry Building
+              %span Department of Chemistry
+              %span Texas A&M University
+              College Station, TX
+          %div.info-group-item
+            %i.fa.fa-phone
+            %p +1 979 845 5235
+          %div.info-group-item
+            %i.fa.fa-envelope
+            %p
+              %a{:href => "mailto:dunbar@tamu.com"} dunbar@tamu.com
       .footer-right
-        = link_to image_tag("chemistry_logo.png"), "http://www.chem.tamu.edu/", :target => '_blank'
+        = link_to image_tag("chem_logo.bmp"), "http://www.chem.tamu.edu/", :target => '_blank'
   :javascript
     function myFunction() {
         document.getElementsById("menu-icon")[0].classList.toggle("responsive");

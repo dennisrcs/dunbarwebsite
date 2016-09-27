@@ -6,13 +6,13 @@ footer {
 }
 
 .footer-distributed{
-	background-color: #292c2f;
+	background-color: #4C0000;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-	padding: 55px 0px;
+	padding: 20px 0px;
 	margin-top: 20px;
 }
 
@@ -46,8 +46,8 @@ footer {
 }
 
 .footer-distributed .footer-left i{
-	background-color:  #33383b;
-	color: #ffffff;
+	background-color: #ffffff;
+	color: #33383b;
 	font-size: 25px;
 	width: 38px;
 	height: 38px;
@@ -58,18 +58,13 @@ footer {
 	vertical-align: middle;
 }
 
-.footer-distributed .footer-left .info-group-item,
-.footer-distributed .footer-right a {
-	display: table;
-	margin: 0 auto;
+.footer-distributed .footer-left .info-group-items-wrapper {
+  	padding-left: 30%;
 }
 
-.footer-distributed .footer-left .info-group-item {
-	padding-left: calc(20%);
-}
-
-.footer-distributed .footer-right a {
-	padding-right: calc(20%);
+.footer-distributed .footer-right img {
+  	padding-right: 30%;
+  	float: right;
 }
 
 .footer-distributed .footer-left i.fa-envelope{
