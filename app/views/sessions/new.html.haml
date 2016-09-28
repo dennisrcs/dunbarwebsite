@@ -4,13 +4,14 @@
     - if msg.is_a?(String)
       = content_tag :div, msg, :class => "flash_#{name}"
   .row
-    %h1 Login
-    #login-form.login-form
-      = form_for(:session, url: login_path) do |f|
-        = f.text_field :username, :placeholder => 'Please enter your username', :required => true, :class => 'form-control', :id => "username"
-        = f.password_field :password, :placeholder => 'Password', :required => true, :class => 'form-control', :id => "password"
-        = f.submit "Log in", id: "login-form-button"
-
-      = link_to "Forgot my password", new_password_reset_path, :id => 'password-reset-link'
+    .login-form-wrapper
+      %h1 Login
+      #login-form.login-form
+        = form_for(:session, url: login_path) do |f|
+          = f.text_field :username, :placeholder => 'Please enter your username', :required => true, :class => 'form-control', :id => "username"
+          = f.password_field :password, :placeholder => 'Password', :required => true, :class => 'form-control', :id => "password"
+          = f.submit "Log in", id: "login-form-button"
+  
+        = link_to "Forgot my password", new_password_reset_path, :id => 'password-reset-link'
 - else
   %p You are already logged in!

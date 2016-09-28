@@ -94,7 +94,7 @@ body {
 .main:after {
   content: "";
   display: block;
-  height: 310px;
+  height: 240px;
 }
 
 .flash_danger,
@@ -141,22 +141,16 @@ a:hover, a:active {
   display: moz-inline-box;
   font-size: 16px;
   color: #191919;
-  background-color: #FFF056;
+  background-color: #E6A811;
   padding: 10px 80px;
   text-decoration: none;
   opacity: 1.0;
-  transition: opacity 0.5s ease-out;
-  -webkit-transition: opacity 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
 }
 
 .yellow-box-link:hover, .yellow-box-link:active {
-  display: inline-block;
-  display: moz-inline-box;
-  font-size: 16px;
-  font-style: normal;
-  opacity: 0.5;
-  padding: 10px 80px;
-  text-decoration: none;
+  background-color: #E6C34E;
 }
 
 .login-message {
@@ -197,6 +191,10 @@ a:hover, a:active {
   
   .login-message p {
     font-size: 20pt;
+  }
+  
+  .content .row {
+    width: 50%;
   }
   
 }

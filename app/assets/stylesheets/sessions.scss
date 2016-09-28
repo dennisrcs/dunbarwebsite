@@ -25,25 +25,37 @@
   border: none;
   font-size: 16px;
   color: #191919;
-  background-color: #FFF056;
+  background-color: #E6A811;
   padding: 10px 80px;
   text-decoration: none;
-  opacity: 1.0;
   cursor: pointer;
-  transition: opacity 0.5s ease-out;
-  -webkit-transition: opacity 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
 }
 
 #login-form-button:hover, #login-form-button:active {
-  display: inline-block;
-  height: 35px;
-  width: 100%;
-  display: moz-inline-box;
-  font-size: 16px;
-  font-style: normal;
-  opacity: 0.7;
-  padding: 10px 80px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
+  background-color: #E6C34E;
+}
+
+.login-form-wrapper {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  
+  .login-form input {
+    width: calc(100% - 18px);
+    height: 70px;
+    font-size: 22pt;
+  }
+  
+  #login-form-button {
+    height: 70px;
+    font-size: 22pt;
+  }
+  
+  #password-reset-link {
+    font-size: 20pt;
+  }
+  
 }

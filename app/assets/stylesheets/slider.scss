@@ -7,22 +7,17 @@
   display: moz-inline-box;
   font-size: 16px;
   color: #191919;
-  background-color: #FFF056;
+  background-color: #E6A811;
   padding: 10px 80px;
   text-decoration: none;
   opacity: 1.0;
-  transition: opacity 0.5s ease-out;
-  -webkit-transition: opacity 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
 }
 
 .homepage-content .box-btn a:hover, .homepage-content .box-btn a:active {
-  display: inline-block;
-  display: moz-inline-box;
-  font-size: 16px;
   font-style: normal;
-  opacity: 0.5;
-  padding: 10px 80px;
-  text-decoration: none;
+  background-color: #E6C34E;
 }
 
 .homepage-content .manage-slides {
