@@ -6,7 +6,6 @@
 }
 
 .details .section {
-  margin-bottom: 30px;
   display: table-row;
 }
 
@@ -125,9 +124,17 @@ input[type='file'].entry {
   margin-bottom: 5px;
 }
 
-.former_member a {
+.former_member .former-member-email {
   text-decoration: none;
   color: #666666 !important;
+}
+
+.former_member .former-member-page {
+  color: black !important;
+}
+
+.member-homepage {
+  font-weight: bold;
 }
 
 .member-config {

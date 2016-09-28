@@ -38,6 +38,9 @@
       %p
         Office:
         = @member.office
+      - if @member.link?
+        %p
+          = link_to 'Homepage', @member.link, :target => '_blank', :class => 'member-homepage'
       %p
         #cv
           = link_to 'Curriculum Vitae', "#{@member.cv_path}", :target => '_blank'

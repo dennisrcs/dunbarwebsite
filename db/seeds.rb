@@ -24,7 +24,7 @@ member1 = Member.create(:name => 'Dr. Kim R. Dunbar', :position => 'Distriguinsh
                         " extensively with colleagues from Europe and Asia as well as North America."\
                         " Dr. Dunbar was recently recognized by Texas A&M University with the inaugural Graduate Mentoring Award from The Association of Former Students at Texas A&M University in 2006. She is the author"\
                         " of over 280 research publications and 16 book chapters or reviews.",
-                        :building => 'Chemistry Building', :office => '2311', :rank => 0,
+                        :building => 'Chemistry Building', :office => '2311', :rank => 0, :link => 'http://www.google.com.br',
                         :is_current_member => true, :is_listed => true, :researcherid => "B-6488-2015",
                         :avatar_path => '/uploads/images/dunbar.png', :cv_path => '/uploads/cv/cv.pdf')
 user1.update_attribute(:member, member1)
@@ -32,35 +32,35 @@ user1.update_attribute(:member, member1)
 user2 = User.create(:username => 'andrezza', :is_admin => true, :activated => true, :activated_at => Time.zone.now, :email => 'andrezza@gmail.com', :password => 'andrezza123', :password_confirmation => 'andrezza123')
 member2 = Member.create(:name => 'Andrezza Antonio', :position => 'Assistant', :telephone => '(979) 533-1153', :fax => '(979) 113-5457', :previous_affiliation => 'Unilever', 
                         :bio => 'Hey, this is me, Andrezza! :)', :building => 'Chemistry Building', :office => '2311',
-                        :is_current_member => true, :is_listed => true, :rank => 1,
+                        :is_current_member => true, :is_listed => true, :rank => 1, :rank => 0,
                         :avatar_path => '/uploads/images/andrezza.jpg', :cv_path => '/uploads/cv/cv.pdf')
 user2.update_attribute(:member, member2)
 
 user3 = User.create(:username => 'silvia', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'silvia@gmail.com', :password => 'silvia123', :password_confirmation => 'silvia123')
 member3 = Member.create(:name => 'Silvia Gomez', :position => 'Postdoc', :researcherid => "F-5384-2011", :telephone => '(979) 973-3543', :fax => '(979) 127-3126', :previous_affiliation => 'University of Spain',
                         :bio => 'Hey, my name is Silvia Gomez! :)', :building => 'Chemistry Building', :office => '2311',
-                        :is_current_member => true, :is_listed => true, :rank => 2,
+                        :is_current_member => true, :is_listed => true, :rank => 2, :link => 'https://www.linkedin.com/in/dennis-cunha-63094351',
                         :avatar_path => '/uploads/images/silvia.png', :cv_path => '/uploads/cv/cv.pdf')
 user3.update_attribute(:member, member3)
 
 user4 = User.create(:username => 'devil', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'devil@gmail.com', :password => 'devil123', :password_confirmation => 'devil123')
 member4 = Member.create(:name => 'Irving Solis', :position => 'PhD Student', :telephone => '(979) 169-9253', :fax => '(979) 779-7382', :previous_affiliation => 'Universidad Nacional do Mexico',
                         :bio => 'Hey, my name is Irving Solis! :)', :building => 'Chemistry Building', :office => '2311',
-                        :is_current_member => false, :is_listed => true, :rank => 3,
+                        :is_current_member => false, :is_listed => true, :rank => 3, :rank => 0, :link => 'http://www.google.com.br',
                         :avatar_path => '/uploads/images/irving.png', :cv_path => '/uploads/cv/cv.pdf')
 user4.update_attribute(:member, member4)
 
 user5 = User.create(:username => 'police', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'police@gmail.com', :password => 'police123', :password_confirmation => 'police123')
 member5 = Member.create(:name => 'Bozhen Liu', :position => 'MSc Student', :researcherid => 'B-6488-2015', :telephone => '(979) 941-0023', :fax => '(979) 441-6421', :previous_affiliation => 'Cornell University',
                         :bio => 'Hey, my name is Bozhen Liu! :)', :building => 'Chemistry Building', :office => '2311',
-                        :is_current_member => false, :is_listed => true, :rank => 4,
+                        :is_current_member => false, :is_listed => true, :rank => 4, :rank => 0, :link => 'http://www.google.com.br',
                         :avatar_path => '/uploads/images/bozhen.png', :cv_path => '/uploads/cv/cv.pdf')
 user5.update_attribute(:member, member5)
 
 user6 = User.create(:username => 'xiaoxuesu', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'xuesuxiao@gmail.com', :password => 'xiaoxuesu123', :password_confirmation => 'xiaoxuesu123')
 member6 = Member.create(:name => 'Xuesu Xiao', :position => 'Undergraduate Student', :telephone => '(979) 835-1259', :fax => '(979) 148-7289', :previous_affiliation => 'Carnegie Mellon University',
                         :bio => 'Hey, my name is Xuesu Xiao! :)', :building => 'Chemistry Building', :office => '2311',
-                        :is_current_member => false, :is_listed => false, :rank => 5,
+                        :is_current_member => false, :is_listed => false, :rank => 5, :rank => 0, :link => 'http://www.google.com.br',
                         :avatar_path => '/uploads/images/xuesu.png', :cv_path => '/uploads/cv/cv.pdf')
 user6.update_attribute(:member, member6)
 

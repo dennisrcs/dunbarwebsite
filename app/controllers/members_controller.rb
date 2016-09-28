@@ -55,7 +55,7 @@ class MembersController < ApplicationController
                                :is_current_member => is_current_member, :is_listed => is_listed,
                                :previous_affiliation => params[:previous_affiliation], :bio => params[:bio],
                                :building => params[:building], :office => params[:office], :rank => params[:rank].to_i,
-                               :avatar_path => avatar_path, :cv_path => cv_path)
+                               :link => params[:link], :avatar_path => avatar_path, :cv_path => cv_path)
       
         @user.update_attribute(:member, member)
       
