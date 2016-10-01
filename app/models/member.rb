@@ -1,6 +1,11 @@
 class Member < ActiveRecord::Base
-  attr_accessible :name, :position, :telephone, :fax, :researcherid, :previous_affiliation, :bio, :building, :office, :avatar_path, :cv_path, :is_current_member, :is_listed, :rank, :link
+  attr_accessible :name, :position, :telephone, :fax, :researcherid, :previous_affiliation, :bio, :building, :office, :avatar_path, :cv_path, :is_current_member, :is_listed, :rank, :link, :birthplace
   has_one :user
+
+  validates :name, presence: true
+  validates :position, presence: true
+  validates :rank, presence: true
+  validates :birthplace, presence: true
 
   # writes 'data' to the public folder, following 'path' structure
   def self.write_to_filesystem(data, path)

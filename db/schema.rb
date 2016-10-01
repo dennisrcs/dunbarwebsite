@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160928033305) do
+ActiveRecord::Schema.define(version: 20161001183357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20160928033305) do
     t.boolean "is_listed"
     t.integer "rank"
     t.string  "link"
+    t.string  "birthplace"
   end
 
   create_table "mercury_images", force: :cascade do |t|

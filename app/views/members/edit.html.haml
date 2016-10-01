@@ -15,6 +15,7 @@
         = text_field_tag :researcherid, @member.researcherid, :class => 'entry', :placeholder => 'Researcher ID'
         = text_field_tag :telephone, @member.telephone, :class => 'entry', :placeholder => 'Telephone', :id => "telephone"
         = text_field_tag :fax, @member.fax, :class => 'entry', :placeholder => 'Fax', :id => "fax"
+        = text_field_tag :birthplace, @member.birthplace, :class => 'entry', :placeholder => 'Birthplace (ex: Texas, United States)'
         = text_field_tag :previous_affiliation, @member.previous_affiliation, :class => 'entry', :placeholder => 'Previous affiliation'
         = text_area_tag :bio, @member.bio , :class => 'entry', :placeholder => 'Please enter a short description of the member'
         = text_field_tag :building, @member.building, :class => 'entry', :placeholder => 'Building'
