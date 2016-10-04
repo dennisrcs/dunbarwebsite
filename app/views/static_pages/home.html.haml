@@ -27,35 +27,37 @@
       = link_to "Manage Slides", slider_images_path, :title => "Manage slides"
   .news-aboutus-sponsor
     .aboutus-sponsor
-      .aboutus
-        %h2 About us
-        %p
-          Research in the Dunbar Research Group spans a number of topics in synthetic and structural inorganic
-          chemistry with a focus on problems at the interface of materials and biological chemistry. The combined
-          use of many physical techniques (electronic epr, infrared spectroscopies, X-ray crystallography, ac and 
-          dc magnetic magnetometry, scanning and transmission electron microscopy, mass spectrometry and
-          electrochemistry to name a subset) reflect the breadth of problems under investigation. Our aim is to 
-          define important synthetic challenges and tackle their solution with an arsenal of physical, chemical 
-          and spectroscopic data. We are devoted to the use of coordination chemistry as a tool to make new compounds
-          as well as to probe new structure and bonding relationships.
-        %p
-          Find out more:
-        .icons-container
-          .icon-wrapper
-            .icon-item
-              = link_to image_tag("icons/icon_research.png"), researches_path
-            .description
-              = link_to "Research", researches_path
-          .icon-wrapper
-            .icon-item
-              = link_to image_tag("icons/icon_members.png"), members_path
-            .description
-              = link_to "Members", members_path
-          .icon-wrapper
-            .icon-item
-              = link_to image_tag("icons/icon_publications.png"), publications_path
-            .description
-              = link_to "Publications", publications_path
+      .aboutus-map
+        .aboutus
+          %h2 About us
+          %p
+            Research in the Dunbar Research Group spans a number of topics in synthetic and structural inorganic
+            chemistry with a focus on problems at the interface of materials and biological chemistry. The combined
+            use of many physical techniques (electronic epr, infrared spectroscopies, X-ray crystallography, ac and 
+            dc magnetic magnetometry, scanning and transmission electron microscopy, mass spectrometry and
+            electrochemistry to name a subset) reflect the breadth of problems under investigation. Our aim is to 
+            define important synthetic challenges and tackle their solution with an arsenal of physical, chemical 
+            and spectroscopic data. We are devoted to the use of coordination chemistry as a tool to make new compounds
+            as well as to probe new structure and bonding relationships.
+        .map-members
+          %h2 Members from all over the world!
+          #map
+          :javascript
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 26.712600, lng: .957013},
+              zoom: 1,
+              mapTypeControl: false,
+              zoomControl: true,
+              zoomControlOptions: {
+                  position: google.maps.ControlPosition.RIGHT_CENTER
+              },
+              scaleControl: true,
+              streetViewControl: false
+              });
+            }
+          %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyCjL_hHqsaDzpcmNm7mKAstTKkqDMgbp_o&callback=initMap"}
       .sponsor
         %h2 Supporting our research over the years
         .icons-container

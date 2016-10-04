@@ -23,13 +23,43 @@
   width: 24.5%;
 }
 
-.aboutus-sponsor .aboutus,
+.aboutus-map {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.aboutus-map .aboutus,
+.aboutus-map .map-members {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.aboutus-map .map-members {
+  position: absolute;
+}
+
+#map { height: 100%; }
+
 .aboutus-sponsor .sponsor {
   padding-right: 50px;
 }
 
-.aboutus-sponsor .icons-container, 
-.aboutus-sponsor .icons-container .icon-item {
+.aboutus-sponsor .aboutus {
+  font-size: 14pt;
+}
+
+.aboutus-sponsor .aboutus p {
+  padding-right: 30px;
+}
+
+.homepage-content .news > * {
+  padding-left: 30px;
+}
+
+.aboutus-sponsor .icons-container {
   display: table;
   margin: 0 auto;
 }
@@ -57,10 +87,6 @@
 .aboutus .icons-container img,
 .sponsor .icons-container img {
   height: 100px;
-}
-
-.icons-container .icon-wrapper .description {
-  text-align: center;
 }
 
 @media screen and (max-width: 1320px) {
