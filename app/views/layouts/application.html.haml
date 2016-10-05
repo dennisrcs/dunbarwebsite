@@ -3,6 +3,7 @@
   %head
     %title 
       = yield(:title) + " | Dr. Dunbar"
+    = Gon::Base.render_data
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     %link{:href => "//fonts.googleapis.com/css?family=Cookie", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}/

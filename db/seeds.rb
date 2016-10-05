@@ -52,7 +52,7 @@ user4.update_attribute(:member, member4)
 
 user5 = User.create(:username => 'police', :is_admin => false, :activated => true, :activated_at => Time.zone.now, :email => 'police@gmail.com', :password => 'police123', :password_confirmation => 'police123')
 member5 = Member.create(:name => 'Bozhen Liu', :position => 'MSc Student', :researcherid => 'B-6488-2015', :telephone => '(979) 941-0023', :fax => '(979) 441-6421', :previous_affiliation => 'Cornell University',
-                        :bio => 'Hey, my name is Bozhen Liu! :)', :building => 'Chemistry Building', :office => '2311', :birthplace => 'Beijing, China',
+                        :bio => 'Hey, my name is Bozhen Liu! :)', :building => 'Chemistry Building', :office => '2311', :birthplace => 'Cape Town, South Africa',
                         :is_current_member => false, :is_listed => true, :rank => 4, :link => 'http://www.google.com.br',
                         :avatar_path => '/uploads/images/bozhen.png', :cv_path => '/uploads/cv/cv.pdf')
 user5.update_attribute(:member, member5)

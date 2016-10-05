@@ -6,7 +6,10 @@ gem 'haml'
 # Pagination
 gem 'will_paginate'
 
-# Gem for sanding emails
+# Gem for accessing data from javascript
+gem 'gon'
+
+# Gem for sending emails
 gem 'rest-client'
 #add activerecord gem
 gem 'activerecord'
