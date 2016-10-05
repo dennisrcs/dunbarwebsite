@@ -14,17 +14,19 @@ function initMap() {
 }
 
 $(document).ready(function() {
-  for (i = 0; i < gon.members.length; i++) { 
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'address': gon.members[i].birthplace},
-      function(results, status) {
-        if (status === 'OK') {
-          var marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location
-          });
+  if (gon.members != undefined) {
+    for (i = 0; i < gon.members.length; i++) { 
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode({'address': gon.members[i].birthplace},
+        function(results, status) {
+          if (status === 'OK') {
+            var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location
+            });
+          }
         }
-      }
-    );
+      );
+    }  
   }
 });
