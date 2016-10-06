@@ -6,6 +6,11 @@
       = form_tag({action: :create}, multipart: true) do
         = text_field_tag :title, nil, :class => 'entry', :placeholder => 'Title', :required => true
         = text_field_tag :url, nil, :class => 'entry', :placeholder => 'Url', :required => true
+        = text_area_tag :description, nil, :class => 'entry', :placeholder => 'Link short description (40-50 words)', :required => true
+        
+        = label_tag :picture, 'Please provide an image to the link' 
+        = file_field_tag :picture, :class => 'entry'
+        
         = submit_tag 'Add Link', :id => 'new-link-form-button'
 - else
   %p Only users with privileges can add new publications.

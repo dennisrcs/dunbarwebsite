@@ -6,6 +6,10 @@
       = form_tag link_path(@link), :method => :put do
         = text_field_tag :title, @link.title, :class => 'entry', :placeholder => 'Title', :required => true
         = text_field_tag :url, @link.url, :class => 'entry', :placeholder => 'Url', :required => true
+        = text_area_tag :description, @link.description, :class => 'entry', :placeholder => 'Link short description (40-50 words)', :required => true
+        
+        = label_tag :picture, 'Please provide an image to the link' 
+        = file_field_tag :picture, :class => 'entry'
         
         = submit_tag 'Update Link', :id => 'edit-link-form-button'
 - else

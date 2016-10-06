@@ -7,10 +7,18 @@
 %h1 Important Links
 
 .largest-row
-  .links-wrapper
+  .links-list
     - @links.each.with_index do |link, index|
-      .links-content
-        = link_to link.title, link.url, :target => "_blank"
+      .links-item
+        .links-picture
+          = link_to image_tag(link.picture_path), link.url, :target => '_blank'
+        .links-info
+          .links-title
+            = link_to link.title, link.url, :target => "_blank"
+          .links-description
+            %p
+              %i 
+                = link.description
         - if logged_in? && current_user_admin?
           .link-admin-controls
             = link_to image_tag("icons/icon_edit.png"), edit_link_path(link), :title => "Edit Link" , :id => "Edit"
