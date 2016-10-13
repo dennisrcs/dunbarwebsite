@@ -1,7 +1,7 @@
 class Publication < ActiveRecord::Base
   attr_accessible :article, :contributors, :journal, :year, :more_info, :pages, :link, :publication_picture
   
-  self.per_page = 5;
+  self.per_page = 10;
   
   def self.publicationNumber(page, index)
     if page == 0 || page == nil
