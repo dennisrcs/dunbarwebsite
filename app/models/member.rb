@@ -5,7 +5,6 @@ class Member < ActiveRecord::Base
   validates :name, presence: true
   validates :position, presence: true
   validates :rank, presence: true
-  validates :birthplace, presence: true
 
   # writes 'data' to the public folder, following 'path' structure
   def self.write_to_filesystem(data, path)
