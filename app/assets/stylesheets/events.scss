@@ -97,6 +97,10 @@
   font-size: 12pt;
 }
 
+.event-item .event-summary p {
+    text-align: justify;
+  }
+
 .event-item h3,
 .event-item .event-date p,
 .event-wrapper #date,
@@ -156,7 +160,7 @@
   }
   
   .event-item .event-summary p {
-    text-align: center;
+    text-align: justify;
   }
   
   .event-item h3,
