@@ -108,6 +108,21 @@
     padding-right: 20px;  
   }
   
+  .aboutus-map .aboutus,
+  .aboutus-map .map-members {
+    width: 100%;
+    display: block;
+    position: static;
+  }
+  
+  .aboutus-map .map-members {
+    height: 400px;
+  }
+  
+  .homepage-content .news > * {
+    padding-left: 0px;
+  }
+    
   .news-aboutus-sponsor .aboutus-sponsor,
   .news-aboutus-sponsor .news {
     display: block;

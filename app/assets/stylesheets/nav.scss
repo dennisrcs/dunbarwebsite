@@ -82,7 +82,8 @@ body .nav {
   opacity: 0.8;
 }
 
-.nav .menu-icon {
+.nav .menu-icon,
+.nav .dunbar-group {
   display: none;
 }
 
@@ -139,6 +140,10 @@ body .nav {
   
   .nav-top li:first-child a {
     margin-left: 40px;
+  }
+  
+  .nav .dunbar-group {
+    display: inline;
   }
   
   .nav-items { 

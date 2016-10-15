@@ -11,22 +11,26 @@ function initMap() {
     scaleControl: true,
     streetViewControl: false
   });
+  
+  plotMembers();
 }
 
-$(document).ready(function() {
+function plotMembers(){
   if (gon.members != undefined) {
     for (i = 0; i < gon.members.length; i++) { 
       var geocoder = new google.maps.Geocoder();
-      geocoder.geocode({'address': gon.members[i].birthplace},
-        function(results, status) {
-          if (status === 'OK') {
-            var marker = new google.maps.Marker({
-              map: map,
-              position: results[0].geometry.location
-            });
+      if (gon.members[i].birthplace != undefined && gon.members[i].birthplace != "" && gon.members[i].birthplace != null) {
+        geocoder.geocode({'address': gon.members[i].birthplace},
+          function(results, status) {
+            if (status === 'OK') {
+              var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+              });
+            }
           }
-        }
-      );
+        ); 
+      }
     }  
   }
-});
+}
