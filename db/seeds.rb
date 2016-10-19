@@ -114,6 +114,10 @@ Publication.create(:article => "A cobalt(II) spin-crossover compound with partia
 :contributors => "Xuan Zhang, Zhao-Xi Wang, Haomiao Xie, Ming-Xing Li, Toby J. Woods and Kim R. Dunbar", :journal => "Chem. Sci.", :year => "2009", :more_info => "7", :pages => "1569-1574",
 :publication_picture => "/uploads/publications/new_pub1.png", :link => "http://pubs.rsc.org/en/content/articlelanding/2016/sc/c5sc03547c")
 
+Publication.create(:article => 'Hydro-ionothermal syntheses, crystal structures, and proterties of five new divalent metal iminophosphonates',
+:contributors => 'Andrey V. Prosvirin, Kim R. Dunbar, Simon J. Teat and Abraham Clearfield', :journal => 'Dalton Trans.',
+:year => '2012', :more_info => '41', :pages => '3995-4006', :publication_picture => '/uploads/publications/new_pub6.png', :link => 'http://pubs.rsc.org/en/content/articlelanding/2012/dt/c2dt11907b')
+
 # group info
 
 group_info1 = GroupInfo.create(:title => "Basic Group Information", :category => :group_rules, :file_path => "/uploads/group_info/rules.pdf")
