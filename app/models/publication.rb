@@ -11,7 +11,7 @@ class Publication < ActiveRecord::Base
   end
   
   def self.search(page)
-    Publication.all.order(year: :desc).paginate(:per_page => Publication.per_page, :page => page)
+    Publication.all.order(created_at: :desc).paginate(:per_page => Publication.per_page, :page => page)
   end
   
   # writes 'data' to the public folder, following 'path' structure
