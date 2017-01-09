@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find_by_id(params[:id])
+    #
   end
 
   def new
@@ -17,8 +17,7 @@ class EventsController < ApplicationController
     
     # creating event
     event = Event.create(:title => params[:title], :date => params[:date],
-                           :summary => params[:summary], :content => params[:content],
-                           :picture_path => event_picture_path)
+                           :summary => params[:summary], :picture_path => event_picture_path)
     event.save
     # removing temp files
     try_delete_tempfile(params[:picture])
@@ -29,8 +28,7 @@ class EventsController < ApplicationController
   def update
     event = Event.find(params[:id])
     event.update_attributes!(:title => params[:content][:title][:value], 
-                                :date => params[:content][:date][:value],
-                                :content => params[:content][:content][:value])
+                                :date => params[:content][:date][:value])
     render text: ""
   end
   
@@ -54,15 +52,6 @@ class EventsController < ApplicationController
     
     flash.now[:info] = "The event information was successfully updated."
     redirect_to events_path
-  end
-  
-  def mercury_update
-    event = Event.find(params[:id])
-    event.title = params[:content][:title][:value]
-    event.date = params[:content][:date][:value]
-    event.content = params[:content][:content][:value]
-    event.save!
-    render text: ""
   end
   
   def destroy

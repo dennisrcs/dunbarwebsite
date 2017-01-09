@@ -7,8 +7,7 @@
         = text_field_tag :title, nil, :class => 'entry', :placeholder => 'Title', :required => true
         = text_field_tag :date, nil, :class => 'entry', :placeholder => 'Date', :required => true
         = text_area_tag :summary, nil, :class => 'entry', :placeholder => 'Please provide a summary of this event', :required => true
-        = text_area_tag :content, nil, :class => 'entry', :placeholder => 'Please a temporary description of this event', :required => true
-  
+        
         = label_tag :picture, 'Please provide a representative picture to this event' 
         = file_field_tag :picture, :class => 'entry'
 
