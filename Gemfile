@@ -9,6 +9,8 @@ gem 'will_paginate'
 # Gem for accessing data from javascript
 gem 'gon'
 
+gem 'sqlite3'
+
 # Gem for sending emails
 gem 'rest-client'
 #add activerecord gem

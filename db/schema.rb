@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20161006042751) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "collaborations", force: :cascade do |t|
     t.string "researcher"
     t.string "link"
@@ -31,7 +28,7 @@ ActiveRecord::Schema.define(version: 20161006042751) do
     t.integer "file_type"
   end
 
-  add_index "course_files", ["course_id"], name: "index_course_files_on_course_id", using: :btree
+  add_index "course_files", ["course_id"], name: "index_course_files_on_course_id"
 
   create_table "courses", force: :cascade do |t|
     t.string   "name"
@@ -78,15 +75,6 @@ ActiveRecord::Schema.define(version: 20161006042751) do
     t.integer "rank"
     t.string  "link"
     t.string  "birthplace"
-  end
-
-  create_table "mercury_images", force: :cascade do |t|
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "news", force: :cascade do |t|
@@ -149,6 +137,6 @@ ActiveRecord::Schema.define(version: 20161006042751) do
     t.datetime "reset_sent_at"
   end
 
-  add_index "users", ["member_id"], name: "index_users_on_member_id", using: :btree
+  add_index "users", ["member_id"], name: "index_users_on_member_id"
 
 end
