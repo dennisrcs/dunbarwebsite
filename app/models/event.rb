@@ -1,11 +1,10 @@
 class Event < ActiveRecord::Base
-  attr_accessible :title, :date, :picture_path, :summary, :content
+  attr_accessible :title, :date, :picture_path, :summary
 
   validates :title, presence: true
   validates :date, presence: true
   validates :picture_path, presence: true
   validates :summary, presence: true
-  validates :content, presence: true
 
   # writes 'data' to the public folder, following 'path' structure
   def self.write_to_filesystem(data, path)

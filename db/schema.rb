@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161006042751) do
+ActiveRecord::Schema.define(version: 20170109220911) do
 
   create_table "collaborations", force: :cascade do |t|
     t.string "researcher"
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20161006042751) do
     t.string "date"
     t.string "picture_path"
     t.string "summary"
-    t.string "content"
   end
 
   create_table "group_infos", force: :cascade do |t|

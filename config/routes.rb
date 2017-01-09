@@ -37,9 +37,6 @@ Rails.application.routes.draw do
   end
 
   resources :events
-  resources :events do
-    member { post :mercury_update }
-  end
 
   resources :events, only: []  do
     collection do
