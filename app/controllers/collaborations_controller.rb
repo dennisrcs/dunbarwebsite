@@ -16,9 +16,9 @@ class CollaborationsController < ApplicationController
     collaboration_picture_path = Collaboration.write_to_filesystem(params[:collaboration_picture], 'uploads/collaborations/')
     
     # creating publication
-    publication = Collaboration.create(:researcher => params[:researcher], :affiliation => params[:affiliation],
-                           :description => params[:description], :picture_path => collaboration_picture_path)
-    publication.save
+    collaboration = Collaboration.new(:researcher => params[:researcher], :affiliation => params[:affiliation],
+                           :description => params[:description], :link => params[:link], :picture_path => collaboration_picture_path)
+    collaboration.save
     # removing temp files
     try_delete_tempfile(params[:collaboration_picture])
     # redirect to the created publication page
@@ -36,10 +36,10 @@ class CollaborationsController < ApplicationController
       collaboration_picture_path = Collaboration.write_to_filesystem(params[:collaboration_picture], 'uploads/collaborations/')
       
       collaboration.update_attributes!(:researcher => params[:researcher], :affiliation => params[:affiliation],
-                           :description => params[:description], :picture_path => collaboration_picture_path)
+                           :description => params[:description], :link => params[:link], :picture_path => collaboration_picture_path)
       try_delete_tempfile(params[:collaboration_picture])
     else
-     collaboration.update_attributes!(:researcher => params[:researcher], :affiliation => params[:affiliation], :description => params[:description])
+     collaboration.update_attributes!(:researcher => params[:researcher], :affiliation => params[:affiliation], :description => params[:description], :link => params[:link])
     end
     flash.now[:info] = "The collaboration was successfully updated."
     redirect_to collaborations_path
