@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-# thin server
-gem 'thin'
-
 # Use Haml for templates
 gem 'haml'
 
