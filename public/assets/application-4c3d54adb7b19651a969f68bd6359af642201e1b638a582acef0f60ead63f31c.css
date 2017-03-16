@@ -1,0 +1,5981 @@
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/account_activations.scss */
+.account-activation-form .form-control {
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 9, /home/dennis/dunbarwebsite/app/assets/stylesheets/account_activations.scss */
+.account-activation-form #account-activation-button {
+  width: 100%;
+  height: 30px;
+}
+/* line 4, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.new-collaboration-form .entry, .edit-collaboration-form .entry {
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 12, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+#collaboration-form-button, #edit-collaboration-form-button {
+  width: 100%;
+  height: 30px;
+}
+
+/* line 17, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.new-collaboration-form textarea.entry, .edit-collaboration-form textarea.entry {
+  width: 382px;
+  height: 100px;
+  resize: none;
+}
+
+/* line 23, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.collaborations-list {
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 28, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.collaboration-item {
+  display: table-row;
+  height: auto;
+}
+
+/* line 33, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.collaboration-item .collaboration-picture,
+.collaboration-item .collaboration-info {
+  display: table-cell;
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+
+/* line 40, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.collaboration-item .collaboration-edit-delete {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 45, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+#add-collaboration {
+  display: table;
+  margin: 0 auto;
+  font-size: 15pt;
+}
+
+/* line 51, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.collaboration-item .edit-delete-buttons {
+  margin-left: 5px;
+}
+
+/* line 55, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.collaboration-picture img {
+  margin-right: 50px;
+  margin-bottom: 30px;
+  max-width: 150px;
+  height: auto;
+}
+
+/* line 62, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.collaboration-info h3 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+/* line 67, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.collaboration-affiliation p {
+  margin-top: 0px;
+}
+
+/* line 71, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.collaboration-item .collaboration-description p {
+  font-size: 12pt;
+  text-align: justify;
+}
+
+/* line 76, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+.collaboration-item h3,
+.collaboration-item .collaboration-affiliation p {
+  font-size: 14pt;
+}
+
+@media (max-width: 1100px) {
+  /* line 83, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+  .collaboration-item .collaboration-description p {
+    text-align: center;
+    font-size: 16pt;
+  }
+
+  /* line 88, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+  .collaboration-item h3,
+  .collaboration-item .collaboration-affiliation p {
+    text-align: center;
+    font-size: 18pt;
+  }
+
+  /* line 94, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+  .collaboration-picture img {
+    display: table;
+    margin: 0 auto;
+    width: 300px;
+    max-width: 300px;
+    vertical-align: middle;
+  }
+
+  /* line 102, /home/dennis/dunbarwebsite/app/assets/stylesheets/collaborations.scss */
+  .collaborations-list .collaboration-picture,
+  .collaborations-list .collaboration-info {
+    display: table-row;
+  }
+}
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.courses-list {
+  margin-bottom: 20px;
+}
+
+/* line 5, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+ul.course-info {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 10, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+ul.course-info,
+.course-info li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 17, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-info li {
+  height: 55px;
+}
+
+/* line 21, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-info li a.course-name {
+  display: inline-block;
+  width: 180px;
+  vertical-align: top;
+  position: relative;
+  padding: 18px 5px;
+  font-size: 12pt;
+  border-bottom: 1px solid #FFF;
+  background: #fff;
+}
+
+/* line 32, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-info li a img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* line 38, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-info li a.course-name:hover,
+.course-info li.active a.course-name {
+  background: #e0e0e0 !important;
+  color: #000 !important;
+}
+
+/* line 44, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-info li.active a.course-name:after,
+.course-info li:hover a.course-name:after {
+  content: "";
+  position: absolute;
+  border-top: 28px solid transparent;
+  border-bottom: 28px solid transparent;
+  right: -10px;
+  border-left: 10px solid #E0E0E0;
+  height: 56px;
+  top: 0px;
+}
+
+/* line 56, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-info *:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 62, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-files * {
+  vertical-align: middle;
+}
+
+/* line 66, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-files {
+  width: 750px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+/* line 76, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-files .course-files-container {
+  display: none;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+/* line 82, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-files .course-files-container.active {
+  display: block;
+  margin-left: 30px;
+}
+
+/* line 87, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-files .course-files-container h4 {
+  margin-bottom: 5px;
+  color: #292c2f;
+}
+
+/* line 92, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-files .course-files-container h4:first-child {
+  margin-top: 5px;
+}
+
+/* line 96, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.largest-row .course-files-content {
+  font-size: 20px;
+}
+
+/* line 100, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-files-content .course-files-item {
+  margin-bottom: 20px;
+}
+
+/* line 104, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-files-content .course-files-item * {
+  vertical-align: middle;
+}
+
+/* line 108, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.course-files-content h4 {
+  margin-bottom: 10px;
+}
+
+/* line 112, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+#add-new-coursefile,
+#back-teaching-page,
+#add-course-btn {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 119, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+#add-new-coursefile,
+#add-course-btn {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 126, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.new-coursefile-form .entry {
+  display: block;
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 135, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+.new-coursefile-form #select {
+  width: 100%;
+}
+
+/* line 139, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+#add-coursefile-btn,
+#add-course-form-btn {
+  width: 100%;
+  height: 30px;
+}
+
+@media (max-width: 1100px) {
+  /* line 147, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+  .course-info-container,
+  .linetop {
+    width: 100%;
+    min-width: 750px;
+    position: relative;
+  }
+
+  /* line 154, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+  .course-info li {
+    height: 100px;
+    text-align: center;
+  }
+
+  /* line 159, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+  .course-info li a.course-name {
+    width: 220px;
+    padding: 35px 5px;
+  }
+
+  /* line 164, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+  .course-files {
+    width: 500px;
+  }
+
+  /* line 168, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+  .course-info li a.course-name,
+  .course-files a {
+    font-size: 18pt;
+  }
+
+  /* line 173, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+  .course-files h4 {
+    font-size: 20pt;
+  }
+
+  /* line 177, /home/dennis/dunbarwebsite/app/assets/stylesheets/courses.scss */
+  .course-info li.active a.course-name:after,
+  .course-info li:hover a.course-name:after {
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    right: -10px;
+    border-left: 10px solid #E0E0E0;
+    height: 100px;
+  }
+}
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/errors.scss */
+.largest-row .not-found-content {
+  margin-top: 50px;
+}
+
+/* line 5, /home/dennis/dunbarwebsite/app/assets/stylesheets/errors.scss */
+.largest-row .not-found-content * {
+  display: table;
+  margin: 0 auto;
+}
+/* line 4, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.new-event-form .entry, .edit-event-form .entry {
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 12, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+#event-form-button, #edit-event-form-button, #edit-event-info-button {
+  width: 100%;
+  height: 30px;
+}
+
+/* line 17, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.new-event-form textarea.entry, .edit-event-form textarea.entry {
+  width: 382px;
+  height: 100px;
+  resize: none;
+}
+
+/* line 23, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.events-list {
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 28, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-item {
+  display: table-row;
+  height: auto;
+}
+
+/* line 33, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-item .event-picture,
+.event-item .event-info {
+  display: table-cell;
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+
+/* line 40, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-item .event-edit-delete {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 45, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+#add-event {
+  display: table;
+  margin: 0 auto;
+  font-size: 15pt;
+}
+
+/* line 51, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-item .edit-delete-buttons {
+  margin-left: 5px;
+}
+
+/* line 55, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-picture img {
+  margin-right: 50px;
+  margin-bottom: 30px;
+  max-width: 400px;
+  height: auto;
+}
+
+/* line 62, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-info h3 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+/* line 67, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-item .event-date p {
+  margin-top: 0px;
+}
+
+/* line 71, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-wrapper .event-title h3 {
+  margin-bottom: 10px;
+}
+
+/* line 75, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-wrapper .event-date p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* line 80, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-wrapper .event-content {
+  margin-top: 50px;
+}
+
+/* line 84, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.edit-delete-event,
+.event-wrapper .event-title,
+.event-wrapper .event-date {
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 91, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-item .event-summary {
+  margin-bottom: 40px;
+}
+
+/* line 95, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-item .event-summary p,
+.event-wrapper p {
+  font-size: 12pt;
+}
+
+/* line 100, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-item .event-summary p {
+  text-align: justify;
+}
+
+/* line 104, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-item h3,
+.event-item .event-date p,
+.event-wrapper #date,
+.event-wrapper #title {
+  font-size: 14pt;
+}
+
+/* line 111, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+.event-wrapper #date {
+  font-style: italic;
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 117, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .wide-row .event-wrapper > * {
+    max-width: 100%;
+    min-width: 400px;
+  }
+
+  /* line 122, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .events-list {
+    width: 600px;
+  }
+
+  /* line 126, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .event-item .event-summary {
+    margin-bottom: 20px;
+  }
+
+  /* line 130, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .event-item .event-date p {
+    margin-bottom: 10px;
+  }
+
+  /* line 134, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .event-item .event-summary p {
+    margin-top: 10px;
+  }
+
+  /* line 138, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .event-read-more {
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  /* line 144, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .event-picture img {
+    display: table;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 600px;
+    height: auto;
+  }
+
+  /* line 152, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .event-item .event-picture,
+  .event-item .event-info {
+    display: table-row;
+  }
+
+  /* line 157, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .event-item .event-summary p,
+  .event-wrapper p {
+    font-size: 20pt;
+  }
+
+  /* line 162, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .event-item .event-summary p {
+    text-align: justify;
+  }
+
+  /* line 166, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .event-item h3,
+  .event-item .event-date p,
+  .event-wrapper #date,
+  .event-wrapper #title {
+    font-size: 22pt;
+    text-align: center;
+  }
+
+  /* line 174, /home/dennis/dunbarwebsite/app/assets/stylesheets/events.scss */
+  .event-item .event-date p,
+  .event-wrapper #date {
+    font-style: italic;
+    text-align: center;
+  }
+}
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+footer {
+  color: white;
+  text-align: center;
+  position: relative;
+  background: #4E4B46;
+}
+
+/* line 8, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed {
+  background-color: #4C0000;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 20px 0px;
+  margin-top: 20px;
+}
+
+/* line 19, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-left {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 24, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-right {
+  display: inline-block;
+  transform: translateY(50%);
+}
+
+/* line 29, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-left,
+.footer-distributed .footer-right {
+  width: calc(50% - 3px);
+}
+
+/* Footer links */
+/* line 35, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+/* line 41, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 48, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-left i {
+  background-color: #ffffff;
+  color: #33383b;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+/* line 61, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-left .info-group-items-wrapper {
+  padding-left: 30%;
+}
+
+/* line 65, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-right img {
+  padding-right: 30%;
+  float: right;
+}
+
+/* line 70, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-left i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+/* line 75, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-left p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+/* line 82, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-left p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* line 89, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-left p a {
+  color: #FFF056;
+  text-decoration: none;
+}
+
+/* Footer Right */
+/* line 96, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+/* line 100, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1100px) {
+  /* line 119, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed .footer-left .info-group-items-wrapper {
+    padding-left: 0;
+  }
+
+  /* line 123, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed .footer-right img {
+    padding-right: 0;
+    float: none;
+  }
+
+  /* line 128, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed p,
+  .footer-distributed .footer-left p span {
+    display: block;
+    font-weight: bold;
+    font-size: 16pt;
+    line-height: 1.5;
+  }
+
+  /* line 136, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed .footer-right {
+    display: inline-block;
+    transform: none;
+  }
+
+  /* line 141, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-right {
+    width: 100%;
+  }
+
+  /* line 146, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed .footer-left .info-group-items-wrapper,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* line 154, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed .footer-left i {
+    margin-left: 0;
+  }
+
+  /* line 158, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed .footer-left .info-group-item {
+    padding-left: 0px;
+  }
+
+  /* line 162, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed .footer-right a {
+    padding-right: 0px;
+  }
+}
+@media (max-width: 880px) {
+  /* line 170, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  /* line 178, /home/dennis/dunbarwebsite/app/assets/stylesheets/footer.scss */
+  .footer-distributed .footer-left i {
+    margin-left: 0;
+  }
+}
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-list {
+  margin-bottom: 20px;
+}
+
+/* line 5, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+ul.group-info-category {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 10, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+ul.group-info-category,
+.group-info-category li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 17, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-category li {
+  height: 55px;
+}
+
+/* line 21, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-category li a {
+  display: inline-block;
+  width: 240px;
+  vertical-align: top;
+  position: relative;
+  padding: 18px 5px;
+  font: normal 12pt;
+  border-bottom: 1px solid #FFF;
+  background: #fff;
+}
+
+/* line 32, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-category li img {
+  padding-top: 3px;
+  padding-bottom: 4px;
+  height: 48px;
+}
+
+/* line 38, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-category li a:hover,
+.group-info-category li.active a {
+  background: #e0e0e0 !important;
+  color: #000 !important;
+}
+
+/* line 44, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-category li img:hover {
+  cursor: pointer;
+}
+
+/* line 48, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info h2 {
+  margin-left: 30px;
+}
+
+/* line 52, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info li {
+  display: none;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+/* line 58, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info li.active {
+  display: block;
+  margin-left: 30px;
+}
+
+/* line 63, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-category li.active a:after,
+.group-info-category li:hover a:after {
+  content: "";
+  position: absolute;
+  border-top: 28px solid transparent;
+  border-bottom: 28px solid transparent;
+  right: -10px;
+  border-left: 10px solid #E0E0E0;
+  height: 56px;
+  top: 0px;
+}
+
+/* line 75, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-category *:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 81, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.wide-row .linetop {
+  margin: 0 auto;
+  display: table;
+  width: inherit;
+  height: 1px;
+  position: absolute;
+  top: -1px;
+  background: #e1e1e1;
+}
+
+/* line 91, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info * {
+  vertical-align: middle;
+}
+
+/* line 95, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info {
+  font-size: 18px;
+  margin-bottom: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+/* line 104, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info .group-info-item {
+  display: block;
+}
+
+/* line 108, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.new-group-info-form .entry, .edit-group-info-form .entry {
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 116, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+#category-selector {
+  width: 100%;
+}
+
+/* line 120, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+#group-info-form-button {
+  width: 100%;
+  height: 30px;
+}
+
+/* line 125, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+#add-group-info {
+  font-size: 20px;
+  text-decoration: none;
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 132, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-config-container {
+  display: table;
+  margin-bottom: 20px;
+}
+
+/* line 137, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-config {
+  display: table-row;
+}
+
+/* line 141, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-config * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 146, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-config label {
+  padding-right: 5px;
+}
+
+/* line 150, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-login-message {
+  display: table;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* line 156, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+.group-info-login-message p {
+  font-size: 14pt;
+  display: table;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  /* line 164, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  .group-info-container,
+  .linetop {
+    width: 100%;
+    min-width: 750px;
+    position: relative;
+  }
+
+  /* line 171, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  .group-info-category li {
+    height: 100px;
+    text-align: center;
+  }
+
+  /* line 176, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  .group-info-category li a.category-link {
+    width: 320px;
+    padding: 35px 5px;
+  }
+
+  /* line 181, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  .group-info {
+    width: 400px;
+  }
+
+  /* line 185, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  .group-info-category li a.category-link,
+  .group-info a {
+    font-size: 18pt;
+  }
+
+  /* line 190, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  .group-info h4 {
+    font-size: 20pt;
+  }
+
+  /* line 194, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  .group-info-category li.active a.category-link:after,
+  .group-info-category li:hover a.category-link:after {
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    right: -10px;
+    border-left: 10px solid #E0E0E0;
+    height: 100px;
+  }
+
+  /* line 203, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  ul.group-info-category img {
+    display: none;
+  }
+
+  /* line 207, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  .group-info-login-message {
+    display: table;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  /* line 213, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  .group-info-login-message h2 {
+    font-size: 22pt;
+  }
+
+  /* line 217, /home/dennis/dunbarwebsite/app/assets/stylesheets/group_infos.scss */
+  .group-info-login-message p {
+    font-size: 18pt;
+    display: table;
+    margin: 0 auto;
+  }
+}
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.homepage-content {
+  display: block;
+}
+
+/* line 5, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.homepage-content .news-item {
+  margin-bottom: 30px;
+}
+
+/* line 9, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.news-aboutus-sponsor {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* line 14, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.homepage-content .aboutus-sponsor {
+  vertical-align: top;
+  display: inline-block;
+  width: 74.5%;
+}
+
+/* line 20, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.homepage-content .news {
+  vertical-align: top;
+  display: inline-block;
+  width: 24.5%;
+}
+
+/* line 26, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.aboutus-map {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* line 32, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.aboutus-map .aboutus,
+.aboutus-map .map-members {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+/* line 40, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.aboutus-map .map-members {
+  position: absolute;
+}
+
+/* line 44, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+#map {
+  height: 100%;
+}
+
+/* line 46, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.aboutus-sponsor .sponsor {
+  padding-right: 50px;
+}
+
+/* line 50, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.aboutus-sponsor .aboutus {
+  font-size: 14pt;
+}
+
+/* line 54, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.aboutus-sponsor .aboutus p {
+  padding-right: 30px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* line 60, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.homepage-content .news > * {
+  padding-left: 30px;
+}
+
+/* line 64, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.aboutus-sponsor .icons-container {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 69, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.icons-container .icon-wrapper {
+  display: inline-block;
+}
+
+/* line 73, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.aboutus .icons-container .icon-wrapper {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* line 78, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.sponsor .icons-container .icon-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: padding-left 0.5s ease-out;
+  transition: padding-right 0.5s ease-out;
+}
+
+/* line 85, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.sponsor .icons-container {
+  margin-top: 30px;
+}
+
+/* line 89, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+.aboutus .icons-container img,
+.sponsor .icons-container img {
+  height: 100px;
+}
+
+@media screen and (max-width: 1320px) {
+  /* line 95, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .sponsor .icons-container .icon-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  /* line 102, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .news-aboutus-sponsor h2 {
+    font-size: 26pt;
+  }
+
+  /* line 106, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .sponsor .icons-container .icon-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* line 111, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .aboutus-map .aboutus,
+  .aboutus-map .map-members {
+    width: 100%;
+    display: block;
+    position: static;
+  }
+
+  /* line 118, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .aboutus-map .map-members {
+    height: 400px;
+  }
+
+  /* line 122, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .homepage-content .news > * {
+    padding-left: 0px;
+  }
+
+  /* line 126, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .news-aboutus-sponsor .aboutus-sponsor,
+  .news-aboutus-sponsor .news {
+    display: block;
+  }
+
+  /* line 131, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .homepage-content .aboutus-sponsor {
+    width: 100%;
+  }
+
+  /* line 135, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .homepage-content .news {
+    width: 100%;
+  }
+
+  /* line 139, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .homepage-content .aboutus p,
+  .homepage-content .aboutus .description,
+  .homepage-content .news-item {
+    font-size: 22pt;
+  }
+
+  /* line 145, /home/dennis/dunbarwebsite/app/assets/stylesheets/home.scss */
+  .aboutus .icons-container img {
+    height: 125px;
+  }
+}
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Header
+	#Navigation
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face 
+	#Slider 
+	#FontAwesome 
+	#Contact Form*/
+
+/* #Header
+================================================== */
+
+
+#header { border-bottom: 1px solid #E3E3E8; margin-bottom: 30px; }
+h1 a { text-indent: -9999px; }
+#site-title { padding-top: 20px; }
+
+/* #Navigation
+================================================== */
+
+#main-nav { float: right; }
+#main-nav ul, #main-nav li { list-style: none; padding: 0; margin: 0; display: inline; } 
+#main-nav ul li { float: left; position: relative; }
+#main-nav ul li a { display: inline-block; padding: 48px 10px 34px 10px; margin: 0 5px; text-decoration: none; font-size: 12px; border-bottom: 3px solid transparent; }
+#main-nav ul li:hover { border-bottom: 3px solid #2c88c9 !important; }
+
+
+/* #Site Styles
+================================================== */
+
+.rounded { background: #003c67; -webkit-border-radius: 100px; -moz-border-radius: 100px; border-radius: 100px; display: inline-block; width: 40px !important; height: 40px; color: white; text-align: center; vertical-align: middle; font-size: 20px; line-height: 40px; margin-right: 5px; }
+
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; -moz-opacity: 0; filter: alpha(opacity=0); -webkit-transition: opacity 180ms ease-in-out; -moz-transition: opacity 180ms ease-in-out; -o-transition: opacity 180ms ease-in-out; transition: opacity 180ms ease-in-out; z-index: 40; }
+.overlay.zoom { background: url(../images/overlay-bg.png) no-repeat center center; }
+.overlay:hover { opacity: 1; -moz-opacity: 1; filter:alpha(opacity=100); }
+
+.feature-column h4 a { color: #003c67; text-decoration: none; }
+.feature-column h4 a:hover { color: #012037; }
+
+.featured-image { position: relative; margin-bottom: 10px; }
+
+.tagline { font-size: 1.7em; padding: 0.8em 0; margin: 1em 0 1em 0; text-align: center; font-style: italic; letter-spacing: 0px; line-height: 1.6em; clear: both; }
+.tagline strong { color: #2C88C9; }
+
+section.container { padding: 1.2em 0; }
+
+.recent-posts, .recent-posts h4 { margin-bottom: 20px; }
+
+blockquote.testimonial { position: relative; padding: 20px 46px 20px 50px; border-left: none; display: block; letter-spacing: 0px; }
+.sidebar-widget blockquote.testimonial { padding: 0px 0px 20px 0px; }
+blockquote.no-after::before, blockquote.no-after::after { content:''; }
+
+blockquote cite { position: absolute; right: 50px; text-align: right; bottom: 0; line-height: 1em; text-transform: uppercase; color: #999; font-style: normal; font-size: 11px; }
+
+blockquote::before, blockquote::after { content: '\201C'; font-size: 100px; position: absolute; top: 0px; left: 0px; line-height: 1em; font-family: Georgia, "Times New Roman", serif; font-style: italic; color: #DDD; padding-right:20px; }
+
+
+footer {background: #d0ebfd; border-top: 1px solid #afdfff; }
+#footer-base { background: #003c67; font-size: 0.9em; font-style: italic; color: #EEE; padding: 0.8em 0; }
+#footer-base a { color: #d0ebfd; }
+#footer-base a:hover { color: #EEE; }
+
+.footer-columns { padding: 20px 0; }
+.social a { text-decoration: none; font-size: 1.2em; color: #003c67; }
+.social a:hover { color: #2c88c9; }
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+
+/* #Slider
+============================================== */
+
+.flex-container .flex-caption { font-family: Helvetica, Arial, sans-serif!important; width: 96%; padding: 10px 0 0 10px; position: absolute; bottom: 0; background: rgba(0, 0, 0, .5); color: white; text-shadow: 0 -1px 0 rgba(0, 0, 0, .5); font-style: italic; }
+.flex-container .flex-caption h5, .flex-container .flex-caption h5 a { font-family: Helvetica, Arial, sans-serif!important; color: white; font-weight: bold; margin-bottom: 0px; font-style: normal; text-decoration: none; text-transform: uppercase; }
+.flex-container .flexslider { padding: 0; background:none; border: 10px solid #005088; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; }
+.flexslider li { margin-bottom: 0; }
+.flex-direction-nav { display: none; position: absolute; width: 100%; top: 50%; margin-top: -25px; display: block	9; }
+
+/*  Font Awesome
+    the iconic font designed for use with Twitter Bootstrap
+    -------------------------------------------------------
+    The full suite of pictographic icons, examples, and documentation
+    can be found at: http://fortawesome.github.com/Font-Awesome/
+
+    License
+    -------------------------------------------------------
+    The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0:
+    http://creativecommons.org/licenses/by/3.0/ A mention of
+    'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable
+    source code is considered acceptable attribution (most common on the web).
+    If human readable source code is not available to the end user, a mention in
+    an 'About' or 'Credits' screen is considered acceptable (most common in desktop
+    or mobile software).
+
+    Contact
+    -------------------------------------------------------
+    Email: dave@davegandy.com
+    Twitter: http://twitter.com/fortaweso_me
+    Work: http://lemonwi.se co-founder
+
+============================================== */
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url('../font/fontawesome-webfont.eot');
+  src: url('../font/fontawesome-webfont.eot?#iefix') format('eot'), url('../font/fontawesome-webfont.woff') format('woff'), url('../font/fontawesome-webfont.ttf') format('truetype'), url('../font/fontawesome-webfont.svg#FontAwesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*  Font Awesome styles
+    ------------------------------------------------------- */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  padding: 3px;
+}
+a [class^="icon-"], a [class*=" icon-"] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: top;
+  font-size: 1.3333333333333333em;
+}
+.btn [class^="icon-"], .btn [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+
+  line-height: .9em;
+}
+li [class^="icon-"], li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+li .icon-large[class^="icon-"], li .icon-large[class*=" icon-"] {
+  /* 1.5 increased font size for icon-large * 1.25 width */
+
+  width: 1.875em;
+}
+li[class^="icon-"], li[class*=" icon-"] {
+  margin-left: 0;
+  list-style-type: none;
+}
+li[class^="icon-"]:before, li[class*=" icon-"]:before {
+  text-indent: -2em;
+  text-align: center;
+}
+li[class^="icon-"].icon-large:before, li[class*=" icon-"].icon-large:before {
+  text-indent: -1.3333333333333333em;
+}
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent icons */
+.icon-glass:before                { content: "\f000"; }
+.icon-music:before                { content: "\f001"; }
+.icon-search:before               { content: "\f002"; }
+.icon-envelope:before             { content: "\f003"; }
+.icon-heart:before                { content: "\f004"; }
+.icon-star:before                 { content: "\f005"; }
+.icon-star-empty:before           { content: "\f006"; }
+.icon-user:before                 { content: "\f007"; }
+.icon-film:before                 { content: "\f008"; }
+.icon-th-large:before             { content: "\f009"; }
+.icon-th:before                   { content: "\f00a"; }
+.icon-th-list:before              { content: "\f00b"; }
+.icon-ok:before                   { content: "\f00c"; }
+.icon-remove:before               { content: "\f00d"; }
+.icon-zoom-in:before              { content: "\f00e"; }
+
+.icon-zoom-out:before             { content: "\f010"; }
+.icon-off:before                  { content: "\f011"; }
+.icon-signal:before               { content: "\f012"; }
+.icon-cog:before                  { content: "\f013"; }
+.icon-trash:before                { content: "\f014"; }
+.icon-home:before                 { content: "\f015"; }
+.icon-file:before                 { content: "\f016"; }
+.icon-time:before                 { content: "\f017"; }
+.icon-road:before                 { content: "\f018"; }
+.icon-download-alt:before         { content: "\f019"; }
+.icon-download:before             { content: "\f01a"; }
+.icon-upload:before               { content: "\f01b"; }
+.icon-inbox:before                { content: "\f01c"; }
+.icon-play-circle:before          { content: "\f01d"; }
+.icon-repeat:before               { content: "\f01e"; }
+
+/* \f020 doesn't work in Safari. all shifted one down */
+.icon-refresh:before              { content: "\f021"; }
+.icon-list-alt:before             { content: "\f022"; }
+.icon-lock:before                 { content: "\f023"; }
+.icon-flag:before                 { content: "\f024"; }
+.icon-headphones:before           { content: "\f025"; }
+.icon-volume-off:before           { content: "\f026"; }
+.icon-volume-down:before          { content: "\f027"; }
+.icon-volume-up:before            { content: "\f028"; }
+.icon-qrcode:before               { content: "\f029"; }
+.icon-barcode:before              { content: "\f02a"; }
+.icon-tag:before                  { content: "\f02b"; }
+.icon-tags:before                 { content: "\f02c"; }
+.icon-book:before                 { content: "\f02d"; }
+.icon-bookmark:before             { content: "\f02e"; }
+.icon-print:before                { content: "\f02f"; }
+
+.icon-camera:before               { content: "\f030"; }
+.icon-font:before                 { content: "\f031"; }
+.icon-bold:before                 { content: "\f032"; }
+.icon-italic:before               { content: "\f033"; }
+.icon-text-height:before          { content: "\f034"; }
+.icon-text-width:before           { content: "\f035"; }
+.icon-align-left:before           { content: "\f036"; }
+.icon-align-center:before         { content: "\f037"; }
+.icon-align-right:before          { content: "\f038"; }
+.icon-align-justify:before        { content: "\f039"; }
+.icon-list:before                 { content: "\f03a"; }
+.icon-indent-left:before          { content: "\f03b"; }
+.icon-indent-right:before         { content: "\f03c"; }
+.icon-facetime-video:before       { content: "\f03d"; }
+.icon-picture:before              { content: "\f03e"; }
+
+.icon-pencil:before               { content: "\f040"; }
+.icon-map-marker:before           { content: "\f041"; }
+.icon-adjust:before               { content: "\f042"; }
+.icon-tint:before                 { content: "\f043"; }
+.icon-edit:before                 { content: "\f044"; }
+.icon-share:before                { content: "\f045"; }
+.icon-check:before                { content: "\f046"; }
+.icon-move:before                 { content: "\f047"; }
+.icon-step-backward:before        { content: "\f048"; }
+.icon-fast-backward:before        { content: "\f049"; }
+.icon-backward:before             { content: "\f04a"; }
+.icon-play:before                 { content: "\f04b"; }
+.icon-pause:before                { content: "\f04c"; }
+.icon-stop:before                 { content: "\f04d"; }
+.icon-forward:before              { content: "\f04e"; }
+
+.icon-fast-forward:before         { content: "\f050"; }
+.icon-step-forward:before         { content: "\f051"; }
+.icon-eject:before                { content: "\f052"; }
+.icon-chevron-left:before         { content: "\f053"; }
+.icon-chevron-right:before        { content: "\f054"; }
+.icon-plus-sign:before            { content: "\f055"; }
+.icon-minus-sign:before           { content: "\f056"; }
+.icon-remove-sign:before          { content: "\f057"; }
+.icon-ok-sign:before              { content: "\f058"; }
+.icon-question-sign:before        { content: "\f059"; }
+.icon-info-sign:before            { content: "\f05a"; }
+.icon-screenshot:before           { content: "\f05b"; }
+.icon-remove-circle:before        { content: "\f05c"; }
+.icon-ok-circle:before            { content: "\f05d"; }
+.icon-ban-circle:before           { content: "\f05e"; }
+
+.icon-arrow-left:before           { content: "\f060"; }
+.icon-arrow-right:before          { content: "\f061"; }
+.icon-arrow-up:before             { content: "\f062"; }
+.icon-arrow-down:before           { content: "\f063"; }
+.icon-share-alt:before            { content: "\f064"; }
+.icon-resize-full:before          { content: "\f065"; }
+.icon-resize-small:before         { content: "\f066"; }
+.icon-plus:before                 { content: "\f067"; }
+.icon-minus:before                { content: "\f068"; }
+.icon-asterisk:before             { content: "\f069"; }
+.icon-exclamation-sign:before     { content: "\f06a"; }
+.icon-gift:before                 { content: "\f06b"; }
+.icon-leaf:before                 { content: "\f06c"; }
+.icon-fire:before                 { content: "\f06d"; }
+.icon-eye-open:before             { content: "\f06e"; }
+
+.icon-eye-close:before            { content: "\f070"; }
+.icon-warning-sign:before         { content: "\f071"; }
+.icon-plane:before                { content: "\f072"; }
+.icon-calendar:before             { content: "\f073"; }
+.icon-random:before               { content: "\f074"; }
+.icon-comment:before              { content: "\f075"; }
+.icon-magnet:before               { content: "\f076"; }
+.icon-chevron-up:before           { content: "\f077"; }
+.icon-chevron-down:before         { content: "\f078"; }
+.icon-retweet:before              { content: "\f079"; }
+.icon-shopping-cart:before        { content: "\f07a"; }
+.icon-folder-close:before         { content: "\f07b"; }
+.icon-folder-open:before          { content: "\f07c"; }
+.icon-resize-vertical:before      { content: "\f07d"; }
+.icon-resize-horizontal:before    { content: "\f07e"; }
+
+.icon-bar-chart:before            { content: "\f080"; }
+.icon-twitter-sign:before         { content: "\f081"; }
+.icon-facebook-sign:before        { content: "\f082"; }
+.icon-camera-retro:before         { content: "\f083"; }
+.icon-key:before                  { content: "\f084"; }
+.icon-cogs:before                 { content: "\f085"; }
+.icon-comments:before             { content: "\f086"; }
+.icon-thumbs-up:before            { content: "\f087"; }
+.icon-thumbs-down:before          { content: "\f088"; }
+.icon-star-half:before            { content: "\f089"; }
+.icon-heart-empty:before          { content: "\f08a"; }
+.icon-signout:before              { content: "\f08b"; }
+.icon-linkedin-sign:before        { content: "\f08c"; }
+.icon-pushpin:before              { content: "\f08d"; }
+.icon-external-link:before        { content: "\f08e"; }
+
+.icon-signin:before               { content: "\f090"; }
+.icon-trophy:before               { content: "\f091"; }
+.icon-github-sign:before          { content: "\f092"; }
+.icon-upload-alt:before           { content: "\f093"; }
+.icon-lemon:before                { content: "\f094"; }
+.icon-phone:before                { content: "\f095"; }
+.icon-check-empty:before          { content: "\f096"; }
+.icon-bookmark-empty:before       { content: "\f097"; }
+.icon-phone-sign:before           { content: "\f098"; }
+.icon-twitter:before              { content: "\f099"; }
+.icon-facebook:before             { content: "\f09a"; }
+.icon-github:before               { content: "\f09b"; }
+.icon-unlock:before               { content: "\f09c"; }
+.icon-credit-card:before          { content: "\f09d"; }
+.icon-rss:before                  { content: "\f09e"; }
+
+.icon-hdd:before                  { content: "\f0a0"; }
+.icon-bullhorn:before             { content: "\f0a1"; }
+.icon-bell:before                 { content: "\f0a2"; }
+.icon-certificate:before          { content: "\f0a3"; }
+.icon-hand-right:before           { content: "\f0a4"; }
+.icon-hand-left:before            { content: "\f0a5"; }
+.icon-hand-up:before              { content: "\f0a6"; }
+.icon-hand-down:before            { content: "\f0a7"; }
+.icon-circle-arrow-left:before    { content: "\f0a8"; }
+.icon-circle-arrow-right:before   { content: "\f0a9"; }
+.icon-circle-arrow-up:before      { content: "\f0aa"; }
+.icon-circle-arrow-down:before    { content: "\f0ab"; }
+.icon-globe:before                { content: "\f0ac"; }
+.icon-wrench:before               { content: "\f0ad"; }
+.icon-tasks:before                { content: "\f0ae"; }
+
+.icon-filter:before               { content: "\f0b0"; }
+.icon-briefcase:before            { content: "\f0b1"; }
+.icon-fullscreen:before           { content: "\f0b2"; }
+
+.icon-group:before                { content: "\f0c0"; }
+.icon-link:before                 { content: "\f0c1"; }
+.icon-cloud:before                { content: "\f0c2"; }
+.icon-beaker:before               { content: "\f0c3"; }
+.icon-cut:before                  { content: "\f0c4"; }
+.icon-copy:before                 { content: "\f0c5"; }
+.icon-paper-clip:before           { content: "\f0c6"; }
+.icon-save:before                 { content: "\f0c7"; }
+.icon-sign-blank:before           { content: "\f0c8"; }
+.icon-reorder:before              { content: "\f0c9"; }
+.icon-list-ul:before              { content: "\f0ca"; }
+.icon-list-ol:before              { content: "\f0cb"; }
+.icon-strikethrough:before        { content: "\f0cc"; }
+.icon-underline:before            { content: "\f0cd"; }
+.icon-table:before                { content: "\f0ce"; }
+
+.icon-magic:before                { content: "\f0d0"; }
+.icon-truck:before                { content: "\f0d1"; }
+.icon-pinterest:before            { content: "\f0d2"; }
+.icon-pinterest-sign:before       { content: "\f0d3"; }
+.icon-google-plus-sign:before     { content: "\f0d4"; }
+.icon-google-plus:before          { content: "\f0d5"; }
+.icon-money:before                { content: "\f0d6"; }
+.icon-caret-down:before           { content: "\f0d7"; }
+.icon-caret-up:before             { content: "\f0d8"; }
+.icon-caret-left:before           { content: "\f0d9"; }
+.icon-caret-right:before          { content: "\f0da"; }
+.icon-columns:before              { content: "\f0db"; }
+.icon-sort:before                 { content: "\f0dc"; }
+.icon-sort-down:before            { content: "\f0dd"; }
+.icon-sort-up:before              { content: "\f0de"; }
+
+.icon-envelope-alt:before         { content: "\f0e0"; }
+.icon-linkedin:before             { content: "\f0e1"; }
+.icon-undo:before                 { content: "\f0e2"; }
+.icon-legal:before                { content: "\f0e3"; }
+.icon-dashboard:before            { content: "\f0e4"; }
+.icon-comment-alt:before          { content: "\f0e5"; }
+.icon-comments-alt:before         { content: "\f0e6"; }
+.icon-bolt:before                 { content: "\f0e7"; }
+.icon-sitemap:before              { content: "\f0e8"; }
+.icon-umbrella:before             { content: "\f0e9"; }
+.icon-paste:before                { content: "\f0ea"; }
+
+.icon-user-md:before              { content: "\f200"; }
+
+/*  Contact Form
+    ------------------------------------------------------- */
+
+
+#contact h1 { margin: 10px 0 10px; font-size: 24px; color: #333333; }
+#contact hr { color: inherit; height: 0; margin: 6px 0 6px 0; padding: 0; border: 1px solid #d9d9d9; border-style: none none solid; }
+
+#contact { display: block; width: 650px; margin: 50px auto; padding: 35px; border: 1px solid #cbcbcb; background-color: #FFF; -webkit-border-radius:5px;  }
+
+/* Form style */
+
+#contact label { display: inline-block; float: left; height: 26px; line-height: 26px; width: 155px; font-size: 1.5em; -webkit-border-radius:5px; }
+#contact input, textarea, select { width: 280px; margin: 0; padding: 5px; color: #666; background: #f5f5f5; border: 1px solid #ccc; margin: 5px 0; webkit-border-radius:5px; }
+#contact input:focus, textarea:focus, select:focus { border: 1px solid #999; background-color: #fff; color:#333; }
+#contact input.submit { width: 85px; cursor: pointer; border: 1px solid #222; background:#333; color:#fff; }
+#contact input.submit:hover { background:#444; }
+#contact input[type="submit"][disabled] { background:#888; }
+#contact fieldset { padding:20px; border:1px solid #eee; -webkit-border-radius:5px; -moz-border-radius:5px; }
+#contact legend { padding:7px 10px; font-weight:bold; color:#000; border:1px solid #eee; -webkit-border-radius:5px; -moz-border-radius:5px; margin-bottom:0 !important; margin-bottom:20px; }
+
+#contact span.required{ font-size: 13px; color: #ff0000; } /* Select the colour of the * if the field is required. */
+
+.verify-this, input[type="text"] .verify-this { display: inline !important; }
+
+#message { margin: 10px 0; padding: 0; }
+
+.error_message { display: block; height: 22px; line-height: 22px; background: #FBE3E4 url('../assets/error.gif') no-repeat 10px center; padding: 3px 10px 3px 35px; color:#8a1f11;border: 1px solid #FBC2C4; -webkit-border-radius:5px; }
+
+.loader { padding: 0 10px; }
+
+#contact #success_page h1 { background: url('../assets/success.gif') left no-repeat; padding-left:22px; }
+
+acronym { border-bottom:1px dotted #ccc; }
+
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.links-list {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 6, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.links-list .links-item {
+  margin-bottom: 10px;
+  display: table-row;
+}
+
+/* line 11, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.links-item .links-picture,
+.links-item .links-info,
+.links-item .link-admin-controls {
+  display: table-cell;
+}
+
+/* line 17, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.links-item .links-picture,
+.links-item .links-info {
+  vertical-align: top;
+}
+
+/* line 22, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.links-item .link-admin-controls {
+  vertical-align: middle;
+}
+
+/* line 26, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.links-item .links-picture img {
+  height: 100px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+/* line 32, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.links-item .links-title {
+  font-weight: bold;
+}
+
+/* line 36, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.links-item .links-title,
+.links-description {
+  font-size: 12pt;
+  text-align: justify;
+}
+
+/* line 42, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.links-list .links-item a {
+  font-size: 16pt;
+}
+
+/* line 46, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+#add-link-button {
+  font-size: 14pt;
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 52, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.new-link-form .entry, .edit-link-form .entry {
+  display: block;
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+  resize: none;
+}
+
+/* line 62, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+.new-link-form textarea.entry, .edit-link-form textarea.entry {
+  width: 382px;
+  height: 100px;
+  resize: none;
+}
+
+/* line 68, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+#new-link-form-button, #edit-link-form-button {
+  width: 100%;
+  height: 30px;
+}
+
+@media (max-width: 1100px) {
+  /* line 74, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+  .links-item .links-picture img {
+    height: 200px;
+  }
+
+  /* line 78, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+  .links-item .links-title {
+    font-size: 20pt;
+  }
+
+  /* line 82, /home/dennis/dunbarwebsite/app/assets/stylesheets/link.scss */
+  .links-description {
+    font-size: 16pt;
+  }
+}
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.details {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 880px;
+  display: table;
+}
+
+/* line 8, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.details .section {
+  display: table-row;
+}
+
+/* line 12, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#personal_info {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 17, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#personal_info #cv a {
+  margin-top: 10px;
+}
+
+/* line 21, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#personal_info #cv a:link, #personal_info #cv a:visited {
+  display: inline-block;
+  display: moz-inline-box;
+  font-size: 16px;
+  color: #191919;
+  background-color: #E6A811;
+  padding: 10px 80px;
+  text-decoration: none;
+  opacity: 1.0;
+  transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
+}
+
+/* line 34, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#personal_info #cv a:hover, #personal_info #cv a:active {
+  background-color: #E6C34E;
+}
+
+/* line 38, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#people_image_form_button {
+  width: 100%;
+  height: 30px;
+}
+
+/* line 43, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.details #info {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/* line 48, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#profile-actions {
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 53, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#profile-actions a {
+  display: inline-block;
+  display: -moz-inline-block;
+}
+
+/* line 58, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.details #picture-cv {
+  display: table-cell;
+  padding-right: 50px;
+}
+
+/* line 63, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.details #picture-cv #avatar {
+  width: 200px;
+  margin: 0 auto;
+  display: table;
+  border-radius: 50%;
+}
+
+/* line 70, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member-picture img {
+  width: 200px;
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+/* line 77, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member-picture img:hover {
+  opacity: 0.6;
+}
+
+/* line 81, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.details #bio p {
+  text-align: justify;
+}
+
+/* line 85, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.details h2, .details h3 {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  color: #222222;
+}
+
+/* line 91, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.details p {
+  margin: 5px 0px 5px 0px;
+  font-size: 12pt;
+}
+
+/* line 96, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.new-member-form .entry, .edit-member-form .entry {
+  display: block;
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 105, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+input[type='file'].entry {
+  margin-top: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 111, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.config {
+  display: table;
+  margin-bottom: 20px;
+}
+
+/* line 116, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.former_members_list {
+  margin-bottom: 30px;
+}
+
+/* line 120, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.former_member {
+  font-size: 14pt;
+  margin-bottom: 5px;
+}
+
+/* line 125, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.former_member .former-member-email {
+  text-decoration: none;
+  color: #666666 !important;
+}
+
+/* line 130, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.former_member .former-member-page {
+  color: black !important;
+}
+
+/* line 134, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member-homepage {
+  font-weight: bold;
+}
+
+/* line 138, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member-config {
+  display: table-row;
+}
+
+/* line 142, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member-config * {
+  display: table-cell;
+}
+
+/* line 146, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member-config label {
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+/* line 151, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.new-member-form textarea.entry, .edit-member-form textarea.entry {
+  width: 382px;
+  height: 100px;
+  resize: none;
+}
+
+/* line 157, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member_grid {
+  font-size: 0;
+}
+
+/* line 161, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member {
+  display: inline-block;
+  margin-bottom: 50px;
+  width: calc(25% - 6px);
+  margin-right: 8px;
+}
+
+/* line 168, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member:nth-of-type(2n) {
+  margin-right: 8px;
+}
+
+/* line 172, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+/* line 176, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member a {
+  display: block;
+}
+
+/* line 180, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member .avatar {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 185, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member .caption a, #add_member a, .details a {
+  font-size: 16px;
+  text-decoration: none;
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 192, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#picture-cv #badge img {
+  width: 100%;
+}
+
+/* line 196, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#add_member a {
+  font-size: 20px;
+}
+
+/* line 200, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#member_form_button {
+  width: 100%;
+  height: 30px;
+}
+
+/* line 205, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.member .caption a {
+  color: #666666;
+}
+
+/* line 209, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#people-page-button {
+  margin-top: 30px;
+}
+
+/* line 213, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+#info a {
+  display: inline;
+}
+
+/* line 217, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.peopleSlider .cycle-slideshow a img {
+  height: 400px;
+}
+
+/* line 221, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.slider-image-item .slider-title p {
+  padding-left: 15px;
+}
+
+/* overlay */
+/* line 226, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.peopleSlider .cycle-overlay {
+  font-family: tahoma, arial;
+  position: absolute;
+  bottom: 3px;
+  width: 100%;
+  z-index: 600;
+  background: black;
+  color: white;
+  padding: 15px 0px;
+  opacity: .6;
+}
+
+/* line 232, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.peopleSlider .cycle-overlay div {
+  padding: 0px 15px;
+  font-size: 14pt;
+}
+
+/* line 237, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.manage-people-slider {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 242, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+.members-wrapper {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  /* line 247, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .member {
+    margin-bottom: 30px;
+    width: calc(50% - 6px);
+    margin-right: 8px;
+  }
+
+  /* line 253, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .member-picture img {
+    width: 300px;
+  }
+
+  /* line 257, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .member:nth-of-type(n) {
+    margin-right: 8px;
+  }
+
+  /* line 261, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .member:nth-of-type(2n) {
+    margin-right: 0;
+  }
+
+  /* line 265, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .member .caption a,
+  .details a,
+  .details p,
+  .former_member,
+  #add_member a {
+    font-size: 18pt;
+  }
+
+  /* line 273, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .details #picture-cv #avatar {
+    width: 300px;
+  }
+
+  /* line 277, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  #picture-cv #badge img {
+    width: 200px;
+  }
+
+  /* line 281, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  #personal_info #cv a:link, #personal_info #cv a:visited {
+    display: inline-block;
+    display: moz-inline-box;
+    font-size: 18pt;
+    color: #191919;
+    background-color: #FFF056;
+    padding: 20px 100px;
+    text-decoration: none;
+    opacity: 1.0;
+    transition: opacity 0.5s ease-out;
+    -webkit-transition: opacity 0.5s ease-out;
+  }
+
+  /* line 294, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  #personal_info #cv a:hover, #personal_info #cv a:active {
+    display: inline-block;
+    display: moz-inline-box;
+    font-size: 18pt;
+    font-style: normal;
+    opacity: 0.5;
+    padding: 20px 100px;
+    text-decoration: none;
+  }
+
+  /* line 304, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .details h2 {
+    font-size: 20pt;
+  }
+
+  /* line 308, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .details h3 {
+    font-size: 18pt;
+  }
+
+  /* line 312, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .former_members_list {
+    margin-left: 30px;
+  }
+
+  /* line 316, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .peopleSlider .cycle-overlay {
+    opacity: .7;
+  }
+
+  /* line 320, /home/dennis/dunbarwebsite/app/assets/stylesheets/members.scss */
+  .peopleSlider .cycle-overlay div {
+    padding: 0px 20px;
+    font-size: 20pt;
+  }
+}
+/*!
+ * Mercury Editor is a Coffeescript and jQuery based WYSIWYG editor.  Documentation and other useful information can be
+ * found at https://github.com/jejacks0n/mercury
+ *
+ * Copyright (c) 2011 Jeremy Jackson
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+ * documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+ * persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+ * Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+
+
+
+ */
+
+
+/*!
+ * This file is a derivative of the Twitter Bootstrap CSS.  It only includes the form and button css.
+ *
+ * Bootstrap v2.0.4
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 27px;
+  font-size: 19.5px;
+  line-height: 36px;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+legend small {
+  font-size: 13.5px;
+  color: #999999;
+}
+
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  /*height: 18px;*/
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  /*line-height: 18px;*/
+  color: #555555;
+}
+
+input,
+textarea {
+  width: 210px;
+}
+
+textarea {
+  height: auto;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 3px 0;
+  *margin-top: 0;
+  /* IE7 */
+
+  line-height: normal;
+  cursor: pointer;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+.uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+
+select,
+input[type="file"] {
+  height: 28px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+
+  line-height: 28px;
+}
+
+select {
+  width: 220px;
+  border: 1px solid #bbb;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.radio,
+.checkbox {
+  min-height: 18px;
+  padding-left: 18px;
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -18px;
+}
+
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+  padding-top: 5px;
+}
+
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+
+.input-mini {
+  width: 60px;
+}
+
+.input-small {
+  width: 90px;
+}
+
+.input-medium {
+  width: 150px;
+}
+
+.input-large {
+  width: 210px;
+}
+
+.input-xlarge {
+  width: 270px;
+}
+
+.input-xxlarge {
+  width: 530px;
+}
+
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"],
+.uneditable-input[class*="span"],
+.row-fluid input[class*="span"],
+.row-fluid select[class*="span"],
+.row-fluid textarea[class*="span"],
+.row-fluid .uneditable-input[class*="span"] {
+  float: none;
+  margin-left: 0;
+}
+
+.input-append input[class*="span"],
+.input-append .uneditable-input[class*="span"],
+.input-prepend input[class*="span"],
+.input-prepend .uneditable-input[class*="span"],
+.row-fluid .input-prepend [class*="span"],
+.row-fluid .input-append [class*="span"] {
+  display: inline-block;
+}
+
+input,
+textarea,
+.uneditable-input {
+  margin-left: 0;
+}
+
+input.span12,
+textarea.span12,
+.uneditable-input.span12 {
+  width: 930px;
+}
+
+input.span11,
+textarea.span11,
+.uneditable-input.span11 {
+  width: 850px;
+}
+
+input.span10,
+textarea.span10,
+.uneditable-input.span10 {
+  width: 770px;
+}
+
+input.span9,
+textarea.span9,
+.uneditable-input.span9 {
+  width: 690px;
+}
+
+input.span8,
+textarea.span8,
+.uneditable-input.span8 {
+  width: 610px;
+}
+
+input.span7,
+textarea.span7,
+.uneditable-input.span7 {
+  width: 530px;
+}
+
+input.span6,
+textarea.span6,
+.uneditable-input.span6 {
+  width: 450px;
+}
+
+input.span5,
+textarea.span5,
+.uneditable-input.span5 {
+  width: 370px;
+}
+
+input.span4,
+textarea.span4,
+.uneditable-input.span4 {
+  width: 290px;
+}
+
+input.span3,
+textarea.span3,
+.uneditable-input.span3 {
+  width: 210px;
+}
+
+input.span2,
+textarea.span2,
+.uneditable-input.span2 {
+  width: 130px;
+}
+
+input.span1,
+textarea.span1,
+.uneditable-input.span1 {
+  width: 50px;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  border-color: #ddd;
+}
+
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
+
+.control-group.warning > label,
+.control-group.warning .help-block,
+.control-group.warning .help-inline {
+  color: #c09853;
+}
+
+.control-group.warning .checkbox,
+.control-group.warning .radio,
+.control-group.warning input,
+.control-group.warning select,
+.control-group.warning textarea {
+  color: #c09853;
+  border-color: #c09853;
+}
+
+.control-group.warning .checkbox:focus,
+.control-group.warning .radio:focus,
+.control-group.warning input:focus,
+.control-group.warning select:focus,
+.control-group.warning textarea:focus {
+  border-color: #a47e3c;
+  -webkit-box-shadow: 0 0 6px #dbc59e;
+  -moz-box-shadow: 0 0 6px #dbc59e;
+  box-shadow: 0 0 6px #dbc59e;
+}
+
+.control-group.warning .input-prepend .add-on,
+.control-group.warning .input-append .add-on {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #c09853;
+}
+
+.control-group.error > label,
+.control-group.error .help-block,
+.control-group.error .help-inline {
+  color: #b94a48;
+}
+
+.control-group.error .checkbox,
+.control-group.error .radio,
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
+  color: #b94a48;
+  border-color: #b94a48;
+}
+
+.control-group.error .checkbox:focus,
+.control-group.error .radio:focus,
+.control-group.error input:focus,
+.control-group.error select:focus,
+.control-group.error textarea:focus {
+  border-color: #953b39;
+  -webkit-box-shadow: 0 0 6px #d59392;
+  -moz-box-shadow: 0 0 6px #d59392;
+  box-shadow: 0 0 6px #d59392;
+}
+
+.control-group.error .input-prepend .add-on,
+.control-group.error .input-append .add-on {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #b94a48;
+}
+
+.control-group.success > label,
+.control-group.success .help-block,
+.control-group.success .help-inline {
+  color: #468847;
+}
+
+.control-group.success .checkbox,
+.control-group.success .radio,
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
+  color: #468847;
+  border-color: #468847;
+}
+
+.control-group.success .checkbox:focus,
+.control-group.success .radio:focus,
+.control-group.success input:focus,
+.control-group.success select:focus,
+.control-group.success textarea:focus {
+  border-color: #356635;
+  -webkit-box-shadow: 0 0 6px #7aba7b;
+  -moz-box-shadow: 0 0 6px #7aba7b;
+  box-shadow: 0 0 6px #7aba7b;
+}
+
+.control-group.success .input-prepend .add-on,
+.control-group.success .input-append .add-on {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #468847;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid,
+select:focus:required:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+
+input:focus:required:invalid:focus,
+textarea:focus:required:invalid:focus,
+select:focus:required:invalid:focus {
+  border-color: #e9322d;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+
+.form-actions {
+  padding: 17px 20px 18px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+  *zoom: 1;
+}
+
+.form-actions:before,
+.form-actions:after {
+  display: table;
+  content: "";
+}
+
+.form-actions:after {
+  clear: both;
+}
+
+.uneditable-input {
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: not-allowed;
+  background-color: #ffffff;
+  border-color: #eee;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+}
+
+:-moz-placeholder {
+  color: #999999;
+}
+
+:-ms-input-placeholder {
+  color: #999999;
+}
+
+::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.help-block,
+.help-inline {
+  color: #555555;
+}
+
+.help-block {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.help-inline {
+  display: inline-block;
+  *display: inline;
+  padding-left: 5px;
+  vertical-align: middle;
+  *zoom: 1;
+}
+
+.input-prepend,
+.input-append {
+  margin-bottom: 5px;
+}
+
+.input-prepend input,
+.input-append input,
+.input-prepend select,
+.input-append select,
+.input-prepend .uneditable-input,
+.input-append .uneditable-input {
+  position: relative;
+  margin-bottom: 0;
+  *margin-left: 0;
+  vertical-align: middle;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.input-prepend input:focus,
+.input-append input:focus,
+.input-prepend select:focus,
+.input-append select:focus,
+.input-prepend .uneditable-input:focus,
+.input-append .uneditable-input:focus {
+  z-index: 2;
+}
+
+.input-prepend .uneditable-input,
+.input-append .uneditable-input {
+  border-left-color: #ccc;
+}
+
+.input-prepend .add-on,
+.input-append .add-on {
+  display: inline-block;
+  width: auto;
+  height: 18px;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-weight: normal;
+  line-height: 18px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  vertical-align: middle;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+}
+
+.input-prepend .add-on,
+.input-append .add-on,
+.input-prepend .btn,
+.input-append .btn {
+  margin-left: -1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.input-prepend .active,
+.input-append .active {
+  background-color: #a9dba9;
+  border-color: #46a546;
+}
+
+.input-prepend .add-on,
+.input-prepend .btn {
+  margin-right: -1px;
+}
+
+.input-prepend .add-on:first-child,
+.input-prepend .btn:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+.input-append input,
+.input-append select,
+.input-append .uneditable-input {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+.input-append .uneditable-input {
+  border-right-color: #ccc;
+  border-left-color: #eee;
+}
+
+.input-append .add-on:last-child,
+.input-append .btn:last-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.input-prepend.input-append input,
+.input-prepend.input-append select,
+.input-prepend.input-append .uneditable-input {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.input-prepend.input-append .add-on:first-child,
+.input-prepend.input-append .btn:first-child {
+  margin-right: -1px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+.input-prepend.input-append .add-on:last-child,
+.input-prepend.input-append .btn:last-child {
+  margin-left: -1px;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.search-query {
+  padding-right: 14px;
+  padding-right: 4px \9;
+  padding-left: 14px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+  margin-bottom: 0;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+
+.form-search input,
+.form-inline input,
+.form-horizontal input,
+.form-search textarea,
+.form-inline textarea,
+.form-horizontal textarea,
+.form-search select,
+.form-inline select,
+.form-horizontal select,
+.form-search .help-inline,
+.form-inline .help-inline,
+.form-horizontal .help-inline,
+.form-search .uneditable-input,
+.form-inline .uneditable-input,
+.form-horizontal .uneditable-input,
+.form-search .input-prepend,
+.form-inline .input-prepend,
+.form-horizontal .input-prepend,
+.form-search .input-append,
+.form-inline .input-append,
+.form-horizontal .input-append {
+  display: inline-block;
+  *display: inline;
+  margin-bottom: 0;
+  *zoom: 1;
+}
+
+.form-search .hide,
+.form-inline .hide,
+.form-horizontal .hide {
+  display: none;
+}
+
+.form-search label,
+.form-inline label {
+  display: inline-block;
+}
+
+.form-search .input-append,
+.form-inline .input-append,
+.form-search .input-prepend,
+.form-inline .input-prepend {
+  margin-bottom: 0;
+}
+
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio,
+.form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-right: 3px;
+  margin-left: 0;
+}
+
+.control-group {
+  margin-bottom: 9px;
+}
+
+legend + .control-group {
+  margin-top: 18px;
+  -webkit-margin-top-collapse: separate;
+}
+
+.form-horizontal .control-group {
+  margin-bottom: 18px;
+  *zoom: 1;
+}
+
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
+  display: table;
+  content: "";
+}
+
+.form-horizontal .control-group:after {
+  clear: both;
+}
+
+.form-horizontal .control-label {
+  float: left;
+  width: 140px;
+  padding-top: 5px;
+  text-align: right;
+}
+
+.form-horizontal .controls {
+  *display: inline-block;
+  *padding-left: 20px;
+  margin-left: 160px;
+  *margin-left: 0;
+}
+
+.form-horizontal .controls:first-child {
+  *padding-left: 160px;
+}
+
+.form-horizontal .help-block {
+  margin-top: 9px;
+  margin-bottom: 0;
+}
+
+.form-horizontal .form-actions {
+  padding-left: 160px;
+}
+
+
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 13px;
+  line-height: 18px;
+  *line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+
+.btn:active,
+.btn.active {
+  background-color: #cccccc \9;
+}
+
+.btn:first-child {
+  *margin-left: 0;
+}
+
+.btn:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn.active,
+.btn:active {
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn.disabled,
+.btn[disabled] {
+  cursor: default;
+  background-color: #e6e6e6;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-large {
+  padding: 9px 14px;
+  font-size: 15px;
+  line-height: normal;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.btn-large [class^="icon-"] {
+  margin-top: 1px;
+}
+
+.btn-small {
+  padding: 5px 9px;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.btn-small [class^="icon-"] {
+  margin-top: -1px;
+}
+
+.btn-mini {
+  padding: 2px 6px;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.btn {
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary {
+  background-color: #0074cc;
+  *background-color: #0055cc;
+  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
+  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
+  background-image: linear-gradient(top, #0088cc, #0055cc);
+  background-repeat: repeat-x;
+  border-color: #0055cc #0055cc #003580;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background-color: #0055cc;
+  *background-color: #004ab3;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #004099 \9;
+}
+
+.btn-warning {
+  background-color: #faa732;
+  *background-color: #f89406;
+  background-image: -ms-linear-gradient(top, #fbb450, #f89406);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+  background-image: -o-linear-gradient(top, #fbb450, #f89406);
+  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+  background-image: linear-gradient(top, #fbb450, #f89406);
+  background-repeat: repeat-x;
+  border-color: #f89406 #f89406 #ad6704;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89406', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning[disabled] {
+  background-color: #f89406;
+  *background-color: #df8505;
+}
+
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #c67605 \9;
+}
+
+.btn-danger {
+  background-color: #da4f49;
+  *background-color: #bd362f;
+  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: linear-gradient(top, #ee5f5b, #bd362f);
+  background-repeat: repeat-x;
+  border-color: #bd362f #bd362f #802420;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger.disabled,
+.btn-danger[disabled] {
+  background-color: #bd362f;
+  *background-color: #a9302a;
+}
+
+.btn-danger:active,
+.btn-danger.active {
+  background-color: #942a25 \9;
+}
+
+.btn-success {
+  background-color: #5bb75b;
+  *background-color: #51a351;
+  background-image: -ms-linear-gradient(top, #62c462, #51a351);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+  background-image: -o-linear-gradient(top, #62c462, #51a351);
+  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+  background-image: linear-gradient(top, #62c462, #51a351);
+  background-repeat: repeat-x;
+  border-color: #51a351 #51a351 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#62c462', endColorstr='#51a351', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #51a351;
+  *background-color: #499249;
+}
+
+.btn-success:active,
+.btn-success.active {
+  background-color: #408140 \9;
+}
+
+.btn-info {
+  background-color: #49afcd;
+  *background-color: #2f96b4;
+  background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: linear-gradient(top, #5bc0de, #2f96b4);
+  background-repeat: repeat-x;
+  border-color: #2f96b4 #2f96b4 #1f6377;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+.btn-info:hover,
+.btn-info:active,
+.btn-info.active,
+.btn-info.disabled,
+.btn-info[disabled] {
+  background-color: #2f96b4;
+  *background-color: #2a85a0;
+}
+
+.btn-info:active,
+.btn-info.active {
+  background-color: #24748c \9;
+}
+
+.btn-inverse {
+  background-color: #414141;
+  *background-color: #222222;
+  background-image: -ms-linear-gradient(top, #555555, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222));
+  background-image: -webkit-linear-gradient(top, #555555, #222222);
+  background-image: -o-linear-gradient(top, #555555, #222222);
+  background-image: -moz-linear-gradient(top, #555555, #222222);
+  background-image: linear-gradient(top, #555555, #222222);
+  background-repeat: repeat-x;
+  border-color: #222222 #222222 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#555555', endColorstr='#222222', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+.btn-inverse:hover,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+  background-color: #222222;
+  *background-color: #151515;
+}
+
+.btn-inverse:active,
+.btn-inverse.active {
+  background-color: #080808 \9;
+}
+
+button.btn,
+input[type="submit"].btn {
+  *padding-top: 2px;
+  *padding-bottom: 2px;
+}
+
+button.btn::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button.btn.btn-large,
+input[type="submit"].btn.btn-large {
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+
+button.btn.btn-small,
+input[type="submit"].btn.btn-small {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+
+button.btn.btn-mini,
+input[type="submit"].btn.btn-mini {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+.btn-group {
+  position: relative;
+  *margin-left: .3em;
+  *zoom: 1;
+}
+
+.btn-group:before,
+.btn-group:after {
+  display: table;
+  content: "";
+}
+
+.btn-group:after {
+  clear: both;
+}
+
+.btn-group:first-child {
+  *margin-left: 0;
+}
+
+.btn-group + .btn-group {
+  margin-left: 5px;
+}
+
+.btn-toolbar {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.btn-toolbar .btn-group {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+}
+
+.btn-group > .btn {
+  position: relative;
+  float: left;
+  margin-left: -1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.btn-group > .btn:first-child {
+  margin-left: 0;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle {
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+
+.btn-group > .btn.large:first-child {
+  margin-left: 0;
+  -webkit-border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  -webkit-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-topleft: 6px;
+}
+
+.btn-group > .btn.large:last-child,
+.btn-group > .large.dropdown-toggle {
+  -webkit-border-top-right-radius: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -moz-border-radius-bottomright: 6px;
+}
+
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active {
+  z-index: 2;
+}
+
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+
+.btn-group > .dropdown-toggle {
+  *padding-top: 4px;
+  padding-right: 8px;
+  *padding-bottom: 4px;
+  padding-left: 8px;
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-group > .btn-mini.dropdown-toggle {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.btn-group > .btn-small.dropdown-toggle {
+  *padding-top: 4px;
+  *padding-bottom: 4px;
+}
+
+.btn-group > .btn-large.dropdown-toggle {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.btn-group.open .dropdown-toggle {
+  background-image: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-group.open .btn.dropdown-toggle {
+  background-color: #e6e6e6;
+}
+
+.btn-group.open .btn-primary.dropdown-toggle {
+  background-color: #0055cc;
+}
+
+.btn-group.open .btn-warning.dropdown-toggle {
+  background-color: #f89406;
+}
+
+.btn-group.open .btn-danger.dropdown-toggle {
+  background-color: #bd362f;
+}
+
+.btn-group.open .btn-success.dropdown-toggle {
+  background-color: #51a351;
+}
+
+.btn-group.open .btn-info.dropdown-toggle {
+  background-color: #2f96b4;
+}
+
+.btn-group.open .btn-inverse.dropdown-toggle {
+  background-color: #222222;
+}
+
+.btn .caret {
+  margin-top: 7px;
+  margin-left: 0;
+}
+
+.btn:hover .caret,
+.open.btn-group .caret {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.btn-mini .caret {
+  margin-top: 5px;
+}
+
+.btn-small .caret {
+  margin-top: 6px;
+}
+
+.btn-large .caret {
+  margin-top: 6px;
+  border-top-width: 5px;
+  border-right-width: 5px;
+  border-left-width: 5px;
+}
+
+.dropup .btn-large .caret {
+  border-top: 0;
+  border-bottom: 5px solid #000000;
+}
+
+.btn-primary .caret,
+.btn-warning .caret,
+.btn-danger .caret,
+.btn-info .caret,
+.btn-success .caret,
+.btn-inverse .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+/*
+
+
+
+
+
+
+
+
+
+
+ */
+
+/*
+ * General Layout
+ *---------------------------------------------------------------------------*/
+
+/* Disable text sizing in webkit (ipad/iphone etc -- should apply to mercury only) */
+
+html {
+  -webkit-text-size-adjust: none;
+}
+
+html, body {
+  -webkit-transition: -webkit-transform 3s;
+  margin: 0;
+  padding: 0;
+}
+
+.mercury-iframe {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+}
+.mercury-focusable {
+  position: absolute;
+  opacity: 0;
+}
+
+.filter {
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Bootsrap Overrides (overrides what's in bootstrap-ish)
+ *---------------------------------------------------------------------------*/
+
+.btn-group > .btn {
+  margin-right: 0;
+}
+form {
+  margin-bottom: 0;
+}
+fieldset {
+  margin-bottom: 15px;
+  background: #F6F6F6;
+  border: 1px solid #CCC;
+  border-radius: 7px;
+  padding: 10px;
+}
+legend {
+  display: block;
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 0;
+  font-weight: bold;
+  width: auto;
+  padding: 0;
+  font-size: 12px;
+  color: #333333;
+  border: 0;
+  line-height: 1px;
+}
+select {
+  width: auto;
+}
+.form-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+.control-group {
+  margin-bottom: 0;
+}
+legend + .control-group {
+  margin-top: 0;
+  -webkit-margin-top-collapse: separate;
+}
+.form-horizontal .control-group {
+  margin-bottom: 0;
+}
+.form-horizontal .controls {
+  margin-left: 150px;
+}
+.form-horizontal hr {
+  margin-left: 150px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+label input[type=radio] {
+  margin-right: 5px;
+}
+.form-actions {
+  padding-bottom: 0;
+}
+/*
+ * Dialogs
+ *----------------------------------------------------------------------------*/
+
+.mercury-dialog,
+.mercury-select,
+.mercury-palette {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  position: absolute;
+  z-index: 10012;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #727272;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  margin-top: -1px;
+  background-color: #FFFFFF;
+	box-shadow: 1px 1px 4px rgba(0,0,0, .5);
+	-moz-box-shadow: 1px 1px 4px rgba(0,0,0, .5);
+  font-family: Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 8.5pt;
+  color: #333;
+}
+.mercury-dialog.loading,
+.mercury-select.loading,
+.mercury-palette.loading {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*
+ * Selects
+ *----------------------------------------------------------------------------*/
+.mercury-select {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  overflow: auto;
+  background-color: #FFF;
+}
+/*
+ * Panels
+ *----------------------------------------------------------------------------*/
+.mercury-panel {
+  position: fixed;
+  z-index: 10011;
+  background-color: #f5f5f5;
+  opacity: .9;
+  box-shadow: 1px 1px 4px rgba(0,0,0, .5);
+  -moz-box-shadow: 1px 1px 4px rgba(0,0,0, .5);
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  color: #333;
+  font-family: Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 9.5pt;
+  max-width: 500px;
+}
+.mercury-panel.loading {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mercury-panel h1,
+.mercury-panel h3 {
+  font-size: 9pt;
+  padding: 10px 15px 8px;
+  margin: 0;
+  background: #333;
+  white-space: nowrap;
+  line-height: normal;
+}
+.mercury-panel h1 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: #f5f5f5;
+  font-size: 10pt;
+  text-shadow: 1px 1px 2px rgba(0,0,0, .9);
+  border-bottom: 1px solid #222;
+  height: 15px;
+  cursor: move;
+}
+.mercury-panel h1 span {
+  display: block;
+  width: 100%;
+}
+.mercury-panel h1 a.mercury-panel-close {
+  position: absolute;
+  right: -5px;
+  top: -4px;
+  width: 42px;
+  height: 42px;
+  cursor: default;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mercury-panel h4,
+.mercury-panel h5,
+.mercury-panel h6 {
+  margin: 0;
+}
+.mercury-panel .mercury-panel-pane {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+.mercury-panel .mercury-panel-pane h3 {
+  margin: 10px -15px;
+  font-size: 9.5pt;
+  font-weight: normal;
+  padding: 8px 14px;
+}
+/*
+ * Specific Dialogs (eg. color palettes, selects)
+ *----------------------------------------------------------------------------*/
+.mercury-color-picker {
+  width: 170px;
+  height: auto;
+  padding: 1px;
+  cursor: default;
+}
+.mercury-color-picker .picker {
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 1px;
+}
+.mercury-color-picker .picker:hover {
+  outline: 1px solid #333;
+}
+.mercury-color-picker .last-picked {
+  position: relative;
+  top: 1px;
+  width: 166px;
+  border: 1px solid #333;
+  border-radius: 2px;
+  margin: 1px 1px 2px 1px;
+  -moz-border-radius: 2px;
+  clear: left;
+  text-align: center;
+}
+.mercury-select-options {
+  margin: 10px 0;
+  white-space: nowrap;
+}
+.mercury-select-options * {
+  cursor: default;
+  padding: 0 10px;
+  margin: 0;
+  line-height: 1.6em;
+}
+.mercury-select-options div:hover,
+.mercury-select-options h1:hover,
+.mercury-select-options h2:hover,
+.mercury-select-options h3:hover,
+.mercury-select-options h4:hover,
+.mercury-select-options h5:hover,
+.mercury-select-options h6:hover,
+.mercury-select-options pre:hover {
+  background-color: #E2E1E2 !important;
+  color: #000 !important;
+}
+.mercury-select-options div[data-tag=pre] {
+  font-family: monospace;
+}
+/*
+ * Specific Panels (eg. snippets, notes, todos)
+ *----------------------------------------------------------------------------*/
+.mercury-snippet-panel {
+  width: 300px;
+}
+.mercury-snippet-panel input.filter {
+  outline: none;
+  font-size: 1em;
+  border-radius: 30px;
+  moz-border-radius: 30px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding-left: 20px;
+  background-color: #FFF;
+  background-repeat: no-repeat;
+}
+.mercury-snippet-panel ul {
+  font-size: .9em;
+  padding: 10px 0 0 0;
+  margin: 0;
+  list-style-type: none;
+}
+.mercury-snippet-panel ul li {
+  clear: both;
+  padding-top: 20px;
+}
+.mercury-snippet-panel ul li img {
+  float: left;
+  cursor: move;
+}
+.mercury-snippet-panel ul li h4,
+.mercury-snippet-panel ul li .description {
+  float: right;
+  width: 245px;
+}
+.mercury-snippet-panel ul li h4 {
+  margin-bottom: 5px;
+}
+/* history / notes */
+.mercury-history-panel,
+.mercury-notes-panel {
+  width: 250px;
+}
+/*
+ * Lightview
+ *----------------------------------------------------------------------------*/
+
+.mercury-lightview-overlay {
+  position: fixed;
+  z-index: 10030;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: none;
+  background: rgba(255, 255, 255, .8);
+}
+.mercury-lightview {
+  position: fixed;
+  z-index: 10040;
+  top: 20px;
+  background: rgba(239, 239, 239, .7);
+  opacity: 0;
+  overflow: hidden;
+  display: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, .9);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .9);
+  font: normal normal normal 12px/normal Helvetica, Tahoma, Arial, sans-serif;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #000;
+}
+.mercury-lightview.loading {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mercury-lightview .mercury-lightview-content {
+  padding: 10px 20px 20px;
+}
+.mercury-lightview h1.mercury-lightview-title {
+  margin: 0;
+  padding: 10px 20px 8px;
+  border-bottom: 1px solid #CCC;
+  color: #000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-size: 10pt;
+  white-space: nowrap;
+  text-shadow: 1px 1px 2px rgba(100, 100, 100, .5);
+}
+.mercury-lightview h1.mercury-lightview-title a.mercury-lightview-close {
+  float: right;
+  width: 32px;
+  height: 42px;
+  margin: -14px -20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mercury-lightview .mercury-display-pane-container {
+  overflow: auto;
+  margin: -10px -20px 0;
+  padding: 20px 20px 10px;
+}
+.mercury-lightview .mercury-display-pane-container .mercury-display-pane {
+  float: left;
+}
+.mercury-lightview .mercury-display-controls {
+  padding: 15px 0 0;
+  border-top: 1px solid #333;
+  text-align: right;
+}
+/*
+ * Specific Lightviews
+ *----------------------------------------------------------------------------*/
+/* about mercury */
+#mercury_about {
+  width: 300px;
+  min-height: 100px;
+  font-size: 1.1em;
+  background-repeat: no-repeat;
+}
+#mercury_about ul {
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 118px 0 0 0;
+  width: 120px;
+  text-align: center;
+}
+#mercury_about p {
+  margin: 0;
+  float: right;
+  width: 175px;
+}
+#mercury_about a {
+  color: #09F;
+}
+#mercury_about a:hover {
+  color: #333;
+}
+/*
+ * Modal
+ *----------------------------------------------------------------------------*/
+
+.mercury-modal-overlay {
+  position: fixed;
+  z-index: 10040;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: none;
+  background: rgba(255, 255, 255, .8);
+}
+.mercury-modal {
+  position: fixed;
+  z-index: 10050;
+  top: 0;
+  width: 500px;
+  overflow: hidden;
+  padding: 0 0 10px;
+  background: #EFEFEF;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, .9);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .9);
+  font: normal normal normal 12px/normal Helvetica, Tahoma, Arial, sans-serif;
+}
+.mercury-modal.loading .mercury-modal-content-container {
+  background-color: #EFEFEF;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mercury-modal h1.mercury-modal-title {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 2px 10px 0 10px;
+  background: #DDD;
+  border-bottom: 1px solid #CCC;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 23px;
+  overflow: hidden;
+}
+.mercury-modal h1.mercury-modal-title:after {
+  content: '\00a0';
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+}
+.mercury-modal h1.mercury-modal-title span {
+  float: left;
+  color: #000;
+  text-shadow: #EEE 1px 1px 0;
+}
+.mercury-modal h1.mercury-modal-title a {
+  display: block;
+  float: right;
+  font-size: 10px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 4px;
+  line-height: 23px;
+}
+.mercury-modal h1.mercury-modal-title a:hover {
+  color: #333;
+}
+.mercury-modal .mercury-modal-content-container {
+  float: left;
+  width: 100%;
+}
+.mercury-modal .mercury-modal-content {
+  position: relative;
+  overflow: auto;
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 20px 20px 10px;
+  font-family: Helvetica, Tahoma, Arial, sans-serif;
+  color: #000;
+}
+.mercury-modal .mercury-modal-content:after {
+  display: block;
+  clear: both;
+  content: '\00a0';
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+}
+.mercury-modal .mercury-display-pane-container {
+  overflow: auto;
+  margin: -20px -20px 0;
+  padding: 20px 20px 0;
+}
+.mercury-modal .mercury-display-pane-container .mercury-display-pane {
+  float: left;
+}
+.mercury-modal .mercury-display-controls {
+  padding-right: 0;
+  border-top: 1px solid #CCC;
+  text-align: right;
+}
+/*
+ * Specific Modals (eg. htmlEditor)
+ *----------------------------------------------------------------------------*/
+/* html editor */
+#mercury_html_editor textarea {
+  resize: none;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0 0 -2px 0;
+  border: 2px solid #CCC;
+  width: 100%;
+}
+/* character */
+#mercury_character .character {
+  float: left;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  background: #FFF;
+  margin: 0 2px 2px 0;
+  text-align: center;
+  font-size: 11pt;
+  line-height: 23px;
+  cursor: pointer;
+}
+#mercury_character .character:hover {
+  position: relative;
+  margin: -11px -5px 1px -5px;
+  width: 32px;
+  height: 32px;
+  font-size: 19pt;
+  line-height: 35px;
+  background: #DDD;
+}
+/* table */
+#mercury_table #table_display {
+  float: left;
+  margin-right: 13px;
+  overflow: auto;
+  padding: 0;
+}
+#mercury_table #table_display .controls {
+  margin: 0;
+  width: 225px;
+  height: 259px;
+  padding: 10px;
+}
+#mercury_table #table_display table {
+  width: 100%;
+  height: 100%;
+}
+#mercury_table #table_display .selected {
+  background: #09F;
+}
+/*
+ * Statusbar
+ *----------------------------------------------------------------------------*/
+
+.mercury-statusbar {
+  position: fixed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  z-index: 10020;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 23px;
+  cursor: default;
+  padding: 0 10px;
+  background: #E2E1E2;
+  border-top: 1px solid #727272;
+  font-family: Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 8.5pt;
+  line-height: 23px;
+  color: #222;
+}
+.mercury-statusbar .mercury-statusbar-about {
+  display: block;
+  float: right;
+  color: #333;
+  text-shadow: #EEE 0 1px 0;
+  text-decoration: none;
+}
+/*
+ * Toolbar
+ *----------------------------------------------------------------------------*/
+
+.mercury-toolbar-container {
+  user-select: none;
+  position: fixed;
+  z-index: 10010;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #E2E1E2;
+}
+.mercury-toolbar {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background: #DDD;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(198,198,198)), color-stop(1, rgb(226,225,226)));
+  background-image: -moz-linear-gradient(center bottom, rgb(198,198,198) 0%, rgb(226,225,226) 100%);
+  border-bottom: 1px solid #727272;
+  cursor: default;
+}
+.mercury-toolbar-button-container {
+  float: left;
+}
+.mercury-toolbar-expander {
+  position: absolute;
+  display: none;
+  right: 0;
+  border-left: 1px solid #727272;
+}
+.mercury-button,
+.mercury-button-group,
+.mercury-separator,
+.mercury-line-separator {
+  display: block;
+  float: left;
+}
+.mercury-separator,
+.mercury-line-separator {
+  width: 1px;
+  border: 0;
+  margin: 0;
+}
+.mercury-line-separator {
+  width: 1px;
+  background: #727272;
+}
+.mercury-button {
+  cursor: pointer;
+}
+.mercury-button em {
+  display: block;
+  font-style: normal;
+}
+.mercury-expander {
+  padding: 5px 0;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+.mercury-expander .mercury-expander-button {
+  cursor: default;
+  white-space: nowrap;
+  padding: 0 20px 0 10px;
+}
+.mercury-expander .mercury-expander-button:hover {
+  background: #CCC;
+}
+.mercury-expander .mercury-expander-button em {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.mercury-expander .mercury-expander-button span {
+  display: inline-block;
+  line-height: 20px;
+}
+.disabled .mercury-button,
+.mercury-button.disabled {
+  opacity: 0.33;
+}
+/*
+ * Toolbar: Primary Toolbar
+ *----------------------------------------------------------------------------*/
+.mercury-primary-toolbar {
+  position: relative;
+  height: 58px;
+  overflow: hidden;
+  text-shadow: #EEE 0 1px 0;
+}
+.mercury-primary-toolbar .mercury-button {
+  display: inline-block;
+  height: 58px;
+  margin-bottom: 20px;
+  min-width: 55px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  font-family: Helvetica, Tahoma, Arial, sans-serif;
+}
+.mercury-primary-toolbar .mercury-button.pressed {
+  background-repeat: no-repeat;
+}
+.mercury-primary-toolbar .mercury-button em {
+  margin: 0 -5px;
+  height: 15px;
+  padding-top: 41px;
+  background-repeat: no-repeat;
+  background-position: 50% 7px;
+  font-size: 8.5pt;
+  line-height: 15px;
+  color: #222;
+}
+.mercury-primary-toolbar .mercury-button.active em {
+  background-position: 51% 8px;
+}
+
+.mercury-primary-toolbar .mercury-separator,
+.mercury-primary-toolbar .mercury-line-separator {
+  display: inline-block;
+  width: 1px;
+  height: 50px;
+  margin: 5px 20px 28px;
+}
+.mercury-primary-toolbar .mercury-toolbar-button-container {
+  white-space: nowrap;
+  padding-right: 10px;
+}
+.mercury-primary-toolbar .mercury-toolbar-expander {
+  width: 12px;
+  height: 58px;
+  background-color: rgba(0, 0, 0, .2);
+  background-repeat: no-repeat;
+}
+/*
+ * Toolbar: Editable Region Toolbar
+ *----------------------------------------------------------------------------*/
+.mercury-editable-toolbar {
+  padding: 3px 13px 1px 10px;
+  border-top: 1px solid #E2E1E2;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(198,198,198)), color-stop(1, rgb(210,210,209)));
+  background-image: -moz-linear-gradient(center bottom, rgb(198,198,198) 0%, rgb(210,210,209) 100%);
+}
+.mercury-editable-toolbar:after {
+  content: '\00a0';
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+}
+.mercury-editable-toolbar .mercury-separator,
+.mercury-editable-toolbar .mercury-line-separator {
+  height: 18px;
+  padding: 0;
+  margin: 0 7px 2px;
+}
+.mercury-editable-toolbar .mercury-separator {
+  margin: 0 3px 2px;
+}
+.mercury-editable-toolbar .mercury-button-group {
+  white-space: nowrap;
+}
+.mercury-editable-toolbar .mercury-button-group .mercury-button:first-child {
+  width: 23px;
+}
+.mercury-editable-toolbar .mercury-button {
+  width: 22px;
+  height: 18px;
+  margin: 0 0 2px;
+}
+.mercury-editable-toolbar .mercury-button em {
+  display: none;
+}
+.mercury-editable-toolbar .mercury-button-palette {
+  width: 23px;
+  background-position: 0 -36px;
+}
+.mercury-editable-toolbar .mercury-button-select {
+  width: auto !important;
+  overflow: hidden;
+  padding-left: 6px;
+  background-position: -24px -36px;
+}
+.mercury-editable-toolbar .mercury-button-select em {
+  display: block;
+  padding-right: 15px;
+  background-position: right -36px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-style: normal;
+  font-family: Helvetica, Tahoma, Arial, sans-serif;
+  font-size: 8.5pt;
+  line-height: 19px;
+  color: #222;
+}
+/* default buttons */
+.mercury-editable-toolbar .mercury-bold-button                       { background-position: 0 0 }
+.mercury-editable-toolbar .mercury-bold-button.active                { background-position: 0 -18px }
+.mercury-editable-toolbar .mercury-italic-button                     { background-position: -23px 0 }
+.mercury-editable-toolbar .mercury-italic-button.active              { background-position: -23px -18px }
+.mercury-editable-toolbar .mercury-overline-button                   { background-position: -45px 0 }
+.mercury-editable-toolbar .mercury-overline-button.active            { background-position: -45px -18px }
+.mercury-editable-toolbar .mercury-strikethrough-button              { background-position: -67px 0 }
+.mercury-editable-toolbar .mercury-strikethrough-button.active       { background-position: -67px -18px }
+.mercury-editable-toolbar .mercury-underline-button                  { background-position: -89px 0 }
+.mercury-editable-toolbar .mercury-underline-button.active           { background-position: -89px -18px }
+.mercury-editable-toolbar .mercury-subscript-button                  { background-position: -112px 0 }
+.mercury-editable-toolbar .mercury-subscript-button.active           { background-position: -112px -18px }
+.mercury-editable-toolbar .mercury-superscript-button                { background-position: -135px 0 }
+.mercury-editable-toolbar .mercury-superscript-button.active         { background-position: -135px -18px }
+.mercury-editable-toolbar .mercury-justifyLeft-button                { background-position: -158px 0 }
+.mercury-editable-toolbar .mercury-justifyLeft-button.active         { background-position: -158px -18px }
+.mercury-editable-toolbar .mercury-justifyCenter-button              { background-position: -181px 0 }
+.mercury-editable-toolbar .mercury-justifyCenter-button.active       { background-position: -181px -18px }
+.mercury-editable-toolbar .mercury-justifyRight-button               { background-position: -203px 0 }
+.mercury-editable-toolbar .mercury-justifyRight-button.active        { background-position: -203px -18px }
+.mercury-editable-toolbar .mercury-justifyFull-button                { background-position: -225px 0 }
+.mercury-editable-toolbar .mercury-justifyFull-button.active         { background-position: -225px -18px }
+.mercury-editable-toolbar .mercury-insertUnorderedList-button        { background-position: -248px 0 }
+.mercury-editable-toolbar .mercury-insertUnorderedList-button.active { background-position: -248px -18px }
+.mercury-editable-toolbar .mercury-insertOrderedList-button          { background-position: -271px 0 }
+.mercury-editable-toolbar .mercury-insertOrderedList-button.active   { background-position: -271px -18px }
+.mercury-editable-toolbar .mercury-outdent-button                    { background-position: -294px 0 }
+.mercury-editable-toolbar .mercury-outdent-button.active             { background-position: -294px -18px }
+.mercury-editable-toolbar .mercury-indent-button                     { background-position: -317px 0 }
+.mercury-editable-toolbar .mercury-indent-button.active              { background-position: -317px -18px }
+.mercury-editable-toolbar .mercury-insertRowBefore-button            { background-position: -340px 0 }
+.mercury-editable-toolbar .mercury-insertRowBefore-button.active     { background-position: -340px -18px }
+.mercury-editable-toolbar .mercury-insertRowAfter-button             { background-position: -363px 0 }
+.mercury-editable-toolbar .mercury-insertRowAfter-button.active      { background-position: -363px -18px }
+.mercury-editable-toolbar .mercury-deleteRow-button                  { background-position: -385px 0 }
+.mercury-editable-toolbar .mercury-deleteRow-button.active           { background-position: -385px -18px }
+.mercury-editable-toolbar .mercury-insertColumnBefore-button         { background-position: -407px 0 }
+.mercury-editable-toolbar .mercury-insertColumnBefore-button.active  { background-position: -407px -18px }
+.mercury-editable-toolbar .mercury-insertColumnAfter-button          { background-position: -429px 0 }
+.mercury-editable-toolbar .mercury-insertColumnAfter-button.active   { background-position: -429px -18px }
+.mercury-editable-toolbar .mercury-deleteColumn-button               { background-position: -451px 0 }
+.mercury-editable-toolbar .mercury-deleteColumn-button.active        { background-position: -451px -18px }
+.mercury-editable-toolbar .mercury-increaseColspan-button            { background-position: -474px 0; width: 23px }
+.mercury-editable-toolbar .mercury-increaseColspan-button.active     { background-position: -474px -18px }
+.mercury-editable-toolbar .mercury-decreaseColspan-button            { background-position: -497px 0 }
+.mercury-editable-toolbar .mercury-decreaseColspan-button.active     { background-position: -497px -18px }
+.mercury-editable-toolbar .mercury-increaseRowspan-button            { background-position: -520px 0 }
+.mercury-editable-toolbar .mercury-increaseRowspan-button.active     { background-position: -520px -18px }
+.mercury-editable-toolbar .mercury-decreaseRowspan-button            { background-position: -542px 0 }
+.mercury-editable-toolbar .mercury-decreaseRowspan-button.active     { background-position: -542px -18px }
+.mercury-editable-toolbar .mercury-horizontalRule-button             { background-position: -564px 0 }
+.mercury-editable-toolbar .mercury-horizontalRule-button.active      { background-position: -564px -18px }
+.mercury-editable-toolbar .mercury-removeFormatting-button           { background-position: -588px 0 }
+.mercury-editable-toolbar .mercury-removeFormatting-button.active    { background-position: -588px -18px }
+.mercury-editable-toolbar .mercury-htmlEditor-button                 { background-position: -612px 0 }
+.mercury-editable-toolbar .mercury-htmlEditor-button.active          { background-position: -612px -18px }
+/*
+ * Toolbar: Snippets Region Toolbar
+ *----------------------------------------------------------------------------*/
+.mercury-snippet-toolbar {
+  position: absolute;
+  top: 100px;
+  left: 15px;
+  border: 1px solid #727272;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  padding: 3px 7px 1px 7px;
+}
+.mercury-snippet-toolbar:after {
+  content: '\00a0';
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+}
+.mercury-snippet-toolbar .mercury-separator,
+.mercury-snippet-toolbar .mercury-line-separator {
+  height: 18px;
+  padding: 0;
+  margin: 0 7px 2px;
+}
+.mercury-snippet-toolbar .mercury-separator {
+  margin: 0 3px 2px;
+}
+.mercury-snippet-toolbar .mercury-button-group {
+  white-space: nowrap;
+}
+.mercury-snippet-toolbar .mercury-button-group .mercury-button:first-child {
+  width: 23px;
+}
+.mercury-snippet-toolbar .mercury-button {
+  width: 23px;
+  height: 18px;
+  margin: 0 0 2px;
+}
+.mercury-snippet-toolbar .mercury-button em {
+  display: none;
+}
+/* default buttons */
+.mercury-snippet-toolbar .mercury-editSnippet-button                { background-position: -24px 0 }
+.mercury-snippet-toolbar .mercury-editSnippet-button.active         { background-position: -24px -18px }
+.mercury-snippet-toolbar .mercury-removeSnippet-button              { background-position: -48px 0 }
+.mercury-snippet-toolbar .mercury-removeSnippet-button.active       { background-position: -48px -18px }
+.mercury-snippet-toolbar .mercury-dragsnippet-button                { background-position: -72px 0 }
+.mercury-snippet-toolbar .mercury-dragsnippet-button.active         { background-position: -72px -18px }
+/*
+ * Tooltip
+ *----------------------------------------------------------------------------*/
+
+.mercury-tooltip {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  max-width: 400px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, .70);
+  padding: 2px 5px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  font: normal normal normal 11px/normal Helvetica, Tahoma, Arial, sans-serif;
+  color: #EEE;
+  word-wrap: break-word;
+}
+.mercury-tooltip a {
+  color: #EEE;
+  text-decoration: none;
+}
+.mercury-tooltip a:hover {
+  color: #FFF;
+}
+/*
+ * Uploader
+ *----------------------------------------------------------------------------*/
+
+[draggable=true] {
+  -khtml-user-drag: element;
+}
+.mercury-uploader-overlay {
+  position: absolute;
+  z-index: 10040;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .95;
+  background: rgba(255, 255, 255, .8);
+}
+.mercury-uploader {
+  position: absolute;
+  z-index: 10050;
+  top: 300px;
+  left: 400px;
+  width: 500px;
+  height: 150px;
+  overflow: hidden;
+  padding: 15px;
+  background: rgba(239, 239, 239, .70);
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, .9);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .9);
+  font: normal normal normal 12px/normal Helvetica, Tahoma, Arial, sans-serif;
+  color: #000;
+}
+.mercury-uploader .mercury-uploader-preview {
+  float: left;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.mercury-uploader .mercury-uploader-preview b {
+  display: table-cell;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  vertical-align: middle;
+}
+.mercury-uploader .mercury-uploader-preview img {
+  margin: 5px;
+  max-width: 140px;
+  max-height: 140px;
+}
+.mercury-uploader .mercury-uploader-details {
+  width: 333px;
+  overflow: hidden;
+  float: left;
+  padding-left: 15px;
+}
+.mercury-uploader .mercury-uploader-details span {
+  color: #F00;
+}
+.mercury-uploader .mercury-uploader-progress {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 333px;
+}
+.mercury-uploader .mercury-uploader-progress div.mercury-uploader-indicator {
+  width: 100%;
+  height: 30px;
+  margin: 5px 0 0;
+  position: relative;
+  border-radius: 35px;
+  -moz-border-radius: 35px;
+  background-color: #BABABA;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #C7C7C7), color-stop(1, #B0B0B0));
+  background: -moz-linear-gradient(#B0B0B0 0%, #C7C7C7 100%);
+  -webkit-box-shadow: inset 0 1px 2px 0 rgba(0,0,0, 0.5), 0 1px 0 0 rgba(255,255,255, 0.3);
+  -moz-box-shadow: inset 0 1px 2px 0 rgba(0,0,0, 0.5), 0 1px 0 0 rgba(255,255,255, 0.3);
+  box-shadow: inset 0 1px 2px 0 rgba(0,0,0, 0.5), 0 1px 0 0 rgba(255,255,255, 0.3);
+}
+.mercury-uploader .mercury-uploader-progress div.mercury-uploader-indicator div {
+  min-width: 28px;
+  position: relative;
+  overflow: hidden;
+  height: 28px;
+  border-radius: 35px;
+  width: 0;
+  -moz-border-radius: 35px;
+  -webkit-animation: animate-stripes 2s linear infinite;
+  -webkit-background-size: 44px 44px;
+  background: -webkit-gradient(linear, 0 0, 44 44, color-stop(0.00, rgba(255,255,255, 0.17)), color-stop(0.25, rgba(255,255,255, 0.17)), color-stop(0.26, rgba(255,255,255, 0)), color-stop(0.50, rgba(255,255,255, 0)), color-stop(0.51, rgba(255,255,255, 0.17)), color-stop(0.75, rgba(255,255,255, 0.17)), color-stop(0.76, rgba(255,255,255, 0)), color-stop(1.00, rgba(255,255,255, 0))),
+              -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(255,255,255, 0.1)), color-stop(1, rgba(255,255,255, 0.37)));
+  background: -moz-repeating-linear-gradient(top left -30deg, rgba(255,255,255, 0.17), rgba(255,255,255, 0.17) 15px, rgba(255,255,255, 0) 15px, rgba(255,255,255, 0) 30px),
+              -moz-linear-gradient(rgba(255,255,255, 0.1) 0%, rgba(255,255,255, 0.37) 100%);
+  background-color: #09F;
+  border: 1px solid #0083DA;
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.4), inset 0 -1px 1px rgba(0,0,0, 0.2);
+  -moz-box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.4), inset 0 -1px 1px rgba(0,0,0, 0.2);
+}
+.mercury-uploader .mercury-uploader-progress div.mercury-uploader-indicator div b {
+  display: none;
+  position: absolute;
+  right: 0;
+  line-height: 28px;
+  padding-right: 12px;
+  color: rgba(0, 0, 0, .6);
+  text-shadow: rgba(255, 255, 255, 0.45) 0 1px 0px;
+  white-space: nowrap;
+}
+/*
+ * mercury.css
+ *----------------------------------------------------------------------------*/
+
+form fieldset.buttons .commit input {
+  background-image: url(/assets/mercury/button-4b456e49e6c017d53be594d467c4508368dbe32ea0fd52a4b0718d5dc1862d51.png);
+}
+/*
+ * dialog.css
+ *----------------------------------------------------------------------------*/
+.mercury-dialog.loading,
+.mercury-select.loading,
+.mercury-palette.loading {
+  background-image: url(/assets/mercury/loading-light-7308a23ed7c1266d64dddd6a1e88fcc39860018f2c65e7044e1c043de09bdbc9.gif);
+}
+.mercury-panel.loading {
+  background-image: url(/assets/mercury/loading-dark-5d40c6b1b701dea50e025059f2c4631b608e78d43aa5d07f61d47ce4c19916cd.gif);
+}
+.mercury-panel h1 a.mercury-panel-close {
+  background-image: url(/assets/mercury/close-17e1977137c8d19334573c7add2e7ab505ef55e08b5c9e6e8714bd8ad75735a9.png);
+}
+.mercury-snippet-panel input.filter {
+  background-image: url(/assets/mercury/search-icon-f6051996314403ca696b848a7b399f4ce82add4cae2295ca76d057e810bf00c3.png);
+  background-position: 4px center;
+}
+/*
+ * lightview.css
+ *----------------------------------------------------------------------------*/
+.mercury-lightview.loading {
+  background-image: url(/assets/mercury/loading-dark-5d40c6b1b701dea50e025059f2c4631b608e78d43aa5d07f61d47ce4c19916cd.gif);
+}
+.mercury-lightview h1.mercury-lightview-title a.mercury-lightview-close {
+  background-image: url(/assets/mercury/close-17e1977137c8d19334573c7add2e7ab505ef55e08b5c9e6e8714bd8ad75735a9.png);
+}
+#mercury_about {
+  background-image: url(/assets/mercury/temp-logo-473e58648e2b483c9a9362b218d07c5970d0c71e4976de070f613f78b36776f8.png);
+  background-position: 0 0;
+}
+/*
+ * modal.css
+ *----------------------------------------------------------------------------*/
+.mercury-modal.loading .mercury-modal-content-container {
+  background-image: url(/assets/mercury/loading-light-7308a23ed7c1266d64dddd6a1e88fcc39860018f2c65e7044e1c043de09bdbc9.gif);
+}
+/*
+ * toolbar.css
+ *----------------------------------------------------------------------------*/
+.mercury-primary-toolbar .mercury-button.pressed {
+  background-image: url(/assets/mercury/toolbar/primary/_pressed-187fbd12bd2652e8ae288deceac6615a9ca0d39e5772245f0a2bae10a41490be.png);
+  background-position: top center;
+}
+.mercury-primary-toolbar .mercury-toolbar-expander {
+  background-image: url(/assets/mercury/toolbar/primary/_expander-3fc887027da136d0d0e6fcbcddb53c712482e0a49ea12a6cf164f562ed6b8af9.png);
+  background-position: center 90%;
+}
+.mercury-primary-toolbar .mercury-save-button em,
+.mercury-expander-button[data-button=save] em             { background-image: url(/assets/mercury/toolbar/primary/save-ab76f721baebde3a0bcc51aefd58e8b839c91013605ee267674fa5fa215d38a1.png) }
+.mercury-primary-toolbar .mercury-preview-button em,
+.mercury-expander-button[data-button=preview] em          { background-image: url(/assets/mercury/toolbar/primary/preview-a29118005d3cc60fcd6013a664f9efc666d647ffec81213c2b109c2b823b0f2f.png) }
+.mercury-primary-toolbar .mercury-undo-button em,
+.mercury-expander-button[data-button=undo] em             { background-image: url(/assets/mercury/toolbar/primary/undo-760e7a69e732acd6d45c4079c0889f8e730f83d1ed98d3f019fc91dba6f0b742.png) }
+.mercury-primary-toolbar .mercury-redo-button em,
+.mercury-expander-button[data-button=redo] em             { background-image: url(/assets/mercury/toolbar/primary/redo-a9e3a7465503952fcfc550b20d93cd217a03fc043404ff251da66d12a804faef.png) }
+.mercury-primary-toolbar .mercury-insertLink-button em,
+.mercury-expander-button[data-button=insertLink] em       { background-image: url(/assets/mercury/toolbar/primary/insertlink-38b13cbc2c9a2327f19c4fc1216de19e218045ba61e023abe85c5f866b4f859f.png) }
+.mercury-primary-toolbar .mercury-insertMedia-button em,
+.mercury-expander-button[data-button=insertMedia] em      { background-image: url(/assets/mercury/toolbar/primary/insertmedia-f478374254566f5a80d341b94e50500119b7087d7154a3638e68adf4defdecde.png) }
+.mercury-primary-toolbar .mercury-insertTable-button em,
+.mercury-expander-button[data-button=insertTable] em      { background-image: url(/assets/mercury/toolbar/primary/inserttable-564ff7f3509a46cf16516dcfbc6d635d8ef5eec8f31f1e5c436613b5bd867c19.png) }
+.mercury-primary-toolbar .mercury-insertCharacter-button em,
+.mercury-expander-button[data-button=insertCharacter] em  { background-image: url(/assets/mercury/toolbar/primary/insertcharacter-3f239652c47093d4108c0a41429a102b69e72629ee14348dbed1f279ed20f8d7.png) }
+.mercury-primary-toolbar .mercury-snippetPanel-button em,
+.mercury-expander-button[data-button=snippetPanel] em     { background-image: url(/assets/mercury/toolbar/primary/snippetpanel-e83ad0c761a6626a24054468fb6ff518a23f53a85388efe696572de99fc5eb67.png) }
+.mercury-primary-toolbar .mercury-historyPanel-button em,
+.mercury-expander-button[data-button=historyPanel] em     { background-image: url(/assets/mercury/toolbar/primary/historypanel-50b4715262c6310d015f8bf66edbd1157deb2bbfcbb962ff29435e9fe155053f.png) }
+.mercury-primary-toolbar .mercury-notesPanel-button em,
+.mercury-expander-button[data-button=notesPanel] em       { background-image: url(/assets/mercury/toolbar/primary/notespanel-3cf7e355711aebf12f5bc7605701ff67935401b022169ed76a34db1da0eb9973.png) }
+.mercury-primary-toolbar .mercury-userPanel-button em,
+.mercury-expander-button[data-button=userPanel] em        { background-image: url(/assets/mercury/toolbar/primary/user-2c887f981109f6e7edb270fcd8df988af126d74d2d9f27c3d4a05df8944dc5de.png) }
+.mercury-primary-toolbar .mercury-toolsPanel-button em,
+.mercury-expander-button[data-button=toolsPanel] em       { background-image: url(/assets/mercury/toolbar/primary/tools-9a187661ce4f231b65b560ab097efcd70d059aa19d0cad93635089c62deef033.png) }
+.mercury-editable-toolbar .mercury-button {
+  background-image: url(/assets/mercury/toolbar/editable/buttons-470385be442a25b46beefc15ac2a1eafacdc9633fa5cbefbccf99d762ec38f5d.png);
+}
+.mercury-editable-toolbar .mercury-button em {
+  background-image: url(/assets/mercury/toolbar/editable/buttons-470385be442a25b46beefc15ac2a1eafacdc9633fa5cbefbccf99d762ec38f5d.png);
+}
+
+.mercury-snippet-toolbar .mercury-button {
+  background-image: url(/assets/mercury/toolbar/snippets/buttons-3600fb2a519a8c3c25742b2b5a442a058c9649ee229e1abaec535eeb7a9c0b3c.png);
+}
+.mercury-snippet-toolbar .mercury-button em {
+  background-image: url(/assets/mercury/toolbar/snippets/buttons-3600fb2a519a8c3c25742b2b5a442a058c9649ee229e1abaec535eeb7a9c0b3c.png);
+}
+/*!
+ * Mercury Editor is a Coffeescript and jQuery based WYSIWYG editor.  Documentation and other useful information can be
+ * found at https://github.com/jejacks0n/mercury
+ *
+ * This file is intended to provide a standard way to override the CSS that comes default with Mercury Editor, and
+ * includes an example button style, should you ever need to add new ones yourself.  Read the toolbar configuration in
+ * mercury.js for more on how to add your own buttons to the toolbar.
+ */
+
+/* Disable text sizing in webkit (ipad/iphone etc -- should apply to mercury only) */
+
+html { -webkit-text-size-adjust: none; }
+
+/* Button example */
+.mercury-primary-toolbar .mercury-inspector-button em,
+.mercury-expander-button[data-button="inspector"] em {
+  background-image: url(/assets/mercury/toolbar/primary/inspectorpanel.png);
+}
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+body .nav {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 6, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav {
+  top: 0;
+  position: fixed;
+  height: 200px;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  background-color: #292c2f;
+  transition: height  0.5s ease-out;
+  background: url("/assets/banner_bg-f9d3b5d2b160ec1b5f9e9e00a3c496387496ee886fb19810c75d9e183b1014cd.png");
+}
+
+/* line 18, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav .logo {
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+  transform: translateX(-50%);
+  transition: left 0.5s ease-out;
+  z-index: 100;
+}
+
+/* line 26, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav .logo img {
+  height: 100px;
+  transition: height 0.5s ease-out;
+}
+
+/* line 31, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav .logo a {
+  color: #ffffff;
+  font: normal 24pt 'Cookie', cursive;
+  transition: font-size 0.5s ease-out;
+  margin: 0;
+}
+
+/* line 38, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav .logo a span {
+  color: #FFF056;
+}
+
+/* line 42, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav .logo a * {
+  vertical-align: middle;
+}
+
+/* line 46, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav-top {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-36%);
+  width: 100%;
+  padding: 0px;
+  list-style-type: none;
+  margin-bottom: 0px;
+}
+
+/* line 56, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav-items {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 61, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav-top li {
+  display: inline;
+}
+
+/* line 65, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav-top li a {
+  color: white;
+  background: #4C0000;
+  margin-left: 10px;
+  opacity: 1;
+  display: inline-block;
+  font-size: 15pt;
+  font-style: normal;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+/* line 77, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav-top li a:hover {
+  opacity: 0.8;
+}
+
+/* line 81, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav-top a.active {
+  opacity: 0.8;
+}
+
+/* line 85, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+.nav .menu-icon,
+.nav .dunbar-group {
+  display: none;
+}
+
+@media screen and (max-width: 1900px) {
+  /* line 91, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top li a {
+    padding: 15px 15px;
+    font-size: 13pt;
+  }
+
+  /* line 96, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top {
+    transform: translate(-37%, -50%);
+  }
+}
+@media screen and (max-width: 1600px) {
+  /* line 102, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top li a {
+    padding: 15px 10px;
+    font-size: 12pt;
+  }
+
+  /* line 107, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav .logo img {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 1350px) {
+  /* line 113, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top li a {
+    padding: 15px 4px;
+    font-size: 11pt;
+  }
+
+  /* line 118, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top {
+    transform: translate(-40%, -50%);
+  }
+}
+@media screen and (max-width: 1250px) {
+  /* line 124, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top {
+    transform: translate(-37%, -50%);
+  }
+}
+@media screen and (max-width: 1100px) {
+  /* line 131, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav {
+    height: 100px !important;
+  }
+
+  /* line 135, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top {
+    transform: none;
+    left: 0;
+    top: 0;
+  }
+
+  /* line 141, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top li:first-child a {
+    margin-left: 40px;
+  }
+
+  /* line 145, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav .dunbar-group {
+    display: inline;
+  }
+
+  /* line 149, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-items {
+    display: inline;
+  }
+
+  /* line 153, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav .logo {
+    display: none;
+  }
+
+  /* line 157, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top li a {
+    font-size: 24pt;
+  }
+
+  /* line 161, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top li:not(:first-child) {
+    display: none;
+  }
+
+  /* line 163, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top.responsive li a {
+    font-size: 24pt;
+  }
+
+  /* line 167, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top.responsive li:not(:last-child) a {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  /* line 172, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  ul.nav-top.responsive {
+    position: relative;
+  }
+
+  /* line 173, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  ul.nav-top.responsive li.menu-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* line 178, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  ul.nav-top.responsive li {
+    float: none;
+    display: inline;
+  }
+
+  /* line 182, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  ul.nav-top.responsive li a {
+    display: block;
+    text-align: left;
+  }
+
+  /* line 187, /home/dennis/dunbarwebsite/app/assets/stylesheets/nav.scss */
+  .nav-top li.menu-icon {
+    float: right;
+    display: inline-block;
+    padding: 10 10px;
+    margin-right: 40px;
+    top: 15px;
+  }
+}
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/news.scss */
+.news-list .news-item {
+  margin-bottom: 20px;
+}
+
+/* line 5, /home/dennis/dunbarwebsite/app/assets/stylesheets/news.scss */
+.news .news-item > * {
+  display: block;
+}
+
+/* line 9, /home/dennis/dunbarwebsite/app/assets/stylesheets/news.scss */
+.news .news-item .news-content {
+  margin-top: 5px;
+  text-align: justify;
+}
+
+/* line 14, /home/dennis/dunbarwebsite/app/assets/stylesheets/news.scss */
+.news .news-item .news-date * {
+  font-size: 10pt;
+  margin-top: 5px;
+}
+
+/* line 19, /home/dennis/dunbarwebsite/app/assets/stylesheets/news.scss */
+#add-announcement {
+  font-size: 16px;
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 25, /home/dennis/dunbarwebsite/app/assets/stylesheets/news.scss */
+.new-news-form .entry, .edit-news-form .entry {
+  display: block;
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+  resize: none;
+}
+
+/* line 35, /home/dennis/dunbarwebsite/app/assets/stylesheets/news.scss */
+.new-news-form textarea.entry, .edit-news-form textarea.entry {
+  height: 200px;
+}
+
+/* line 39, /home/dennis/dunbarwebsite/app/assets/stylesheets/news.scss */
+#new-news-form-button, #edit-news-form-button {
+  width: 100%;
+  height: 30px;
+}
+
+/* line 44, /home/dennis/dunbarwebsite/app/assets/stylesheets/news.scss */
+.news .more-news {
+  margin: 0 auto;
+  display: table;
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 50, /home/dennis/dunbarwebsite/app/assets/stylesheets/news.scss */
+  .news .news-item .news-date * {
+    font-size: 16pt;
+  }
+}
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/pagination.scss */
+.apple_pagination {
+  margin: 0;
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default;
+}
+
+/* line 10, /home/dennis/dunbarwebsite/app/assets/stylesheets/pagination.scss */
+.apple_pagination a, .apple_pagination span {
+  padding: 0.2em 0.3em;
+}
+
+/* line 14, /home/dennis/dunbarwebsite/app/assets/stylesheets/pagination.scss */
+.apple_pagination .disabled {
+  color: #aaaaaa;
+}
+
+/* line 18, /home/dennis/dunbarwebsite/app/assets/stylesheets/pagination.scss */
+.apple_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background-color: #bebebe;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.5;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+}
+
+/* line 32, /home/dennis/dunbarwebsite/app/assets/stylesheets/pagination.scss */
+.apple_pagination a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 37, /home/dennis/dunbarwebsite/app/assets/stylesheets/pagination.scss */
+.apple_pagination a:hover, .apple_pagination a:focus {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 42, /home/dennis/dunbarwebsite/app/assets/stylesheets/pagination.scss */
+  .apple_pagination * {
+    font-size: 18pt;
+    padding: 1.2em;
+  }
+
+  /* line 47, /home/dennis/dunbarwebsite/app/assets/stylesheets/pagination.scss */
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.9em 1.2em;
+  }
+
+  /* line 51, /home/dennis/dunbarwebsite/app/assets/stylesheets/pagination.scss */
+  .apple_pagination .current {
+    border-radius: 2em;
+  }
+}
+/* line 4, /home/dennis/dunbarwebsite/app/assets/stylesheets/password_resets.scss */
+.forgot-password-form input, .reset-password-form input {
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 12, /home/dennis/dunbarwebsite/app/assets/stylesheets/password_resets.scss */
+#forgot-password-form-button, #reset-password-form-button {
+  width: 100%;
+  height: 30px;
+}
+
+/* line 17, /home/dennis/dunbarwebsite/app/assets/stylesheets/password_resets.scss */
+#password-reset-link {
+  font-size: 16px;
+}
+/* line 4, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.new-publication-form .entry, .edit-publication-form .entry {
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 12, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+#publication-form-button, #edit-publication-form-button {
+  width: 100%;
+  height: 30px;
+}
+
+/* line 17, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-list {
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 22, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item {
+  display: table-row;
+  height: auto;
+}
+
+/* line 27, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item .image,
+.publication-item .publication-content {
+  display: table-cell;
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+
+/* line 34, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.image img {
+  margin-right: 30px;
+  max-width: 330px;
+  height: auto;
+}
+
+/* line 40, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item * {
+  font-size: 12pt;
+}
+
+/* line 44, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item .title {
+  color: #333333;
+}
+
+/* line 48, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item .authors {
+  margin-top: 20px;
+  color: #111111;
+}
+
+/* line 53, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item .citation {
+  margin-top: 20px;
+  color: #111111;
+}
+
+/* line 58, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item .doi {
+  margin-top: 20px;
+}
+
+/* line 62, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item .edit_delete {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 67, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item .buttons {
+  margin-left: 5px;
+}
+
+/* line 71, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.largest-row .pagination {
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 76, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.largest-row .pagination > * {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 81, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item .doi a:link, .publication-item .doi a:visited {
+  display: inline-block;
+  display: moz-inline-box;
+  font-size: 12pt;
+  color: #191919;
+  background-color: #E6A811;
+  padding: 10px 80px;
+  text-decoration: none;
+  opacity: 1.0;
+  transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
+}
+
+/* line 94, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+.publication-item .doi a:hover, .publication-item .doi a:active {
+  background-color: #E6C34E;
+}
+
+/* line 98, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+#add_publication {
+  margin: 0 auto;
+  display: table;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 105, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+  .publication-item * {
+    font-size: 16pt;
+  }
+
+  /* line 109, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+  .publication-item .doi a:link, .publication-item .doi a:visited {
+    padding: 20px 80px;
+    font-size: 16pt;
+  }
+
+  /* line 114, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+  .publication-item .doi a:hover, .publication-item .doi a:active {
+    padding: 20px 80px;
+    font-size: 16pt;
+  }
+
+  /* line 119, /home/dennis/dunbarwebsite/app/assets/stylesheets/publications.scss */
+  .publication-item .image,
+  .publication-item .publication-content {
+    padding-bottom: 30px;
+  }
+}
+/* line 4, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.new-research-form .entry, .edit-research-form .entry {
+  width: 482px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 12, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.new-research-form #research-form-button,
+.edit-research-form #edit-research-form-button,
+.edit-research-form #update-research-picture {
+  width: 100%;
+  height: 30px;
+}
+
+/* line 19, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.new-research-form textarea.entry, .edit-research-form textarea.entry {
+  width: 482px;
+  height: 100px;
+  resize: none;
+}
+
+/* line 25, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-content {
+  display: table-row;
+}
+
+/* line 29, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-list {
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 34, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-item {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 8px);
+  margin-right: 8px;
+}
+
+/* line 41, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-item:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+/* line 45, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-item .title,
+.research-item .delete-research {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 51, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-item .title img {
+  padding-top: 20px;
+  max-width: 400px;
+}
+
+/* line 56, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-item .title a {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 61, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-item .title a:hover {
+  color: #222222;
+}
+
+/* line 65, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-item .title h2 {
+  margin-bottom: 0px;
+}
+
+/* line 69, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-item .title {
+  opacity: 1.0;
+  transition: opacity 0.4s ease-out;
+}
+
+/* line 74, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-item .title:hover {
+  opacity: 0.5;
+}
+
+/* line 78, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.research-item .delete-research {
+  padding-left: 10px;
+}
+
+/* line 82, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+#add-research-btn {
+  margin-top: 30px !important;
+  font-size: 20px;
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 89, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.edit-delete-research {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 94, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+.edit-delete-research #delete-research-btn {
+  margin-left: 10px;
+}
+
+@media (max-width: 1000px) {
+  /* line 99, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+  .research-item {
+    width: 90%;
+  }
+
+  /* line 103, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+  .research-item .title img {
+    padding-top: 20px;
+    max-width: 500px;
+  }
+
+  /* line 108, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+  .research-item .title h2,
+  .research-content h2 {
+    font-size: 24pt;
+  }
+
+  /* line 113, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+  .research-content h3 {
+    font-size: 22pt;
+  }
+
+  /* line 117, /home/dennis/dunbarwebsite/app/assets/stylesheets/researches.scss */
+  .research-content p {
+    font-size: 20pt;
+  }
+}
+/* line 4, /home/dennis/dunbarwebsite/app/assets/stylesheets/sessions.scss */
+.login-form input {
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 12, /home/dennis/dunbarwebsite/app/assets/stylesheets/sessions.scss */
+.login-form a {
+  margin: 0 auto;
+  display: table;
+  margin-top: 30px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* line 20, /home/dennis/dunbarwebsite/app/assets/stylesheets/sessions.scss */
+#login-form-button {
+  width: 100%;
+  height: 35px;
+  display: inline-block;
+  display: moz-inline-box;
+  border: none;
+  font-size: 16px;
+  color: #191919;
+  background-color: #E6A811;
+  padding: 10px 80px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
+}
+
+/* line 36, /home/dennis/dunbarwebsite/app/assets/stylesheets/sessions.scss */
+#login-form-button:hover, #login-form-button:active {
+  background-color: #E6C34E;
+}
+
+/* line 40, /home/dennis/dunbarwebsite/app/assets/stylesheets/sessions.scss */
+.login-form-wrapper {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  /* line 46, /home/dennis/dunbarwebsite/app/assets/stylesheets/sessions.scss */
+  .login-form input {
+    width: calc(100% - 18px);
+    height: 70px;
+    font-size: 22pt;
+  }
+
+  /* line 52, /home/dennis/dunbarwebsite/app/assets/stylesheets/sessions.scss */
+  #login-form-button {
+    height: 70px;
+    font-size: 22pt;
+  }
+
+  /* line 57, /home/dennis/dunbarwebsite/app/assets/stylesheets/sessions.scss */
+  #password-reset-link {
+    font-size: 20pt;
+  }
+}
+/* line 1, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.cycle-slideshow.slider {
+  height: 560px;
+}
+
+/* line 5, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.homepage-content .box-btn a:link, .homepage-content .box-btn a:visited {
+  display: inline-block;
+  display: moz-inline-box;
+  font-size: 16px;
+  color: #191919;
+  background-color: #E6A811;
+  padding: 10px 80px;
+  text-decoration: none;
+  opacity: 1.0;
+  transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
+}
+
+/* line 18, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.homepage-content .box-btn a:hover, .homepage-content .box-btn a:active {
+  font-style: normal;
+  background-color: #E6C34E;
+}
+
+/* line 23, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.homepage-content .manage-slides {
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 28, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.slider-image-list {
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 33, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.slider-image-list .slider-image-item {
+  display: table-row;
+  height: auto;
+}
+
+/* line 38, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.slider-image-list .slider-image,
+.slider-image-list .slider-title,
+.slider-image-list .slider-edit-delete {
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom: 10px;
+}
+
+/* line 46, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.slider-content-wrapper .slider-title p {
+  margin-bottom: 50px;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+/* line 52, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.slider-content-wrapper .slider-content p {
+  font-size: 16pt;
+}
+
+/* line 56, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.slider-image-list .slider-image img {
+  height: 80%;
+}
+
+/* line 60, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.slider-image-list .slider-edit-delete {
+  padding-left: 5px;
+}
+
+/* line 64, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.new-slider_image-form .entry, .edit-slider_image-form .entry {
+  width: 382px;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 72, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.new-slider_image-form textarea.entry, .edit-slider_image-form textarea.entry {
+  width: 382px;
+  height: 150px;
+  resize: none;
+}
+
+/* line 78, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+#slider_image-form-button, #slider_image_form_button {
+  width: 100%;
+  height: 30px;
+}
+
+/* line 83, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+#add_slider_image {
+  margin: 0 auto;
+  display: table;
+}
+
+/* line 88, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.homepage-content .slider-table {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 93, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.homepage-content .slider-table * {
+  vertical-align: middle;
+}
+
+/* line 97, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.homepage-content .slider-row {
+  display: table-row;
+}
+
+/* line 100, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.homepage-content .slider-image,
+.homepage-content .slider-content-wrapper {
+  display: table-cell;
+  width: 50%;
+}
+
+/* line 106, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.slider-wrapper {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* line 111, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.cycle-pager {
+  text-align: center;
+  width: 100%;
+  z-index: 500;
+  position: absolute;
+  bottom: 10px;
+  overflow: hidden;
+}
+
+/* line 114, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.cycle-pager span {
+  font-family: arial;
+  font-size: 65px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  color: #ddd;
+  cursor: pointer;
+}
+
+/* line 118, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.cycle-pager span.cycle-pager-active {
+  color: #D69746;
+}
+
+/* line 119, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+.cycle-pager > * {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 123, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+  .slider-row .slider-image img {
+    height: 400px;
+  }
+
+  /* line 127, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+  .cycle-slideshow.slider {
+    height: 450px;
+  }
+
+  /* line 131, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+  .cycle-pager {
+    display: none;
+  }
+
+  /* line 135, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+  .homepage-content .box-btn a:link, .homepage-content .box-btn a:visited {
+    font-size: 18pt;
+    padding: 20px 70px;
+  }
+
+  /* line 140, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+  .slider-content-wrapper .slider-title p {
+    margin-bottom: 10px;
+    font-size: 16pt;
+  }
+
+  /* line 145, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+  .homepage-content .slider-content-wrapper p {
+    font-size: 16pt;
+  }
+}
+@media screen and (max-width: 1100px) {
+  /* line 152, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+  .cycle-pager span {
+    font-family: arial;
+    font-size: 200px;
+    width: 50px;
+    height: 16px;
+    display: inline-block;
+    color: #ddd;
+    cursor: pointer;
+  }
+
+  /* line 157, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+  .slider-row .slider-image img {
+    height: 300px;
+  }
+
+  /* line 161, /home/dennis/dunbarwebsite/app/assets/stylesheets/slider.scss */
+  .cycle-slideshow.slider {
+    height: 400px;
+  }
+}
+/* line 4, /home/dennis/dunbarwebsite/app/assets/stylesheets/static_pages.scss */
+.welcome p {
+  display: table;
+  margin: 0 auto;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+ 
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-Regular.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-Italic.ttf");
+  font-style: italic, oblique;
+}
+ 
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("fonts/LiberationSans-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+
+html, body {
+  font-family: /* "Liberation Sans" ,*/ Arial, sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+	padding: 0;
+	bottom: 0;
+	top: 0;
+}
+
+body {
+  margin-top: 250px;
+  transition: margin-top  0.5s ease-out;;
+}
+
+.content .row {
+  display: table;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.content .large-row {
+  display: table;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.content .largest-row {
+  display: table;
+  margin: 0 auto;
+  width: 980px;
+}
+
+.content .wide-row {
+  display: table;
+  margin: 0 auto;
+  width: 1024px;
+}
+
+.content h1,
+.content > p {
+  display: table;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.main {
+  min-height: 100%;
+  margin-bottom: -240px;
+}
+
+.main:after {
+  content: "";
+  display: block;
+  height: 240px;
+}
+
+.flash_danger,
+.flash_info {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 60px;
+  z-index: 150;
+}
+
+.flash_danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1.5px solid #ebccd1;
+}
+
+.flash_info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border: 1.5px solid #bce8f1;
+}
+
+.row h1, .large-row h1, .largest-row h1 {
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-out;
+  color: #222222;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: #666666;
+}
+
+.yellow-box-link:link, .yellow-box-link:visited {
+  display: inline-block;
+  display: moz-inline-box;
+  font-size: 16px;
+  color: #191919;
+  background-color: #E6A811;
+  padding: 10px 80px;
+  text-decoration: none;
+  opacity: 1.0;
+  transition: background-color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
+}
+
+.yellow-box-link:hover, .yellow-box-link:active {
+  background-color: #E6C34E;
+}
+
+.login-message {
+  margin: 0 auto;
+  display: table;
+  margin-top: 30px;
+}
+
+.login-message p,
+.login-message h2 {
+  margin: 0 auto;
+  display: table;
+  font-size: 16pt;
+}
+
+.login-message p {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .yellow-box-link:link, .yellow-box-link:visited {
+    padding: 15px 80px;
+    font-size: 26pt;
+  }
+}
+
+@media (max-width: 1100px) {
+  
+  body {
+    margin-top: 150px;
+  }
+  
+  .content .wide-row, 
+  .content .largest-row {
+    width: 90%;
+    max-width: 90%;
+  }
+  
+  .login-message p {
+    font-size: 20pt;
+  }
+  
+  .content .row {
+    width: 50%;
+  }
+  
+}
+
+/* css for the slider*/
+.slide{
+	background-color: #228FC4;
+	width:100%;
+	height: auto;
+	border: 4px solid gray;
+	vertical-align: middle;
+}
+.slide:before{
+	content:"";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+.slide1 p, .slide1 .slide1img  {
+	margin-right: 1em;
+	display: inline-block;
+}
+	.slide2 p, .slide1 .slide2img  {
+	margin-right: 1em;
+	display: inline-block;
+}
+.innerWrapper{
+/*		margin:0 auto;
+	width:90%;
+	border:#fff 4px solid ;
+	vertical-align: middle;*/
+	/*display: inline-block;*/
+	display: inline-block;
+	vertical-align: middle;
+	width: 90%;
+	border-left:10px solid white;
+	border-right:10px solid white;
+	margin-left: 20px;
+	padding: 10px;
+	/*padding: 55px 0 0 40px;*/
+	text-align: center;
+	/*height: 280px;*/
+}
+.slide1text{
+	vertical-align: top;
+	width: 30%;
+	text-align: left;
+	font-size: 1.4em;
+	color: black;
+}
+.slide2text{
+	/*vertical-align: top;*/
+	right: 0px;
+	/*margin-left: 2em;*/
+	width: 100%;
+}
+.button{
+	display: inline-block;
+	/*margin-left: 10em;*/
+	text-decoration: none;
+	color: black;
+	font-family: arial;
+	background-color: yellow;
+	padding: 10px;
+	border-radius: 5px;
+
+}
+.outerWrapper{
+	/*border-right:5px solid white;*/
+}
+.box1,.box2{
+	width:300px;
+	height: 300px;
+	background-color: green;
+	padding: 50px;
+}
+.box2{
+	background-color: blue;
+}
+.slider-wrapper div .cycle-overlay { 
+    color: white; background: black; opacity: .3; filter:alpha(opacity=60);
+    position: absolute; bottom: 0; width: 100%; padding: 15px;
+}
+.slider-wrapper div .cycle-caption{
+    color: white; background: red; opacity: .3; filter:alpha(opacity=60);
+    position: absolute; bottom: 0; width: 100%; padding: 15px;	
+}
