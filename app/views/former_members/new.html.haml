@@ -1,0 +1,15 @@
+= content_for(:title, "Add former member")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Create former member
+    #new-group-info-form.new-group-info-form
+      = form_tag({action: :create}, multipart: true) do
+        = text_field_tag :description, nil, :class => 'entry', :placeholder => "Name, affiliation, email", :required => true
+        = number_field_tag :year, nil, :class => 'entry', :required => true
+
+        = label_tag :category, 'Please select the category of the former member'
+        = select_tag :category, options_for_select(@categories), :class => 'entry', :id => "category-selector"
+
+        = submit_tag 'Create former member', :id => 'group-info-form-button'
+- else
+  %p Only users with privileges can add new group info

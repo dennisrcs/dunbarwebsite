@@ -3,6 +3,21 @@ class MembersController < ApplicationController
   def index
     @members = Member.all.order(rank: :asc)
     @peopleImages = PeopleImage.all
+
+    # current members data
+    @kim_andrezza = Member.filterByRank(0,false)
+    @visiting_scholars = Member.filterByRank(1,true)
+    @postdocs = Member.filterByRank(2,true)
+    @phd_students = Member.filterByRank(3,true)
+    msc_students = Member.filterByRank(4,true)
+    undergrad_students = Member.filterByRank(5,true)    
+    @msc_undergrad_students = msc_students + undergrad_students
+
+    # former members data
+    @former_grad_students = FormerMember.filterMembers(:phd_student, :msc_student)
+    @former_postdocs = FormerMember.filterMembers(:postdoc, nil)
+    @former_visiting_scholars = FormerMember.filterMembers(:visiting_scholar, nil)
+    @former_undergrad_students = FormerMember.filterMembers(:undergrad_student, nil)
   end
 
   def show
@@ -46,15 +61,14 @@ class MembersController < ApplicationController
         # writing cv to the NFS
         cv_path = Member.write_to_filesystem(params[:cv], 'uploads/cv/')
       
-        is_current_member = (params[:is_current_member] == "1" || params[:is_current_member] == "on") ? true : false
         is_listed = (params[:is_listed] == "1" || params[:is_listed] == "on") ? true : false
       
         # creating member
-        member = Member.create(:name => params[:name], :position => params[:position],
+        member = Member.create(:name => params[:name], :last_name => params[:last_name], :position => params[:position],
                                :telephone => params[:telephone], :fax => params[:fax],
-                               :is_current_member => is_current_member, :is_listed => is_listed,
+                               :is_listed => is_listed,
                                :previous_affiliation => params[:previous_affiliation], :bio => params[:bio], 
-                               :birthplace => params[:birthplace], :building => params[:building],
+                               :interests => params[:interests], :birthplace => params[:birthplace], :building => params[:building],
                                :office => params[:office], :rank => params[:rank].to_i,
                                :link => params[:link], :avatar_path => avatar_path, :cv_path => cv_path)
       
@@ -65,7 +79,7 @@ class MembersController < ApplicationController
         try_delete_tempfile(params[:cv])
       
         # redirect to the created member page
-        redirect_to member_path(member)
+        redirect_to members_path
       rescue Exception => ex
         @user.destroy
         flash[:danger] = "#{ex}"
@@ -96,9 +110,7 @@ class MembersController < ApplicationController
     end
    
     if logged_in? && current_user_admin? 
-      is_current_member = (params[:is_current_member] == "1" || params[:is_current_member] == "on") ? true : false
       is_listed = (params[:is_listed] == "1" || params[:is_listed] == "on") ? true : false
-      params[:is_current_member] = is_current_member
       params[:is_listed] = is_listed
       params[:rank] = params[:rank].to_i
     end

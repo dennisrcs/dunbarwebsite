@@ -2,27 +2,31 @@
 - flash.each do |name, msg|
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
-.wide-row
-  .collaborations-list
-    - @collaborations.each do |collaboration|
-      .collaboration-item
-        .collaboration-picture
-          = link_to image_tag(collaboration.picture_path), collaboration.link, :target => '_blank'
-        .collaboration-info
-          .collaboration-researcher
-            %h3
-              = link_to collaboration.researcher, collaboration.link, :target => '_blank'
-          .collaboration-affiliation
-            %p
-              %i
-                = collaboration.affiliation
-          .collaboration-description
-            %p
-              = collaboration.description
-        - if logged_in? && current_user_admin?
-          .collaboration-edit-delete
-            .edit-delete-buttons
-              = link_to image_tag("icons/icon_edit.png"), edit_collaboration_path(collaboration), :title => "Edit collaboration"
-              = link_to image_tag("icons/icon_delete.png"), collaboration_path(collaboration), :title => "Delete collaboration", :method => :delete, data: { confirm: "Do you want to delete this collaboration?" }
+
 - if logged_in? && current_user_admin?
-  #add-collaboration= link_to 'Add New Collaboration', new_collaboration_path
+  .wide-row
+    .collaborations-list
+      - @collaborations.each do |collaboration|
+        .collaboration-item
+          .collaboration-picture
+            = link_to image_tag(collaboration.picture_path), collaboration.link, :target => '_blank'
+          .collaboration-info
+            .collaboration-researcher
+              %h3
+                = link_to collaboration.researcher, collaboration.link, :target => '_blank'
+            .collaboration-affiliation
+              %p
+                %i
+                  = collaboration.affiliation
+          - if logged_in? && current_user_admin?
+            .collaboration-edit-delete
+              .edit-delete-buttons
+                = link_to image_tag("icons/icon_edit.png"), edit_collaboration_path(collaboration), :title => "Edit collaboration"
+                = link_to image_tag("icons/icon_delete.png"), collaboration_path(collaboration), :title => "Delete collaboration", :method => :delete, data: { confirm: "Do you want to delete this collaboration?" }
+
+  - if logged_in? && current_user_admin?
+    #add-collaboration= link_to 'Add New Collaboration', new_collaboration_path
+- else
+  %h2.collaborations-soon
+    More information coming soon.
+    

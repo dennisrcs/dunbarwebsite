@@ -15,16 +15,17 @@ Rails.application.routes.draw do
   
   delete 'logout'  => 'sessions#destroy'
   
-  resources :group_infos
-  resources :members
+  resources :group_infos, :path => "group_info"
+  resources :members, :path => "people"
   resources :collaborations
   resources :links
   resources :courses
+  resources :former_members
   resources :courses do
     resources :course_files
   end
 
-  resources :researches
+  resources :researches, :path => "research"
   resources :researches do
     member { post :mercury_update }
   end
@@ -52,6 +53,7 @@ Rails.application.routes.draw do
   resources :people_images
   
   get '*path', :to => 'application#page_not_found'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

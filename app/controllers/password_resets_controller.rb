@@ -30,7 +30,7 @@ class PasswordResetsController < ApplicationController
       if @user.activate?(password)
         log_in @user
         flash[:info] = "Password reset successfully!"
-        redirect_to member_path(@user)
+        redirect_to members_path
       else
         flash[:danger] = "Password is too short (minimum is 8 characters)."
         redirect_to edit_password_reset_path(:id => params[:token], :email => @user.email)

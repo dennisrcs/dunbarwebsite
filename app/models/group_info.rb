@@ -41,7 +41,6 @@ class GroupInfo < ActiveRecord::Base
   after_create :setRestriction
 
   validates :title, presence: true
-  validates :file_path, presence: true
 
   # writes 'data' to the public folder, following 'path' structure
   def self.write_to_filesystem(data, path)

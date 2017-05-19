@@ -3,7 +3,7 @@
   - if msg.is_a?(String)
     = content_tag :div, msg, :class => "flash_#{name}"
 
-%h1 #{@member.name}
+%h1 #{@member.name} #{@member.last_name}
 
 .details
 
@@ -13,7 +13,7 @@
       - if @member.researcherid != nil && !@member.researcherid.empty?
         #badge
           = link_to image_tag("icons/badge.gif"), "http://www.researcherid.com/rid/#{@member.researcherid}", :title => "ResearcherID Profile", :target => "_blank"
-      - if logged_in? && (current_user.id == @member.id || current_user_admin?)
+      - if logged_in? && (current_user.member.id == @member.id || current_user_admin?)
         #profile-actions
           = link_to image_tag("icons/icon_edit.png"), edit_member_path(@member), :title => "Edit profile", :id => "Edit"
           = link_to image_tag("icons/icon_delete.png"), member_path, :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure?" }, :id => "Delete"
@@ -26,29 +26,31 @@
       %p
         E-mail:
         = @member.user.email
-      %p
-        Previous Affiliation:
+      %p.education
+        Education/Degree:
         = @member.previous_affiliation
-      %p
-        Telephone:
-        = @member.telephone
       %p 
         Building:
         = @member.building
       %p
         Office:
         = @member.office
-      - if @member.link?
-        %p
-          = link_to 'Homepage', @member.link, :target => '_blank', :class => 'member-homepage'
       %p
         #cv
           = link_to 'Curriculum Vitae', "#{@member.cv_path}", :target => '_blank'
 
   #bio.section
-    %h3 Bio
+    %h3 Research
   
     %p
       = @member.bio
+
+  #interests.section
+    %h3 Interests
+
+    %p
+      = @member.interests
+
+
 
   = link_to "Back to people page", members_path, :id => "people-page-button"

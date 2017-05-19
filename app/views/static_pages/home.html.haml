@@ -17,9 +17,9 @@
                 %img.slide1img{:src => slider_image.slider_image_picture}
               .slider-content-wrapper
                 .slider-title
-                  %p.slide2text #{slider_image.title}
+                  %p.slide2text #{slider_image.title.html_safe}
                 .slider-content
-                  %p.slide2text #{slider_image.content}
+                  %p.slide2text #{slider_image.content.html_safe}
                 .box-btn
                   = link_to "More", slider_image.link, :target => '_blank'
   -if logged_in? && current_user_admin?
@@ -31,14 +31,7 @@
         .aboutus
           %h2 About us
           %p
-            Research in the Dunbar Research Group spans a number of topics in synthetic and structural inorganic
-            chemistry with a focus on problems at the interface of materials and biological chemistry. The combined
-            use of many physical techniques (electronic epr, infrared spectroscopies, X-ray crystallography, ac and 
-            dc magnetic magnetometry, scanning and transmission electron microscopy, mass spectrometry and
-            electrochemistry to name a subset) reflect the breadth of problems under investigation. Our aim is to 
-            define important synthetic challenges and tackle their solution with an arsenal of physical, chemical 
-            and spectroscopic data. We are devoted to the use of coordination chemistry as a tool to make new compounds
-            as well as to probe new structure and bonding relationships.
+            The Dunbar group conducts research in the area of inorganic chemistry, with an emphasis on coordination chemistry. We strive to elucidate the relationship between molecular structure and physical properties in each specific application of our research. Our projects span the topics of molecular magnetism, anti-cancer compounds, and multifunctional materials with organic radicals. The variety of goals for our research provide the students in this group with the opportunity to expand their chemical knowledge outside the boundaries of their specialty. Students in the Dunbar group gain experience in a wide variety of techniques and instrumentation, including air-free synthesis (glovebox and Schlenk-line), X-ray crystallography, SQUID magnetometry, mass spectrometry, computational chemistry, cell viability assays, electrochemistry, and electronic, EPR, infrared, and NMR spectroscopies.
         .map-members
           %h2 Members from all over the world!
           #map

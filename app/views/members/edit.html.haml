@@ -1,23 +1,22 @@
 = content_for(:title, "Edit profile")
-- if logged_in? && (current_user.id == @member.id || current_user_admin?)
+- if logged_in? && (current_user.member.id == @member.id || current_user_admin?)
   .row
     %h1 Edit Member
     #edit-member-form.edit-member-form
       = form_tag member_path(@member), :method => :put, multipart: true do
 
-        = text_field_tag :name, @member.name, :class => 'entry', :placeholder => 'Full name', :required => true
+        = text_field_tag :name, @member.name, :class => 'entry', :placeholder => 'First name', :required => true
+        = text_field_tag :last_name, @member.last_name, :class => 'entry', :placeholder => 'Last name', :required => true
         = text_field_tag :position, @member.position, :class => 'entry', :placeholder => 'Position (PhD Student, MSc Student, etc)'
         = text_field_tag :username, @member.user.username, :class => 'entry', :placeholder => 'Username', :required => true
-        = text_field_tag :email, @member.user.email, :class => 'entry', :placeholder => 'E-mail', :required => true
-        = text_field_tag :link, @member.link, :class => 'entry', :placeholder => 'Link to homepage, LinkedIn, etc. Include http:// or https://'
         - if current_user_admin?
           = text_field_tag :rank, @member.rank, :class => 'entry', :placeholder => 'Please provide a rank for sorting purposes'
         = text_field_tag :researcherid, @member.researcherid, :class => 'entry', :placeholder => 'Researcher ID'
-        = text_field_tag :telephone, @member.telephone, :class => 'entry', :placeholder => 'Telephone', :id => "telephone"
         = text_field_tag :fax, @member.fax, :class => 'entry', :placeholder => 'Fax', :id => "fax"
         = text_field_tag :birthplace, @member.birthplace, :class => 'entry', :placeholder => 'Birthplace (ex: Texas, United States)'
-        = text_field_tag :previous_affiliation, @member.previous_affiliation, :class => 'entry', :placeholder => 'Previous affiliation'
-        = text_area_tag :bio, @member.bio , :class => 'entry', :placeholder => 'Please enter a short description of the member'
+        = text_area_tag :previous_affiliation, @member.previous_affiliation, :class => 'entry', :placeholder => 'Education/Degree'
+        = text_area_tag :bio, @member.bio, :class => 'entry', :placeholder => 'Please enter a short description of the member'
+        = text_field_tag :interests, @member.interests, :class => 'entry', :placeholder => 'Interests'
         = text_field_tag :building, @member.building, :class => 'entry', :placeholder => 'Building'
         = text_field_tag :office, @member.office, :class => 'entry', :placeholder => 'Office'
 
@@ -35,12 +34,6 @@
                 = check_box_tag :is_admin, nil, {:checked => "checked"}
               - else
                 = check_box_tag :is_admin
-            .member-config#current-member-div
-              = label_tag :is_current_member, 'Is current member?'
-              - if @member.is_current_member
-                = check_box_tag :is_current_member, nil, {:checked => "checked"}
-              - else
-                = check_box_tag :is_current_member
             .member-config#is-listed
               = label_tag :is_listed, 'Member should be listed?'
               - if @member.is_listed
@@ -49,4 +42,5 @@
                 = check_box_tag :is_listed
         = submit_tag 'Save Member', :id => 'member_form_button'
 - else
-  %p Only users with privileges can edit members.
+  %p
+    Only users with privileges can edit members.

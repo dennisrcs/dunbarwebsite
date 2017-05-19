@@ -17,20 +17,24 @@ function initMap() {
 
 function plotMembers(){
   if (gon.members != undefined) {
-    for (i = 0; i < gon.members.length; i++) { 
-      var geocoder = new google.maps.Geocoder();
-      if (gon.members[i].birthplace != undefined && gon.members[i].birthplace != "" && gon.members[i].birthplace != null) {
-        geocoder.geocode({'address': gon.members[i].birthplace},
-          function(results, status) {
-            if (status === 'OK') {
-              var marker = new google.maps.Marker({
-                map: map,
-                position: results[0].geometry.location
-              });
-            }
+    var size = gon.members.length;
+    for (i = 0; i < size; i++) {
+      var birthplace = gon.members[i].birthplace;
+      if (birthplace != undefined && birthplace != "" && birthplace != null) {
+        if (birthplace.includes(",") && birthplace.includes(".")) {
+          var latlng_str = birthplace.split(",");
+          if (latlng_str.length == 2) {
+            var lat_d = parseFloat(latlng_str[0]);
+            var lng_d = parseFloat(latlng_str[1]);
+            var latlng = {lat: lat_d, lng: lng_d};
+            var marker = new google.maps.Marker({
+              position: latlng,
+              map: map,
+              title: gon.members[i].name
+            });
           }
-        ); 
+        }
       }
-    }  
+    }
   }
 }

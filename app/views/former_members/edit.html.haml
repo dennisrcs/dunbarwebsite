@@ -1,0 +1,15 @@
+= content_for(:title, "Edit former member")
+- if logged_in? && current_user_admin?
+  .row
+    %h1 Edit former member
+    #edit-group-info-form.edit-group-info-form
+      = form_tag former_member_path(@former_member), :method => :put, multipart: true do
+        = text_field_tag :description, @former_member.description, :class => 'entry', :placeholder => "Former member description", :required => true
+        = number_field_tag :year, @former_member.year, :class => 'entry', :required => true
+        = label_tag :category, 'Please select the category of the group info file'
+        = select_tag :category, options_for_select(@categories, @former_member.category), :class => 'entry', :id => "category-selector"
+
+        = submit_tag 'Update former member', :id => 'group-info-form-button'
+
+- else
+  %p Only users with privileges can add new publications

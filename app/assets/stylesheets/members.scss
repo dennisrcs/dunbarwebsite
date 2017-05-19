@@ -9,6 +9,10 @@
   display: table-row;
 }
 
+#bio p {
+  margin-bottom: 15px;
+}
+
 #personal_info {
   display: table;
   margin: 0 auto;
@@ -62,6 +66,7 @@
 
 .details #picture-cv #avatar {
   width: 200px;
+  height: 200px;
   margin: 0 auto;
   display: table;
   border-radius: 50%;
@@ -69,6 +74,7 @@
 
 .member-picture img {
   width: 200px;
+  height: 200px;
   border-radius: 50%;
   opacity: 1;
   transition: opacity 0.4s ease-out;
@@ -91,6 +97,11 @@
 .details p {
   margin: 5px 0px 5px 0px;
   font-size: 12pt;
+}
+
+.details p.education {
+  white-space: pre-wrap;
+  margin-top: -20px;
 }
 
 .new-member-form .entry, .edit-member-form .entry {
@@ -163,6 +174,7 @@ input[type='file'].entry {
   margin-bottom: 50px;
   width: calc(25% - 6px);
   margin-right: 8px;
+  vertical-align: top;
 }
 
 .member:nth-of-type(2n) {
@@ -187,6 +199,7 @@ input[type='file'].entry {
   text-decoration: none;
   display: table;
   margin: 0 auto;
+  text-align: center;
 }
 
 #picture-cv #badge img {
@@ -252,6 +265,7 @@ input[type='file'].entry {
   
   .member-picture img {
     width: 300px;
+    height: 300px;
   }
   
   .member:nth-of-type(n) {
@@ -272,10 +286,12 @@ input[type='file'].entry {
   
   .details #picture-cv #avatar {
     width: 300px;
+    height: 300px;
   }
   
   #picture-cv #badge img {
     width: 200px;
+    height: 200px;
   }
   
   #personal_info #cv a:link, #personal_info #cv a:visited {

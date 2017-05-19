@@ -1,5 +1,5 @@
 .cycle-slideshow.slider {
-  height: 560px;
+  height: 420px;
 }
 
 .homepage-content .box-btn a:link, .homepage-content .box-btn a:visited {
@@ -53,8 +53,8 @@
   font-size: 16pt;
 }
 
-.slider-image-list .slider-image img {
-  height: 80%;
+img.slide1img {
+  height: 400px;
 }
 
 .slider-image-list .slider-edit-delete {
@@ -90,7 +90,11 @@
   margin: 0 auto;
 }
 
-.homepage-content .slider-table * {
+.homepage-content .slider-table .slider-row,
+.homepage-content .slider-table .slider-content-wrapper,
+.homepage-content .slider-table .slider-title,
+.homepage-content .slider-table .slider-content,
+.homepage-content .slider-table .box-btn{
   vertical-align: middle;
 }
 

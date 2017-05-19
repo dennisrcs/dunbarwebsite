@@ -1,4 +1,4 @@
-= content_for(:title, "Members")
+= content_for(:title, "People")
 
 - flash.each do |name, msg|
   - if msg.is_a?(String)
@@ -9,33 +9,93 @@
     .cycle-slideshow{"data-cycle-timeout" => "3000", "data-cycle-slides" => 'a', "data-cycle-caption-plugin" => "caption2"}
       .cycle-overlay
       - @peopleImages.each do |image|
-        = link_to image_tag(image.picture_path), image.link, 'data-cycle-desc' => image.description
+        = link_to image_tag(image.picture_path), '#', 'data-cycle-desc' => image.description
   .manage-people-slider
     - if logged_in? && current_user_admin?
       = link_to image_tag("icons/icon_edit.png"), people_images_path, :title => "Manage People Slider"
   .members-wrapper
-    %h1 Current members
+    %h1 Director and Administrative Assistant
     .member_grid
-      - @members.each do |member|
-        - if member.is_current_member && member.is_listed
+      - @kim_andrezza.each do |member|
+        - if member.is_listed
           .member
             .avatar
               = link_to image_tag(member.avatar_path), member_path(member), :class => "member-picture"
             .caption
-              = link_to "#{member.name}", member_path(member) 
+              = link_to "#{member.name} #{member.last_name}", member_path(member) 
               = link_to "#{member.position}", member_path(member)
-    %h1 Former members
+    %h1 Visiting Scholars
+    .member_grid
+      - @visiting_scholars.each do |member|
+        - if member.is_listed
+          .member
+            .avatar
+              = link_to image_tag(member.avatar_path), member_path(member), :class => "member-picture"
+            .caption
+              = link_to "#{member.name} #{member.last_name}", member_path(member)
+              = link_to "#{member.position}", member_path(member)
+    %h1 Postdoctoral Research Associates
+    .member_grid
+      - @postdocs.each do |member|
+        - if member.is_listed
+          .member
+            .avatar
+              = link_to image_tag(member.avatar_path), member_path(member), :class => "member-picture"
+            .caption
+              = link_to "#{member.name} #{member.last_name}", member_path(member)
+              = link_to "#{member.position}", member_path(member)
+    %h1 Ph.D. Students
+    .member_grid
+      - @phd_students.each do |member|
+        - if member.is_listed
+          .member
+            .avatar
+              = link_to image_tag(member.avatar_path), member_path(member), :class => "member-picture"
+            .caption
+              = link_to "#{member.name} #{member.last_name}", member_path(member)
+              = link_to "#{member.position}", member_path(member)
+    %h1 M.Sc. and Undergraduate Students
+    .member_grid
+      - @msc_undergrad_students.each do |member|
+        - if member.is_listed
+          .member
+            .avatar
+              = link_to image_tag(member.avatar_path), member_path(member), :class => "member-picture"
+            .caption
+              = link_to "#{member.name} #{member.last_name}", member_path(member)
+              = link_to "#{member.position}", member_path(member)
+    %h1 Former Professors and Scholars
     .former_members_list
-      - @members.each do |member|
-        - if !member.is_current_member && member.is_listed
-          .former_member
-            = link_to member.name, member.link, :target => '_blank', :class => 'former-member-page'
-            %a{:href => "mailto:#{member.user.email}", :class => '.former-member-email'} #{member.user.email}
-            #{member.previous_affiliation}
-            (#{member.position})
-            - if logged_in? && current_user_admin?
-              = link_to image_tag("icons/icon_edit.png"), edit_member_path(member), :title => "Edit profile"
-              = link_to image_tag("icons/icon_delete.png"), member_path(member), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this member?" }
+      - @former_visiting_scholars.each do |former_member|
+        .former_member
+          = former_member.description
+          - if logged_in? && current_user_admin?
+            = link_to image_tag("icons/icon_edit.png"), edit_former_member_path(former_member), :title => "Edit profile"
+            = link_to image_tag("icons/icon_delete.png"), former_member_path(former_member), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this member?" }
+    %h1 Former Postdoctoral Associates
+    .former_members_list
+      - @former_postdocs.each do |former_member|
+        .former_member
+          = former_member.description
+          - if logged_in? && current_user_admin?
+            = link_to image_tag("icons/icon_edit.png"), edit_former_member_path(former_member), :title => "Edit profile"
+            = link_to image_tag("icons/icon_delete.png"), former_member_path(former_member), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this member?" }
+    %h1 Former Graduate Students
+    .former_members_list
+      - @former_grad_students.each do |former_member|
+        .former_member
+          = former_member.description
+          - if logged_in? && current_user_admin?
+            = link_to image_tag("icons/icon_edit.png"), edit_former_member_path(former_member), :title => "Edit profile"
+            = link_to image_tag("icons/icon_delete.png"), former_member_path(former_member), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this member?" }
+    %h1 Former Undergraduate Students
+    .former_members_list
+      - @former_undergrad_students.each do |former_member|
+        .former_member
+          = former_member.description
+          - if logged_in? && current_user_admin?
+            = link_to image_tag("icons/icon_edit.png"), edit_former_member_path(former_member), :title => "Edit profile"
+            = link_to image_tag("icons/icon_delete.png"), former_member_path(former_member), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this member?" }
     - if logged_in? && current_user_admin?
       %h1 Not listed members
       .former_members_list
@@ -50,3 +110,4 @@
               = link_to image_tag("icons/icon_delete.png"), member_path(member), :title => "Delete profile", :method => :delete, data: { confirm: "Are you sure you want to delete this member?" }
 - if logged_in? && current_user_admin?
   #add_member= link_to 'Add new member', new_member_path 
+  #add_member= link_to 'Add former member', new_former_member_path
