@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'seed_dump'
+
 # Use Haml for templates
 gem 'haml'
 
