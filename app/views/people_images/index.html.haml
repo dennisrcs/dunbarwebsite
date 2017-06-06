@@ -7,7 +7,7 @@
       - @peopleImages.each do |image|
         .slider-image-item
           .slider-image
-            = link_to image_tag(image.picture_path), people_image_path(image), :class => "people-slider-picture"
+            = image_tag(image.picture_path, :class => "people-slider-picture")
           .slider-title
             %p
               = image.description

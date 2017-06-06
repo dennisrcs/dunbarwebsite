@@ -5,7 +5,6 @@
     #new-slider_image-form.new-slider_image-form
       = form_tag({action: :create}, multipart: true) do
         = text_field_tag :description, nil, :class => 'entry', :placeholder => 'Please enter a description to the image', :required => true
-        = text_field_tag :link, nil, :class => 'entry', :placeholder => 'Link to the slider item', :required => true
         
         = label_tag :picture_path, 'Please upload an image 980X400'
         = file_field_tag :picture_path, :class => 'entry'
