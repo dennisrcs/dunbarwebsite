@@ -7,13 +7,12 @@ class FormerMember < ActiveRecord::Base
   enum category: [ :admin, :visiting_scholar, :postdoc, :phd_student, :msc_student, :undergrad_student, :other ]
 
   def self.categories_list
-    [ ['Administrator', :admin], ['Visiting Scholar', :visiting_scholar], ['Postdoc', 'postdoc'], ['PhD Student', :phd_student],
+    [ ['Visiting Scholar', :visiting_scholar], ['Postdoc', 'postdoc'], ['PhD Student', :phd_student],
     ['MSc Student', :msc_student], ['Ungraduate Student', :undergrad_student], ['Other', :other] ]
   end
 
   def self.get_category(categ_type)
     categories = Hash.new
-    categories[:admin] = 'Administrator'
     categories[:postdoc] = 'Postdoc'
     categories[:visiting_scholar] = 'Visiting Scholar'
     categories[:phd_student] = 'PhD Student'
@@ -37,8 +36,6 @@ class FormerMember < ActiveRecord::Base
     end
     return result.sort_by{ |m| -m.year }
   end
-
-  validates :description, presence: true
 
   # writes 'data' to the public folder, following 'path' structure
   def self.write_to_filesystem(data, path)
