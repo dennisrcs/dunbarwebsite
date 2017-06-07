@@ -21,7 +21,7 @@ function plotMembers(){
     for (i = 0; i < size; i++) {
       var birthplace = gon.members[i].birthplace;
       if (birthplace != undefined && birthplace != "" && birthplace != null) {
-        if (birthplace.includes(",") && birthplace.includes(".")) {
+        if (birthplace.indexOf(",") >= 0 && birthplace.indexOf(".") >= 0) {
           var latlng_str = birthplace.split(",");
           if (latlng_str.length == 2) {
             var lat_d = parseFloat(latlng_str[0]);

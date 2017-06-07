@@ -15,3 +15,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+# ignore the following files
+config/environments/production.rb
+config/secrets.yml

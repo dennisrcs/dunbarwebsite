@@ -12,7 +12,8 @@
           = text_field_tag :rank, @member.rank, :class => 'entry', :placeholder => 'Please provide a rank for sorting purposes'
         = text_field_tag :researcherid, @member.researcherid, :class => 'entry', :placeholder => 'Researcher ID'
         = text_field_tag :fax, @member.fax, :class => 'entry', :placeholder => 'Fax', :id => "fax"
-        = text_field_tag :birthplace, @member.birthplace, :class => 'entry', :placeholder => 'Birthplace (ex: Texas, United States)'
+        - if current_user_admin?
+          = text_field_tag :birthplace, @member.birthplace, :class => 'entry', :placeholder => 'Birthplace (ex: Texas, United States)'
         = text_area_tag :previous_affiliation, @member.previous_affiliation, :class => 'entry', :placeholder => 'Education/Degree'
         = text_area_tag :bio, @member.bio, :class => 'entry', :placeholder => 'Please enter a short description of the member'
         = text_field_tag :interests, @member.interests, :class => 'entry', :placeholder => 'Interests'
